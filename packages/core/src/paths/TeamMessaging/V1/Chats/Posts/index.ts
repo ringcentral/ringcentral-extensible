@@ -3,17 +3,13 @@ import TMPostInfo from "../../../../../definitions/TMPostInfo.js";
 import TMCreatePostRequest from "../../../../../definitions/TMCreatePostRequest.js";
 import TMPostsList from "../../../../../definitions/TMPostsList.js";
 import ReadGlipPostsNewParameters from "../../../../../definitions/ReadGlipPostsNewParameters.js";
-import {
-  ParentInterface,
-  RestRequestConfig,
-  RingCentralInterface,
-} from "../../../../../types.js";
+import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types.js';
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
   public postId: string | null;
-
+  
   public constructor(_parent: ParentInterface, postId: string | null = null) {
     this._parent = _parent;
     this.rc = _parent.rc;
@@ -21,7 +17,7 @@ class Index {
   }
   public path(withParameter = true): string {
     if (withParameter && this.postId !== null) {
-      return `${this._parent.path()}/posts/${this.postId}`;
+        return `${this._parent.path()}/posts/${this.postId}`;
     }
     return `${this._parent.path()}/posts`;
   }
@@ -32,39 +28,24 @@ class Index {
    * Rate Limit Group: Medium
    * App Permission: TeamMessaging
    */
-  public async list(
-    queryParams?: ReadGlipPostsNewParameters,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<TMPostsList> {
-    const r = await this.rc.get<TMPostsList>(
-      this.path(false),
-      queryParams,
-      restRequestConfig,
-    );
+  public async list(queryParams?: ReadGlipPostsNewParameters, restRequestConfig?: RestRequestConfig): Promise<TMPostsList> {
+    const r = await this.rc.get<TMPostsList>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }
 
   /**
    * Creates a post in the chat specified in path. Any mention can be added within the `text` attribute of
-   * the request body in .md format - `![:Type](id)`, where `type` is one of (Person, Team, File, Note,
-   * Task, Event, Link, Card) and `id` is a unique identifier of the mentioned object of the specified type.
-   * Attachments can also be added to a post by passing the type and ID of attachment(s) in request body.
-   *
+ * the request body in .md format - `![:Type](id)`, where `type` is one of (Person, Team, File, Note,
+ * Task, Event, Link, Card) and `id` is a unique identifier of the mentioned object of the specified type.
+ * Attachments can also be added to a post by passing the type and ID of attachment(s) in request body.
+ * 
    * HTTP Method: post
    * Endpoint: /team-messaging/v1/chats/{chatId}/posts
    * Rate Limit Group: Medium
    * App Permission: TeamMessaging
    */
-  public async post(
-    tMCreatePostRequest: TMCreatePostRequest,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<TMPostInfo> {
-    const r = await this.rc.post<TMPostInfo>(
-      this.path(false),
-      tMCreatePostRequest,
-      undefined,
-      restRequestConfig,
-    );
+  public async post(tMCreatePostRequest: TMCreatePostRequest, restRequestConfig?: RestRequestConfig): Promise<TMPostInfo> {
+    const r = await this.rc.post<TMPostInfo>(this.path(false), tMCreatePostRequest, undefined, restRequestConfig);
     return r.data;
   }
 
@@ -76,14 +57,11 @@ class Index {
    * App Permission: TeamMessaging
    */
   public async get(restRequestConfig?: RestRequestConfig): Promise<TMPostInfo> {
-    if (this.postId === null) {
-      throw new Error("postId must be specified.");
+    if (this.postId === null)
+    {
+        throw new Error('postId must be specified.');
     }
-    const r = await this.rc.get<TMPostInfo>(
-      this.path(),
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.get<TMPostInfo>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 
@@ -95,15 +73,11 @@ class Index {
    * App Permission: TeamMessaging
    */
   public async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
-    if (this.postId === null) {
-      throw new Error("postId must be specified.");
+    if (this.postId === null)
+    {
+        throw new Error('postId must be specified.');
     }
-    const r = await this.rc.delete<string>(
-      this.path(),
-      {},
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.delete<string>(this.path(), {}, undefined, restRequestConfig);
     return r.data;
   }
 
@@ -114,19 +88,12 @@ class Index {
    * Rate Limit Group: Medium
    * App Permission: TeamMessaging
    */
-  public async patch(
-    tMUpdatePostRequest: TMUpdatePostRequest,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<TMPostInfo> {
-    if (this.postId === null) {
-      throw new Error("postId must be specified.");
+  public async patch(tMUpdatePostRequest: TMUpdatePostRequest, restRequestConfig?: RestRequestConfig): Promise<TMPostInfo> {
+    if (this.postId === null)
+    {
+        throw new Error('postId must be specified.');
     }
-    const r = await this.rc.patch<TMPostInfo>(
-      this.path(),
-      tMUpdatePostRequest,
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.patch<TMPostInfo>(this.path(), tMUpdatePostRequest, undefined, restRequestConfig);
     return r.data;
   }
 }

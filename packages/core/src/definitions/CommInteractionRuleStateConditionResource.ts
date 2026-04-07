@@ -1,14 +1,15 @@
 import CommStateResource from "./CommStateResource.js";
 
 interface CommInteractionRuleStateConditionResource {
-  /**
-   * Ring target type
+    /**
+   * Interaction condition type resource
    * Required
    * Example: State
    */
-  type?: "Interaction" | "Schedule" | "State";
+  type?: ('Interaction' | 'Schedule' | 'State');
 
-  /** */
+  /**
+   */
   state?: CommStateResource;
 }
 

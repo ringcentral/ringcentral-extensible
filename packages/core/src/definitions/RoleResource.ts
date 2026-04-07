@@ -1,7 +1,7 @@
 import PermissionIdResource from "./PermissionIdResource.js";
 
 interface RoleResource {
-  /**
+    /**
    * Link to a role resource
    * Format: uri
    */
@@ -37,17 +37,10 @@ interface RoleResource {
   /**
    * Specifies resource for permission
    */
-  scope?:
-    | "Account"
-    | "AllExtensions"
-    | "Federation"
-    | "Group"
-    | "NonUserExtensions"
-    | "RoleBased"
-    | "Self"
-    | "UserExtensions";
+  scope?: ('Account' | 'AllExtensions' | 'Federation' | 'Group' | 'NonUserExtensions' | 'RoleBased' | 'Self' | 'UserExtensions');
 
-  /** */
+  /**
+   */
   hidden?: boolean;
 
   /**
@@ -55,7 +48,8 @@ interface RoleResource {
    */
   lastUpdated?: string;
 
-  /** */
+  /**
+   */
   permissions?: PermissionIdResource[];
 }
 

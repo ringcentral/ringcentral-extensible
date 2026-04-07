@@ -8,9 +8,10 @@ import BillingPackageInfo from "./BillingPackageInfo.js";
 
 /**
  * Account service information, including brand, service plan and billing plan
- */
+ * 
+*/
 interface AccountServiceInfoRequest {
-  /**
+    /**
    * Canonical URI of the account Service Info resource
    * Format: uri
    */
@@ -21,19 +22,24 @@ interface AccountServiceInfoRequest {
    */
   servicePlanName?: string;
 
-  /** */
+  /**
+   */
   brand?: BrandInfo;
 
-  /** */
+  /**
+   */
   contractedCountry?: CountryInfoShortModel;
 
-  /** */
+  /**
+   */
   servicePlan?: ServicePlanInfo;
 
-  /** */
+  /**
+   */
   targetServicePlan?: ServicePlanInfo;
 
-  /** */
+  /**
+   */
   billingPlan?: BillingPlanInfo;
 
   /**
@@ -41,10 +47,12 @@ interface AccountServiceInfoRequest {
    */
   serviceFeatures?: ServiceFeatureInfo[];
 
-  /** */
+  /**
+   */
   limits?: AccountLimitsInfo;
 
-  /** */
+  /**
+   */
   package?: BillingPackageInfo;
 }
 

@@ -4,7 +4,7 @@ import MakeRingOutCallerIdInfo from "./MakeRingOutCallerIdInfo.js";
 import MakeRingOutCountryInfo from "./MakeRingOutCountryInfo.js";
 
 interface MakeRingOutRequest {
-  /**
+    /**
    * Required
    */
   from?: MakeRingOutCallerInfoRequestFrom;
@@ -14,16 +14,18 @@ interface MakeRingOutRequest {
    */
   to?: MakeRingOutCallerInfoRequestTo;
 
-  /** */
+  /**
+   */
   callerId?: MakeRingOutCallerIdInfo;
 
   /**
    * Audio prompt that a calling party hears when a call
-   *  is connected
+ *  is connected
    */
   playPrompt?: boolean;
 
-  /** */
+  /**
+   */
   country?: MakeRingOutCountryInfo;
 }
 

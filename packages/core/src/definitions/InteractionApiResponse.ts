@@ -1,10 +1,12 @@
 import InteractionApiResponseResponse from "./InteractionApiResponseResponse.js";
 
 interface InteractionApiResponse {
-  /** */
-  status?: "Success" | "Fail";
+    /**
+   */
+  status?: ('Success' | 'Fail');
 
-  /** */
+  /**
+   */
   response?: InteractionApiResponseResponse;
 }
 

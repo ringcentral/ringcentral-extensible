@@ -3,7 +3,7 @@ import ServiceInfoV2 from "./ServiceInfoV2.js";
 import SystemUserContactInfo from "./SystemUserContactInfo.js";
 
 interface AccountInfo {
-  /**
+    /**
    * Internal identifier of RingCentral account
    * Required
    * Example: 8000012345
@@ -12,7 +12,7 @@ interface AccountInfo {
 
   /**
    * External account ID. Used as a primary key to link accounts between
-   *  RingCentral and partner systems.
+ *  RingCentral and partner systems.
    * Example: acme-us-12345
    */
   externalAccountId?: string;
@@ -27,7 +27,7 @@ interface AccountInfo {
    * Status of an account
    * Required
    */
-  status?: "Initial" | "Unconfirmed" | "Confirmed" | "Disabled";
+  status?: ('Initial' | 'Unconfirmed' | 'Confirmed' | 'Disabled');
 
   /**
    * Company name
@@ -35,7 +35,8 @@ interface AccountInfo {
    */
   companyName?: string;
 
-  /** */
+  /**
+   */
   companyAddress?: PostalAddress;
 
   /**
@@ -43,7 +44,8 @@ interface AccountInfo {
    */
   serviceInfo?: ServiceInfoV2;
 
-  /** */
+  /**
+   */
   contactInfo?: SystemUserContactInfo;
 
   /**

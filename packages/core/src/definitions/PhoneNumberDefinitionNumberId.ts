@@ -1,9 +1,9 @@
 /**
- * To be used to assign a number by ID
- */
+ * Assign a number by ID
+*/
 interface PhoneNumberDefinitionNumberId {
-  /**
-   * Phone number ID
+    /**
+   * Phone number identifier
    * Required
    */
   phoneNumberId?: string;

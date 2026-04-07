@@ -1,8 +1,8 @@
 interface ScimEmail {
-  /**
+    /**
    * Required
    */
-  type?: "work";
+  type?: ('work');
 
   /**
    * Required

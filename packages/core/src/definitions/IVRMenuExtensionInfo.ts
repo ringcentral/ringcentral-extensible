@@ -1,8 +1,8 @@
 /**
  * For 'Connect' or 'Voicemail' actions only. Extension reference
- */
-interface IVRMenuExtensionInfo {
-  /**
+*/
+interface IvrMenuExtensionInfo {
+    /**
    * Link to an extension resource
    * Format: uri
    */
@@ -17,6 +17,11 @@ interface IVRMenuExtensionInfo {
    * Name of an extension
    */
   name?: string;
+
+  /**
+   * Extension number
+   */
+  pin?: string;
 }
 
-export default IVRMenuExtensionInfo;
+export default IvrMenuExtensionInfo;

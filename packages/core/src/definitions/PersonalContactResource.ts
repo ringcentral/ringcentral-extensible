@@ -1,7 +1,7 @@
 import ContactAddressInfo from "./ContactAddressInfo.js";
 
 interface PersonalContactResource {
-  /**
+    /**
    * Canonical URI of a contact
    * Format: uri
    * Example: https://platform.ringcentral.com/restapi/v1.0/account/230919004/extension/230919004/address-book/contact/623045004
@@ -10,10 +10,10 @@ interface PersonalContactResource {
 
   /**
    * This property has a special meaning only on Address Book Sync
-   *  (e.g. a contact can be `Deleted`). For simple contact list reading it
-   *  has always the default value - `Alive`
+ *  (e.g. a contact can be `Deleted`). For simple contact list reading it
+ *  has always the default value - `Alive`
    */
-  availability?: "Alive" | "Deleted" | "Purged";
+  availability?: ('Alive' | 'Deleted' | 'Purged');
 
   /**
    * Email of a contact
@@ -170,13 +170,16 @@ interface PersonalContactResource {
    */
   callbackPhone?: string;
 
-  /** */
+  /**
+   */
   businessAddress?: ContactAddressInfo;
 
-  /** */
+  /**
+   */
   homeAddress?: ContactAddressInfo;
 
-  /** */
+  /**
+   */
   otherAddress?: ContactAddressInfo;
 
   /**

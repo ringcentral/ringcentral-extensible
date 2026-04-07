@@ -1,5 +1,6 @@
 interface ScimSupported {
-  /** */
+    /**
+   */
   supported?: boolean;
 }
 

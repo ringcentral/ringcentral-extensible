@@ -1,27 +1,20 @@
 import GetRingOutStatusResponse from "../../../../../definitions/GetRingOutStatusResponse.js";
 import MakeRingOutRequest from "../../../../../definitions/MakeRingOutRequest.js";
-import {
-  ParentInterface,
-  RestRequestConfig,
-  RingCentralInterface,
-} from "../../../../../types.js";
+import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types.js';
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
   public ringoutId: string | null;
-
-  public constructor(
-    _parent: ParentInterface,
-    ringoutId: string | null = null,
-  ) {
+  
+  public constructor(_parent: ParentInterface, ringoutId: string | null = null) {
     this._parent = _parent;
     this.rc = _parent.rc;
     this.ringoutId = ringoutId;
   }
   public path(withParameter = true): string {
     if (withParameter && this.ringoutId !== null) {
-      return `${this._parent.path()}/ring-out/${this.ringoutId}`;
+        return `${this._parent.path()}/ring-out/${this.ringoutId}`;
     }
     return `${this._parent.path()}/ring-out`;
   }
@@ -32,16 +25,8 @@ class Index {
    * Rate Limit Group: Heavy
    * App Permission: RingOut
    */
-  public async post(
-    makeRingOutRequest: MakeRingOutRequest,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<GetRingOutStatusResponse> {
-    const r = await this.rc.post<GetRingOutStatusResponse>(
-      this.path(false),
-      makeRingOutRequest,
-      undefined,
-      restRequestConfig,
-    );
+  public async post(makeRingOutRequest: MakeRingOutRequest, restRequestConfig?: RestRequestConfig): Promise<GetRingOutStatusResponse> {
+    const r = await this.rc.post<GetRingOutStatusResponse>(this.path(false), makeRingOutRequest, undefined, restRequestConfig);
     return r.data;
   }
 
@@ -52,17 +37,12 @@ class Index {
    * Rate Limit Group: Light
    * App Permission: RingOut
    */
-  public async get(
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<GetRingOutStatusResponse> {
-    if (this.ringoutId === null) {
-      throw new Error("ringoutId must be specified.");
+  public async get(restRequestConfig?: RestRequestConfig): Promise<GetRingOutStatusResponse> {
+    if (this.ringoutId === null)
+    {
+        throw new Error('ringoutId must be specified.');
     }
-    const r = await this.rc.get<GetRingOutStatusResponse>(
-      this.path(),
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.get<GetRingOutStatusResponse>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 
@@ -74,15 +54,11 @@ class Index {
    * App Permission: RingOut
    */
   public async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
-    if (this.ringoutId === null) {
-      throw new Error("ringoutId must be specified.");
+    if (this.ringoutId === null)
+    {
+        throw new Error('ringoutId must be specified.');
     }
-    const r = await this.rc.delete<string>(
-      this.path(),
-      {},
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.delete<string>(this.path(), {}, undefined, restRequestConfig);
     return r.data;
   }
 }

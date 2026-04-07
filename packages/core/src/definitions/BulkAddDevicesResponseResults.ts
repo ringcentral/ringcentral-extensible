@@ -2,7 +2,7 @@ import BulkOperationExtensionReference from "./BulkOperationExtensionReference.j
 import ApiErrorWithParameter from "./ApiErrorWithParameter.js";
 
 interface BulkAddDevicesResponseResults {
-  /**
+    /**
    * Indicates if the provisioning operation was successful for this item, always `false` in this model
    */
   successful?: boolean;
@@ -13,7 +13,8 @@ interface BulkAddDevicesResponseResults {
    */
   id?: string;
 
-  /** */
+  /**
+   */
   extension?: BulkOperationExtensionReference;
 
   /**
@@ -22,7 +23,8 @@ interface BulkAddDevicesResponseResults {
    */
   phoneNumber?: string;
 
-  /** */
+  /**
+   */
   errors?: ApiErrorWithParameter[];
 }
 

@@ -3,21 +3,13 @@ import GreetingAnsweringRuleId from "./GreetingAnsweringRuleId.js";
 
 /**
  * Request body for operation createCustomUserGreeting
- */
+*/
 interface CreateCustomUserGreetingRequest {
-  /**
+    /**
    * Type of greeting, specifying the case when the greeting is played.
    * Required
    */
-  type?:
-    | "Introductory"
-    | "Announcement"
-    | "ConnectingMessage"
-    | "ConnectingAudio"
-    | "Voicemail"
-    | "Unavailable"
-    | "HoldMusic"
-    | "TemplateGreeting";
+  type?: ('Introductory' | 'Announcement' | 'ConnectingMessage' | 'ConnectingAudio' | 'Voicemail' | 'Unavailable' | 'HoldMusic' | 'TemplateGreeting');
 
   /**
    * Media file to upload
@@ -25,7 +17,8 @@ interface CreateCustomUserGreetingRequest {
    */
   binary?: Attachment;
 
-  /** */
+  /**
+   */
   answeringRule?: GreetingAnsweringRuleId;
 }
 

@@ -1,10 +1,12 @@
 import AdaptiveCardInfoRequestItem from "./AdaptiveCardInfoRequestItem.js";
 
 interface AdaptiveCardInfoRequest {
-  /** */
-  type?: "Container";
+    /**
+   */
+  type?: ('Container');
 
-  /** */
+  /**
+   */
   items?: AdaptiveCardInfoRequestItem[];
 }
 

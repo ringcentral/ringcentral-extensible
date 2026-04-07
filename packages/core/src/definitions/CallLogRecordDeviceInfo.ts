@@ -1,5 +1,5 @@
 interface CallLogRecordDeviceInfo {
-  /**
+    /**
    * Internal identifier of a device
    * Required
    */

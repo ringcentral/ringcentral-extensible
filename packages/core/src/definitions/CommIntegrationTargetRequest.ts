@@ -1,7 +1,7 @@
 import CommIntegrationRequest from "./CommIntegrationRequest.js";
 
 interface CommIntegrationTargetRequest {
-  /**
+    /**
    * Required
    */
   integration?: CommIntegrationRequest;
@@ -10,7 +10,7 @@ interface CommIntegrationTargetRequest {
    * Ring target type
    * Example: IntegrationRingTarget
    */
-  type?: "IntegrationRingTarget";
+  type?: ('IntegrationRingTarget');
 }
 
 export default CommIntegrationTargetRequest;

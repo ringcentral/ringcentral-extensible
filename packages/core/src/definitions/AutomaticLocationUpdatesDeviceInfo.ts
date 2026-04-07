@@ -3,7 +3,7 @@ import AutomaticLocationUpdatesSiteInfo from "./AutomaticLocationUpdatesSiteInfo
 import AutomaticLocationUpdatesPhoneLine from "./AutomaticLocationUpdatesPhoneLine.js";
 
 interface AutomaticLocationUpdatesDeviceInfo {
-  /**
+    /**
    * Internal identifier of a device
    */
   id?: string;
@@ -12,7 +12,7 @@ interface AutomaticLocationUpdatesDeviceInfo {
    * Device type
    * Default: HardPhone
    */
-  type?: "HardPhone" | "SoftPhone" | "OtherPhone";
+  type?: ('HardPhone' | 'SoftPhone' | 'OtherPhone');
 
   /**
    * Serial number for HardPhone (is returned only when the phone is shipped and provisioned)
@@ -29,10 +29,12 @@ interface AutomaticLocationUpdatesDeviceInfo {
    */
   name?: string;
 
-  /** */
+  /**
+   */
   model?: AutomaticLocationUpdatesModelInfo;
 
-  /** */
+  /**
+   */
   site?: AutomaticLocationUpdatesSiteInfo;
 
   /**

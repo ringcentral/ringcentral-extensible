@@ -1,29 +1,19 @@
-import IVRMenuExtensionInfo from "./IVRMenuExtensionInfo.js";
+import IvrMenuExtensionInfo from "./IvrMenuExtensionInfo.js";
 
-interface IVRMenuActionsInfo {
-  /**
-   * Key. The following values are supported: numeric: '1' to '9' Star Hash NoInput
+interface IvrMenuActionsInfo {
+    /**
+   * Key pressed by the user
    */
-  input?: string;
+  input?: ('0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | 'Hash' | 'Star' | 'NoInput');
 
   /**
-   * Internal identifier of an answering rule
+   * Action to be taken on key press
    */
-  action?:
-    | "Connect"
-    | "Voicemail"
-    | "DialByName"
-    | "Transfer"
-    | "Repeat"
-    | "ReturnToRoot"
-    | "ReturnToPrevious"
-    | "Disconnect"
-    | "ReturnToTopLevelMenu"
-    | "DoNothing"
-    | "ConnectToOperator";
+  action?: ('Connect' | 'Voicemail' | 'DialByName' | 'Transfer' | 'Repeat' | 'ReturnToRoot' | 'ReturnToPrevious' | 'Disconnect' | 'ReturnToTopLevelMenu' | 'DoNothing' | 'ConnectToOperator' | 'TransferToContactCenterNumber' | 'ConnectToIncomingCallRoutingSelection');
 
-  /** */
-  extension?: IVRMenuExtensionInfo;
+  /**
+   */
+  extension?: IvrMenuExtensionInfo;
 
   /**
    * For 'Transfer' action only. PSTN number in E.164 format
@@ -31,4 +21,4 @@ interface IVRMenuActionsInfo {
   phoneNumber?: string;
 }
 
-export default IVRMenuActionsInfo;
+export default IvrMenuActionsInfo;

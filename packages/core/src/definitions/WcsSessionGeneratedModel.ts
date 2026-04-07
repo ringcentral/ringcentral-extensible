@@ -1,5 +1,5 @@
 interface WcsSessionGeneratedModel {
-  /**
+    /**
    * The RCV bridge id
    * Example: 839874770
    */

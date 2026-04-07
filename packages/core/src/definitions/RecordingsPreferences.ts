@@ -3,12 +3,14 @@ import AutoShared from "./AutoShared.js";
 
 /**
  * Recordings preferences
- */
+*/
 interface RecordingsPreferences {
-  /** */
+    /**
+   */
   everyoneCanControl?: EveryoneCanControl;
 
-  /** */
+  /**
+   */
   autoShared?: AutoShared;
 }
 

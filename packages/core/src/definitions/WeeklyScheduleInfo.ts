@@ -2,9 +2,9 @@ import TimeInterval from "./TimeInterval.js";
 
 /**
  * Weekly schedule
- */
+*/
 interface WeeklyScheduleInfo {
-  /**
+    /**
    * Time intervals for a particular day
    */
   monday?: TimeInterval[];

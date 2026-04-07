@@ -2,9 +2,10 @@ import AddressBookBulkUploadTaskResult from "./AddressBookBulkUploadTaskResult.j
 
 /**
  * Information on a task for adding multiple contacts to multiple extensions
- */
+ * 
+*/
 interface AddressBookBulkUploadResponse {
-  /**
+    /**
    * Internal identifier of a task
    * Required
    */
@@ -21,7 +22,7 @@ interface AddressBookBulkUploadResponse {
    * Task status
    * Required
    */
-  status?: "Accepted" | "InProgress" | "Completed" | "Failed";
+  status?: ('Accepted' | 'InProgress' | 'Completed' | 'Failed');
 
   /**
    * Date/time of a task creation
@@ -37,7 +38,8 @@ interface AddressBookBulkUploadResponse {
    */
   lastModifiedTime?: string;
 
-  /** */
+  /**
+   */
   results?: AddressBookBulkUploadTaskResult;
 }
 

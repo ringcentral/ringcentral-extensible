@@ -1,8 +1,9 @@
-import CreateSwitchInfo from "./CreateSwitchInfo.js";
+import SwitchInfo from "./SwitchInfo.js";
 
 interface CreateMultipleSwitchesRequest {
-  /** */
-  records?: CreateSwitchInfo[];
+    /**
+   */
+  records?: SwitchInfo[];
 }
 
 export default CreateMultipleSwitchesRequest;

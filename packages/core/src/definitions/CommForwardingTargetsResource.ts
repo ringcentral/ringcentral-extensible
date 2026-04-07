@@ -2,7 +2,7 @@ import CommForwardingTargetsResourceRecords from "./CommForwardingTargetsResourc
 import EnumeratedPagingModel from "./EnumeratedPagingModel.js";
 
 interface CommForwardingTargetsResource {
-  /**
+    /**
    * Required
    */
   records?: CommForwardingTargetsResourceRecords[];

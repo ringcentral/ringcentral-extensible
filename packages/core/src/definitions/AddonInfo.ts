@@ -1,8 +1,10 @@
 interface AddonInfo {
-  /** */
+    /**
+   */
   id?: string;
 
-  /** */
+  /**
+   */
   name?: string;
 
   /**

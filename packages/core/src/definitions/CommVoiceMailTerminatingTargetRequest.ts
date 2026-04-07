@@ -2,18 +2,15 @@ import CommReferencedExtensionResource from "./CommReferencedExtensionResource.j
 import CommTerminatingPromptResource from "./CommTerminatingPromptResource.js";
 
 interface CommVoiceMailTerminatingTargetRequest {
-  /**
+    /**
    * Terminating target type
    * Required
    * Example: VoiceMailTerminatingTarget
    */
-  type?:
-    | "ExtensionTerminatingTarget"
-    | "PhoneNumberTerminatingTarget"
-    | "PlayAnnouncementTerminatingTarget"
-    | "VoiceMailTerminatingTarget";
+  type?: ('ExtensionTerminatingTarget' | 'PhoneNumberTerminatingTarget' | 'PlayAnnouncementTerminatingTarget' | 'VoiceMailTerminatingTarget');
 
-  /** */
+  /**
+   */
   extension?: CommReferencedExtensionResource;
 
   /**

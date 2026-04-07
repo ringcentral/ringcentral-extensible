@@ -1,60 +1,61 @@
-import CommonEmergencyLocationAddressInfo from "./CommonEmergencyLocationAddressInfo.js";
+import EmergencyLocationAddressResource from "./EmergencyLocationAddressResource.js";
 import SiteBasicInfo from "./SiteBasicInfo.js";
 import LocationOwnerInfo from "./LocationOwnerInfo.js";
 
 /**
  * Company emergency response location details
- */
+*/
 interface EmergencyLocationResponseResource {
+    /**
+   * Link to an emergency location resource
+   */
+  uri?: string;
+
   /**
    * Internal identifier of an emergency response location
    */
   id?: string;
 
-  /** */
-  address?: CommonEmergencyLocationAddressInfo;
+  /**
+   */
+  address?: EmergencyLocationAddressResource;
 
   /**
    * Emergency response location name
    */
   name?: string;
 
-  /** */
+  /**
+   */
   site?: SiteBasicInfo;
 
   /**
    * Emergency address status
    */
-  addressStatus?: "Valid" | "Invalid" | "Provisioning";
+  addressStatus?: ('Valid' | 'Invalid' | 'Provisioning' | 'Deprovisioned');
 
   /**
    * Status of emergency response location usage.
    */
-  usageStatus?: "Active" | "Inactive";
+  usageStatus?: ('Active' | 'Inactive');
 
   /**
    * Resulting status of emergency address synchronization. Returned
-   *  if `syncEmergencyAddress` parameter is set to `true`
+ *  if `syncEmergencyAddress` parameter is set to `true`
    */
-  syncStatus?:
-    | "Verified"
-    | "Updated"
-    | "Deleted"
-    | "ActivationProcess"
-    | "NotRequired"
-    | "Unsupported"
-    | "Failed";
+  syncStatus?: ('Verified' | 'Updated' | 'Deleted' | 'ActivationProcess' | 'NotRequired' | 'Unsupported' | 'Failed');
 
-  /** */
-  addressType?: "LocationWithElins" | "LocationWithEndpoint";
+  /**
+   */
+  addressType?: ('LocationWithElins' | 'LocationWithEndpoint');
 
   /**
    * Visibility of an emergency response location. If `Private`
-   *  is set, then location is visible only for the restricted number of users,
-   *  specified in `owners` array
+ *  is set, then location is visible only for the restricted number of users,
+ *  specified in `owners` array
    * Default: Public
    */
-  visibility?: "Private" | "Public";
+  visibility?: ('Private' | 'Public');
 
   /**
    * List of private location owners
@@ -67,8 +68,13 @@ interface EmergencyLocationResponseResource {
   addressFormatId?: string;
 
   /**
+   * Address format statuses
+   */
+  addressFormatStatus?: ('Actual' | 'Outdated' | 'Deprecated');
+
+  /**
    * Specifies emergency address validation during the ERL creation/update.
-   *  If set to 'true', then address validation for non-US addresses is skipped
+ *  If set to 'true', then address validation for non-US addresses is skipped
    */
   trusted?: boolean;
 }

@@ -3,13 +3,16 @@ import SpeakerInsightsObject from "./SpeakerInsightsObject.js";
 import ConversationalInsightsUnit from "./ConversationalInsightsUnit.js";
 
 interface InteractionApiResponseResponse {
-  /** */
+    /**
+   */
   utteranceInsights?: UtteranceInsightsObject[];
 
-  /** */
+  /**
+   */
   speakerInsights?: SpeakerInsightsObject;
 
-  /** */
+  /**
+   */
   conversationalInsights?: ConversationalInsightsUnit[];
 }
 

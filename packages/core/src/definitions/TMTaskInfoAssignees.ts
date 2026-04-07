@@ -1,5 +1,5 @@
 interface TMTaskInfoAssignees {
-  /**
+    /**
    * Internal identifier of an assignee
    */
   id?: string;
@@ -7,7 +7,7 @@ interface TMTaskInfoAssignees {
   /**
    * Task execution status by assignee
    */
-  status?: "Pending" | "Completed";
+  status?: ('Pending' | 'Completed');
 }
 
 export default TMTaskInfoAssignees;

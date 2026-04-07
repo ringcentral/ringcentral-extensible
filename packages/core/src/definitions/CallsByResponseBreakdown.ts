@@ -1,8 +1,8 @@
 /**
  * Result breakdown by response
- */
+*/
 interface CallsByResponseBreakdown {
-  /**
+    /**
    * Value for Answered response
    * Required
    * Format: double

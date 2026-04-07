@@ -3,13 +3,16 @@ import BulkUpdateInviteesRequestUpdatedInvitees from "./BulkUpdateInviteesReques
 import RcwResourceIdModel from "./RcwResourceIdModel.js";
 
 interface BulkUpdateInviteesRequest {
-  /** */
+    /**
+   */
   addedInvitees?: AddInviteeRequest[];
 
-  /** */
+  /**
+   */
   updatedInvitees?: BulkUpdateInviteesRequestUpdatedInvitees[];
 
-  /** */
+  /**
+   */
   deletedInvitees?: RcwResourceIdModel[];
 }
 

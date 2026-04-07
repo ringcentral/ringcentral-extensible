@@ -1,5 +1,5 @@
 interface Delegate {
-  /**
+    /**
    * Delegate id (equal as extension id of delegate)
    */
   id?: string;

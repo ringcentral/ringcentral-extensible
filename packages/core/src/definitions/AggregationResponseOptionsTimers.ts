@@ -15,9 +15,9 @@ import AggregationResponseOptionsTimersCallsDurationByQueueHours from "./Aggrega
  * If `aggregationType` is `Sum` or `Percent`, `aggregationInterval` is not supported.
  * If `aggregationType` is `Min`, `Max` or `Average`, `aggregationInterval` is supported, but not required.
  * If left empty, aggregation will be performed on per-call basis
- */
+*/
 interface AggregationResponseOptionsTimers {
-  /**
+    /**
    * Aggregation of all calls duration
    */
   allCallsDuration?: AggregationResponseOptionsTimersAllCallsDuration;
@@ -25,8 +25,7 @@ interface AggregationResponseOptionsTimers {
   /**
    * Aggregation of calls duration by direction (Inbound, Outbound)
    */
-  callsDurationByDirection?:
-    AggregationResponseOptionsTimersCallsDurationByDirection;
+  callsDurationByDirection?: AggregationResponseOptionsTimersCallsDurationByDirection;
 
   /**
    * Aggregation of calls duration by origin (Internal, External)
@@ -36,8 +35,7 @@ interface AggregationResponseOptionsTimers {
   /**
    * Aggregation of calls duration by response (Answered, NotAnswered, Connected, NotConnected)
    */
-  callsDurationByResponse?:
-    AggregationResponseOptionsTimersCallsDurationByResponse;
+  callsDurationByResponse?: AggregationResponseOptionsTimersCallsDurationByResponse;
 
   /**
    * Aggregation of calls duration by segments (Ringing, LiveTalk, Hold, Park, Transfer, IvrPrompt, Voicemail, VmGreeting, Setup)
@@ -52,14 +50,12 @@ interface AggregationResponseOptionsTimers {
   /**
    * Aggregation of calls duration by company hours (BusinessHours, AfterHours)
    */
-  callsDurationByCompanyHours?:
-    AggregationResponseOptionsTimersCallsDurationByCompanyHours;
+  callsDurationByCompanyHours?: AggregationResponseOptionsTimersCallsDurationByCompanyHours;
 
   /**
    * Aggregation of calls duration by queue SLA (InSLA, OutSLA). This timer is only applicable to Queues grouping
    */
-  callsDurationByQueueSla?:
-    AggregationResponseOptionsTimersCallsDurationByQueueSla;
+  callsDurationByQueueSla?: AggregationResponseOptionsTimersCallsDurationByQueueSla;
 
   /**
    * Aggregation of calls duration by type (Direct, FromQueue, ParkRetrieval, Transferred, Outbound, QueueCallPickup)
@@ -69,14 +65,12 @@ interface AggregationResponseOptionsTimers {
   /**
    * Aggregation of calls duration by party that ended the call (Callee, Caller, System)
    */
-  callsDurationByEndingParty?:
-    AggregationResponseOptionsTimersCallsDurationByEndingParty;
+  callsDurationByEndingParty?: AggregationResponseOptionsTimersCallsDurationByEndingParty;
 
   /**
    * Aggregation of calls duration by queue hours (BusinessHours, AfterHours)
    */
-  callsDurationByQueueHours?:
-    AggregationResponseOptionsTimersCallsDurationByQueueHours;
+  callsDurationByQueueHours?: AggregationResponseOptionsTimersCallsDurationByQueueHours;
 }
 
 export default AggregationResponseOptionsTimers;

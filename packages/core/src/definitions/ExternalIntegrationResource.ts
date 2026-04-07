@@ -1,5 +1,5 @@
 interface ExternalIntegrationResource {
-  /**
+    /**
    * Example: 9813
    */
   id?: string;

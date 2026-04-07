@@ -1,7 +1,8 @@
 import AdgPhoneNumberResource from "./AdgPhoneNumberResource.js";
 
 interface FederatedAccountResource {
-  /** */
+    /**
+   */
   companyName?: string;
 
   /**
@@ -9,7 +10,8 @@ interface FederatedAccountResource {
    */
   conflictCount?: number;
 
-  /** */
+  /**
+   */
   federatedName?: string;
 
   /**
@@ -22,7 +24,8 @@ interface FederatedAccountResource {
    */
   linkCreationTime?: string;
 
-  /** */
+  /**
+   */
   mainNumber?: AdgPhoneNumberResource;
 }
 

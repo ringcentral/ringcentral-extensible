@@ -3,9 +3,9 @@ import TelephonySessionsEventPartyInfo from "./TelephonySessionsEventPartyInfo.j
 
 /**
  * Notification payload body
- */
+*/
 interface TelephonySessionsEventBody {
-  /**
+    /**
    * Order number of a notification to state the chronology
    * Format: int64
    */
@@ -32,7 +32,8 @@ interface TelephonySessionsEventBody {
    */
   eventTime?: string;
 
-  /** */
+  /**
+   */
   origin?: OriginInfo;
 
   /**

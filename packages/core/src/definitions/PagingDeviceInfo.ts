@@ -1,5 +1,5 @@
 interface PagingDeviceInfo {
-  /**
+    /**
    * Internal identifier of a paging device
    */
   id?: string;

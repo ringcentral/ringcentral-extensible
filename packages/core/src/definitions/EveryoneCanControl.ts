@@ -1,8 +1,8 @@
 /**
  * Controls whether participants can start and pause recording
- */
+*/
 interface EveryoneCanControl {
-  /**
+    /**
    * Controls whether preference is enabled
    * Example: true
    */

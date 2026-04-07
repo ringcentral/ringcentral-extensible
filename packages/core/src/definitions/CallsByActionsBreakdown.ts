@@ -1,8 +1,8 @@
 /**
  * Result breakdown by actions
- */
+*/
 interface CallsByActionsBreakdown {
-  /**
+    /**
    * Value for ParkOn action
    * Required
    * Format: double

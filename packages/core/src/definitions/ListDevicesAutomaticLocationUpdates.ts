@@ -3,7 +3,7 @@ import PageNavigationModel from "./PageNavigationModel.js";
 import EnumeratedPagingModel from "./EnumeratedPagingModel.js";
 
 interface ListDevicesAutomaticLocationUpdates {
-  /**
+    /**
    * Link to a devices resource
    * Format: uri
    */
@@ -11,14 +11,16 @@ interface ListDevicesAutomaticLocationUpdates {
 
   /**
    * List of the user(s) devices with the current status of Emergency
-   *  Address Auto Update Feature
+ *  Address Auto Update Feature
    */
   records?: AutomaticLocationUpdatesDeviceInfo[];
 
-  /** */
+  /**
+   */
   navigation?: PageNavigationModel;
 
-  /** */
+  /**
+   */
   paging?: EnumeratedPagingModel;
 }
 

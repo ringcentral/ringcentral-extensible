@@ -2,7 +2,7 @@ import RegistrantModelWithQuestionnaire from "./RegistrantModelWithQuestionnaire
 import RcwPagingForwardModel from "./RcwPagingForwardModel.js";
 
 interface RegistrantListResource {
-  /**
+    /**
    * Required
    */
   records?: RegistrantModelWithQuestionnaire[];

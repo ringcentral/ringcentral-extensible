@@ -4,12 +4,13 @@ import PartyInfo from "./PartyInfo.js";
 import OwnerInfo from "./OwnerInfo.js";
 
 interface ReplyParty {
-  /**
+    /**
    * Internal identifier of a party
    */
   id?: string;
 
-  /** */
+  /**
+   */
   status?: CallStatusInfo;
 
   /**
@@ -22,22 +23,26 @@ interface ReplyParty {
    */
   standAlone?: boolean;
 
-  /** */
+  /**
+   */
   park?: ParkInfo;
 
-  /** */
+  /**
+   */
   from?: PartyInfo;
 
-  /** */
+  /**
+   */
   to?: PartyInfo;
 
-  /** */
+  /**
+   */
   owner?: OwnerInfo;
 
   /**
    * Direction of a call
    */
-  direction?: "Inbound" | "Outbound";
+  direction?: ('Inbound' | 'Outbound');
 }
 
 export default ReplyParty;

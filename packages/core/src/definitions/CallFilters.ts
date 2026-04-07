@@ -5,9 +5,10 @@ import TimeSpentFilter from "./TimeSpentFilter.js";
 
 /**
  * Optional filters that limit the scope of calls (joined via AND)
- */
+*/
 interface CallFilters {
-  /** */
+    /**
+   */
   extensionFilters?: ExtensionFilters;
 
   /**
@@ -23,33 +24,22 @@ interface CallFilters {
   /**
    * Specifies the call directions relative to the scope specified in grouping object (joined via OR). Not applicable to internal origin calls with company scope
    */
-  directions?: ("Inbound" | "Outbound")[];
+  directions?: ('Inbound' | 'Outbound')[];
 
   /**
    * Specifies whether an external party was present in the initial segment of the call (joined via OR)
    */
-  origins?: ("Internal" | "External")[];
+  origins?: ('Internal' | 'External')[];
 
   /**
    * Filtering of calls by first response (joined via OR)
    */
-  callResponses?: ("Answered" | "NotAnswered" | "Connected" | "NotConnected")[];
+  callResponses?: ('Answered' | 'NotAnswered' | 'Connected' | 'NotConnected')[];
 
   /**
    * Filtering of calls by the nature of call result (joined via OR)
    */
-  callResults?: (
-    | "Completed"
-    | "Abandoned"
-    | "Voicemail"
-    | "Unknown"
-    | "Missed"
-    | "Accepted"
-    | "Transferred"
-    | "PickedUp"
-    | "Forwarded"
-    | "AnsweredElsewhere"
-  )[];
+  callResults?: ('Completed' | 'Abandoned' | 'Voicemail' | 'Unknown' | 'Missed' | 'Accepted' | 'Transferred' | 'PickedUp' | 'Forwarded' | 'AnsweredElsewhere')[];
 
   /**
    * Filtering of calls by presence of specific segment (joined via OR)
@@ -59,54 +49,40 @@ interface CallFilters {
   /**
    * Filtering of calls by presence of specific action (joined via OR)
    */
-  callActions?: (
-    | "HoldOff"
-    | "HoldOn"
-    | "ParkOn"
-    | "ParkOff"
-    | "BlindTransfer"
-    | "WarmTransfer"
-    | "DTMFTransfer"
-  )[];
+  callActions?: ('HoldOff' | 'HoldOn' | 'ParkOn' | 'ParkOff' | 'BlindTransfer' | 'WarmTransfer' | 'DTMFTransfer')[];
 
   /**
    * Filtering of calls by company's business hours or after hours (joined via OR)
    */
-  companyHours?: ("BusinessHours" | "AfterHours")[];
+  companyHours?: ('BusinessHours' | 'AfterHours')[];
 
-  /** */
+  /**
+   */
   callDuration?: CallDurationFilter;
 
-  /** */
+  /**
+   */
   timeSpent?: TimeSpentFilter;
 
   /**
    * Filtering calls that were within or out of queue SLA (joined via OR). Only applicable to Queues grouping
    */
-  queueSla?: ("InSla" | "OutSla")[];
+  queueSla?: ('InSla' | 'OutSla')[];
 
   /**
    * Filtering of calls based on how the call started from the callee perspective (joined via OR). If the call is outbound relative to the grouping scope, CallType is Outbound
    */
-  callTypes?: (
-    | "Direct"
-    | "FromQueue"
-    | "ParkRetrieval"
-    | "Transferred"
-    | "Outbound"
-    | "Overflow"
-    | "QueueCallPickup"
-  )[];
+  callTypes?: ('Direct' | 'FromQueue' | 'ParkRetrieval' | 'Transferred' | 'Outbound' | 'Overflow' | 'QueueCallPickup')[];
 
   /**
    * Filtering of calls based on the party that ended that call (joined via OR)
    */
-  endingParties?: ("Caller" | "Callee" | "System")[];
+  endingParties?: ('Caller' | 'Callee' | 'System')[];
 
   /**
    * Filtering of calls by queue's business hours or after hours (joined via OR). Only applicable to Queues grouping
    */
-  queueHours?: ("BusinessHours" | "AfterHours")[];
+  queueHours?: ('BusinessHours' | 'AfterHours')[];
 }
 
 export default CallFilters;

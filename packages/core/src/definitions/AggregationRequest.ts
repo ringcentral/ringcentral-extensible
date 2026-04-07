@@ -4,7 +4,7 @@ import CallFilters from "./CallFilters.js";
 import AggregationResponseOptions from "./AggregationResponseOptions.js";
 
 interface AggregationRequest {
-  /**
+    /**
    * Required
    */
   grouping?: Grouping;
@@ -14,7 +14,8 @@ interface AggregationRequest {
    */
   timeSettings?: TimeSettings;
 
-  /** */
+  /**
+   */
   callFilters?: CallFilters;
 
   /**

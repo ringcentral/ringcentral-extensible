@@ -4,31 +4,32 @@ import CommPhoneNumberResource from "./CommPhoneNumberResource.js";
 import CommIntegrationResource from "./CommIntegrationResource.js";
 
 interface CommForwardingTargetsResourceRecords {
-  /** */
-  name?: string;
-
-  /**
+    /**
    * Ring target type
    * Example: PhoneNumberRingTarget
    */
-  type?:
-    | "CoworkerAppsRingTarget"
-    | "CoworkerRingTarget"
-    | "DeviceRingTarget"
-    | "ImsPhoneNumberRingTarget"
-    | "IntegrationRingTarget"
-    | "PhoneNumberRingTarget";
+  type?: ('CoworkerAppsRingTarget' | 'CoworkerRingTarget' | 'DeviceRingTarget' | 'ImsPhoneNumberRingTarget' | 'FmcPhoneNumberRingTarget' | 'IntegrationRingTarget' | 'PhoneNumberRingTarget');
 
-  /** */
+  /**
+   */
   extension?: CommReferencedExtensionResource;
 
-  /** */
+  /**
+   */
   device?: CommDeviceResource;
 
-  /** */
+  /**
+   * Device name
+   * Example: HP2
+   */
+  name?: string;
+
+  /**
+   */
   destination?: CommPhoneNumberResource;
 
-  /** */
+  /**
+   */
   integration?: CommIntegrationResource;
 }
 

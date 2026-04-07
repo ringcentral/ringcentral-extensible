@@ -2,16 +2,12 @@ import TMNoteInfo from "../../../../../definitions/TMNoteInfo.js";
 import TMCreateNoteRequest from "../../../../../definitions/TMCreateNoteRequest.js";
 import TMNoteList from "../../../../../definitions/TMNoteList.js";
 import ListChatNotesNewParameters from "../../../../../definitions/ListChatNotesNewParameters.js";
-import {
-  ParentInterface,
-  RestRequestConfig,
-  RingCentralInterface,
-} from "../../../../../types.js";
+import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types.js';
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
-
+  
   public constructor(_parent: ParentInterface) {
     this._parent = _parent;
     this.rc = _parent.rc;
@@ -26,15 +22,8 @@ class Index {
    * Rate Limit Group: Heavy
    * App Permission: TeamMessaging
    */
-  public async get(
-    queryParams?: ListChatNotesNewParameters,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<TMNoteList> {
-    const r = await this.rc.get<TMNoteList>(
-      this.path(),
-      queryParams,
-      restRequestConfig,
-    );
+  public async get(queryParams?: ListChatNotesNewParameters, restRequestConfig?: RestRequestConfig): Promise<TMNoteList> {
+    const r = await this.rc.get<TMNoteList>(this.path(), queryParams, restRequestConfig);
     return r.data;
   }
 
@@ -45,16 +34,8 @@ class Index {
    * Rate Limit Group: Medium
    * App Permission: TeamMessaging
    */
-  public async post(
-    tMCreateNoteRequest: TMCreateNoteRequest,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<TMNoteInfo> {
-    const r = await this.rc.post<TMNoteInfo>(
-      this.path(),
-      tMCreateNoteRequest,
-      undefined,
-      restRequestConfig,
-    );
+  public async post(tMCreateNoteRequest: TMCreateNoteRequest, restRequestConfig?: RestRequestConfig): Promise<TMNoteInfo> {
+    const r = await this.rc.post<TMNoteInfo>(this.path(), tMCreateNoteRequest, undefined, restRequestConfig);
     return r.data;
   }
 }

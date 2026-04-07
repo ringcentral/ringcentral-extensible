@@ -1,7 +1,8 @@
 import CreateWirelessPoint from "./CreateWirelessPoint.js";
 
 interface CreateMultipleWirelessPointsRequest {
-  /** */
+    /**
+   */
   records?: CreateWirelessPoint[];
 }
 

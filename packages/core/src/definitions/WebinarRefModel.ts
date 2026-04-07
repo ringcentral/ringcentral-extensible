@@ -1,7 +1,7 @@
 import HostModel from "./HostModel.js";
 
 interface WebinarRefModel {
-  /**
+    /**
    * Internal object ID
    * Example: 78654321
    */

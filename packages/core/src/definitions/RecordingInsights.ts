@@ -1,7 +1,7 @@
 import AIInsights from "./AIInsights.js";
 
 interface RecordingInsights {
-  /**
+    /**
    * Title of the call
    * Required
    * Example: Call from 1234567890 to 0987654321
@@ -19,13 +19,7 @@ interface RecordingInsights {
    * Required
    * Example: pbx
    */
-  domain?:
-    | "pbx"
-    | "rcv"
-    | "rcx"
-    | "connect-and-sell"
-    | "nice-incontact"
-    | "ms-teams";
+  domain?: ('pbx' | 'rcv' | 'rcx' | 'nice-incontact' | 'ms-teams');
 
   /**
    * Recording ID of the domain
@@ -45,7 +39,7 @@ interface RecordingInsights {
    * Optional call direction in case of phone call recording
    * Example: Inbound
    */
-  callDirection?: "Inbound" | "Outbound";
+  callDirection?: ('Inbound' | 'Outbound');
 
   /**
    * Extension id of the call recording owner

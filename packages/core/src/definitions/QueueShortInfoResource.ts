@@ -1,5 +1,5 @@
 interface QueueShortInfoResource {
-  /**
+    /**
    * Call queue extension identifier
    */
   id?: string;

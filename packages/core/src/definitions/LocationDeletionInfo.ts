@@ -1,19 +1,22 @@
 import LocationDeletionErrorInfo from "./LocationDeletionErrorInfo.js";
 
 interface LocationDeletionInfo {
-  /** */
+    /**
+   */
   id?: string;
 
-  /** */
+  /**
+   */
   name?: string;
 
   /**
    * Identifies the possibility and status of emergency location
-   *  deletion
+ *  deletion
    */
-  deletion?: "Failed" | "Completed" | "Forbidden" | "Restricted" | "Allowed";
+  deletion?: ('Failed' | 'Completed' | 'Forbidden' | 'Restricted' | 'Allowed');
 
-  /** */
+  /**
+   */
   errors?: LocationDeletionErrorInfo;
 }
 

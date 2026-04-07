@@ -1,15 +1,11 @@
 import ForwardCallPartyResponse from "../../../../../../../definitions/ForwardCallPartyResponse.js";
 import ForwardTarget from "../../../../../../../definitions/ForwardTarget.js";
-import {
-  ParentInterface,
-  RestRequestConfig,
-  RingCentralInterface,
-} from "../../../../../../../types.js";
+import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../../types.js';
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
-
+  
   public constructor(_parent: ParentInterface) {
     this._parent = _parent;
     this.rc = _parent.rc;
@@ -24,16 +20,8 @@ class Index {
    * Rate Limit Group: Light
    * App Permission: CallControl
    */
-  public async post(
-    forwardTarget: ForwardTarget,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<ForwardCallPartyResponse> {
-    const r = await this.rc.post<ForwardCallPartyResponse>(
-      this.path(),
-      forwardTarget,
-      undefined,
-      restRequestConfig,
-    );
+  public async post(forwardTarget: ForwardTarget, restRequestConfig?: RestRequestConfig): Promise<ForwardCallPartyResponse> {
+    const r = await this.rc.post<ForwardCallPartyResponse>(this.path(), forwardTarget, undefined, restRequestConfig);
     return r.data;
   }
 }

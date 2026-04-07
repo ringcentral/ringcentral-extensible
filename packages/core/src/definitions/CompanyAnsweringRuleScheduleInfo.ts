@@ -3,9 +3,10 @@ import RangesInfo from "./RangesInfo.js";
 
 /**
  * Schedule when an answering rule should be applied
- */
+*/
 interface CompanyAnsweringRuleScheduleInfo {
-  /** */
+    /**
+   */
   weeklyRanges?: CompanyAnsweringRuleWeeklyScheduleInfoRequest;
 
   /**
@@ -16,7 +17,7 @@ interface CompanyAnsweringRuleScheduleInfo {
   /**
    * Reference to Business Hours or After Hours schedule = ['BusinessHours', 'AfterHours']
    */
-  ref?: "BusinessHours" | "AfterHours";
+  ref?: ('BusinessHours' | 'AfterHours');
 }
 
 export default CompanyAnsweringRuleScheduleInfo;

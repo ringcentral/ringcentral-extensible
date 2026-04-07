@@ -1,7 +1,7 @@
 import CommRemoveForwardingTargetsRequestRecords from "./CommRemoveForwardingTargetsRequestRecords.js";
 
 interface CommRemoveForwardingTargetsRequest {
-  /**
+    /**
    * Required
    */
   records?: CommRemoveForwardingTargetsRequestRecords[];

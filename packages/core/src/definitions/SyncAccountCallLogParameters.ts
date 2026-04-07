@@ -1,12 +1,12 @@
 /**
  * Query parameters for operation syncAccountCallLog
- */
+*/
 interface SyncAccountCallLogParameters {
-  /**
+    /**
    * Type of call log synchronization request - full or incremental sync
    * Default: FSync
    */
-  syncType?: "FSync" | "ISync";
+  syncType?: ('FSync' | 'ISync');
 
   /**
    * Value of syncToken property of last sync request response. Mandatory parameter for 'ISync' sync type
@@ -15,18 +15,18 @@ interface SyncAccountCallLogParameters {
 
   /**
    * Starting date for the resulting records in ISO 8601 format, including
-   *  timezone, for example *2016-03-10T18:07:52.534Z*. The range is limited to the last 30 days from the current moment.
-   *  If not specified, the default value is a log history date (date of account creation/call log deletion), and
-   *  no time range limitation applied
+ *  timezone, for example *2016-03-10T18:07:52.534Z*. The range is limited to the last 30 days from the current moment.
+ *  If not specified, the default value is a log history date (date of account creation/call log deletion), and
+ *  no time range limitation applied
    * Format: date-time
    */
   dateFrom?: string;
 
   /**
    * For `FSync` mode this parameter is mandatory, it limits the number of records to be returned in response.
-   *
-   *  For `ISync` mode this parameter specifies the number of records to extend the sync frame with to the past
-   *  (the maximum number of records is 250)
+ *  
+ *  For `ISync` mode this parameter specifies the number of records to extend the sync frame with to the past
+ *  (the maximum number of records is 250)
    * Minimum: 1
    * Format: int32
    */
@@ -35,13 +35,13 @@ interface SyncAccountCallLogParameters {
   /**
    * Type of calls to be returned
    */
-  statusGroup?: ("Missed" | "All")[];
+  statusGroup?: ('Missed' | 'All')[];
 
   /**
    * Defines the level of details for returned call records
    * Default: Simple
    */
-  view?: "Simple" | "Detailed";
+  view?: ('Simple' | 'Detailed');
 
   /**
    * Supported for `ISync` mode. Indicates that deleted call records should be returned
@@ -50,21 +50,21 @@ interface SyncAccountCallLogParameters {
 
   /**
    * Deprecated, replaced with `recordingType` filter, still supported for compatibility reasons.
-   *  Indicates if only recorded calls should be returned.
-   *
-   *  If both `withRecording` and `recordingType` parameters are specified, then `withRecording` is ignored
+ *  Indicates if only recorded calls should be returned.
+ *  
+ *  If both `withRecording` and `recordingType` parameters are specified, then `withRecording` is ignored
    */
   withRecording?: boolean;
 
   /**
    * Indicates that call records with recordings of particular type should be returned.
-   *  If omitted, then calls with and without recordings are returned
+ *  If omitted, then calls with and without recordings are returned
    */
-  recordingType?: "Automatic" | "OnDemand" | "All";
+  recordingType?: ('Automatic' | 'OnDemand' | 'All');
 
   /**
    * Category of metadata to be returned. If omitted, all call records are returned.
-   *  Multiple values are supported
+ *  Multiple values are supported
    */
   metadataCategory?: string[];
 }

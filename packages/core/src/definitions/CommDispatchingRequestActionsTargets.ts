@@ -5,26 +5,26 @@ import CommIntegrationRequest from "./CommIntegrationRequest.js";
 import CommTerminatingPromptResource from "./CommTerminatingPromptResource.js";
 
 interface CommDispatchingRequestActionsTargets {
-  /**
+    /**
    * Terminating target type
    * Example: ExtensionTerminatingTarget
    */
-  type?:
-    | "ExtensionTerminatingTarget"
-    | "PhoneNumberTerminatingTarget"
-    | "PlayAnnouncementTerminatingTarget"
-    | "VoiceMailTerminatingTarget";
+  type?: ('ExtensionTerminatingTarget' | 'PhoneNumberTerminatingTarget' | 'PlayAnnouncementTerminatingTarget' | 'VoiceMailTerminatingTarget');
 
-  /** */
+  /**
+   */
   extension?: CommReferencedExtensionResource;
 
-  /** */
+  /**
+   */
   device?: CommDeviceRequest;
 
-  /** */
+  /**
+   */
   destination?: CommPhoneNumberResource;
 
-  /** */
+  /**
+   */
   integration?: CommIntegrationRequest;
 
   /**
@@ -32,11 +32,13 @@ interface CommDispatchingRequestActionsTargets {
    */
   name?: string;
 
-  /** */
+  /**
+   */
   prompt?: CommTerminatingPromptResource;
 
-  /** */
-  dispatchingType?: "Ringing" | "Terminating";
+  /**
+   */
+  dispatchingType?: ('Ringing' | 'Terminating');
 }
 
 export default CommDispatchingRequestActionsTargets;

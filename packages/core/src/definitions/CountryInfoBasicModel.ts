@@ -1,5 +1,5 @@
 interface CountryInfoBasicModel {
-  /**
+    /**
    * Internal identifier of a country
    */
   id?: string;

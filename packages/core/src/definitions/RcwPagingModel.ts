@@ -1,5 +1,5 @@
 interface RcwPagingModel {
-  /**
+    /**
    * Number of items per page
    * Required
    * Maximum: 1000

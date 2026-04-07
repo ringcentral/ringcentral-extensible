@@ -1,5 +1,5 @@
 interface TemplateInfo {
-  /**
+    /**
    * Link to a template
    * Format: uri
    */
@@ -15,8 +15,9 @@ interface TemplateInfo {
    */
   description?: string;
 
-  /** */
-  type?: "UserSettings" | "CallHandling" | "LimitedExtensions";
+  /**
+   */
+  type?: ('CallHandling' | 'CallQueueCallHandling' | 'CallQueueSettings' | 'KeyTemplates' | 'LimitedExtensions' | 'SiteCallHandling' | 'UserSettings');
 
   /**
    * Name of a template

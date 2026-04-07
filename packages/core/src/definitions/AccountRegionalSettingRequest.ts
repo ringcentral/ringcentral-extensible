@@ -5,26 +5,32 @@ import AccountGreetingLanguageInfoRequest from "./AccountGreetingLanguageInfoReq
 import AccountFormattingLocaleInfoRequest from "./AccountFormattingLocaleInfoRequest.js";
 
 interface AccountRegionalSettingRequest {
-  /** */
+    /**
+   */
   homeCountry?: AccountCountryInfoRequest;
 
-  /** */
+  /**
+   * Required
+   */
   timezone?: AccountTimezoneInfoRequest;
 
-  /** */
+  /**
+   */
   language?: AccountLanguageInfoRequest;
 
-  /** */
+  /**
+   */
   greetingLanguage?: AccountGreetingLanguageInfoRequest;
 
-  /** */
+  /**
+   */
   formattingLocale?: AccountFormattingLocaleInfoRequest;
 
   /**
    * Time format (12-hours or 24-hours).
    * Default: 12h
    */
-  timeFormat?: "12h" | "24h";
+  timeFormat?: ('12h' | '24h');
 }
 
 export default AccountRegionalSettingRequest;

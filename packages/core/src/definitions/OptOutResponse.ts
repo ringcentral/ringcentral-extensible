@@ -1,8 +1,8 @@
 /**
  * Opt-out record
- */
+*/
 interface OptOutResponse {
-  /**
+    /**
    * Phone number in [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I) format from which the recipient has opted out
    * Example: +15551234567
    */
@@ -17,12 +17,12 @@ interface OptOutResponse {
   /**
    * Status of a phone number
    */
-  status?: "OptIn" | "OptOut";
+  status?: ('OptIn' | 'OptOut');
 
   /**
    * The source of the opt-out record
    */
-  source?: "Recipient" | "Account" | "Upstream" | "Carrier";
+  source?: ('Recipient' | 'Account' | 'Upstream' | 'Carrier');
 }
 
 export default OptOutResponse;

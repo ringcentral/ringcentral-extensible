@@ -1,14 +1,14 @@
 interface BaseTokenRequest {
-  /**
+    /**
    * The list of application permissions (OAuth scopes) requested.
-   *  By default, it includes all permissions configured on
-   *  the client application registration
+ *  By default, it includes all permissions configured on
+ *  the client application registration
    */
   scope?: string;
 
   /**
    * The unique identifier of a client application instance. If not
-   *  specified, the derived or auto-generated value will be used
+ *  specified, the derived or auto-generated value will be used
    */
   endpoint_id?: string;
 

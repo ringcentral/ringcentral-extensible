@@ -3,12 +3,13 @@ import PublicIpRangeInfo from "./PublicIpRangeInfo.js";
 import PrivateIpRangeInfoRequest from "./PrivateIpRangeInfoRequest.js";
 
 interface CreateNetworkRequest {
-  /**
+    /**
    * Required
    */
   name?: string;
 
-  /** */
+  /**
+   */
   site?: AutomaticLocationUpdatesSiteInfo;
 
   /**

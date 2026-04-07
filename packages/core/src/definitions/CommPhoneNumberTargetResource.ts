@@ -1,7 +1,7 @@
 import CommPhoneNumberResource from "./CommPhoneNumberResource.js";
 
 interface CommPhoneNumberTargetResource {
-  /**
+    /**
    * Required
    */
   destination?: CommPhoneNumberResource;
@@ -10,7 +10,7 @@ interface CommPhoneNumberTargetResource {
    * Ring target type
    * Example: PhoneNumberRingTarget
    */
-  type?: "PhoneNumberRingTarget";
+  type?: ('PhoneNumberRingTarget');
 }
 
 export default CommPhoneNumberTargetResource;

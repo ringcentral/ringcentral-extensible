@@ -1,8 +1,8 @@
 /**
  * Result breakdown by call result
- */
+*/
 interface CallsByResultBreakdown {
-  /**
+    /**
    * Value for Completed result
    * Required
    * Format: double

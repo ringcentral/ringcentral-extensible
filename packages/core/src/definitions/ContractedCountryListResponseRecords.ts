@@ -1,5 +1,5 @@
 interface ContractedCountryListResponseRecords {
-  /**
+    /**
    * Internal identifier of a country
    */
   id?: string;

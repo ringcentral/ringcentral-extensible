@@ -1,16 +1,16 @@
-import CommStateScheduleResource from "./CommStateScheduleResource.js";
+import CommStateScheduleRequest from "./CommStateScheduleRequest.js";
 
 interface CommStateScheduleConditionRequest {
-  /**
-   * Ring target type
+    /**
+   * State condition type
    * Required
    */
-  type?: "Schedule" | "State";
+  type?: ('Schedule' | 'State');
 
   /**
    * Required
    */
-  schedule?: CommStateScheduleResource;
+  schedule?: CommStateScheduleRequest;
 }
 
 export default CommStateScheduleConditionRequest;

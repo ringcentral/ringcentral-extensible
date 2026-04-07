@@ -1,5 +1,5 @@
 interface AccountHistoryRecordDetailsParameters {
-  /**
+    /**
    * Required
    * Example: settingName
    */

@@ -1,7 +1,7 @@
 import CreateForwardingNumberDeviceInfo from "./CreateForwardingNumberDeviceInfo.js";
 
 interface CreateForwardingNumberRequest {
-  /**
+    /**
    * Internal identifier of a forwarding/call flip phone number
    */
   id?: string;
@@ -26,9 +26,10 @@ interface CreateForwardingNumberRequest {
    * Forwarding/call flip phone type. If specified, 'label' attribute value is ignored
    * Default: Other
    */
-  type?: "PhoneLine" | "Home" | "Mobile" | "Work" | "Other";
+  type?: ('PhoneLine' | 'Home' | 'Mobile' | 'Work' | 'Other');
 
-  /** */
+  /**
+   */
   device?: CreateForwardingNumberDeviceInfo;
 }
 

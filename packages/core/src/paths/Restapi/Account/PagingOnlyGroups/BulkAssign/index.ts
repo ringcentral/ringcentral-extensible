@@ -1,14 +1,10 @@
 import EditPagingGroupRequest from "../../../../../definitions/EditPagingGroupRequest.js";
-import {
-  ParentInterface,
-  RestRequestConfig,
-  RingCentralInterface,
-} from "../../../../../types.js";
+import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types.js';
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
-
+  
   public constructor(_parent: ParentInterface) {
     this._parent = _parent;
     this.rc = _parent.rc;
@@ -18,23 +14,15 @@ class Index {
   }
   /**
    * Adds and/or removes paging group users and devices.
-   *
+ * 
    * HTTP Method: post
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/paging-only-groups/{pagingOnlyGroupId}/bulk-assign
    * Rate Limit Group: Heavy
    * App Permission: EditAccounts
    * User Permission: Groups
    */
-  public async post(
-    editPagingGroupRequest: EditPagingGroupRequest,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<string> {
-    const r = await this.rc.post<string>(
-      this.path(),
-      editPagingGroupRequest,
-      undefined,
-      restRequestConfig,
-    );
+  public async post(editPagingGroupRequest: EditPagingGroupRequest, restRequestConfig?: RestRequestConfig): Promise<string> {
+    const r = await this.rc.post<string>(this.path(), editPagingGroupRequest, undefined, restRequestConfig);
     return r.data;
   }
 }

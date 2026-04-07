@@ -1,5 +1,5 @@
 interface TMCreateTeamRequestMembers {
-  /**
+    /**
    * Internal identifier of a person
    */
   id?: string;

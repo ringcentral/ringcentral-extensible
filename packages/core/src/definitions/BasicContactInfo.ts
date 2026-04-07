@@ -1,8 +1,8 @@
 /**
  * Personal contact information
- */
+*/
 interface BasicContactInfo {
-  /**
+    /**
    * Given name
    * Example: John
    */

@@ -1,8 +1,8 @@
 /**
  * Emergency response location information
- */
+*/
 interface EmergencyLocationInfo {
-  /**
+    /**
    * Internal identifier of an emergency response location
    * Required
    */
@@ -14,9 +14,14 @@ interface EmergencyLocationInfo {
   name?: string;
 
   /**
-   * Address format ID
+   * Address format identifier
    */
   addressFormatId?: string;
+
+  /**
+   * Emergency address status. Only supported for extension-level (personal) endpoints
+   */
+  addressStatus?: ('Valid' | 'Invalid' | 'Provisioning' | 'Deprovisioned');
 }
 
 export default EmergencyLocationInfo;

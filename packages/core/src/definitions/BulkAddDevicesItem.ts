@@ -3,7 +3,7 @@ import BulkAddDevicesItemEmergency from "./BulkAddDevicesItemEmergency.js";
 import BulkAddDevicesItemPhoneInfo from "./BulkAddDevicesItemPhoneInfo.js";
 
 interface BulkAddDevicesItem {
-  /**
+    /**
    * Internal identifier of a cost center
    * Example: 224149
    */
@@ -18,19 +18,23 @@ interface BulkAddDevicesItem {
    * Device type. Only "OtherPhone" and "WebRTC" device types are supported at the moment
    * Required
    */
-  type?: "OtherPhone" | "WebRTC";
+  type?: ('OtherPhone' | 'WebRTC');
 
   /**
-   * Only "address" is supported at the moment
    * Required
    */
   emergency?: BulkAddDevicesItemEmergency;
 
   /**
-   * To be used to assign a number by ID
+   * Assign a specific phone number
    * Required
    */
   phoneInfo?: BulkAddDevicesItemPhoneInfo;
+
+  /**
+   * The option that indicates whether Contact Center Phone Line should be created or not
+   */
+  contactCenterPhoneLine?: boolean;
 }
 
 export default BulkAddDevicesItem;

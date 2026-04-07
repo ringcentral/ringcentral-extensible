@@ -1,18 +1,14 @@
-import Complete from "./Complete/index.js";
+import Complete from './Complete/index.js';
 import TMTaskList from "../../../../definitions/TMTaskList.js";
 import TMUpdateTaskRequest from "../../../../definitions/TMUpdateTaskRequest.js";
 import TMTaskInfo from "../../../../definitions/TMTaskInfo.js";
-import {
-  ParentInterface,
-  RestRequestConfig,
-  RingCentralInterface,
-} from "../../../../types.js";
+import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types.js';
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
   public taskId: string | null;
-
+  
   public constructor(_parent: ParentInterface, taskId: string | null = null) {
     this._parent = _parent;
     this.rc = _parent.rc;
@@ -20,7 +16,7 @@ class Index {
   }
   public path(withParameter = true): string {
     if (withParameter && this.taskId !== null) {
-      return `${this._parent.path()}/tasks/${this.taskId}`;
+        return `${this._parent.path()}/tasks/${this.taskId}`;
     }
     return `${this._parent.path()}/tasks`;
   }
@@ -32,14 +28,11 @@ class Index {
    * App Permission: TeamMessaging
    */
   public async get(restRequestConfig?: RestRequestConfig): Promise<TMTaskInfo> {
-    if (this.taskId === null) {
-      throw new Error("taskId must be specified.");
+    if (this.taskId === null)
+    {
+        throw new Error('taskId must be specified.');
     }
-    const r = await this.rc.get<TMTaskInfo>(
-      this.path(),
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.get<TMTaskInfo>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 
@@ -51,15 +44,11 @@ class Index {
    * App Permission: TeamMessaging
    */
   public async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
-    if (this.taskId === null) {
-      throw new Error("taskId must be specified.");
+    if (this.taskId === null)
+    {
+        throw new Error('taskId must be specified.');
     }
-    const r = await this.rc.delete<string>(
-      this.path(),
-      {},
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.delete<string>(this.path(), {}, undefined, restRequestConfig);
     return r.data;
   }
 
@@ -70,19 +59,12 @@ class Index {
    * Rate Limit Group: Medium
    * App Permission: TeamMessaging
    */
-  public async patch(
-    tMUpdateTaskRequest: TMUpdateTaskRequest,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<TMTaskList> {
-    if (this.taskId === null) {
-      throw new Error("taskId must be specified.");
+  public async patch(tMUpdateTaskRequest: TMUpdateTaskRequest, restRequestConfig?: RestRequestConfig): Promise<TMTaskList> {
+    if (this.taskId === null)
+    {
+        throw new Error('taskId must be specified.');
     }
-    const r = await this.rc.patch<TMTaskList>(
-      this.path(),
-      tMUpdateTaskRequest,
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.patch<TMTaskList>(this.path(), tMUpdateTaskRequest, undefined, restRequestConfig);
     return r.data;
   }
 

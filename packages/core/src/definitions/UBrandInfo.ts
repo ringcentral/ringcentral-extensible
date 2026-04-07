@@ -1,8 +1,8 @@
 /**
  * Account sub-brand information
- */
+*/
 interface UBrandInfo {
-  /**
+    /**
    * Sub-brand unique ID
    * Example: 111.222
    */

@@ -1,5 +1,5 @@
 interface ExtensionGreetingLanguageInfoRequest {
-  /**
+    /**
    * Internal identifier of a greeting language
    */
   id?: string;

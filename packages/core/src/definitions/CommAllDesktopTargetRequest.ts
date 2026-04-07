@@ -2,15 +2,16 @@ import CommReferencedExtensionResource from "./CommReferencedExtensionResource.j
 
 /**
  * All Desktop Ring target
- */
+*/
 interface CommAllDesktopTargetRequest {
-  /** */
+    /**
+   */
   extension?: CommReferencedExtensionResource;
 
   /**
    * Example: AllDesktopRingTarget
    */
-  type?: "AllDesktopRingTarget";
+  type?: ('AllDesktopRingTarget');
 }
 
 export default CommAllDesktopTargetRequest;

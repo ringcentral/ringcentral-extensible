@@ -1,5 +1,5 @@
 interface CallRecording {
-  /**
+    /**
    * Internal identifier of a call recording
    */
   id?: string;

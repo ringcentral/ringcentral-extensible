@@ -1,8 +1,8 @@
 /**
  * Recipient data
- */
+*/
 interface RecipientInfo {
-  /**
+    /**
    * Link to a voicemail recipient extension resource
    * Format: uri
    */

@@ -3,7 +3,7 @@ import PageNavigationModel from "./PageNavigationModel.js";
 import EnumeratedPagingModel from "./EnumeratedPagingModel.js";
 
 interface PagingOnlyGroupDevices {
-  /**
+    /**
    * Link to a list of devices assigned to the paging only group
    * Format: uri
    */
@@ -14,10 +14,12 @@ interface PagingOnlyGroupDevices {
    */
   records?: PagingDeviceInfo[];
 
-  /** */
+  /**
+   */
   navigation?: PageNavigationModel;
 
-  /** */
+  /**
+   */
   paging?: EnumeratedPagingModel;
 }
 

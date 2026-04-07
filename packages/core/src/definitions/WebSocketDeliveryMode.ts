@@ -1,9 +1,9 @@
 interface WebSocketDeliveryMode {
-  /**
+    /**
    * The transport type for this subscription
    * Required
    */
-  transportType?: "WebSocket";
+  transportType?: ('WebSocket');
 }
 
 export default WebSocketDeliveryMode;

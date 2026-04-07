@@ -1,8 +1,8 @@
-import CommonEmergencyLocationAddressInfo from "./CommonEmergencyLocationAddressInfo.js";
+import EmergencyAddressResourceRequest from "./EmergencyAddressResourceRequest.js";
 import SiteBasicInfo from "./SiteBasicInfo.js";
 
 interface CreateUserEmergencyLocationRequest {
-  /**
+    /**
    * Name of a new personal emergency response location
    */
   name?: string;
@@ -14,14 +14,16 @@ interface CreateUserEmergencyLocationRequest {
 
   /**
    * Specifies emergency address validation during the ERL creation/update.
-   *  If set to 'true', then address validation for non-US addresses is skipped
+ *  If set to 'true', then address validation for non-US addresses is skipped
    */
   trusted?: boolean;
 
-  /** */
-  address?: CommonEmergencyLocationAddressInfo;
+  /**
+   */
+  address?: EmergencyAddressResourceRequest;
 
-  /** */
+  /**
+   */
   site?: SiteBasicInfo;
 }
 

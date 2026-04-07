@@ -1,7 +1,8 @@
 import CommIntegrationRequest from "./CommIntegrationRequest.js";
 
 interface CommIntegrationForwardingTargetRequest {
-  /** */
+    /**
+   */
   name?: string;
 
   /**
@@ -9,13 +10,7 @@ interface CommIntegrationForwardingTargetRequest {
    * Required
    * Example: IntegrationRingTarget
    */
-  type?:
-    | "CoworkerAppsRingTarget"
-    | "CoworkerRingTarget"
-    | "DeviceRingTarget"
-    | "ImsPhoneNumberRingTarget"
-    | "IntegrationRingTarget"
-    | "PhoneNumberRingTarget";
+  type?: ('CoworkerAppsRingTarget' | 'CoworkerRingTarget' | 'DeviceRingTarget' | 'ImsPhoneNumberRingTarget' | 'IntegrationRingTarget' | 'PhoneNumberRingTarget');
 
   /**
    * Required

@@ -1,5 +1,5 @@
 interface TMAttachmentInfo {
-  /**
+    /**
    * Internal identifier of an attachment
    */
   id?: string;
@@ -7,7 +7,7 @@ interface TMAttachmentInfo {
   /**
    * Type of an attachment
    */
-  type?: "File" | "Note" | "Event" | "Card";
+  type?: ('File' | 'Note' | 'Event' | 'Card');
 }
 
 export default TMAttachmentInfo;

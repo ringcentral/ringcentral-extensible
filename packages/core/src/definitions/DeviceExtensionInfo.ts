@@ -1,5 +1,5 @@
 interface DeviceExtensionInfo {
-  /**
+    /**
    * Internal identifier of an extension
    * Format: int64
    */

@@ -1,8 +1,8 @@
 /**
  * Billing package information
- */
+*/
 interface ServiceInfoPackage {
-  /**
+    /**
    * Billing package ID
    * Required
    * Example: 555

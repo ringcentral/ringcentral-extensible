@@ -1,7 +1,7 @@
 import OptOutBulkAssignFailedEntry from "./OptOutBulkAssignFailedEntry.js";
 
 interface OptOutBulkAssignResponseOptOuts {
-  /**
+    /**
    * Recipients' phone numbers which opt-outs were successfully added for.
    * Example: +15551237755
    */

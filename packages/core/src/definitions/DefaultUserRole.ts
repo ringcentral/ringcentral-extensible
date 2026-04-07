@@ -1,5 +1,5 @@
 interface DefaultUserRole {
-  /**
+    /**
    * Link to a default role resource
    * Format: uri
    */

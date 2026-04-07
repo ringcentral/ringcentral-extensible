@@ -1,12 +1,12 @@
 import CommInteractionRuleScheduleResource from "./CommInteractionRuleScheduleResource.js";
 
 interface CommInteractionRuleScheduleConditionRequest {
-  /**
-   * Ring target type
+    /**
+   * Interaction condition type resource
    * Required
    * Example: Schedule
    */
-  type?: "Interaction" | "Schedule" | "State";
+  type?: ('Interaction' | 'Schedule' | 'State');
 
   /**
    * Required

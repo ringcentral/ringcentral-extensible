@@ -1,5 +1,5 @@
 interface TMAttachmentAuthorInfo {
-  /**
+    /**
    * Name of a message author
    */
   name?: string;

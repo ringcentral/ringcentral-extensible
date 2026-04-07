@@ -1,8 +1,9 @@
-import UpdateSwitchInfo from "./UpdateSwitchInfo.js";
+import SwitchInfo from "./SwitchInfo.js";
 
 interface UpdateMultipleSwitchesRequest {
-  /** */
-  records?: UpdateSwitchInfo[];
+    /**
+   */
+  records?: SwitchInfo[];
 }
 
 export default UpdateMultipleSwitchesRequest;

@@ -1,12 +1,13 @@
 import BridgeResponseSecurityPassword from "./BridgeResponseSecurityPassword.js";
 
 interface BridgeResponseSecurity {
-  /**
+    /**
    * Specifies if a meeting is password protected.
    */
   passwordProtected?: boolean;
 
-  /** */
+  /**
+   */
   password?: BridgeResponseSecurityPassword;
 
   /**

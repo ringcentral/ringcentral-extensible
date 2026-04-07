@@ -1,9 +1,9 @@
 import EmergencyAddressAutoUpdateSiteInfo from "./EmergencyAddressAutoUpdateSiteInfo.js";
 import EmergencyAddressInfo from "./EmergencyAddressInfo.js";
-import ERLLocationInfo from "./ERLLocationInfo.js";
+import EmergencyLocationInfo from "./EmergencyLocationInfo.js";
 
 interface WirelessPointInfo {
-  /**
+    /**
    * Link to the wireless point resource
    * Format: uri
    */
@@ -26,7 +26,8 @@ interface WirelessPointInfo {
    */
   name?: string;
 
-  /** */
+  /**
+   */
   site?: EmergencyAddressAutoUpdateSiteInfo;
 
   /**
@@ -34,11 +35,14 @@ interface WirelessPointInfo {
    */
   emergencyAddress?: EmergencyAddressInfo;
 
-  /** */
-  emergencyLocation?: ERLLocationInfo;
+  /**
+   */
+  emergencyLocation?: EmergencyLocationInfo;
 
   /**
-   * Deprecated. Emergency response location (address) internal identifier. Only one of a pair `emergencyAddress` or `emergencyLocationId` should be specified, otherwise the error is returned
+   * Emergency response location (address) internal identifier. 
+ *  Only one of a pair `emergencyAddress` or `emergencyLocationId`
+ *  can be specified, otherwise the error is returned
    */
   emergencyLocationId?: string;
 }

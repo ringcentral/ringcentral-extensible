@@ -2,9 +2,9 @@ import AddonInfo from "./AddonInfo.js";
 
 /**
  * HardPhone model information
- */
+*/
 interface ModelInfo {
-  /**
+    /**
    * Internal identifier of a HardPhone device model
    */
   id?: string;
@@ -19,13 +19,14 @@ interface ModelInfo {
    */
   addons?: AddonInfo[];
 
-  /** */
+  /**
+   */
   deviceClass?: string;
 
   /**
    * Device feature or multiple features supported
    */
-  features?: ("BLA" | "CommonPhone" | "Intercom" | "Paging" | "HELD")[];
+  features?: ('BLA' | 'CommonPhone' | 'Intercom' | 'Paging' | 'HELD')[];
 
   /**
    * Max supported count of phone lines

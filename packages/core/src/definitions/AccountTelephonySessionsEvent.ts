@@ -1,7 +1,7 @@
 import TelephonySessionsEventBody from "./TelephonySessionsEventBody.js";
 
 interface AccountTelephonySessionsEvent {
-  /**
+    /**
    * Universally unique identifier of a notification
    */
   uuid?: string;
@@ -26,7 +26,8 @@ interface AccountTelephonySessionsEvent {
    */
   ownerId?: string;
 
-  /** */
+  /**
+   */
   body?: TelephonySessionsEventBody;
 }
 

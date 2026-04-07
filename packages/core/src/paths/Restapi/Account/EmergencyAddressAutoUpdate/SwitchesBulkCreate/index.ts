@@ -1,15 +1,11 @@
 import CreateMultipleSwitchesResponse from "../../../../../definitions/CreateMultipleSwitchesResponse.js";
 import CreateMultipleSwitchesRequest from "../../../../../definitions/CreateMultipleSwitchesRequest.js";
-import {
-  ParentInterface,
-  RestRequestConfig,
-  RingCentralInterface,
-} from "../../../../../types.js";
+import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types.js';
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
-
+  
   public constructor(_parent: ParentInterface) {
     this._parent = _parent;
     this.rc = _parent.rc;
@@ -19,24 +15,16 @@ class Index {
   }
   /**
    * Creates multiple switches in corporate map. The maximum number
-   * of switches per request is 10 000; limitation for account is 10 000.
-   *
+ * of switches per request is 10 000; limitation for account is 10 000.
+ * 
    * HTTP Method: post
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/switches-bulk-create
    * Rate Limit Group: Heavy
    * App Permission: EditAccounts
    * User Permission: ConfigureEmergencyMaps
    */
-  public async post(
-    createMultipleSwitchesRequest: CreateMultipleSwitchesRequest,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<CreateMultipleSwitchesResponse> {
-    const r = await this.rc.post<CreateMultipleSwitchesResponse>(
-      this.path(),
-      createMultipleSwitchesRequest,
-      undefined,
-      restRequestConfig,
-    );
+  public async post(createMultipleSwitchesRequest: CreateMultipleSwitchesRequest, restRequestConfig?: RestRequestConfig): Promise<CreateMultipleSwitchesResponse> {
+    const r = await this.rc.post<CreateMultipleSwitchesResponse>(this.path(), createMultipleSwitchesRequest, undefined, restRequestConfig);
     return r.data;
   }
 }

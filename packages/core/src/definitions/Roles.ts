@@ -1,5 +1,5 @@
 interface Roles {
-  /**
+    /**
    * Link to a role
    * Format: uri
    */
@@ -10,16 +10,20 @@ interface Roles {
    */
   id?: string;
 
-  /** */
+  /**
+   */
   autoAssigned?: boolean;
 
-  /** */
+  /**
+   */
   displayName?: string;
 
-  /** */
+  /**
+   */
   siteCompatible?: boolean;
 
-  /** */
+  /**
+   */
   siteRestricted?: boolean;
 }
 

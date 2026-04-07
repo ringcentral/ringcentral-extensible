@@ -2,7 +2,7 @@ import CustomGreetingAnsweringRuleInfo from "./CustomGreetingAnsweringRuleInfo.j
 import CustomCompanyGreetingLanguageInfo from "./CustomCompanyGreetingLanguageInfo.js";
 
 interface CustomCompanyGreetingInfo {
-  /**
+    /**
    * Link to an extension custom greeting
    * Format: uri
    */
@@ -16,17 +16,12 @@ interface CustomCompanyGreetingInfo {
   /**
    * Type of a company greeting
    */
-  type?:
-    | "Company"
-    | "StartRecording"
-    | "StopRecording"
-    | "AutomaticRecording"
-    | "TemplateGreeting";
+  type?: ('Company' | 'StartRecording' | 'StopRecording' | 'AutomaticRecording' | 'TemplateGreeting');
 
   /**
    * Content media type
    */
-  contentType?: "audio/mpeg" | "audio/wav";
+  contentType?: ('audio/mpeg' | 'audio/wav');
 
   /**
    * Link to a greeting content (audio file)
@@ -34,10 +29,12 @@ interface CustomCompanyGreetingInfo {
    */
   contentUri?: string;
 
-  /** */
+  /**
+   */
   answeringRule?: CustomGreetingAnsweringRuleInfo;
 
-  /** */
+  /**
+   */
   language?: CustomCompanyGreetingLanguageInfo;
 }
 

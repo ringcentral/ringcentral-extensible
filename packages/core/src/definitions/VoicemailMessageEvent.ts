@@ -1,7 +1,7 @@
 import VoicemailMessageEventBody from "./VoicemailMessageEventBody.js";
 
 interface VoicemailMessageEvent {
-  /**
+    /**
    * Universally unique identifier of a notification
    */
   uuid?: string;
@@ -26,7 +26,8 @@ interface VoicemailMessageEvent {
    */
   ownerId?: string;
 
-  /** */
+  /**
+   */
   body?: VoicemailMessageEventBody;
 }
 

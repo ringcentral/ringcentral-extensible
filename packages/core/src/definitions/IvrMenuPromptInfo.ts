@@ -3,14 +3,15 @@ import PromptLanguageInfo from "./PromptLanguageInfo.js";
 
 /**
  * Prompt metadata
- */
+*/
 interface IvrMenuPromptInfo {
-  /**
+    /**
    * Prompt mode: custom media or text
    */
-  mode?: "Audio" | "TextToSpeech";
+  mode?: ('Audio' | 'TextToSpeech');
 
-  /** */
+  /**
+   */
   audio?: AudioPromptInfo;
 
   /**
@@ -18,7 +19,8 @@ interface IvrMenuPromptInfo {
    */
   text?: string;
 
-  /** */
+  /**
+   */
   language?: PromptLanguageInfo;
 }
 

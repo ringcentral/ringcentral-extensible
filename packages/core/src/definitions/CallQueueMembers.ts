@@ -3,7 +3,7 @@ import PageNavigationModel from "./PageNavigationModel.js";
 import EnumeratedPagingModel from "./EnumeratedPagingModel.js";
 
 interface CallQueueMembers {
-  /**
+    /**
    * Link to a call queue members resource
    * Required
    * Format: uri

@@ -3,9 +3,9 @@ import NonEnumeratedPagingModel from "./NonEnumeratedPagingModel.js";
 
 /**
  * A list of SMS consent records
- */
+*/
 interface OptRecordList {
-  /**
+    /**
    * Required
    */
   records?: SmsOptRecord[];

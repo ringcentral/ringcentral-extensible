@@ -1,5 +1,5 @@
 interface RcwImmutableResourceIdModel {
-  /**
+    /**
    * Internal object ID
    * Example: 78654321
    */

@@ -1,5 +1,5 @@
 interface User {
-  /**
+    /**
    * User account identifier
    * Required
    * Example: 664287016

@@ -1,8 +1,8 @@
 /**
  * Message status parameters
- */
+*/
 interface MessageStatusCounts {
-  /**
+    /**
    * Total cost of all messages with this status code
    * Format: float
    */

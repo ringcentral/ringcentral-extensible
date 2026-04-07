@@ -1,7 +1,7 @@
 import SiteBasicInfo from "./SiteBasicInfo.js";
 
 interface CallQueueInfo {
-  /**
+    /**
    * Link to a call queue
    * Format: uri
    */
@@ -25,14 +25,15 @@ interface CallQueueInfo {
   /**
    * Group extension status
    */
-  status?: "Enabled" | "Disabled" | "NotActivated" | "Unassigned";
+  status?: ('Enabled' | 'Disabled' | 'NotActivated' | 'Unassigned');
 
   /**
    * Indicates whether it is an emergency call queue extension or not
    */
-  subType?: "Emergency" | "Unknown";
+  subType?: ('Emergency' | 'Unknown');
 
-  /** */
+  /**
+   */
   site?: SiteBasicInfo;
 }
 

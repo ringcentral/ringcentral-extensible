@@ -1,8 +1,8 @@
 /**
  * One utterance of a call. Each utterance is a speakerId, text, start and end time
- */
+*/
 interface TranscriptInsightUnit {
-  /**
+    /**
    * Participant ID
    * Required
    * Example: p-32423

@@ -1,5 +1,5 @@
 interface AutomaticRecordingResource {
-  /**
+    /**
    * Flag for controlling Automatic Call Recording settings
    */
   enabled?: boolean;

@@ -1,9 +1,9 @@
 import IvrMenuSiteInfo from "./IvrMenuSiteInfo.js";
 import IvrMenuPromptInfo from "./IvrMenuPromptInfo.js";
-import IVRMenuActionsInfo from "./IVRMenuActionsInfo.js";
+import IvrMenuActionsInfo from "./IvrMenuActionsInfo.js";
 
-interface IVRMenuInfo {
-  /**
+interface IvrMenuInfo {
+    /**
    * Internal identifier of an IVR Menu extension
    */
   id?: string;
@@ -24,16 +24,18 @@ interface IVRMenuInfo {
    */
   extensionNumber?: string;
 
-  /** */
+  /**
+   */
   site?: IvrMenuSiteInfo;
 
-  /** */
+  /**
+   */
   prompt?: IvrMenuPromptInfo;
 
   /**
    * Keys handling settings
    */
-  actions?: IVRMenuActionsInfo[];
+  actions?: IvrMenuActionsInfo[];
 }
 
-export default IVRMenuInfo;
+export default IvrMenuInfo;

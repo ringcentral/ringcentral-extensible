@@ -1,5 +1,5 @@
 interface CreateAnsweringRuleForwardingNumberInfo {
-  /**
+    /**
    * Internal identifier of a forwarding number
    */
   id?: string;
@@ -23,16 +23,7 @@ interface CreateAnsweringRuleForwardingNumberInfo {
   /**
    * Type of forwarding number
    */
-  type?:
-    | "Home"
-    | "Mobile"
-    | "Work"
-    | "PhoneLine"
-    | "Outage"
-    | "Other"
-    | "BusinessMobilePhone"
-    | "ExternalCarrier"
-    | "ExtensionApps";
+  type?: ('Home' | 'Mobile' | 'Work' | 'PhoneLine' | 'Outage' | 'Other' | 'BusinessMobilePhone' | 'ExternalCarrier' | 'ExtensionApps');
 }
 
 export default CreateAnsweringRuleForwardingNumberInfo;

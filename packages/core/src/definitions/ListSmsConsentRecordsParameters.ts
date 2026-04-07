@@ -1,16 +1,16 @@
 /**
  * Query parameters for operation listSmsConsentRecords
- */
+*/
 interface ListSmsConsentRecordsParameters {
-  /**
+    /**
    * The token indicating the particular page of the result set to be retrieved.
-   *  If omitted the first page will be returned.
+ *  If omitted the first page will be returned.
    */
   pageToken?: string;
 
   /**
-   * The number of items per page. If provided value in the request
-   *  is greater than a maximum, the maximum value is applied
+   * The number of items per page. If the provided value in the request
+ *  is greater than a maximum, the maximum value is applied
    * Maximum: 1000
    * Minimum: 1
    * Format: int32
@@ -33,7 +33,17 @@ interface ListSmsConsentRecordsParameters {
    * The opt-out/opt-in status to filter records by. If omitted, `OptOut` records are returned
    * Default: OptOut
    */
-  optStatus?: ("OptOut" | "OptIn")[];
+  optStatus?: ('OptOut' | 'OptIn')[];
+
+  /**
+   * The coverage (scope) to filter records by
+   */
+  coverage?: ('PhoneNumber' | 'Account' | 'CampaignType')[];
+
+  /**
+   * The campaign type to filter records by
+   */
+  campaignType?: ('Conversational' | 'Informational' | 'Promotional')[];
 }
 
 export default ListSmsConsentRecordsParameters;

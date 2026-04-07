@@ -1,8 +1,8 @@
 interface ScimPhoto {
-  /**
+    /**
    * Required
    */
-  type?: "photo";
+  type?: ('photo');
 
   /**
    * Required

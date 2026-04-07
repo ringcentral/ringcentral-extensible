@@ -5,7 +5,7 @@ import CompanyAnsweringRuleExtensionInfoRequest from "./CompanyAnsweringRuleExte
 import GreetingInfo from "./GreetingInfo.js";
 
 interface CompanyAnsweringRuleRequest {
-  /**
+    /**
    * Name of an answering rule specified by user. Max number of symbols is 30. The default value is 'My Rule N' where 'N' is the first free number
    */
   name?: string;
@@ -20,7 +20,7 @@ interface CompanyAnsweringRuleRequest {
    * Type of an answering rule
    * Default: Custom
    */
-  type?: "BusinessHours" | "AfterHours" | "Custom";
+  type?: ('BusinessHours' | 'AfterHours' | 'Custom');
 
   /**
    * Answering rule will be applied when calls are received from the specified caller(s)
@@ -32,15 +32,17 @@ interface CompanyAnsweringRuleRequest {
    */
   calledNumbers?: CompanyAnsweringRuleCalledNumberInfo[];
 
-  /** */
+  /**
+   */
   schedule?: CompanyAnsweringRuleScheduleInfoRequest;
 
   /**
    * Specifies how incoming calls are forwarded. The default value is 'Operator' 'Operator' - play company greeting and forward to operator extension 'Disconnect' - play company greeting and disconnect 'Bypass' - bypass greeting to go to selected extension = ['Operator', 'Disconnect', 'Bypass']
    */
-  callHandlingAction?: "Operator" | "Disconnect" | "Bypass";
+  callHandlingAction?: ('Operator' | 'Disconnect' | 'Bypass');
 
-  /** */
+  /**
+   */
   extension?: CompanyAnsweringRuleExtensionInfoRequest;
 
   /**

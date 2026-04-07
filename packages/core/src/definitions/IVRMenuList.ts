@@ -1,7 +1,7 @@
-import IVRMenuListInfo from "./IVRMenuListInfo.js";
+import IvrMenuListInfo from "./IvrMenuListInfo.js";
 
-interface IVRMenuList {
-  /**
+interface IvrMenuList {
+    /**
    * Link to an IVR Menu list
    * Format: uri
    */
@@ -10,7 +10,7 @@ interface IVRMenuList {
   /**
    * List of ivr menus
    */
-  records?: IVRMenuListInfo[];
+  records?: IvrMenuListInfo[];
 }
 
-export default IVRMenuList;
+export default IvrMenuList;

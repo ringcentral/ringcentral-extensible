@@ -1,7 +1,7 @@
 import ExtensionPresenceEventBody from "./ExtensionPresenceEventBody.js";
 
 interface ExtensionPresenceEvent {
-  /**
+    /**
    * Universally unique identifier of a notification
    */
   uuid?: string;
@@ -22,7 +22,8 @@ interface ExtensionPresenceEvent {
    */
   subscriptionId?: string;
 
-  /** */
+  /**
+   */
   body?: ExtensionPresenceEventBody;
 }
 

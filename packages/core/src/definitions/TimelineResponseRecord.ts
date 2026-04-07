@@ -2,13 +2,14 @@ import KeyInfo from "./KeyInfo.js";
 import TimelineResponsePoint from "./TimelineResponsePoint.js";
 
 interface TimelineResponseRecord {
-  /**
+    /**
    * Grouping key
    * Required
    */
   key?: string;
 
-  /** */
+  /**
+   */
   info?: KeyInfo;
 
   /**

@@ -1,5 +1,5 @@
 interface WebinarTitleModel {
-  /**
+    /**
    * Webinar title
    * Required
    * Example: All-Hands Webinar

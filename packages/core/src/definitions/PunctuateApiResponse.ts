@@ -1,5 +1,5 @@
 interface PunctuateApiResponse {
-  /**
+    /**
    * Required
    */
   texts?: string[];

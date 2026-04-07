@@ -1,8 +1,8 @@
 /**
  * Alert information
- */
+*/
 interface AlertInfo {
-  /**
+    /**
    * Title of a message
    */
   title?: string;

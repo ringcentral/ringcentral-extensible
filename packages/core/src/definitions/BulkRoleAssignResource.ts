@@ -1,10 +1,11 @@
 interface BulkRoleAssignResource {
-  /**
+    /**
    * Example: true
    */
   siteRestricted?: boolean;
 
-  /** */
+  /**
+   */
   siteCompatible?: boolean;
 
   /**
@@ -12,10 +13,12 @@ interface BulkRoleAssignResource {
    */
   uri?: string;
 
-  /** */
+  /**
+   */
   addedExtensionIds?: string[];
 
-  /** */
+  /**
+   */
   removedExtensionIds?: string[];
 }
 

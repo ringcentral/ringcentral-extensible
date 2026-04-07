@@ -1,10 +1,10 @@
 interface SuperviseCallSessionRequest {
-  /**
+    /**
    * Supervising mode
    * Required
    * Example: Listen
    */
-  mode?: "Listen";
+  mode?: ('Listen');
 
   /**
    * Internal identifier of a supervisor's device which will be used for call session monitoring
@@ -22,7 +22,7 @@ interface SuperviseCallSessionRequest {
   /**
    * Specifies session description protocol setting
    */
-  mediaSDP?: "sendOnly" | "sendRecv";
+  mediaSDP?: ('sendOnly' | 'sendRecv');
 
   /**
    * Extension number of the user that will be monitored

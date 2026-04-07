@@ -1,5 +1,5 @@
 interface SiteBasicInfo {
-  /**
+    /**
    * Site extension identifier or "main-site" for the main site
    * Required
    */

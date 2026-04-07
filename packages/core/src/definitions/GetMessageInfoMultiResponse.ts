@@ -1,7 +1,7 @@
 import GetMessageInfoResponse from "./GetMessageInfoResponse.js";
 
 interface GetMessageInfoMultiResponse {
-  /**
+    /**
    * Internal identifier of a resource
    * Required
    * Example: 1724099032020

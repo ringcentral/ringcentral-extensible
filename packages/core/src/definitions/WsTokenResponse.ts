@@ -1,5 +1,5 @@
 interface WsTokenResponse {
-  /**
+    /**
    * The websocket access token to be used when connecting to the Websocket Gateway.
    * Required
    */

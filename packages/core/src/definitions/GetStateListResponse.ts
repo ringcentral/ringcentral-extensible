@@ -3,7 +3,7 @@ import PageNavigationModel from "./PageNavigationModel.js";
 import EnumeratedPagingModel from "./EnumeratedPagingModel.js";
 
 interface GetStateListResponse {
-  /**
+    /**
    * Link to a states list resource
    * Format: uri
    */
@@ -14,10 +14,12 @@ interface GetStateListResponse {
    */
   records?: GetStateInfoResponse[];
 
-  /** */
+  /**
+   */
   navigation?: PageNavigationModel;
 
-  /** */
+  /**
+   */
   paging?: EnumeratedPagingModel;
 }
 

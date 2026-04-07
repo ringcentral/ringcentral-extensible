@@ -3,7 +3,7 @@ import SipInfoResponse from "./SipInfoResponse.js";
 import SipFlagsResponse from "./SipFlagsResponse.js";
 
 interface CreateSipRegistrationResponse {
-  /**
+    /**
    * Required
    */
   device?: SipRegistrationDeviceInfo;
@@ -24,7 +24,8 @@ interface CreateSipRegistrationResponse {
    */
   sipFlags?: SipFlagsResponse;
 
-  /** */
+  /**
+   */
   sipErrorCodes?: string[];
 
   /**

@@ -1,8 +1,8 @@
 /**
  * Filtering of calls based on the time spent by specified mailbox(es) on call
- */
+*/
 interface TimeSpentFilter {
-  /**
+    /**
    * Minimum duration in seconds
    * Format: int64
    */

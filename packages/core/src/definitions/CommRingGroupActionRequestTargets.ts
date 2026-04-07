@@ -4,33 +4,30 @@ import CommPhoneNumberResource from "./CommPhoneNumberResource.js";
 import CommIntegrationRequest from "./CommIntegrationRequest.js";
 
 interface CommRingGroupActionRequestTargets {
-  /**
+    /**
    * Ring target type
    * Example: PhoneNumberRingTarget
    */
-  type?:
-    | "AllDesktopRingTarget"
-    | "AllMobileRingTarget"
-    | "CoworkerRingTarget"
-    | "DeviceRingTarget"
-    | "HotdeskRingTarget"
-    | "ImsPhoneNumberRingTarget"
-    | "IntegrationRingTarget"
-    | "PhoneNumberRingTarget";
+  type?: ('AllDesktopRingTarget' | 'AllMobileRingTarget' | 'CoworkerRingTarget' | 'DeviceRingTarget' | 'HotdeskRingTarget' | 'ImsPhoneNumberRingTarget' | 'FmcPhoneNumberRingTarget' | 'IntegrationRingTarget' | 'PhoneNumberRingTarget');
 
-  /** */
+  /**
+   */
   extension?: CommReferencedExtensionResource;
 
-  /** */
+  /**
+   */
   device?: CommDeviceRequest;
 
-  /** */
+  /**
+   */
   destination?: CommPhoneNumberResource;
 
-  /** */
+  /**
+   */
   integration?: CommIntegrationRequest;
 
-  /** */
+  /**
+   */
   name?: string;
 }
 

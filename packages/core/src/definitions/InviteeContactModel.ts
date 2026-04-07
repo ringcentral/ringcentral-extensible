@@ -1,5 +1,5 @@
 interface InviteeContactModel {
-  /**
+    /**
    * First (given) name
    * Example: John
    */

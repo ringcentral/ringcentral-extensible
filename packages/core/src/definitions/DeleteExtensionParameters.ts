@@ -1,8 +1,8 @@
 /**
  * Query parameters for operation deleteExtension
- */
+*/
 interface DeleteExtensionParameters {
-  /**
+    /**
    * If `true`, the digital lines from the deleted extension are saved in inventory.
    */
   savePhoneLines?: boolean;

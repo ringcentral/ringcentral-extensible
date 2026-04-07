@@ -1,14 +1,10 @@
 import SiteMembersBulkUpdate from "../../../../../definitions/SiteMembersBulkUpdate.js";
-import {
-  ParentInterface,
-  RestRequestConfig,
-  RingCentralInterface,
-} from "../../../../../types.js";
+import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types.js';
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
-
+  
   public constructor(_parent: ParentInterface) {
     this._parent = _parent;
     this.rc = _parent.rc;
@@ -18,23 +14,15 @@ class Index {
   }
   /**
    * Assigns multiple sites to an account specified in path.
-   *
+ * 
    * HTTP Method: post
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/sites/{siteId}/bulk-assign
    * Rate Limit Group: Medium
    * App Permission: EditExtensions
    * User Permission: Sites
    */
-  public async post(
-    siteMembersBulkUpdate: SiteMembersBulkUpdate,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<string> {
-    const r = await this.rc.post<string>(
-      this.path(),
-      siteMembersBulkUpdate,
-      undefined,
-      restRequestConfig,
-    );
+  public async post(siteMembersBulkUpdate: SiteMembersBulkUpdate, restRequestConfig?: RestRequestConfig): Promise<string> {
+    const r = await this.rc.post<string>(this.path(), siteMembersBulkUpdate, undefined, restRequestConfig);
     return r.data;
   }
 }

@@ -2,24 +2,17 @@ import CommReferencedExtensionResource from "./CommReferencedExtensionResource.j
 
 /**
  * All Mobile Ring target
- */
+*/
 interface CommAllMobileRingTargetRequest {
-  /**
+    /**
    * Ring target type
    * Required
    * Example: AllMobileRingTarget
    */
-  type?:
-    | "AllDesktopRingTarget"
-    | "AllMobileRingTarget"
-    | "CoworkerRingTarget"
-    | "DeviceRingTarget"
-    | "HotdeskRingTarget"
-    | "ImsPhoneNumberRingTarget"
-    | "IntegrationRingTarget"
-    | "PhoneNumberRingTarget";
+  type?: ('AllDesktopRingTarget' | 'AllMobileRingTarget' | 'CoworkerRingTarget' | 'DeviceRingTarget' | 'HotdeskRingTarget' | 'ImsPhoneNumberRingTarget' | 'FmcPhoneNumberRingTarget' | 'IntegrationRingTarget' | 'PhoneNumberRingTarget');
 
-  /** */
+  /**
+   */
   extension?: CommReferencedExtensionResource;
 }
 

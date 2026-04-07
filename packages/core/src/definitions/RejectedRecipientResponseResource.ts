@@ -1,8 +1,8 @@
 /**
  * The rejected recipient details
- */
+*/
 interface RejectedRecipientResponseResource {
-  /**
+    /**
    * The index of the messages list in the send batch request where the invalid recipient was found
    * Format: int64
    * Example: 1

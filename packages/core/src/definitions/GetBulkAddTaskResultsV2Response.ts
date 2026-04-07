@@ -1,7 +1,7 @@
 import AddPhoneNumbersResponseItem from "./AddPhoneNumbersResponseItem.js";
 
 interface GetBulkAddTaskResultsV2Response {
-  /**
+    /**
    * List of account phone numbers
    * Required
    */

@@ -1,7 +1,7 @@
 import WordTimingsUnit from "./WordTimingsUnit.js";
 
 interface UtteranceObject {
-  /**
+    /**
    * Required
    * Format: float
    * Example: 0.3
@@ -32,7 +32,8 @@ interface UtteranceObject {
    */
   speakerId?: string;
 
-  /** */
+  /**
+   */
   wordTimings?: WordTimingsUnit[];
 }
 

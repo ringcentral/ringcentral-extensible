@@ -1,9 +1,9 @@
-import GetPresenceInfo from "./GetPresenceInfo.js";
+import PresenceInfoResponse from "./PresenceInfoResponse.js";
 import PresenceNavigationInfo from "./PresenceNavigationInfo.js";
 import PresencePagingInfo from "./PresencePagingInfo.js";
 
 interface AccountPresenceInfo {
-  /**
+    /**
    * Canonical URI of account presence resource
    * Format: uri
    */
@@ -12,12 +12,14 @@ interface AccountPresenceInfo {
   /**
    * List of Prompts
    */
-  records?: GetPresenceInfo[];
+  records?: PresenceInfoResponse[];
 
-  /** */
+  /**
+   */
   navigation?: PresenceNavigationInfo;
 
-  /** */
+  /**
+   */
   paging?: PresencePagingInfo;
 }
 

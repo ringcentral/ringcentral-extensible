@@ -1,8 +1,8 @@
 /**
  * User interface language data
- */
+*/
 interface LanguageInfo {
-  /**
+    /**
    * Internal identifier of a language
    */
   id?: string;
@@ -15,13 +15,13 @@ interface LanguageInfo {
 
   /**
    * Indicates whether a language is available as
-   *  greeting language
+ *  greeting language
    */
   greeting?: boolean;
 
   /**
    * Indicates whether a language is available as
-   *  formatting locale
+ *  formatting locale
    */
   formattingLocale?: boolean;
 

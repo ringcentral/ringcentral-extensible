@@ -1,5 +1,5 @@
 interface RcwDomainUserModel {
-  /**
+    /**
    * User ID
    * Required
    */
@@ -16,7 +16,7 @@ interface RcwDomainUserModel {
    * Required
    * Default: pbx
    */
-  domain?: "pbx" | "ilm";
+  domain?: ('pbx' | 'ilm');
 }
 
 export default RcwDomainUserModel;

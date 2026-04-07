@@ -1,7 +1,8 @@
 import TMWebhookInfo from "./TMWebhookInfo.js";
 
 interface TMWebhookList {
-  /** */
+    /**
+   */
   records?: TMWebhookInfo[];
 }
 

@@ -2,17 +2,13 @@ import TMEventInfo from "../../../../definitions/TMEventInfo.js";
 import TMCreateEventRequest from "../../../../definitions/TMCreateEventRequest.js";
 import TMEventList from "../../../../definitions/TMEventList.js";
 import ReadGlipEventsNewParameters from "../../../../definitions/ReadGlipEventsNewParameters.js";
-import {
-  ParentInterface,
-  RestRequestConfig,
-  RingCentralInterface,
-} from "../../../../types.js";
+import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types.js';
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
   public eventId: string | null;
-
+  
   public constructor(_parent: ParentInterface, eventId: string | null = null) {
     this._parent = _parent;
     this.rc = _parent.rc;
@@ -20,7 +16,7 @@ class Index {
   }
   public path(withParameter = true): string {
     if (withParameter && this.eventId !== null) {
-      return `${this._parent.path()}/events/${this.eventId}`;
+        return `${this._parent.path()}/events/${this.eventId}`;
     }
     return `${this._parent.path()}/events`;
   }
@@ -31,15 +27,8 @@ class Index {
    * Rate Limit Group: Medium
    * App Permission: TeamMessaging
    */
-  public async list(
-    queryParams?: ReadGlipEventsNewParameters,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<TMEventList> {
-    const r = await this.rc.get<TMEventList>(
-      this.path(false),
-      queryParams,
-      restRequestConfig,
-    );
+  public async list(queryParams?: ReadGlipEventsNewParameters, restRequestConfig?: RestRequestConfig): Promise<TMEventList> {
+    const r = await this.rc.get<TMEventList>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }
 
@@ -50,16 +39,8 @@ class Index {
    * Rate Limit Group: Medium
    * App Permission: TeamMessaging
    */
-  public async post(
-    tMCreateEventRequest: TMCreateEventRequest,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<TMEventInfo> {
-    const r = await this.rc.post<TMEventInfo>(
-      this.path(false),
-      tMCreateEventRequest,
-      undefined,
-      restRequestConfig,
-    );
+  public async post(tMCreateEventRequest: TMCreateEventRequest, restRequestConfig?: RestRequestConfig): Promise<TMEventInfo> {
+    const r = await this.rc.post<TMEventInfo>(this.path(false), tMCreateEventRequest, undefined, restRequestConfig);
     return r.data;
   }
 
@@ -70,17 +51,12 @@ class Index {
    * Rate Limit Group: Medium
    * App Permission: TeamMessaging
    */
-  public async get(
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<TMEventInfo> {
-    if (this.eventId === null) {
-      throw new Error("eventId must be specified.");
+  public async get(restRequestConfig?: RestRequestConfig): Promise<TMEventInfo> {
+    if (this.eventId === null)
+    {
+        throw new Error('eventId must be specified.');
     }
-    const r = await this.rc.get<TMEventInfo>(
-      this.path(),
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.get<TMEventInfo>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 
@@ -91,19 +67,12 @@ class Index {
    * Rate Limit Group: Medium
    * App Permission: TeamMessaging
    */
-  public async put(
-    tMCreateEventRequest: TMCreateEventRequest,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<TMEventInfo> {
-    if (this.eventId === null) {
-      throw new Error("eventId must be specified.");
+  public async put(tMCreateEventRequest: TMCreateEventRequest, restRequestConfig?: RestRequestConfig): Promise<TMEventInfo> {
+    if (this.eventId === null)
+    {
+        throw new Error('eventId must be specified.');
     }
-    const r = await this.rc.put<TMEventInfo>(
-      this.path(),
-      tMCreateEventRequest,
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.put<TMEventInfo>(this.path(), tMCreateEventRequest, undefined, restRequestConfig);
     return r.data;
   }
 
@@ -115,15 +84,11 @@ class Index {
    * App Permission: TeamMessaging
    */
   public async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
-    if (this.eventId === null) {
-      throw new Error("eventId must be specified.");
+    if (this.eventId === null)
+    {
+        throw new Error('eventId must be specified.');
     }
-    const r = await this.rc.delete<string>(
-      this.path(),
-      {},
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.delete<string>(this.path(), {}, undefined, restRequestConfig);
     return r.data;
   }
 }

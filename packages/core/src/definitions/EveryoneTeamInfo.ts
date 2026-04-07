@@ -1,5 +1,5 @@
 interface EveryoneTeamInfo {
-  /**
+    /**
    * Internal identifier of a chat
    */
   id?: string;
@@ -7,7 +7,7 @@ interface EveryoneTeamInfo {
   /**
    * Type of chat
    */
-  type?: "Everyone";
+  type?: ('Everyone');
 
   /**
    * Chat name

@@ -1,5 +1,5 @@
 interface CommTerminatingTargetResource {
-  /**
+    /**
    * Required
    */
   name?: string;
@@ -8,11 +8,7 @@ interface CommTerminatingTargetResource {
    * Terminating target type
    * Required
    */
-  type?:
-    | "ExtensionTerminatingTarget"
-    | "PhoneNumberTerminatingTarget"
-    | "PlayAnnouncementTerminatingTarget"
-    | "VoiceMailTerminatingTarget";
+  type?: ('ExtensionTerminatingTarget' | 'PhoneNumberTerminatingTarget' | 'PlayAnnouncementTerminatingTarget' | 'VoiceMailTerminatingTarget');
 }
 
 export default CommTerminatingTargetResource;

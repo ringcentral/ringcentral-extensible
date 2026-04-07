@@ -1,7 +1,7 @@
 import AdgPhoneNumberResource from "./AdgPhoneNumberResource.js";
 
 interface AccountResource {
-  /**
+    /**
    * Example: My lovely company
    */
   companyName?: string;
@@ -17,7 +17,8 @@ interface AccountResource {
    */
   id?: string;
 
-  /** */
+  /**
+   */
   mainNumber?: AdgPhoneNumberResource;
 }
 

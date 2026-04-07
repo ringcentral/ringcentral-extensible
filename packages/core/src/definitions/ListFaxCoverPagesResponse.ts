@@ -3,18 +3,21 @@ import PageNavigationModel from "./PageNavigationModel.js";
 import EnumeratedPagingModel from "./EnumeratedPagingModel.js";
 
 interface ListFaxCoverPagesResponse {
-  /**
+    /**
    * Format: uri
    */
   uri?: string;
 
-  /** */
+  /**
+   */
   records?: FaxCoverPageInfo[];
 
-  /** */
+  /**
+   */
   navigation?: PageNavigationModel;
 
-  /** */
+  /**
+   */
   paging?: EnumeratedPagingModel;
 }
 

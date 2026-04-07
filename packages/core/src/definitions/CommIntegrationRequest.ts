@@ -1,9 +1,9 @@
 interface CommIntegrationRequest {
-  /**
+    /**
    * Integration type
    * Required
    */
-  type?: "MsTeamsDirectRouting" | "FmcLite";
+  type?: ('MsTeamsDirectRouting' | 'FmcLite');
 }
 
 export default CommIntegrationRequest;

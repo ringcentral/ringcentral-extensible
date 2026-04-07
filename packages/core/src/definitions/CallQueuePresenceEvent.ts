@@ -1,7 +1,7 @@
 import CallQueuePresenceEventBody from "./CallQueuePresenceEventBody.js";
 
 interface CallQueuePresenceEvent {
-  /**
+    /**
    * Universally unique identifier of a notification
    */
   uuid?: string;
@@ -22,7 +22,8 @@ interface CallQueuePresenceEvent {
    */
   subscriptionId?: string;
 
-  /** */
+  /**
+   */
   body?: CallQueuePresenceEventBody;
 }
 

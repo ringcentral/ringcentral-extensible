@@ -1,7 +1,7 @@
 import AddressBookBulkContactResource from "./AddressBookBulkContactResource.js";
 
 interface AddressBookBulkUploadResource {
-  /**
+    /**
    * Required
    */
   extensionId?: string;

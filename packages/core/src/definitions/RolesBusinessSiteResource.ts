@@ -3,7 +3,7 @@ import RolesRegionalSettingsResource from "./RolesRegionalSettingsResource.js";
 import ContactAddressInfoResource from "./ContactAddressInfoResource.js";
 
 interface RolesBusinessSiteResource {
-  /**
+    /**
    * Link to a business site resource
    */
   uri?: string;
@@ -18,25 +18,32 @@ interface RolesBusinessSiteResource {
    */
   email?: string;
 
-  /** */
+  /**
+   */
   code?: string;
 
-  /** */
+  /**
+   */
   name?: string;
 
-  /** */
+  /**
+   */
   extensionNumber?: string;
 
-  /** */
+  /**
+   */
   callerIdName?: string;
 
-  /** */
+  /**
+   */
   operator?: BasicExtensionInfoResource;
 
-  /** */
+  /**
+   */
   regionalSettings?: RolesRegionalSettingsResource;
 
-  /** */
+  /**
+   */
   businessAddress?: ContactAddressInfoResource;
 }
 

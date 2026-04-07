@@ -2,9 +2,9 @@ import CommReferencedExtensionResource from "./CommReferencedExtensionResource.j
 
 /**
  * Ring target
- */
+*/
 interface CommCoworkerTargetResource {
-  /**
+    /**
    * Required
    */
   extension?: CommReferencedExtensionResource;
@@ -13,7 +13,7 @@ interface CommCoworkerTargetResource {
    * Type of a ring target
    * Example: CoworkerRingTarget
    */
-  type?: "CoworkerRingTarget";
+  type?: ('CoworkerRingTarget');
 }
 
 export default CommCoworkerTargetResource;

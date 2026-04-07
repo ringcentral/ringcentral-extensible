@@ -1,5 +1,5 @@
 interface EmergencyAddressAutoUpdateSiteInfo {
-  /**
+    /**
    * Internal identifier of a site
    */
   id?: string;

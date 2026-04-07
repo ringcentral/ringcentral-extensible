@@ -1,14 +1,17 @@
-import CommonEmergencyLocationAddressInfo from "./CommonEmergencyLocationAddressInfo.js";
+import EmergencyLocationAddressResource from "./EmergencyLocationAddressResource.js";
 import EmergencyLocationInfo from "./EmergencyLocationInfo.js";
 
 interface PrivateIpRangeInfo {
-  /** */
+    /**
+   */
   id?: string;
 
-  /** */
+  /**
+   */
   startIp?: string;
 
-  /** */
+  /**
+   */
   endIp?: string;
 
   /**
@@ -16,20 +19,23 @@ interface PrivateIpRangeInfo {
    */
   name?: string;
 
-  /** */
-  emergencyAddress?: CommonEmergencyLocationAddressInfo;
+  /**
+   */
+  emergencyAddress?: EmergencyLocationAddressResource;
 
   /**
-   * Emergency response location (address) internal identifier.
-   *  Only one of a pair `emergencyAddress` or `emergencyLocationId` should
-   *  be specified, otherwise an error is returned
+   * Emergency response location (address) internal identifier. 
+ *  Only one of a pair `emergencyAddress` or `emergencyLocationId`
+ *  can be specified, otherwise the error is returned
    */
   emergencyLocationId?: string;
 
-  /** */
+  /**
+   */
   matched?: boolean;
 
-  /** */
+  /**
+   */
   emergencyLocation?: EmergencyLocationInfo;
 }
 

@@ -2,7 +2,8 @@ import CommDeviceRequest from "./CommDeviceRequest.js";
 import CommReferencedExtensionResource from "./CommReferencedExtensionResource.js";
 
 interface CommDeviceForwardingTargetRequest {
-  /** */
+    /**
+   */
   name?: string;
 
   /**
@@ -10,20 +11,15 @@ interface CommDeviceForwardingTargetRequest {
    * Required
    * Example: DeviceRingTarget
    */
-  type?:
-    | "CoworkerAppsRingTarget"
-    | "CoworkerRingTarget"
-    | "DeviceRingTarget"
-    | "ImsPhoneNumberRingTarget"
-    | "IntegrationRingTarget"
-    | "PhoneNumberRingTarget";
+  type?: ('CoworkerAppsRingTarget' | 'CoworkerRingTarget' | 'DeviceRingTarget' | 'ImsPhoneNumberRingTarget' | 'IntegrationRingTarget' | 'PhoneNumberRingTarget');
 
   /**
    * Required
    */
   device?: CommDeviceRequest;
 
-  /** */
+  /**
+   */
   extension?: CommReferencedExtensionResource;
 }
 

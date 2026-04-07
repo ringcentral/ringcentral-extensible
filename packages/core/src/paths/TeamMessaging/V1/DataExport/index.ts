@@ -2,17 +2,13 @@ import DataExportTask from "../../../../definitions/DataExportTask.js";
 import CreateDataExportTaskRequest from "../../../../definitions/CreateDataExportTaskRequest.js";
 import DataExportTaskList from "../../../../definitions/DataExportTaskList.js";
 import ListDataExportTasksNewParameters from "../../../../definitions/ListDataExportTasksNewParameters.js";
-import {
-  ParentInterface,
-  RestRequestConfig,
-  RingCentralInterface,
-} from "../../../../types.js";
+import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types.js';
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
   public taskId: string | null;
-
+  
   public constructor(_parent: ParentInterface, taskId: string | null = null) {
     this._parent = _parent;
     this.rc = _parent.rc;
@@ -20,7 +16,7 @@ class Index {
   }
   public path(withParameter = true): string {
     if (withParameter && this.taskId !== null) {
-      return `${this._parent.path()}/data-export/${this.taskId}`;
+        return `${this._parent.path()}/data-export/${this.taskId}`;
     }
     return `${this._parent.path()}/data-export`;
   }
@@ -32,15 +28,8 @@ class Index {
    * App Permission: TeamMessaging
    * User Permission: Glip
    */
-  public async list(
-    queryParams?: ListDataExportTasksNewParameters,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<DataExportTaskList> {
-    const r = await this.rc.get<DataExportTaskList>(
-      this.path(false),
-      queryParams,
-      restRequestConfig,
-    );
+  public async list(queryParams?: ListDataExportTasksNewParameters, restRequestConfig?: RestRequestConfig): Promise<DataExportTaskList> {
+    const r = await this.rc.get<DataExportTaskList>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }
 
@@ -52,16 +41,8 @@ class Index {
    * App Permission: TeamMessaging
    * User Permission: Glip
    */
-  public async post(
-    createDataExportTaskRequest: CreateDataExportTaskRequest,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<DataExportTask> {
-    const r = await this.rc.post<DataExportTask>(
-      this.path(false),
-      createDataExportTaskRequest,
-      undefined,
-      restRequestConfig,
-    );
+  public async post(createDataExportTaskRequest: CreateDataExportTaskRequest, restRequestConfig?: RestRequestConfig): Promise<DataExportTask> {
+    const r = await this.rc.post<DataExportTask>(this.path(false), createDataExportTaskRequest, undefined, restRequestConfig);
     return r.data;
   }
 
@@ -73,17 +54,12 @@ class Index {
    * App Permission: TeamMessaging
    * User Permission: Glip
    */
-  public async get(
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<DataExportTask> {
-    if (this.taskId === null) {
-      throw new Error("taskId must be specified.");
+  public async get(restRequestConfig?: RestRequestConfig): Promise<DataExportTask> {
+    if (this.taskId === null)
+    {
+        throw new Error('taskId must be specified.');
     }
-    const r = await this.rc.get<DataExportTask>(
-      this.path(),
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.get<DataExportTask>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 }

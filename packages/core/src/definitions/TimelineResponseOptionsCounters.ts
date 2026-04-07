@@ -1,8 +1,8 @@
 /**
  * Options for selecting breakdown for calls count
- */
+*/
 interface TimelineResponseOptionsCounters {
-  /**
+    /**
    * Include data for total calls count
    */
   allCalls?: boolean;

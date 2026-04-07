@@ -1,5 +1,5 @@
 interface CreateConversationRequestMembers {
-  /**
+    /**
    * Internal identifier of a person
    */
   id?: string;

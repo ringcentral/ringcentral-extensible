@@ -1,15 +1,11 @@
 import AdaptiveCardShortInfo from "../../../../../definitions/AdaptiveCardShortInfo.js";
 import AdaptiveCardRequest from "../../../../../definitions/AdaptiveCardRequest.js";
-import {
-  ParentInterface,
-  RestRequestConfig,
-  RingCentralInterface,
-} from "../../../../../types.js";
+import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types.js';
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
-
+  
   public constructor(_parent: ParentInterface) {
     this._parent = _parent;
     this.rc = _parent.rc;
@@ -24,16 +20,8 @@ class Index {
    * Rate Limit Group: Medium
    * App Permission: TeamMessaging
    */
-  public async post(
-    adaptiveCardRequest: AdaptiveCardRequest,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<AdaptiveCardShortInfo> {
-    const r = await this.rc.post<AdaptiveCardShortInfo>(
-      this.path(),
-      adaptiveCardRequest,
-      undefined,
-      restRequestConfig,
-    );
+  public async post(adaptiveCardRequest: AdaptiveCardRequest, restRequestConfig?: RestRequestConfig): Promise<AdaptiveCardShortInfo> {
+    const r = await this.rc.post<AdaptiveCardShortInfo>(this.path(), adaptiveCardRequest, undefined, restRequestConfig);
     return r.data;
   }
 }

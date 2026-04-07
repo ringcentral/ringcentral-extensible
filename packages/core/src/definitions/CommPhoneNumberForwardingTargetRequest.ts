@@ -1,7 +1,8 @@
 import CommPhoneNumberResource from "./CommPhoneNumberResource.js";
 
 interface CommPhoneNumberForwardingTargetRequest {
-  /** */
+    /**
+   */
   name?: string;
 
   /**
@@ -9,13 +10,7 @@ interface CommPhoneNumberForwardingTargetRequest {
    * Required
    * Example: PhoneNumberRingTarget
    */
-  type?:
-    | "CoworkerAppsRingTarget"
-    | "CoworkerRingTarget"
-    | "DeviceRingTarget"
-    | "ImsPhoneNumberRingTarget"
-    | "IntegrationRingTarget"
-    | "PhoneNumberRingTarget";
+  type?: ('CoworkerAppsRingTarget' | 'CoworkerRingTarget' | 'DeviceRingTarget' | 'ImsPhoneNumberRingTarget' | 'IntegrationRingTarget' | 'PhoneNumberRingTarget');
 
   /**
    * Required

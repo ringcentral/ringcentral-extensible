@@ -1,7 +1,8 @@
 import SummaryOutputUnit from "./SummaryOutputUnit.js";
 
 interface SummaryApiResponse {
-  /** */
+    /**
+   */
   summaries?: SummaryOutputUnit[];
 }
 

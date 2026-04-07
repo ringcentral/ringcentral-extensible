@@ -2,7 +2,7 @@ import GetMessageInfoResponse from "./GetMessageInfoResponse.js";
 import SyncInfoMessages from "./SyncInfoMessages.js";
 
 interface GetMessageSyncResponse {
-  /**
+    /**
    * Link to the message sync resource
    * Format: uri
    */

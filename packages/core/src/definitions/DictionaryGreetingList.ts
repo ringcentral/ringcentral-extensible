@@ -3,7 +3,7 @@ import PageNavigationModel from "./PageNavigationModel.js";
 import EnumeratedPagingModel from "./EnumeratedPagingModel.js";
 
 interface DictionaryGreetingList {
-  /**
+    /**
    * Canonical URI of greetings list resource
    * Format: uri
    */
@@ -14,10 +14,12 @@ interface DictionaryGreetingList {
    */
   records?: DictionaryGreetingInfo[];
 
-  /** */
+  /**
+   */
   navigation?: PageNavigationModel;
 
-  /** */
+  /**
+   */
   paging?: EnumeratedPagingModel;
 }
 

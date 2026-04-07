@@ -2,7 +2,7 @@ import MessageTemplateInfo from "./MessageTemplateInfo.js";
 import Site from "./Site.js";
 
 interface MessageTemplateUpdateRequest {
-  /**
+    /**
    * Name of a template
    */
   displayName?: string;
@@ -12,7 +12,8 @@ interface MessageTemplateUpdateRequest {
    */
   body?: MessageTemplateInfo;
 
-  /** */
+  /**
+   */
   site?: Site;
 }
 

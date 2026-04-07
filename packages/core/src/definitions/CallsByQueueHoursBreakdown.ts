@@ -1,8 +1,8 @@
 /**
  * Result breakdown by queue hours
- */
+*/
 interface CallsByQueueHoursBreakdown {
-  /**
+    /**
    * Value for BusinessHours queue hours
    * Required
    * Format: double

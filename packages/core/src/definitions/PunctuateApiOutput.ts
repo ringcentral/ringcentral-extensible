@@ -1,10 +1,12 @@
 import PunctuateApiResponse from "./PunctuateApiResponse.js";
 
 interface PunctuateApiOutput {
-  /** */
-  status?: "Success" | "Fail";
+    /**
+   */
+  status?: ('Success' | 'Fail');
 
-  /** */
+  /**
+   */
   response?: PunctuateApiResponse;
 }
 

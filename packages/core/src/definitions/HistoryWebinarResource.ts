@@ -2,7 +2,7 @@ import WebinarSettingsModel from "./WebinarSettingsModel.js";
 import HostModel from "./HostModel.js";
 
 interface HistoryWebinarResource {
-  /**
+    /**
    * Internal object ID
    * Example: 78654321
    */
@@ -35,7 +35,8 @@ interface HistoryWebinarResource {
    */
   description?: string;
 
-  /** */
+  /**
+   */
   settings?: WebinarSettingsModel;
 
   /**

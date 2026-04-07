@@ -1,10 +1,10 @@
 /**
  * Query parameters for operation listAccountMeetings
- */
+*/
 interface ListAccountMeetingsParameters {
-  /**
+    /**
    * The token indicating the particular page of the result set to be retrieved.
-   *  If omitted the first page will be returned.
+ *  If omitted the first page will be returned.
    */
   pageToken?: string;
 

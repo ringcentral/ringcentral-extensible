@@ -1,5 +1,5 @@
 interface RegSessionModelSettings {
-  /**
+    /**
    * The maximum number of registrants which forces closing the registration (0 means "off").
    * Format: int32
    */
@@ -27,7 +27,7 @@ interface RegSessionModelSettings {
   workEmailRequired?: boolean;
 
   /**
-   * Indicates that recording will be shown after the webinar and in emails.
+   * Indicates that recording will be included in emails.
    */
   viewRecording?: boolean;
 
@@ -35,12 +35,7 @@ interface RegSessionModelSettings {
    * Duration of on-demand webinar. The default value can only be used if the session is on demand.
    * Default: SixMonths
    */
-  onDemandDuration?:
-    | "OneMonth"
-    | "TwoMonths"
-    | "ThreeMonths"
-    | "SixMonths"
-    | "OneYear";
+  onDemandDuration?: ('OneMonth' | 'TwoMonths' | 'ThreeMonths' | 'SixMonths' | 'OneYear');
 
   /**
    * Indicates that recording exists for the session.

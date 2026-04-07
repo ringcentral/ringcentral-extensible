@@ -2,9 +2,9 @@ import CommReferencedExtensionResource from "./CommReferencedExtensionResource.j
 
 /**
  * All Desktop Ring target
- */
+*/
 interface CommAllDesktopRingTargetResource {
-  /**
+    /**
    * Required
    */
   name?: string;
@@ -14,17 +14,10 @@ interface CommAllDesktopRingTargetResource {
    * Required
    * Example: AllDesktopRingTarget
    */
-  type?:
-    | "AllDesktopRingTarget"
-    | "AllMobileRingTarget"
-    | "CoworkerRingTarget"
-    | "DeviceRingTarget"
-    | "HotdeskRingTarget"
-    | "ImsPhoneNumberRingTarget"
-    | "IntegrationRingTarget"
-    | "PhoneNumberRingTarget";
+  type?: ('AllDesktopRingTarget' | 'AllMobileRingTarget' | 'CoworkerRingTarget' | 'DeviceRingTarget' | 'HotdeskRingTarget' | 'ImsPhoneNumberRingTarget' | 'FmcPhoneNumberRingTarget' | 'IntegrationRingTarget' | 'PhoneNumberRingTarget');
 
-  /** */
+  /**
+   */
   extension?: CommReferencedExtensionResource;
 }
 

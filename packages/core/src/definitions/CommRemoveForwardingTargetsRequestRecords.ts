@@ -4,31 +4,30 @@ import CommIntegrationRequest from "./CommIntegrationRequest.js";
 import CommPhoneNumberResource from "./CommPhoneNumberResource.js";
 
 interface CommRemoveForwardingTargetsRequestRecords {
-  /** */
+    /**
+   */
   name?: string;
 
   /**
    * Ring target type
    * Example: PhoneNumberRingTarget
    */
-  type?:
-    | "CoworkerAppsRingTarget"
-    | "CoworkerRingTarget"
-    | "DeviceRingTarget"
-    | "ImsPhoneNumberRingTarget"
-    | "IntegrationRingTarget"
-    | "PhoneNumberRingTarget";
+  type?: ('CoworkerAppsRingTarget' | 'CoworkerRingTarget' | 'DeviceRingTarget' | 'ImsPhoneNumberRingTarget' | 'IntegrationRingTarget' | 'PhoneNumberRingTarget');
 
-  /** */
+  /**
+   */
   extension?: CommReferencedExtensionResource;
 
-  /** */
+  /**
+   */
   device?: CommDeviceRequest;
 
-  /** */
+  /**
+   */
   integration?: CommIntegrationRequest;
 
-  /** */
+  /**
+   */
   destination?: CommPhoneNumberResource;
 }
 

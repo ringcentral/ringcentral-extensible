@@ -7,7 +7,8 @@ import SiteInfo from "./SiteInfo.js";
 import ExtensionStatusInfo from "./ExtensionStatusInfo.js";
 
 interface ExtensionCreationRequest {
-  /** */
+    /**
+   */
   contact?: ContactInfoCreationRequest;
 
   /**
@@ -15,10 +16,12 @@ interface ExtensionCreationRequest {
    */
   extensionNumber?: string;
 
-  /** */
+  /**
+   */
   costCenter?: CostCenterInfo;
 
-  /** */
+  /**
+   */
   customFields?: CustomFieldInfo[];
 
   /**
@@ -31,12 +34,13 @@ interface ExtensionCreationRequest {
    */
   references?: ReferenceInfo[];
 
-  /** */
+  /**
+   */
   regionalSettings?: RegionalSettings;
 
   /**
    * Additional extension identifier, created by partner application
-   *  and applied on client side
+ *  and applied on client side
    */
   partnerId?: string;
 
@@ -49,48 +53,39 @@ interface ExtensionCreationRequest {
    * Initial configuration wizard state
    * Default: NotStarted
    */
-  setupWizardState?: "NotStarted" | "Incomplete" | "Completed";
+  setupWizardState?: ('NotStarted' | 'Incomplete' | 'Completed');
 
-  /** */
+  /**
+   */
   site?: SiteInfo;
 
   /**
    * Extension status
    */
-  status?: "Enabled" | "Disabled" | "Frozen" | "NotActivated" | "Unassigned";
+  status?: ('Enabled' | 'Disabled' | 'Frozen' | 'NotActivated' | 'Unassigned');
 
-  /** */
+  /**
+   */
   statusInfo?: ExtensionStatusInfo;
 
   /**
    * Extension type. Please note that legacy 'Department' extension type
-   *  corresponds to 'Call Queue' extensions in modern RingCentral product
-   *  terminology
+ *  corresponds to 'Call Queue' extensions in modern RingCentral product
+ *  terminology
    */
-  type?:
-    | "User"
-    | "VirtualUser"
-    | "DigitalUser"
-    | "FlexibleUser"
-    | "Department"
-    | "Announcement"
-    | "Voicemail"
-    | "SharedLinesGroup"
-    | "PagingOnly"
-    | "ParkLocation"
-    | "Limited";
+  type?: ('User' | 'VirtualUser' | 'DigitalUser' | 'FlexibleUser' | 'Department' | 'Announcement' | 'Voicemail' | 'SharedLinesGroup' | 'PagingOnly' | 'ParkLocation' | 'Limited');
 
   /**
    * Hides extension from showing in company directory. Supported
-   *  for extensions of 'User' type only. For unassigned extensions the value
-   *  is set to `true` by default. For assigned extensions the value is set
-   *  to `false` by default
+ *  for extensions of 'User' type only. For unassigned extensions the value
+ *  is set to `true` by default. For assigned extensions the value is set
+ *  to `false` by default
    */
   hidden?: boolean;
 
   /**
    * Extension name. For user extension types the value is a combination
-   *  of the specified first name and last name
+ *  of the specified first name and last name
    */
   name?: string;
 }

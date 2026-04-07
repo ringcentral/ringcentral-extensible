@@ -1,0 +1,49 @@
+interface EmergencyAddressResourceRequest {
+    /**
+   * Country name
+   */
+  country?: string;
+
+  /**
+   * Internal identifier of a country
+   */
+  countryId?: string;
+
+  /**
+   * State/Province name. Mandatory for the USA, the UK and Canada
+   */
+  state?: string;
+
+  /**
+   * Internal identifier of a state
+   */
+  stateId?: string;
+
+  /**
+   * City name
+   */
+  city?: string;
+
+  /**
+   * First line address
+   */
+  street?: string;
+
+  /**
+   * Second line address (apartment, suite, unit, building, floor,
+ *  etc.)
+   */
+  street2?: string;
+
+  /**
+   * Postal (Zip) code
+   */
+  zip?: string;
+
+  /**
+   * Customer name
+   */
+  customerName?: string;
+}
+
+export default EmergencyAddressResourceRequest;

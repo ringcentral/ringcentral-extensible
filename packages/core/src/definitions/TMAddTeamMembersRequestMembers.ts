@@ -1,5 +1,5 @@
 interface TMAddTeamMembersRequestMembers {
-  /**
+    /**
    * Internal identifier of a person
    */
   id?: string;

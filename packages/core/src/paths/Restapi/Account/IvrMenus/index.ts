@@ -1,27 +1,20 @@
-import IVRMenuInfo from "../../../../definitions/IVRMenuInfo.js";
-import IVRMenuList from "../../../../definitions/IVRMenuList.js";
-import {
-  ParentInterface,
-  RestRequestConfig,
-  RingCentralInterface,
-} from "../../../../types.js";
+import IvrMenuInfo from "../../../../definitions/IvrMenuInfo.js";
+import IvrMenuList from "../../../../definitions/IvrMenuList.js";
+import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types.js';
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
   public ivrMenuId: string | null;
-
-  public constructor(
-    _parent: ParentInterface,
-    ivrMenuId: string | null = null,
-  ) {
+  
+  public constructor(_parent: ParentInterface, ivrMenuId: string | null = null) {
     this._parent = _parent;
     this.rc = _parent.rc;
     this.ivrMenuId = ivrMenuId;
   }
   public path(withParameter = true): string {
     if (withParameter && this.ivrMenuId !== null) {
-      return `${this._parent.path()}/ivr-menus/${this.ivrMenuId}`;
+        return `${this._parent.path()}/ivr-menus/${this.ivrMenuId}`;
     }
     return `${this._parent.path()}/ivr-menus`;
   }
@@ -32,14 +25,8 @@ class Index {
    * Rate Limit Group: Medium
    * App Permission: ReadAccounts
    */
-  public async list(
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<IVRMenuList> {
-    const r = await this.rc.get<IVRMenuList>(
-      this.path(false),
-      undefined,
-      restRequestConfig,
-    );
+  public async list(restRequestConfig?: RestRequestConfig): Promise<IvrMenuList> {
+    const r = await this.rc.get<IvrMenuList>(this.path(false), undefined, restRequestConfig);
     return r.data;
   }
 
@@ -51,16 +38,8 @@ class Index {
    * App Permission: EditAccounts
    * User Permission: AutoReceptionist
    */
-  public async post(
-    iVRMenuInfo: IVRMenuInfo,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<IVRMenuInfo> {
-    const r = await this.rc.post<IVRMenuInfo>(
-      this.path(false),
-      iVRMenuInfo,
-      undefined,
-      restRequestConfig,
-    );
+  public async post(ivrMenuInfo: IvrMenuInfo, restRequestConfig?: RestRequestConfig): Promise<IvrMenuInfo> {
+    const r = await this.rc.post<IvrMenuInfo>(this.path(false), ivrMenuInfo, undefined, restRequestConfig);
     return r.data;
   }
 
@@ -72,17 +51,12 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: AutoReceptionist
    */
-  public async get(
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<IVRMenuInfo> {
-    if (this.ivrMenuId === null) {
-      throw new Error("ivrMenuId must be specified.");
+  public async get(restRequestConfig?: RestRequestConfig): Promise<IvrMenuInfo> {
+    if (this.ivrMenuId === null)
+    {
+        throw new Error('ivrMenuId must be specified.');
     }
-    const r = await this.rc.get<IVRMenuInfo>(
-      this.path(),
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.get<IvrMenuInfo>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 
@@ -94,19 +68,12 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: AutoReceptionist
    */
-  public async put(
-    iVRMenuInfo: IVRMenuInfo,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<IVRMenuInfo> {
-    if (this.ivrMenuId === null) {
-      throw new Error("ivrMenuId must be specified.");
+  public async put(ivrMenuInfo: IvrMenuInfo, restRequestConfig?: RestRequestConfig): Promise<IvrMenuInfo> {
+    if (this.ivrMenuId === null)
+    {
+        throw new Error('ivrMenuId must be specified.');
     }
-    const r = await this.rc.put<IVRMenuInfo>(
-      this.path(),
-      iVRMenuInfo,
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.put<IvrMenuInfo>(this.path(), ivrMenuInfo, undefined, restRequestConfig);
     return r.data;
   }
 }

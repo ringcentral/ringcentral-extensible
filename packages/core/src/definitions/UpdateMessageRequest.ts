@@ -1,9 +1,9 @@
 interface UpdateMessageRequest {
-  /**
+    /**
    * Message read status
    * Required
    */
-  readStatus?: "Read" | "Unread";
+  readStatus?: ('Read' | 'Unread');
 }
 
 export default UpdateMessageRequest;

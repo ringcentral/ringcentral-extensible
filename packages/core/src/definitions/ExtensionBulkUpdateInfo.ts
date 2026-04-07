@@ -9,7 +9,7 @@ import ProvisioningSiteInfo from "./ProvisioningSiteInfo.js";
 import ReferenceInfo from "./ReferenceInfo.js";
 
 interface ExtensionBulkUpdateInfo {
-  /**
+    /**
    * Internal identifier of an extension
    */
   id?: string;
@@ -17,9 +17,10 @@ interface ExtensionBulkUpdateInfo {
   /**
    * Extension status
    */
-  status?: "Enabled" | "Disabled" | "Frozen" | "NotActivated";
+  status?: ('Enabled' | 'Disabled' | 'Frozen' | 'NotActivated');
 
-  /** */
+  /**
+   */
   statusInfo?: ExtensionStatusInfo;
 
   /**
@@ -37,21 +38,23 @@ interface ExtensionBulkUpdateInfo {
    */
   extensionNumber?: string;
 
-  /** */
+  /**
+   */
   contact?: ContactInfoUpdateRequest;
 
-  /** */
+  /**
+   */
   regionalSettings?: ExtensionRegionalSettingRequest;
 
   /**
    * Initial configuration wizard state
    * Default: NotStarted
    */
-  setupWizardState?: "NotStarted" | "Incomplete" | "Completed";
+  setupWizardState?: ('NotStarted' | 'Incomplete' | 'Completed');
 
   /**
    * Additional extension identifier created by partner application
-   *  and applied on client side
+ *  and applied on client side
    */
   partnerId?: string;
 
@@ -65,16 +68,20 @@ interface ExtensionBulkUpdateInfo {
    */
   password?: string;
 
-  /** */
+  /**
+   */
   callQueueInfo?: CallQueueInfoRequest;
 
-  /** */
+  /**
+   */
   transition?: UserTransitionInfo;
 
-  /** */
+  /**
+   */
   costCenter?: CostCenterInfo;
 
-  /** */
+  /**
+   */
   customFields?: CustomFieldInfo[];
 
   /**
@@ -82,28 +89,16 @@ interface ExtensionBulkUpdateInfo {
    */
   hidden?: boolean;
 
-  /** */
+  /**
+   */
   site?: ProvisioningSiteInfo;
 
   /**
    * Extension type. Please note that legacy 'Department' extension
-   *  type corresponds to 'Call Queue' extensions in modern RingCentral
-   *  product terminology
+ *  type corresponds to 'Call Queue' extensions in modern RingCentral
+ *  product terminology
    */
-  type?:
-    | "User"
-    | "FaxUser"
-    | "VirtualUser"
-    | "DigitalUser"
-    | "Department"
-    | "Announcement"
-    | "Voicemail"
-    | "SharedLinesGroup"
-    | "PagingOnly"
-    | "IvrMenu"
-    | "ApplicationExtension"
-    | "ParkLocation"
-    | "DelegatedLinesGroup";
+  type?: ('User' | 'FaxUser' | 'VirtualUser' | 'DigitalUser' | 'Department' | 'Announcement' | 'Voicemail' | 'SharedLinesGroup' | 'PagingOnly' | 'IvrMenu' | 'ApplicationExtension' | 'ParkLocation' | 'DelegatedLinesGroup');
 
   /**
    * List of non-RC internal identifiers assigned to an extension

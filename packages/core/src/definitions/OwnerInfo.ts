@@ -1,8 +1,8 @@
 /**
  * Deprecated. Information on a call owner
- */
+*/
 interface OwnerInfo {
-  /**
+    /**
    * Internal identifier of an account that monitors a call
    */
   accountId?: string;

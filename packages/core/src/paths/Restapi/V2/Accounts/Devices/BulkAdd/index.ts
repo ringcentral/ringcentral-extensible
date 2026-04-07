@@ -1,15 +1,11 @@
 import BulkAddDevicesResponse from "../../../../../../definitions/BulkAddDevicesResponse.js";
 import BulkAddDevicesRequest from "../../../../../../definitions/BulkAddDevicesRequest.js";
-import {
-  ParentInterface,
-  RestRequestConfig,
-  RingCentralInterface,
-} from "../../../../../../types.js";
+import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../types.js';
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
-
+  
   public constructor(_parent: ParentInterface) {
     this._parent = _parent;
     this.rc = _parent.rc;
@@ -25,16 +21,8 @@ class Index {
    * App Permission: EditAccounts
    * User Permission: AddRemoveDevices
    */
-  public async post(
-    bulkAddDevicesRequest: BulkAddDevicesRequest,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<BulkAddDevicesResponse> {
-    const r = await this.rc.post<BulkAddDevicesResponse>(
-      this.path(),
-      bulkAddDevicesRequest,
-      undefined,
-      restRequestConfig,
-    );
+  public async post(bulkAddDevicesRequest: BulkAddDevicesRequest, restRequestConfig?: RestRequestConfig): Promise<BulkAddDevicesResponse> {
+    const r = await this.rc.post<BulkAddDevicesResponse>(this.path(), bulkAddDevicesRequest, undefined, restRequestConfig);
     return r.data;
   }
 }

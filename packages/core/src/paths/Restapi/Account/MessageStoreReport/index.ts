@@ -1,17 +1,13 @@
-import Archive from "./Archive/index.js";
+import Archive from './Archive/index.js';
 import MessageStoreReport from "../../../../definitions/MessageStoreReport.js";
 import CreateMessageStoreReportRequest from "../../../../definitions/CreateMessageStoreReportRequest.js";
-import {
-  ParentInterface,
-  RestRequestConfig,
-  RingCentralInterface,
-} from "../../../../types.js";
+import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types.js';
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
   public taskId: string | null;
-
+  
   public constructor(_parent: ParentInterface, taskId: string | null = null) {
     this._parent = _parent;
     this.rc = _parent.rc;
@@ -19,30 +15,22 @@ class Index {
   }
   public path(withParameter = true): string {
     if (withParameter && this.taskId !== null) {
-      return `${this._parent.path()}/message-store-report/${this.taskId}`;
+        return `${this._parent.path()}/message-store-report/${this.taskId}`;
     }
     return `${this._parent.path()}/message-store-report`;
   }
   /**
    * Creates a task to collect all account messages within the specified
-   * time interval. Maximum number of simultaneous tasks per account is 2.
-   *
+ * time interval. Maximum number of simultaneous tasks per account is 2.
+ * 
    * HTTP Method: post
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/message-store-report
    * Rate Limit Group: Heavy
    * App Permission: ReadMessages
    * User Permission: Users
    */
-  public async post(
-    createMessageStoreReportRequest: CreateMessageStoreReportRequest,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<MessageStoreReport> {
-    const r = await this.rc.post<MessageStoreReport>(
-      this.path(false),
-      createMessageStoreReportRequest,
-      undefined,
-      restRequestConfig,
-    );
+  public async post(createMessageStoreReportRequest: CreateMessageStoreReportRequest, restRequestConfig?: RestRequestConfig): Promise<MessageStoreReport> {
+    const r = await this.rc.post<MessageStoreReport>(this.path(false), createMessageStoreReportRequest, undefined, restRequestConfig);
     return r.data;
   }
 
@@ -54,17 +42,12 @@ class Index {
    * App Permission: ReadMessages
    * User Permission: Users
    */
-  public async get(
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<MessageStoreReport> {
-    if (this.taskId === null) {
-      throw new Error("taskId must be specified.");
+  public async get(restRequestConfig?: RestRequestConfig): Promise<MessageStoreReport> {
+    if (this.taskId === null)
+    {
+        throw new Error('taskId must be specified.');
     }
-    const r = await this.rc.get<MessageStoreReport>(
-      this.path(),
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.get<MessageStoreReport>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 

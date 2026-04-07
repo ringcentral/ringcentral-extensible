@@ -3,7 +3,7 @@ import PublicIpRangeInfo from "./PublicIpRangeInfo.js";
 import PrivateIpRangeInfo from "./PrivateIpRangeInfo.js";
 
 interface NetworkInfo {
-  /**
+    /**
    * Internal identifier of a network
    */
   id?: string;
@@ -14,16 +14,20 @@ interface NetworkInfo {
    */
   uri?: string;
 
-  /** */
+  /**
+   */
   name?: string;
 
-  /** */
+  /**
+   */
   site?: AutomaticLocationUpdatesSiteInfo;
 
-  /** */
+  /**
+   */
   publicIpRanges?: PublicIpRangeInfo[];
 
-  /** */
+  /**
+   */
   privateIpRanges?: PrivateIpRangeInfo[];
 }
 

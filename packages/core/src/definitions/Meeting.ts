@@ -1,12 +1,14 @@
 import Host from "./Host.js";
 import Participant from "./Participant.js";
 import Recording from "./Recording.js";
+import Transcriptions from "./Transcriptions.js";
+import MeetingNotes from "./MeetingNotes.js";
 
 /**
  * Meeting information
- */
+*/
 interface Meeting {
-  /**
+    /**
    * Meeting id
    * Required
    */
@@ -53,19 +55,19 @@ interface Meeting {
    * Meeting type
    * Required
    */
-  type?: "Meeting" | "Call";
+  type?: ('Meeting' | 'Call');
 
   /**
    * Meeting status
    * Required
    */
-  status?: "InProgress" | "Done";
+  status?: ('InProgress' | 'Done');
 
   /**
    * Describe access rights which has participants to meeting
    * Required
    */
-  rights?: ("delete" | "download" | "share")[];
+  rights?: ('delete' | 'download' | 'share')[];
 
   /**
    * During meeting AI team analyze code and after meeting finished generates text summary about this meeting
@@ -93,6 +95,21 @@ interface Meeting {
    * Required
    */
   recordings?: Recording[];
+
+  /**
+   * A list of transcriptions references
+   */
+  transcriptions?: Transcriptions[];
+
+  /**
+   * A list of meeting notes documents references
+   */
+  notes?: MeetingNotes[];
+
+  /**
+   * Meeting summary generated from transcriptions if AI processing was enabled for the meeting
+   */
+  summary?: string;
 
   /**
    * Chat location

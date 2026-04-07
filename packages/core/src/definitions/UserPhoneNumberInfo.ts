@@ -3,7 +3,7 @@ import ContactCenterProvider from "./ContactCenterProvider.js";
 import UserPhoneNumberExtensionInfo from "./UserPhoneNumberExtensionInfo.js";
 
 interface UserPhoneNumberInfo {
-  /**
+    /**
    * Link to the user phone number resource
    * Format: uri
    */
@@ -15,13 +15,16 @@ interface UserPhoneNumberInfo {
    */
   id?: number;
 
-  /** */
+  /**
+   */
   country?: CountryInfoBasicModel;
 
-  /** */
+  /**
+   */
   contactCenterProvider?: ContactCenterProvider;
 
-  /** */
+  /**
+   */
   extension?: UserPhoneNumberExtensionInfo;
 
   /**
@@ -36,15 +39,9 @@ interface UserPhoneNumberInfo {
 
   /**
    * Payment type. 'External' is returned for forwarded numbers
-   *  which are not terminated in the RingCentral phone system
+ *  which are not terminated in the RingCentral phone system
    */
-  paymentType?:
-    | "External"
-    | "TollFree"
-    | "Local"
-    | "BusinessMobileNumberProvider"
-    | "ExternalNumberProvider"
-    | "ExternalNumberProviderTollFree";
+  paymentType?: ('External' | 'TollFree' | 'Local' | 'BusinessMobileNumberProvider' | 'ExternalNumberProvider' | 'ExternalNumberProviderTollFree' | 'Mobile');
 
   /**
    * Phone number
@@ -58,59 +55,37 @@ interface UserPhoneNumberInfo {
 
   /**
    * Status of a phone number. If the value is `Normal`, the phone
-   *  number is ready to be used. Otherwise, it is an external number not yet
-   *  ported to RingCentral
+ *  number is ready to be used. Otherwise, it is an external number not yet
+ *  ported to RingCentral
    */
-  status?: "Normal" | "Pending" | "PortedIn" | "Temporary" | "Unknown";
+  status?: ('Normal' | 'Pending' | 'PortedIn' | 'Temporary' | 'Unknown');
 
   /**
    * Type of a phone number
    */
-  type?: "VoiceFax" | "VoiceOnly" | "FaxOnly";
+  type?: ('VoiceFax' | 'VoiceOnly' | 'FaxOnly');
 
   /**
    * Extension subtype, if applicable.
-   *  For unrecognized subtypes the `Unknown` value is returned
+ *  For unrecognized subtypes the `Unknown` value is returned
    */
-  subType?:
-    | "VideoPro"
-    | "VideoProPlus"
-    | "DigitalSignage"
-    | "Unknown"
-    | "Emergency";
+  subType?: ('VideoPro' | 'VideoProPlus' | 'DigitalSignageOnlyRooms' | 'Unknown' | 'Emergency');
 
   /**
    * Usage type of a phone number. Numbers of 'NumberPool' and 'NumberStorage' type are not returned in
-   *  phone number list requests
+ *  phone number list requests
    */
-  usageType?:
-    | "MainCompanyNumber"
-    | "AdditionalCompanyNumber"
-    | "CompanyNumber"
-    | "DirectNumber"
-    | "CompanyFaxNumber"
-    | "ForwardedNumber"
-    | "ForwardedCompanyNumber"
-    | "ContactCenterNumber"
-    | "ConferencingNumber"
-    | "MeetingsNumber"
-    | "NumberPool"
-    | "NumberStorage"
-    | "BusinessMobileNumber"
-    | "PartnerBusinessMobileNumber"
-    | "IntegrationNumber";
+  usageType?: ('MainCompanyNumber' | 'AdditionalCompanyNumber' | 'CompanyNumber' | 'DirectNumber' | 'CompanyFaxNumber' | 'FmcBusinessMobileNumber' | 'InventoryFmcBusinessMobileNumber' | 'ForwardedNumber' | 'ForwardedCompanyNumber' | 'ContactCenterNumber' | 'ConferencingNumber' | 'MeetingsNumber' | 'NumberPool' | 'BusinessMobileNumber' | 'ELIN' | 'PartnerBusinessMobileNumber' | 'NumberPoolPartnerBusinessMobileNumber' | 'NumberStorage' | 'IntegrationNumber' | 'InventoryMobileNumber');
 
   /**
    * List of features of a phone number
    */
-  features?: (
-    | "CallerId"
-    | "SmsSender"
-    | "A2PSmsSender"
-    | "MmsSender"
-    | "InternationalSmsSender"
-    | "Delegated"
-  )[];
+  features?: ('CallerId' | 'SmsSender' | 'A2PSmsSender' | 'MmsSender' | 'InternationalSmsSender' | 'Delegated')[];
+
+  /**
+   * Caller ID Name
+   */
+  callerIdName?: string;
 }
 
 export default UserPhoneNumberInfo;

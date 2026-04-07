@@ -1,5 +1,5 @@
 interface FixedOrderAgentsExtensionInfo {
-  /**
+    /**
    * Internal identifier of an extension
    */
   id?: string;

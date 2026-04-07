@@ -1,8 +1,8 @@
 /**
  * Internal RC "brand" information
- */
+*/
 interface ServiceInfoBrand {
-  /**
+    /**
    * RingCentral brand ID
    * Required
    * Example: 6699

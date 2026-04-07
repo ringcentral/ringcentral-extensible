@@ -3,7 +3,7 @@ import AccountHistoryRecordTarget from "./AccountHistoryRecordTarget.js";
 import AccountHistoryRecordPublicDetails from "./AccountHistoryRecordPublicDetails.js";
 
 interface AccountHistoryPublicRecord {
-  /**
+    /**
    * Internal record identifier
    * Example: 9835bead-397b-4ba8-b457-73f07ab79997
    */
@@ -15,7 +15,8 @@ interface AccountHistoryPublicRecord {
    */
   eventTime?: string;
 
-  /** */
+  /**
+   */
   initiator?: AccountHistoryRecordPublicInitiator;
 
   /**
@@ -42,7 +43,8 @@ interface AccountHistoryPublicRecord {
    */
   accountName?: string;
 
-  /** */
+  /**
+   */
   target?: AccountHistoryRecordTarget;
 
   /**
@@ -56,7 +58,8 @@ interface AccountHistoryPublicRecord {
    */
   comment?: string;
 
-  /** */
+  /**
+   */
   details?: AccountHistoryRecordPublicDetails;
 }
 

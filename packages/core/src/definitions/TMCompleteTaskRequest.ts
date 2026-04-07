@@ -1,12 +1,13 @@
 import TMCompleteTaskRequestAssignees from "./TMCompleteTaskRequestAssignees.js";
 
 interface TMCompleteTaskRequest {
-  /**
+    /**
    * Completeness status
    */
-  status?: "Incomplete" | "Complete";
+  status?: ('Incomplete' | 'Complete');
 
-  /** */
+  /**
+   */
   assignees?: TMCompleteTaskRequestAssignees[];
 
   /**

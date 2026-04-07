@@ -2,7 +2,7 @@ import UtteranceObject from "./UtteranceObject.js";
 import WordSegment from "./WordSegment.js";
 
 interface AsrApiResponseResponse {
-  /**
+    /**
    * The number of speakers detected. Field is set only when enableSpeakerDiarization is true.
    * Format: int32
    * Example: 2
@@ -14,7 +14,8 @@ interface AsrApiResponseResponse {
    */
   utterances?: UtteranceObject[];
 
-  /** */
+  /**
+   */
   words?: WordSegment[];
 
   /**

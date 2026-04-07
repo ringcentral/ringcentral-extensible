@@ -9,9 +9,10 @@ import UBrandInfo from "./UBrandInfo.js";
 
 /**
  * Account service information, including brand, service plan and billing plan
- */
+ * 
+*/
 interface AccountServiceInfo {
-  /**
+    /**
    * Canonical URI of the account Service Info resource
    * Format: uri
    */
@@ -22,19 +23,24 @@ interface AccountServiceInfo {
    */
   servicePlanName?: string;
 
-  /** */
+  /**
+   */
   brand?: BrandInfo;
 
-  /** */
+  /**
+   */
   contractedCountry?: CountryInfoShortModel;
 
-  /** */
+  /**
+   */
   servicePlan?: ServicePlanInfo;
 
-  /** */
+  /**
+   */
   targetServicePlan?: ServicePlanInfo;
 
-  /** */
+  /**
+   */
   billingPlan?: BillingPlanInfo;
 
   /**
@@ -42,13 +48,16 @@ interface AccountServiceInfo {
    */
   serviceFeatures?: ServiceFeatureInfo[];
 
-  /** */
+  /**
+   */
   limits?: AccountLimitsInfo;
 
-  /** */
+  /**
+   */
   package?: BillingPackageInfo;
 
-  /** */
+  /**
+   */
   uBrand?: UBrandInfo;
 }
 

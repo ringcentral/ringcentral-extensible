@@ -1,5 +1,5 @@
 interface WordSegment {
-  /**
+    /**
    * Example: JohnDoe
    */
   speakerId?: string;

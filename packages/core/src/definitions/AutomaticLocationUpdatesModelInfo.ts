@@ -1,8 +1,8 @@
 /**
  * HardPhone model information
- */
+*/
 interface AutomaticLocationUpdatesModelInfo {
-  /**
+    /**
    * Device model identifier
    */
   id?: string;
@@ -15,7 +15,7 @@ interface AutomaticLocationUpdatesModelInfo {
   /**
    * Device feature or multiple features supported
    */
-  features?: ("BLA" | "Intercom" | "Paging" | "HELD")[];
+  features?: ('BLA' | 'Intercom' | 'Paging' | 'HELD')[];
 }
 
 export default AutomaticLocationUpdatesModelInfo;

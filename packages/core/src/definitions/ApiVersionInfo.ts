@@ -1,5 +1,5 @@
 interface ApiVersionInfo {
-  /**
+    /**
    * Canonical URI of API version
    * Format: uri
    */

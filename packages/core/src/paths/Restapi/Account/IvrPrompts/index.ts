@@ -1,20 +1,16 @@
-import Content from "./Content/index.js";
-import Utils from "../../../../Utils.js";
+import Content from './Content/index.js';
+import Utils from '../../../../Utils.js';
 import UpdateIVRPromptRequest from "../../../../definitions/UpdateIVRPromptRequest.js";
 import PromptInfo from "../../../../definitions/PromptInfo.js";
 import CreateIVRPromptRequest from "../../../../definitions/CreateIVRPromptRequest.js";
 import IvrPrompts from "../../../../definitions/IvrPrompts.js";
-import {
-  ParentInterface,
-  RestRequestConfig,
-  RingCentralInterface,
-} from "../../../../types.js";
+import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types.js';
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
   public promptId: string | null;
-
+  
   public constructor(_parent: ParentInterface, promptId: string | null = null) {
     this._parent = _parent;
     this.rc = _parent.rc;
@@ -22,7 +18,7 @@ class Index {
   }
   public path(withParameter = true): string {
     if (withParameter && this.promptId !== null) {
-      return `${this._parent.path()}/ivr-prompts/${this.promptId}`;
+        return `${this._parent.path()}/ivr-prompts/${this.promptId}`;
     }
     return `${this._parent.path()}/ivr-prompts`;
   }
@@ -34,14 +30,8 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadCompanyGreetings
    */
-  public async list(
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<IvrPrompts> {
-    const r = await this.rc.get<IvrPrompts>(
-      this.path(false),
-      undefined,
-      restRequestConfig,
-    );
+  public async list(restRequestConfig?: RestRequestConfig): Promise<IvrPrompts> {
+    const r = await this.rc.get<IvrPrompts>(this.path(false), undefined, restRequestConfig);
     return r.data;
   }
 
@@ -53,17 +43,9 @@ class Index {
    * App Permission: EditAccounts
    * User Permission: EditCompanyGreetings
    */
-  public async post(
-    createIVRPromptRequest: CreateIVRPromptRequest,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<PromptInfo> {
-    const formData = await Utils.getFormData(createIVRPromptRequest);
-    const r = await this.rc.post<PromptInfo>(
-      this.path(false),
-      formData,
-      undefined,
-      restRequestConfig,
-    );
+  public async post(createIVRPromptRequest: CreateIVRPromptRequest, restRequestConfig?: RestRequestConfig): Promise<PromptInfo> {
+const formData = await Utils.getFormData(createIVRPromptRequest);
+    const r = await this.rc.post<PromptInfo>(this.path(false), formData, undefined, restRequestConfig);
     return r.data;
   }
 
@@ -76,14 +58,11 @@ class Index {
    * User Permission: ReadCompanyGreetings
    */
   public async get(restRequestConfig?: RestRequestConfig): Promise<PromptInfo> {
-    if (this.promptId === null) {
-      throw new Error("promptId must be specified.");
+    if (this.promptId === null)
+    {
+        throw new Error('promptId must be specified.');
     }
-    const r = await this.rc.get<PromptInfo>(
-      this.path(),
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.get<PromptInfo>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 
@@ -95,19 +74,12 @@ class Index {
    * App Permission: EditAccounts
    * User Permission: EditCompanyGreetings
    */
-  public async put(
-    updateIVRPromptRequest: UpdateIVRPromptRequest,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<PromptInfo> {
-    if (this.promptId === null) {
-      throw new Error("promptId must be specified.");
+  public async put(updateIVRPromptRequest: UpdateIVRPromptRequest, restRequestConfig?: RestRequestConfig): Promise<PromptInfo> {
+    if (this.promptId === null)
+    {
+        throw new Error('promptId must be specified.');
     }
-    const r = await this.rc.put<PromptInfo>(
-      this.path(),
-      updateIVRPromptRequest,
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.put<PromptInfo>(this.path(), updateIVRPromptRequest, undefined, restRequestConfig);
     return r.data;
   }
 
@@ -120,15 +92,11 @@ class Index {
    * User Permission: EditCompanyGreetings
    */
   public async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
-    if (this.promptId === null) {
-      throw new Error("promptId must be specified.");
+    if (this.promptId === null)
+    {
+        throw new Error('promptId must be specified.');
     }
-    const r = await this.rc.delete<string>(
-      this.path(),
-      {},
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.delete<string>(this.path(), {}, undefined, restRequestConfig);
     return r.data;
   }
 

@@ -1,5 +1,5 @@
 interface PagingGroupExtensionInfo {
-  /**
+    /**
    * Internal identifier of a paging group user extension
    */
   id?: string;

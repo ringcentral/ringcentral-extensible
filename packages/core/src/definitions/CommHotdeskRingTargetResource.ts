@@ -1,7 +1,7 @@
 import CommDeviceResource from "./CommDeviceResource.js";
 
 interface CommHotdeskRingTargetResource {
-  /**
+    /**
    * Required
    */
   name?: string;
@@ -11,15 +11,7 @@ interface CommHotdeskRingTargetResource {
    * Required
    * Example: HotdeskRingTarget
    */
-  type?:
-    | "AllDesktopRingTarget"
-    | "AllMobileRingTarget"
-    | "CoworkerRingTarget"
-    | "DeviceRingTarget"
-    | "HotdeskRingTarget"
-    | "ImsPhoneNumberRingTarget"
-    | "IntegrationRingTarget"
-    | "PhoneNumberRingTarget";
+  type?: ('AllDesktopRingTarget' | 'AllMobileRingTarget' | 'CoworkerRingTarget' | 'DeviceRingTarget' | 'HotdeskRingTarget' | 'ImsPhoneNumberRingTarget' | 'FmcPhoneNumberRingTarget' | 'IntegrationRingTarget' | 'PhoneNumberRingTarget');
 
   /**
    * Required

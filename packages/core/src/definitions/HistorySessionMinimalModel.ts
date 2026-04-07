@@ -1,5 +1,5 @@
 interface HistorySessionMinimalModel {
-  /**
+    /**
    * Session start time. If a session hasn't been started this fields should be set to "scheduledStartTime"
    * Format: date-time
    */

@@ -2,7 +2,7 @@ import MessageTemplateInfo from "./MessageTemplateInfo.js";
 import Site from "./Site.js";
 
 interface MessageTemplateResponse {
-  /**
+    /**
    * Internal identifier of a template
    */
   id?: string;
@@ -12,15 +12,17 @@ interface MessageTemplateResponse {
    */
   displayName?: string;
 
-  /** */
+  /**
+   */
   body?: MessageTemplateInfo;
 
   /**
    * Specifies if a template is available on a user (Personal) or a company (Company) level
    */
-  scope?: "Company" | "Personal";
+  scope?: ('Company' | 'Personal');
 
-  /** */
+  /**
+   */
   site?: Site;
 }
 

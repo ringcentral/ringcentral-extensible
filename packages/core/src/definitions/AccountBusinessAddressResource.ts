@@ -1,12 +1,13 @@
 import ContactBusinessAddressInfo from "./ContactBusinessAddressInfo.js";
 
 interface AccountBusinessAddressResource {
-  /**
+    /**
    * Format: uri
    */
   uri?: string;
 
-  /** */
+  /**
+   */
   businessAddress?: ContactBusinessAddressInfo;
 
   /**

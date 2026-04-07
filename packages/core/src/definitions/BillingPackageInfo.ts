@@ -1,5 +1,5 @@
 interface BillingPackageInfo {
-  /**
+    /**
    * Billing package version
    */
   version?: string;

@@ -1,8 +1,9 @@
-import CallQueueUpdateMemberPresence from "./CallQueueUpdateMemberPresence.js";
+import CallQueueMemberPresence from "./CallQueueMemberPresence.js";
 
 interface CallQueueUpdatePresence {
-  /** */
-  records?: CallQueueUpdateMemberPresence[];
+    /**
+   */
+  records?: CallQueueMemberPresence[];
 }
 
 export default CallQueueUpdatePresence;

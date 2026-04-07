@@ -1,5 +1,5 @@
 interface ScimName {
-  /**
+    /**
    * Required
    */
   familyName?: string;

@@ -3,7 +3,7 @@ import PageNavigationModel from "./PageNavigationModel.js";
 import EnumeratedPagingModel from "./EnumeratedPagingModel.js";
 
 interface LanguageList {
-  /**
+    /**
    * Canonical URI of the language list resource
    * Format: uri
    */
@@ -14,10 +14,12 @@ interface LanguageList {
    */
   records?: LanguageInfo[];
 
-  /** */
+  /**
+   */
   navigation?: PageNavigationModel;
 
-  /** */
+  /**
+   */
   paging?: EnumeratedPagingModel;
 }
 

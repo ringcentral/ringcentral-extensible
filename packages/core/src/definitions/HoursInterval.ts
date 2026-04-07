@@ -1,5 +1,5 @@
 interface HoursInterval {
-  /**
+    /**
    * Time in format hh:mm
    * Required
    */

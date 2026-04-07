@@ -3,9 +3,9 @@ import BasicPaging from "./BasicPaging.js";
 
 /**
  * Recordings page
- */
+*/
 interface CloudRecordings {
-  /**
+    /**
    * Recordings array
    * Required
    */

@@ -1,5 +1,5 @@
 interface TMCompanyInfo {
-  /**
+    /**
    * Internal identifier of a company (RingCentral account ID)
    * Required
    */

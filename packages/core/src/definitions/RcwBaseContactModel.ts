@@ -1,5 +1,5 @@
 interface RcwBaseContactModel {
-  /**
+    /**
    * First (given) name
    * Example: John
    */

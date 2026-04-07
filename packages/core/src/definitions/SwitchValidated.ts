@@ -1,7 +1,7 @@
 import ValidationError from "./ValidationError.js";
 
 interface SwitchValidated {
-  /**
+    /**
    * Internal identifier of a switch
    */
   id?: string;
@@ -19,9 +19,10 @@ interface SwitchValidated {
   /**
    * Validation result status
    */
-  status?: "Valid" | "Invalid";
+  status?: ('Valid' | 'Invalid');
 
-  /** */
+  /**
+   */
   errors?: ValidationError[];
 }
 

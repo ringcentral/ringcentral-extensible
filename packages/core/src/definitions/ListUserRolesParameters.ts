@@ -1,10 +1,10 @@
 /**
  * Query parameters for operation listUserRoles
- */
+*/
 interface ListUserRolesParameters {
-  /**
+    /**
    * Specifies whether to return custom roles or predefined roles only.
-   *  If not specified, all roles are returned
+ *  If not specified, all roles are returned
    */
   custom?: boolean;
 
@@ -19,8 +19,8 @@ interface ListUserRolesParameters {
   page?: number;
 
   /**
-   * The number of items per page. If provided value in the request
-   *  is greater than a maximum, the maximum value is applied
+   * The number of items per page. If the provided value in the request
+ *  is greater than a maximum, the maximum value is applied
    * Maximum: 1000
    * Minimum: 1
    * Format: int32

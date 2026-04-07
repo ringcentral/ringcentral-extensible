@@ -1,5 +1,5 @@
 interface BulkTaskInfo {
-  /**
+    /**
    * Internal identifier of a task for multiple switches creation
    */
   id?: string;
@@ -7,7 +7,7 @@ interface BulkTaskInfo {
   /**
    * Status of a task
    */
-  status?: "Accepted" | "Failed";
+  status?: ('Accepted' | 'Failed');
 
   /**
    * Task creation time

@@ -3,7 +3,7 @@ import PageNavigationModel from "./PageNavigationModel.js";
 import EnumeratedPagingModel from "./EnumeratedPagingModel.js";
 
 interface PagingOnlyGroupUsers {
-  /**
+    /**
    * Link to a list of users allowed to page the Paging Only group
    * Format: uri
    */
@@ -14,10 +14,12 @@ interface PagingOnlyGroupUsers {
    */
   records?: PagingGroupExtensionInfo[];
 
-  /** */
+  /**
+   */
   navigation?: PageNavigationModel;
 
-  /** */
+  /**
+   */
   paging?: EnumeratedPagingModel;
 }
 

@@ -1,5 +1,5 @@
 interface ArchiveInfo {
-  /**
+    /**
    * Archive size in bytes
    * Format: int64
    * Example: 201412

@@ -1,5 +1,5 @@
 interface ScimBulkSupported {
-  /**
+    /**
    * Format: int32
    */
   maxOperations?: number;
@@ -9,7 +9,8 @@ interface ScimBulkSupported {
    */
   maxPayloadSize?: number;
 
-  /** */
+  /**
+   */
   supported?: boolean;
 }
 

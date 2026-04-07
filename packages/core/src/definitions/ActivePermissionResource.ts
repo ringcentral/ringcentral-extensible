@@ -1,23 +1,18 @@
 import PermissionIdResource from "./PermissionIdResource.js";
-import RoleIdResource from "./RoleIdResource.js";
+import EffectiveRoleResource from "./EffectiveRoleResource.js";
 
 interface ActivePermissionResource {
-  /** */
+    /**
+   */
   permission?: PermissionIdResource;
 
-  /** */
-  effectiveRole?: RoleIdResource;
+  /**
+   */
+  effectiveRole?: EffectiveRoleResource;
 
-  /** */
-  scopes?: (
-    | "Account"
-    | "AllExtensions"
-    | "Federation"
-    | "NonUserExtensions"
-    | "RoleBased"
-    | "Self"
-    | "UserExtensions"
-  )[];
+  /**
+   */
+  scopes?: ('Account' | 'AllExtensions' | 'Federation' | 'NonUserExtensions' | 'RoleBased' | 'Self' | 'UserExtensions')[];
 }
 
 export default ActivePermissionResource;

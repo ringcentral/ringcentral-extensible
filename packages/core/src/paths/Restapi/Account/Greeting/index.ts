@@ -1,17 +1,13 @@
-import Content from "./Content/index.js";
-import Utils from "../../../../Utils.js";
+import Content from './Content/index.js';
+import Utils from '../../../../Utils.js';
 import CustomCompanyGreetingInfo from "../../../../definitions/CustomCompanyGreetingInfo.js";
 import CreateCompanyGreetingRequest from "../../../../definitions/CreateCompanyGreetingRequest.js";
-import {
-  ParentInterface,
-  RestRequestConfig,
-  RingCentralInterface,
-} from "../../../../types.js";
+import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types.js';
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
-
+  
   public constructor(_parent: ParentInterface) {
     this._parent = _parent;
     this.rc = _parent.rc;
@@ -27,17 +23,9 @@ class Index {
    * App Permission: EditAccounts
    * User Permission: ReadUserInfo
    */
-  public async post(
-    createCompanyGreetingRequest: CreateCompanyGreetingRequest,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<CustomCompanyGreetingInfo> {
-    const formData = await Utils.getFormData(createCompanyGreetingRequest);
-    const r = await this.rc.post<CustomCompanyGreetingInfo>(
-      this.path(),
-      formData,
-      undefined,
-      restRequestConfig,
-    );
+  public async post(createCompanyGreetingRequest: CreateCompanyGreetingRequest, restRequestConfig?: RestRequestConfig): Promise<CustomCompanyGreetingInfo> {
+const formData = await Utils.getFormData(createCompanyGreetingRequest);
+    const r = await this.rc.post<CustomCompanyGreetingInfo>(this.path(), formData, undefined, restRequestConfig);
     return r.data;
   }
 

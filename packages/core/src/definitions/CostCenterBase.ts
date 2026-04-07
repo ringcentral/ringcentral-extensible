@@ -1,5 +1,5 @@
 interface CostCenterBase {
-  /**
+    /**
    * Internal identifier of a cost center
    * Format: int64
    * Example: 981086004

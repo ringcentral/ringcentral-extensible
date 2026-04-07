@@ -2,7 +2,7 @@ import SiteReference from "./SiteReference.js";
 import CallQueueServiceLevelSettings from "./CallQueueServiceLevelSettings.js";
 
 interface CallQueueDetailsForUpdate {
-  /**
+    /**
    * Extension number of a call queue
    */
   extensionNumber?: string;
@@ -15,17 +15,19 @@ interface CallQueueDetailsForUpdate {
   /**
    * Group extension status
    */
-  status?: "Enabled" | "Disabled" | "NotActivated" | "Unassigned";
+  status?: ('Enabled' | 'Disabled' | 'NotActivated' | 'Unassigned');
 
   /**
    * Indicates whether it is an emergency call queue extension or not
    */
-  subType?: "Emergency" | "Unknown";
+  subType?: ('Emergency' | 'Unknown');
 
-  /** */
+  /**
+   */
   site?: SiteReference;
 
-  /** */
+  /**
+   */
   serviceLevelSettings?: CallQueueServiceLevelSettings;
 
   /**

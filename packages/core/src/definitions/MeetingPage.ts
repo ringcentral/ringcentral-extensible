@@ -3,9 +3,9 @@ import BasicPaging from "./BasicPaging.js";
 
 /**
  * Meetings page
- */
+*/
 interface MeetingPage {
-  /**
+    /**
    * Meetings array
    * Required
    */

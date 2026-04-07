@@ -3,18 +3,21 @@ import EnumeratedPagingModel from "./EnumeratedPagingModel.js";
 import PageNavigationModel from "./PageNavigationModel.js";
 
 interface RolesCollectionResource {
-  /**
+    /**
    * Format: uri
    */
   uri?: string;
 
-  /** */
+  /**
+   */
   records?: RoleResource[];
 
-  /** */
+  /**
+   */
   paging?: EnumeratedPagingModel;
 
-  /** */
+  /**
+   */
   navigation?: PageNavigationModel;
 }
 

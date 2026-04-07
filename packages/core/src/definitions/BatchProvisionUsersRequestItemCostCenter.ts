@@ -1,5 +1,5 @@
 interface BatchProvisionUsersRequestItemCostCenter {
-  /**
+    /**
    * Internal identifier of the Cost Center
    * Example: 224149
    */

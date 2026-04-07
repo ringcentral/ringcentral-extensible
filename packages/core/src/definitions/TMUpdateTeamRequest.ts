@@ -1,5 +1,5 @@
 interface TMUpdateTeamRequest {
-  /**
+    /**
    * Team access level
    */
   public?: boolean;

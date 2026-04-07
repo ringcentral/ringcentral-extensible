@@ -1,13 +1,13 @@
 /**
  * Sync type, token and time
- */
+*/
 interface SyncInfoMessages {
-  /**
+    /**
    * Type of message synchronization request:
-   *    - FSync -- full sync
-   *    - ISync -- incremental sync
+ *    - FSync -- full sync
+ *    - ISync -- incremental sync
    */
-  syncType?: "FSync" | "ISync";
+  syncType?: ('FSync' | 'ISync');
 
   /**
    * Synchronization token
@@ -16,12 +16,13 @@ interface SyncInfoMessages {
 
   /**
    * Last synchronization date/time in ISO 8601 format including
-   *  timezone, for example 2016-03-10T18:07:52.534Z
+ *  timezone, for example 2016-03-10T18:07:52.534Z
    * Format: date-time
    */
   syncTime?: string;
 
-  /** */
+  /**
+   */
   olderRecordsExist?: boolean;
 }
 

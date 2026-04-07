@@ -1,7 +1,7 @@
 import SpeechContextPhrasesInput from "./SpeechContextPhrasesInput.js";
 
 interface InteractionInput {
-  /**
+    /**
    * Publicly facing uri
    * Format: uri
    */
@@ -12,7 +12,7 @@ interface InteractionInput {
    * Required
    * Example: Wav
    */
-  encoding?: "Mpeg" | "Mp4" | "Wav" | "Webm" | "Webp" | "Aac" | "Avi" | "Ogg";
+  encoding?: ('Mpeg' | 'Mp4' | 'Wav' | 'Webm' | 'Webp' | 'Aac' | 'Avi' | 'Ogg');
 
   /**
    * Language spoken in the audio file.
@@ -31,13 +31,7 @@ interface InteractionInput {
    * Type of the audio
    * Example: CallCenter
    */
-  audioType?:
-    | "CallCenter"
-    | "Meeting"
-    | "EarningsCalls"
-    | "Interview"
-    | "PressConference"
-    | "Voicemail";
+  audioType?: ('CallCenter' | 'Meeting' | 'EarningsCalls' | 'Interview' | 'PressConference' | 'Voicemail');
 
   /**
    * Set to True if the input audio is multi-channel and each channel has a separate speaker.
@@ -52,30 +46,13 @@ interface InteractionInput {
   speakerCount?: number;
 
   /**
-   * Optional set of speakers to be identified from the call.
-   * Example: speakerId1,speakerId2
-   */
-  speakerIds?: string[];
-
-  /**
    * Apply voice activity detection.
    */
   enableVoiceActivityDetection?: boolean;
 
-  /** */
-  insights?: (
-    | "All"
-    | "KeyPhrases"
-    | "Emotion"
-    | "AbstractiveSummaryLong"
-    | "AbstractiveSummaryShort"
-    | "ExtractiveSummary"
-    | "Topics"
-    | "TalkToListenRatio"
-    | "Energy"
-    | "Pace"
-    | "QuestionsAsked"
-  )[];
+  /**
+   */
+  insights?: ('All' | 'KeyPhrases' | 'AbstractiveSummaryLong' | 'AbstractiveSummaryShort' | 'ExtractiveSummary' | 'Topics' | 'TalkToListenRatio' | 'Pace' | 'QuestionsAsked')[];
 
   /**
    * Indicates the words/phrases that will be used for boosting the transcript. This can help to boost accuracy for cases like Person Names, Company names etc.

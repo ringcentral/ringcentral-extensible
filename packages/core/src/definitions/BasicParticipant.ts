@@ -1,19 +1,22 @@
 /**
  * Basic participant information
- */
+*/
 interface BasicParticipant {
-  /**
+    /**
    * Required
    */
   id?: string;
 
-  /** */
+  /**
+   */
   accountId?: string;
 
-  /** */
+  /**
+   */
   extensionId?: string;
 
-  /** */
+  /**
+   */
   displayName?: string;
 
   /**

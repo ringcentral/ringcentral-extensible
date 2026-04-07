@@ -1,15 +1,11 @@
 import RolesCollectionResource from "../../../../../definitions/RolesCollectionResource.js";
 import ListOfAvailableForAssigningRolesParameters from "../../../../../definitions/ListOfAvailableForAssigningRolesParameters.js";
-import {
-  ParentInterface,
-  RestRequestConfig,
-  RingCentralInterface,
-} from "../../../../../types.js";
+import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types.js';
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
-
+  
   public constructor(_parent: ParentInterface) {
     this._parent = _parent;
     this.rc = _parent.rc;
@@ -24,15 +20,8 @@ class Index {
    * Rate Limit Group: Medium
    * App Permission: RoleManagement
    */
-  public async get(
-    queryParams?: ListOfAvailableForAssigningRolesParameters,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<RolesCollectionResource> {
-    const r = await this.rc.get<RolesCollectionResource>(
-      this.path(),
-      queryParams,
-      restRequestConfig,
-    );
+  public async get(queryParams?: ListOfAvailableForAssigningRolesParameters, restRequestConfig?: RestRequestConfig): Promise<RolesCollectionResource> {
+    const r = await this.rc.get<RolesCollectionResource>(this.path(), queryParams, restRequestConfig);
     return r.data;
   }
 }

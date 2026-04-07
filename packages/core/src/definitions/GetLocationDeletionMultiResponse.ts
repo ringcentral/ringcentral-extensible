@@ -1,13 +1,16 @@
 import LocationDeletionInfo from "./LocationDeletionInfo.js";
 
 interface GetLocationDeletionMultiResponse {
-  /** */
-  deletion?: "Forbidden" | "Restricted" | "Allowed";
+    /**
+   */
+  deletion?: ('Forbidden' | 'Restricted' | 'Allowed');
 
-  /** */
-  reassignment?: "Forbidden" | "Allowed";
+  /**
+   */
+  reassignment?: ('Forbidden' | 'Allowed');
 
-  /** */
+  /**
+   */
   emergencyLocations?: LocationDeletionInfo[];
 }
 

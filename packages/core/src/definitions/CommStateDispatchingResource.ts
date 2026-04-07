@@ -1,7 +1,7 @@
 import CommStateDispatchingResourceActions from "./CommStateDispatchingResourceActions.js";
 
 interface CommStateDispatchingResource {
-  /**
+    /**
    * Action information
    * Required
    */
@@ -11,7 +11,7 @@ interface CommStateDispatchingResource {
    * Call dispatching type
    * Required
    */
-  type?: "RingAtOnce" | "RingInOrder" | "Custom" | "Terminate";
+  type?: ('RingAtOnce' | 'RingInOrder' | 'Custom' | 'Terminate');
 }
 
 export default CommStateDispatchingResource;

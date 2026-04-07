@@ -1,5 +1,5 @@
 interface BulkAddDevicesItemEmergencyLocation {
-  /**
+    /**
    * Emergency location ID
    */
   id?: string;

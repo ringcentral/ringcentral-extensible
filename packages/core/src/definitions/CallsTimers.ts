@@ -12,39 +12,50 @@ import CallsByQueueHours from "./CallsByQueueHours.js";
 
 /**
  * Call length data for the specified grouping
- */
+*/
 interface CallsTimers {
-  /** */
+    /**
+   */
   allCalls?: AllCalls;
 
-  /** */
+  /**
+   */
   callsByDirection?: CallsByDirection;
 
-  /** */
+  /**
+   */
   callsByOrigin?: CallsByOrigin;
 
-  /** */
+  /**
+   */
   callsByResponse?: CallsByResponse;
 
-  /** */
+  /**
+   */
   callsSegments?: CallsBySegments;
 
-  /** */
+  /**
+   */
   callsByResult?: CallsByResult;
 
-  /** */
+  /**
+   */
   callsByEndingParty?: CallsByEndingParty;
 
-  /** */
+  /**
+   */
   callsByCompanyHours?: CallsByCompanyHours;
 
-  /** */
+  /**
+   */
   callsByQueueSla?: CallsByQueueSla;
 
-  /** */
+  /**
+   */
   callsByType?: CallsByType;
 
-  /** */
+  /**
+   */
   callsByQueueHours?: CallsByQueueHours;
 }
 

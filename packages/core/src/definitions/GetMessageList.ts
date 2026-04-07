@@ -3,7 +3,7 @@ import MessagingNavigationInfo from "./MessagingNavigationInfo.js";
 import MessagingPagingInfo from "./MessagingPagingInfo.js";
 
 interface GetMessageList {
-  /**
+    /**
    * Link to a list of user messages
    * Format: uri
    */

@@ -1,16 +1,17 @@
 /**
  * User's business address. The default is
  * Company (Auto-Receptionist) settings
- */
+ * 
+*/
 interface ContactBusinessAddressInfo {
-  /**
+    /**
    * Country name of a user's company
    */
   country?: string;
 
   /**
    * State/province name of a user's company. Mandatory
-   *  for the USA, UK and Canada
+ *  for the USA, UK and Canada
    */
   state?: string;
 

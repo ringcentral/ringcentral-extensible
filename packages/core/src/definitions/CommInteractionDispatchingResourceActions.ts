@@ -2,20 +2,14 @@ import CommGreetingResource from "./CommGreetingResource.js";
 import CommInteractionDispatchingResourceActionsTargets from "./CommInteractionDispatchingResourceActionsTargets.js";
 
 interface CommInteractionDispatchingResourceActions {
-  /**
+    /**
    * Action type
    * Example: TerminatingAction
    */
-  type?:
-    | "PlayConnectingMessageAction"
-    | "PlayConnectingPromptAction"
-    | "PlayWelcomePromptAction"
-    | "ScreeningAction"
-    | "RingGroupAction"
-    | "RingAlwaysGroupAction"
-    | "TerminatingAction";
+  type?: ('PlayConnectingMessageAction' | 'PlayConnectingPromptAction' | 'PlayWelcomePromptAction' | 'ScreeningAction' | 'RingGroupAction' | 'RingAlwaysGroupAction' | 'TerminatingAction');
 
-  /** */
+  /**
+   */
   greeting?: CommGreetingResource;
 
   /**
@@ -26,10 +20,11 @@ interface CommInteractionDispatchingResourceActions {
   /**
    * Screening type
    */
-  screening?: "NoCallerId" | "UnknownCallerId" | "Always";
+  screening?: ('NoCallerId' | 'UnknownCallerId' | 'Always');
 
-  /** */
-  screeningResult?: "AskToAnswer" | "PlayCallerNameOnly";
+  /**
+   */
+  screeningResult?: ('AskToAnswer' | 'PlayCallerNameOnly');
 
   /**
    * Action information
@@ -53,20 +48,12 @@ interface CommInteractionDispatchingResourceActions {
   /**
    * Terminating target type
    */
-  ringingTargetType?:
-    | "ExtensionTerminatingTarget"
-    | "PhoneNumberTerminatingTarget"
-    | "PlayAnnouncementTerminatingTarget"
-    | "VoiceMailTerminatingTarget";
+  ringingTargetType?: ('ExtensionTerminatingTarget' | 'PhoneNumberTerminatingTarget' | 'PlayAnnouncementTerminatingTarget' | 'VoiceMailTerminatingTarget');
 
   /**
    * Terminating target type
    */
-  terminatingTargetType?:
-    | "ExtensionTerminatingTarget"
-    | "PhoneNumberTerminatingTarget"
-    | "PlayAnnouncementTerminatingTarget"
-    | "VoiceMailTerminatingTarget";
+  terminatingTargetType?: ('ExtensionTerminatingTarget' | 'PhoneNumberTerminatingTarget' | 'PlayAnnouncementTerminatingTarget' | 'VoiceMailTerminatingTarget');
 }
 
 export default CommInteractionDispatchingResourceActions;

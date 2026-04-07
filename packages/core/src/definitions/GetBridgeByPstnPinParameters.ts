@@ -1,8 +1,8 @@
 /**
  * Query parameters for operation getBridgeByPstnPin
- */
+*/
 interface GetBridgeByPstnPinParameters {
-  /**
+    /**
    * Bridge hash password
    */
   pw?: string;

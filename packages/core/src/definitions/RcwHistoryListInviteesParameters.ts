@@ -1,20 +1,20 @@
 /**
  * Query parameters for operation rcwHistoryListInvitees
- */
+*/
 interface RcwHistoryListInviteesParameters {
-  /**
+    /**
    * The role of the participant.
    */
-  role?: ("Panelist" | "CoHost" | "Host" | "Attendee")[];
+  role?: ('Panelist' | 'CoHost' | 'Host' | 'Attendee')[];
 
   /**
    * The original role of the invitee/participant.
    */
-  originalRole?: ("Panelist" | "CoHost" | "Host" | "Attendee")[];
+  originalRole?: ('Panelist' | 'CoHost' | 'Host' | 'Attendee')[];
 
   /**
-   * The number of items per page. If provided value in the request
-   *  is greater than a maximum, the maximum value is applied
+   * The number of items per page. If the provided value in the request
+ *  is greater than a maximum, the maximum value is applied
    * Maximum: 1000
    * Minimum: 1
    * Format: int32
@@ -25,7 +25,7 @@ interface RcwHistoryListInviteesParameters {
 
   /**
    * The token indicating the particular page of the result set to be retrieved.
-   *  If omitted the first page will be returned.
+ *  If omitted the first page will be returned.
    */
   pageToken?: string;
 }

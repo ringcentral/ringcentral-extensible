@@ -2,7 +2,7 @@ import ScimSchemaAttribute from "./ScimSchemaAttribute.js";
 import ScimMeta from "./ScimMeta.js";
 
 interface ScimSchemaResponse {
-  /**
+    /**
    * The unique URI of the schema
    * Required
    */
@@ -18,10 +18,12 @@ interface ScimSchemaResponse {
    */
   description?: string;
 
-  /** */
+  /**
+   */
   attributes?: ScimSchemaAttribute[];
 
-  /** */
+  /**
+   */
   meta?: ScimMeta;
 }
 

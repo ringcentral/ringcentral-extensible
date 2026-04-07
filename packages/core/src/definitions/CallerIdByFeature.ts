@@ -1,23 +1,16 @@
-import CallerIdByFeatureInfo from "./CallerIdByFeatureInfo.js";
+import CallerIdData from "./CallerIdData.js";
 
 /**
  * Caller ID settings by feature
- */
+*/
 interface CallerIdByFeature {
-  /** */
-  feature?:
-    | "RingOut"
-    | "RingMe"
-    | "CallFlip"
-    | "FaxNumber"
-    | "AdditionalSoftphone"
-    | "Alternate"
-    | "CommonPhone"
-    | "MobileApp"
-    | "Delegated";
+    /**
+   */
+  feature?: ('RingOut' | 'RingMe' | 'CallFlip' | 'FaxNumber' | 'AdditionalSoftphone' | 'Alternate' | 'CommonPhone' | 'MobileApp' | 'Delegated' | 'BusinessMobile');
 
-  /** */
-  callerId?: CallerIdByFeatureInfo;
+  /**
+   */
+  callerId?: CallerIdData;
 }
 
 export default CallerIdByFeature;

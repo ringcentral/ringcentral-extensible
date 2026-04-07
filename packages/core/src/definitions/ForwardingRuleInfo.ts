@@ -1,7 +1,7 @@
 import CreateAnsweringRuleForwardingNumberInfo from "./CreateAnsweringRuleForwardingNumberInfo.js";
 
 interface ForwardingRuleInfo {
-  /**
+    /**
    * Forwarding number (or group) ordinal
    * Format: int32
    */

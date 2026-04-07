@@ -1,8 +1,8 @@
 /**
  * Extension information
- */
+*/
 interface ExtensionInfoGrants {
-  /**
+    /**
    * Internal identifier of an extension
    */
   id?: string;
@@ -25,23 +25,10 @@ interface ExtensionInfoGrants {
 
   /**
    * Extension type. Please note that legacy 'Department'
-   *  extension type corresponds to 'Call Queue' extensions in modern RingCentral
-   *  product terminology
+ *  extension type corresponds to 'Call Queue' extensions in modern RingCentral
+ *  product terminology
    */
-  type?:
-    | "User"
-    | "Fax User"
-    | "VirtualUser"
-    | "DigitalUser"
-    | "Department"
-    | "Announcement"
-    | "Voicemail"
-    | "SharedLinesGroup"
-    | "PagingOnly"
-    | "IvrMenu"
-    | "ApplicationExtension"
-    | "ParkLocation"
-    | "DelegatedLinesGroup";
+  type?: ('User' | 'Fax User' | 'VirtualUser' | 'DigitalUser' | 'Department' | 'Announcement' | 'Voicemail' | 'SharedLinesGroup' | 'PagingOnly' | 'IvrMenu' | 'ApplicationExtension' | 'ParkLocation' | 'DelegatedLinesGroup');
 }
 
 export default ExtensionInfoGrants;

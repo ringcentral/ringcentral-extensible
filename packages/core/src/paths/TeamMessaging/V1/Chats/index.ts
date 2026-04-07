@@ -1,23 +1,19 @@
-import AdaptiveCards from "./AdaptiveCards/index.js";
-import Unfavorite from "./Unfavorite/index.js";
-import Favorite from "./Favorite/index.js";
-import Tasks from "./Tasks/index.js";
-import Notes from "./Notes/index.js";
-import Posts from "./Posts/index.js";
+import AdaptiveCards from './AdaptiveCards/index.js';
+import Unfavorite from './Unfavorite/index.js';
+import Favorite from './Favorite/index.js';
+import Tasks from './Tasks/index.js';
+import Notes from './Notes/index.js';
+import Posts from './Posts/index.js';
 import TMChatInfo from "../../../../definitions/TMChatInfo.js";
 import TMChatList from "../../../../definitions/TMChatList.js";
 import ListGlipChatsNewParameters from "../../../../definitions/ListGlipChatsNewParameters.js";
-import {
-  ParentInterface,
-  RestRequestConfig,
-  RingCentralInterface,
-} from "../../../../types.js";
+import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types.js';
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
   public chatId: string | null;
-
+  
   public constructor(_parent: ParentInterface, chatId: string | null = null) {
     this._parent = _parent;
     this.rc = _parent.rc;
@@ -25,65 +21,55 @@ class Index {
   }
   public path(withParameter = true): string {
     if (withParameter && this.chatId !== null) {
-      return `${this._parent.path()}/chats/${this.chatId}`;
+        return `${this._parent.path()}/chats/${this.chatId}`;
     }
     return `${this._parent.path()}/chats`;
   }
   /**
    * Returns the list of chats where the user is a member and also public teams that can be joined.
-   *
-   * All records in response are sorted by creation time of a chat in ascending order.
-   *
-   * **Chat types**
-   *
-   * There are multiple types of chats, including:
-   *
-   * * **Personal** - each user is given a dedicated "personal chat" in which they are the only member.
-   * * **Direct** - a chat between two individuals.
-   * * **Group** - a chat between three or more named individuals. A "group" chat has no name.
-   * * **Team** - a chat related to a specific topic. Members can come and go freely from this chat type.
-   * * **Everyone** - a special chat containing every individual in a company.
-   *
+ * 
+ * All records in response are sorted by creation time of a chat in ascending order.
+ * 
+ * **Chat types**
+ * 
+ * There are multiple types of chats, including:
+ * 
+ * * **Personal** - each user is given a dedicated "personal chat" in which they are the only member.
+ * * **Direct** - a chat between two individuals.
+ * * **Group** - a chat between three or more named individuals. A "group" chat has no name.
+ * * **Team** - a chat related to a specific topic. Members can come and go freely from this chat type.
+ * * **Everyone** - a special chat containing every individual in a company.
+ * 
    * HTTP Method: get
    * Endpoint: /team-messaging/v1/chats
    * Rate Limit Group: Medium
    * App Permission: TeamMessaging
    */
-  public async list(
-    queryParams?: ListGlipChatsNewParameters,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<TMChatList> {
-    const r = await this.rc.get<TMChatList>(
-      this.path(false),
-      queryParams,
-      restRequestConfig,
-    );
+  public async list(queryParams?: ListGlipChatsNewParameters, restRequestConfig?: RestRequestConfig): Promise<TMChatList> {
+    const r = await this.rc.get<TMChatList>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }
 
   /**
    * Returns information about a chat by ID.
-   *
-   * **Note** 'Chat' is a general name for all types of threads including *Personal* (user's own me-chat), *Direct* (one on one chat), *Group* (chat of 3-15 participants without specific name), *Team* (chat of 2 and more participants, with a specific name), *Everyone* (company chat including all employees, with a specific name)."
-   *
+ * 
+ * **Note** 'Chat' is a general name for all types of threads including *Personal* (user's own me-chat), *Direct* (one on one chat), *Group* (chat of 3-15 participants without specific name), *Team* (chat of 2 and more participants, with a specific name), *Everyone* (company chat including all employees, with a specific name)."
+ * 
    * HTTP Method: get
    * Endpoint: /team-messaging/v1/chats/{chatId}
    * Rate Limit Group: Light
    * App Permission: TeamMessaging
    */
   public async get(restRequestConfig?: RestRequestConfig): Promise<TMChatInfo> {
-    if (this.chatId === null) {
-      throw new Error("chatId must be specified.");
+    if (this.chatId === null)
+    {
+        throw new Error('chatId must be specified.');
     }
-    const r = await this.rc.get<TMChatInfo>(
-      this.path(),
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.get<TMChatInfo>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 
-  public posts(postId: string | null = null): Posts {
+  public posts(postId: (string | null) = null): Posts {
     return new Posts(this, postId);
   }
 

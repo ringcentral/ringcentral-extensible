@@ -1,5 +1,5 @@
 interface UpdateForwardingNumberRequest {
-  /**
+    /**
    * Forwarding/Call flip phone number
    */
   phoneNumber?: string;
@@ -17,15 +17,7 @@ interface UpdateForwardingNumberRequest {
   /**
    * Forwarding phone number type
    */
-  type?:
-    | "Home"
-    | "Mobile"
-    | "Work"
-    | "PhoneLine"
-    | "Outage"
-    | "Other"
-    | "BusinessMobilePhone"
-    | "ExternalCarrier";
+  type?: ('Home' | 'Mobile' | 'Work' | 'PhoneLine' | 'Outage' | 'Other' | 'BusinessMobilePhone' | 'ExternalCarrier');
 }
 
 export default UpdateForwardingNumberRequest;

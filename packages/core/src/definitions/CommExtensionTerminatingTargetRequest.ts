@@ -1,16 +1,12 @@
 import CommReferencedExtensionResource from "./CommReferencedExtensionResource.js";
 
 interface CommExtensionTerminatingTargetRequest {
-  /**
+    /**
    * Terminating target type
    * Required
    * Example: ExtensionTerminatingTarget
    */
-  type?:
-    | "ExtensionTerminatingTarget"
-    | "PhoneNumberTerminatingTarget"
-    | "PlayAnnouncementTerminatingTarget"
-    | "VoiceMailTerminatingTarget";
+  type?: ('ExtensionTerminatingTarget' | 'PhoneNumberTerminatingTarget' | 'PlayAnnouncementTerminatingTarget' | 'VoiceMailTerminatingTarget');
 
   /**
    * Required
@@ -20,7 +16,7 @@ interface CommExtensionTerminatingTargetRequest {
   /**
    * Required
    */
-  dispatchingType?: "Ringing" | "Terminating";
+  dispatchingType?: ('Ringing' | 'Terminating');
 }
 
 export default CommExtensionTerminatingTargetRequest;

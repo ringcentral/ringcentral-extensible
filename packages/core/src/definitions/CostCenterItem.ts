@@ -1,7 +1,7 @@
 import TaxLocation from "./TaxLocation.js";
 
 interface CostCenterItem {
-  /**
+    /**
    * Internal identifier of a cost center
    * Format: int64
    * Example: 981086004

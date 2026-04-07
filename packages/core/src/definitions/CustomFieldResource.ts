@@ -1,5 +1,5 @@
 interface CustomFieldResource {
-  /**
+    /**
    * Example: 1032854
    */
   id?: string;

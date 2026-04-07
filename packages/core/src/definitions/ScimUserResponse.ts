@@ -7,12 +7,13 @@ import ScimEnterpriseUser from "./ScimEnterpriseUser.js";
 import ScimMeta from "./ScimMeta.js";
 
 interface ScimUserResponse {
-  /**
+    /**
    * User status
    */
   active?: boolean;
 
-  /** */
+  /**
+   */
   addresses?: ScimUserAddress[];
 
   /**
@@ -35,25 +36,27 @@ interface ScimUserResponse {
    */
   name?: ScimName;
 
-  /** */
+  /**
+   */
   phoneNumbers?: ScimPhoneNumber[];
 
-  /** */
+  /**
+   */
   photos?: ScimPhoto[];
 
   /**
    * Required
    */
-  schemas?: ("urn:ietf:params:scim:schemas:core:2.0:User")[];
+  schemas?: ('urn:ietf:params:scim:schemas:core:2.0:User')[];
 
   /**
    * User title
    */
   title?: string;
 
-  /** */
-  "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User"?:
-    ScimEnterpriseUser;
+  /**
+   */
+  'urn:ietf:params:scim:schemas:extension:enterprise:2.0:User'?: ScimEnterpriseUser;
 
   /**
    * MUST be same as work type email address
@@ -61,7 +64,8 @@ interface ScimUserResponse {
    */
   userName?: string;
 
-  /** */
+  /**
+   */
   meta?: ScimMeta;
 }
 

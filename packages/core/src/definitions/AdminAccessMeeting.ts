@@ -3,9 +3,9 @@ import BasicParticipant from "./BasicParticipant.js";
 
 /**
  * Meeting information
- */
+*/
 interface AdminAccessMeeting {
-  /**
+    /**
    * Meeting id
    * Required
    */

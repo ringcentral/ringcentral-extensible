@@ -1,7 +1,7 @@
 import WcsWebinarSettingsModel from "./WcsWebinarSettingsModel.js";
 
 interface WebinarBaseModel {
-  /**
+    /**
    * Webinar title
    * Example: All-Hands Webinar
    */
@@ -13,7 +13,8 @@ interface WebinarBaseModel {
    */
   description?: string;
 
-  /** */
+  /**
+   */
   settings?: WcsWebinarSettingsModel;
 }
 

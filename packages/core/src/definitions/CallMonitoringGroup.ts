@@ -1,7 +1,7 @@
 import CallMonitoringGroupSite from "./CallMonitoringGroupSite.js";
 
 interface CallMonitoringGroup {
-  /**
+    /**
    * Link to a call monitoring group resource
    * Format: uri
    */
@@ -17,7 +17,8 @@ interface CallMonitoringGroup {
    */
   name?: string;
 
-  /** */
+  /**
+   */
   site?: CallMonitoringGroupSite;
 }
 

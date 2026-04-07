@@ -1,5 +1,5 @@
 interface BridgePstnPins {
-  /**
+    /**
    * Host PSTN PIN. If it is not specified while creation, then a PIN will be generated.
    * Example: 432331057631
    */

@@ -3,7 +3,7 @@ import PageNavigationModel from "./PageNavigationModel.js";
 import EnumeratedPagingModel from "./EnumeratedPagingModel.js";
 
 interface GetExtensionForwardingNumberListResponse {
-  /**
+    /**
    * Link to the forwarding number list resource
    * Format: uri
    */
@@ -14,10 +14,12 @@ interface GetExtensionForwardingNumberListResponse {
    */
   records?: ForwardingNumberInfo[];
 
-  /** */
+  /**
+   */
   navigation?: PageNavigationModel;
 
-  /** */
+  /**
+   */
   paging?: EnumeratedPagingModel;
 }
 

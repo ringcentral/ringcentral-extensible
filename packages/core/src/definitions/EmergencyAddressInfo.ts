@@ -1,5 +1,5 @@
 interface EmergencyAddressInfo {
-  /**
+    /**
    * Country name
    */
   country?: string;
@@ -46,13 +46,13 @@ interface EmergencyAddressInfo {
   city?: string;
 
   /**
-   * The name of the street (The field is utilized as 'streetName' field for FR addresses)
+   * First line address
    */
   street?: string;
 
   /**
    * Second line address (apartment, suite, unit, building, floor,
-   *  etc.)
+ *  etc.)
    */
   street2?: string;
 
@@ -67,9 +67,9 @@ interface EmergencyAddressInfo {
   customerName?: string;
 
   /**
-   * Company name
+   * Specifies if the emergency address is out of country
    */
-  companyName?: string;
+  outOfCountry?: boolean;
 
   /**
    * (Optional) Building name
@@ -88,16 +88,10 @@ interface EmergencyAddressInfo {
 
   /**
    * Resulting status of emergency address synchronization. Returned
-   *  for 'Get Device Info' request if `syncEmergencyAddress` parameter is set
-   *  to `true`
+ *  for 'Get Device Info' request if `syncEmergencyAddress` parameter is set
+ *  to `true`
    */
-  syncStatus?:
-    | "Verified"
-    | "Updated"
-    | "Deleted"
-    | "NotRequired"
-    | "Unsupported"
-    | "Failed";
+  syncStatus?: ('Verified' | 'Updated' | 'Deleted' | 'NotRequired' | 'Unsupported' | 'Failed');
 }
 
 export default EmergencyAddressInfo;

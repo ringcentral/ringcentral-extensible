@@ -1,8 +1,8 @@
 /**
  * Query parameters for operation listVoiceInteractionRules
- */
+*/
 interface ListVoiceInteractionRulesParameters {
-  /**
+    /**
    * Display only enabled rules
    */
   enabled?: boolean;
@@ -23,8 +23,8 @@ interface ListVoiceInteractionRulesParameters {
   page?: number;
 
   /**
-   * The number of items per page. If provided value in the request
-   *  is greater than a maximum, the maximum value is applied
+   * The number of items per page. If the provided value in the request
+ *  is greater than a maximum, the maximum value is applied
    * Maximum: 1000
    * Minimum: 1
    * Format: int32

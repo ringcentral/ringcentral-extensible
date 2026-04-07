@@ -1,7 +1,7 @@
 import ApiError from "./ApiError.js";
 
 interface DeleteDeviceFromInventoryResponseRecords {
-  /**
+    /**
    * Specifies if a device is successfully deleted
    */
   bulkItemSuccessful?: boolean;
@@ -13,7 +13,7 @@ interface DeleteDeviceFromInventoryResponseRecords {
 
   /**
    * The list of errors occurred during processing of particular item of bulk operation.
-   *  Returned only if `bulkItemSuccessful` is false
+ *  Returned only if `bulkItemSuccessful` is false
    */
   bulkItemErrors?: ApiError[];
 }

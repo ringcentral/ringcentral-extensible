@@ -1,8 +1,8 @@
 /**
  * Action target object (company/extension)
- */
+*/
 interface AccountHistoryRecordTarget {
-  /**
+    /**
    * Extension identifier of the affected entity or "0" for Company level
    * Example: 404611540004
    */
@@ -12,7 +12,7 @@ interface AccountHistoryRecordTarget {
    * Type of the entity.
    * Example: Extension
    */
-  objectType?: "Extension" | "Account" | "Company" | "Template";
+  objectType?: ('Extension' | 'Account' | 'Company' | 'Template');
 
   /**
    * Target extension name

@@ -1,8 +1,7 @@
 import WordTimingsUnit from "./WordTimingsUnit.js";
-import UtteranceInsightsUnit from "./UtteranceInsightsUnit.js";
 
 interface UtteranceInsightsObject {
-  /**
+    /**
    * Required
    * Format: float
    * Example: 0.3
@@ -33,11 +32,9 @@ interface UtteranceInsightsObject {
    */
   speakerId?: string;
 
-  /** */
+  /**
+   */
   wordTimings?: WordTimingsUnit[];
-
-  /** */
-  insights?: UtteranceInsightsUnit[];
 }
 
 export default UtteranceInsightsObject;

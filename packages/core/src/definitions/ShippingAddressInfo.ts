@@ -3,54 +3,55 @@
  * Service Address, then can be omitted. By default, the same value as the
  * emergencyServiceAddress. Multiple addresses can be specified; in case
  * an order contains several devices, they can be delivered to different addresses
- */
+ * 
+*/
 interface ShippingAddressInfo {
-  /**
+    /**
    * Name of a primary contact person (receiver)
    */
   customerName?: string;
 
   /**
    * Name of an additional contact person. Should be specified for
-   *  countries except the US, Canada, the UK and Australia.
+ *  countries except the US, Canada, the UK and Australia.
    */
   additionalCustomerName?: string;
 
   /**
    * Email of a primary contact person (receiver). Should be specified
-   *  for countries except the US, Canada, the UK and Australia.
+ *  for countries except the US, Canada, the UK and Australia.
    * Format: email
    */
   customerEmail?: string;
 
   /**
    * Email of an additional contact person. Should be specified
-   *  for countries except the US, Canada, the UK and Australia.
+ *  for countries except the US, Canada, the UK and Australia.
    * Format: email
    */
   additionalCustomerEmail?: string;
 
   /**
    * Phone number of a primary contact person (receiver). Should
-   *  be specified for countries except the US, Canada, the UK and Australia
+ *  be specified for countries except the US, Canada, the UK and Australia
    */
   customerPhone?: string;
 
   /**
    * Phone number of an additional contact person. Should be specified
-   *  for countries except the US, Canada, the UK & Australia.
+ *  for countries except the US, Canada, the UK & Australia.
    */
   additionalCustomerPhone?: string;
 
   /**
    * Street address, line 1 - street address, P.O. box, company
-   *  name, c/o
+ *  name, c/o
    */
   street?: string;
 
   /**
    * Street address, line 2 - apartment, suite, unit, building,
-   *  floor, etc.
+ *  floor, etc.
    */
   street2?: string;
 
@@ -106,7 +107,7 @@ interface ShippingAddressInfo {
 
   /**
    * National taxpayer identification number. Should be specified
-   *  for Brazil (CNPJ/CPF number) and Argentina (CUIT number).
+ *  for Brazil (CNPJ/CPF number) and Argentina (CUIT number).
    */
   taxId?: string;
 }

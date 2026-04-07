@@ -1,7 +1,7 @@
 import AdaptiveCardCreator from "./AdaptiveCardCreator.js";
 
 interface AdaptiveCardShortInfo {
-  /**
+    /**
    * Internal identifier of an adaptive card
    */
   id?: string;
@@ -23,15 +23,17 @@ interface AdaptiveCardShortInfo {
    */
   $schema?: string;
 
-  /** */
-  type?: "AdaptiveCard";
+  /**
+   */
+  type?: ('AdaptiveCard');
 
   /**
    * Version of an adaptive card. Filled on server-side
    */
   version?: string;
 
-  /** */
+  /**
+   */
   creator?: AdaptiveCardCreator;
 
   /**

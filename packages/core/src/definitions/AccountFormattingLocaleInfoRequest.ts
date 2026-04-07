@@ -1,5 +1,5 @@
 interface AccountFormattingLocaleInfoRequest {
-  /**
+    /**
    * Internal identifier of a formatting language
    * Required
    */

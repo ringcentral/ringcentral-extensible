@@ -1,5 +1,5 @@
 interface ErrorEntity {
-  /**
+    /**
    * Error code
    */
   errorCode?: string;

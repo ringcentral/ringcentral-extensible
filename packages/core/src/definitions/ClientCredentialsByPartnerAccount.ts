@@ -1,13 +1,14 @@
 /**
  * Token endpoint request parameters used in the "Client Credentials" authorization flow
  * with the `client_credentials` grant type
- */
+ * 
+*/
 interface ClientCredentialsByPartnerAccount {
-  /**
+    /**
    * Grant type
    * Required
    */
-  grant_type?: "client_credentials";
+  grant_type?: ('client_credentials');
 
   /**
    * RingCentral Brand identifier

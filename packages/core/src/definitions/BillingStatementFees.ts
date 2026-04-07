@@ -1,5 +1,6 @@
 interface BillingStatementFees {
-  /** */
+    /**
+   */
   description?: string;
 
   /**

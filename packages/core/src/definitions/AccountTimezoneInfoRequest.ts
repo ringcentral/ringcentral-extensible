@@ -1,5 +1,5 @@
 interface AccountTimezoneInfoRequest {
-  /**
+    /**
    * Internal identifier of a timezone
    * Required
    */

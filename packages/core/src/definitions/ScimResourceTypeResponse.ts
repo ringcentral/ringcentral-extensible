@@ -2,7 +2,7 @@ import ScimSchemaExtension from "./ScimSchemaExtension.js";
 import ScimMeta from "./ScimMeta.js";
 
 interface ScimResourceTypeResponse {
-  /**
+    /**
    * Unique resource type ID, same value as the "name" attribute
    */
   id?: string;
@@ -27,12 +27,14 @@ interface ScimResourceTypeResponse {
   /**
    * Required
    */
-  schema?: "urn:ietf:params:scim:schemas:core:2.0:User";
+  schema?: ('urn:ietf:params:scim:schemas:core:2.0:User');
 
-  /** */
+  /**
+   */
   schemaExtensions?: ScimSchemaExtension[];
 
-  /** */
+  /**
+   */
   meta?: ScimMeta;
 }
 

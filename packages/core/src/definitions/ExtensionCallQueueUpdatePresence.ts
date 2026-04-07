@@ -1,7 +1,8 @@
 import CallQueueId from "./CallQueueId.js";
 
 interface ExtensionCallQueueUpdatePresence {
-  /** */
+    /**
+   */
   callQueue?: CallQueueId;
 
   /**

@@ -3,7 +3,7 @@ import PageNavigationModel from "./PageNavigationModel.js";
 import EnumeratedPagingModel from "./EnumeratedPagingModel.js";
 
 interface GetLocationListResponse {
-  /**
+    /**
    * Link to the location list resource
    * Format: uri
    */

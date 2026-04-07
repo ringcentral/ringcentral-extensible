@@ -1,5 +1,6 @@
 interface ScimAuthenticationScheme {
-  /** */
+    /**
+   */
   description?: string;
 
   /**
@@ -7,7 +8,8 @@ interface ScimAuthenticationScheme {
    */
   documentationUri?: string;
 
-  /** */
+  /**
+   */
   name?: string;
 
   /**
@@ -15,7 +17,8 @@ interface ScimAuthenticationScheme {
    */
   specUri?: string;
 
-  /** */
+  /**
+   */
   primary?: boolean;
 }
 

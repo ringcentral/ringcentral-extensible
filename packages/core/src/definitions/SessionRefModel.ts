@@ -1,7 +1,7 @@
 import WebinarRefModel from "./WebinarRefModel.js";
 
 interface SessionRefModel {
-  /**
+    /**
    * Internal object ID
    * Example: 78654321
    */
@@ -38,7 +38,8 @@ interface SessionRefModel {
    */
   description?: string;
 
-  /** */
+  /**
+   */
   webinar?: WebinarRefModel;
 }
 

@@ -1,5 +1,5 @@
 interface WcsSessionResource {
-  /**
+    /**
    * Internal object ID
    * Example: 78654321
    */
@@ -51,7 +51,7 @@ interface WcsSessionResource {
 
   /**
    * The time offset (positive, in seconds) indicating how much in advance
-   *  (comparing to "scheduledStartTime") panel members should join for the pre-webinar team sync
+ *  (comparing to "scheduledStartTime") panel members should join for the pre-webinar team sync
    * Format: int32
    * Example: 900
    */
@@ -73,7 +73,7 @@ interface WcsSessionResource {
    * Session status (for the purposes of Configuration service)
    * Example: Scheduled
    */
-  status?: "Scheduled" | "Active" | "Finished";
+  status?: ('Scheduled' | 'Active' | 'Finished');
 
   /**
    * The URI to join the webinar as a host

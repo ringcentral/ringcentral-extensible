@@ -3,13 +3,16 @@ import GlipDataExportNavigationInfo from "./GlipDataExportNavigationInfo.js";
 import GlipDataExportPagingInfo from "./GlipDataExportPagingInfo.js";
 
 interface DataExportTaskList {
-  /** */
+    /**
+   */
   tasks?: DataExportTask[];
 
-  /** */
+  /**
+   */
   navigation?: GlipDataExportNavigationInfo;
 
-  /** */
+  /**
+   */
   paging?: GlipDataExportPagingInfo;
 }
 

@@ -4,7 +4,7 @@ import CallFilters from "./CallFilters.js";
 import TimelineResponseOptions from "./TimelineResponseOptions.js";
 
 interface TimelineRequest {
-  /**
+    /**
    * Required
    */
   grouping?: Grouping;
@@ -14,7 +14,8 @@ interface TimelineRequest {
    */
   timeSettings?: TimeSettings;
 
-  /** */
+  /**
+   */
   callFilters?: CallFilters;
 
   /**

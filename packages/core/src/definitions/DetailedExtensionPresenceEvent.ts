@@ -1,7 +1,7 @@
 import DetailedExtensionPresenceEventBody from "./DetailedExtensionPresenceEventBody.js";
 
 interface DetailedExtensionPresenceEvent {
-  /**
+    /**
    * Universally unique identifier of a notification
    */
   uuid?: string;
@@ -22,7 +22,8 @@ interface DetailedExtensionPresenceEvent {
    */
   subscriptionId?: string;
 
-  /** */
+  /**
+   */
   body?: DetailedExtensionPresenceEventBody;
 }
 

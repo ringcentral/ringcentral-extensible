@@ -3,9 +3,9 @@ import OptOutBulkAssignResponseOptOuts from "./OptOutBulkAssignResponseOptOuts.j
 
 /**
  * The results of adding opt-outs and opt-ins
- */
+*/
 interface OptOutBulkAssignResponse {
-  /**
+    /**
    * Contains successful and failed opt-ins
    */
   optIns?: OptOutBulkAssignResponseOptIns;

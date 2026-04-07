@@ -1,5 +1,5 @@
-interface IVRMenuListInfo {
-  /**
+interface IvrMenuListInfo {
+    /**
    * Internal identifier of an IVR Menu extension
    * Example: 7258440006
    */
@@ -25,4 +25,4 @@ interface IVRMenuListInfo {
   extensionNumber?: string;
 }
 
-export default IVRMenuListInfo;
+export default IvrMenuListInfo;

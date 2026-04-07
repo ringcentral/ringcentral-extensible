@@ -3,7 +3,7 @@ import EmergencyAddressInfo from "./EmergencyAddressInfo.js";
 import EmergencyLocationInfo from "./EmergencyLocationInfo.js";
 
 interface SwitchInfo {
-  /**
+    /**
    * Link to the network switch resource
    * Format: uri
    */
@@ -15,12 +15,16 @@ interface SwitchInfo {
   id?: string;
 
   /**
-   * Unique identifier of a network switch
+   * Unique identifier of a network switch. The supported formats
+ *  are: XX:XX:XX:XX:XX:XX (symbols 0-9 and A-F) for MAC address and X.X.X.X
+ *  for IP address (symbols 0-255)
+   * Required
    */
   chassisId?: string;
 
   /**
-   * Switch entity extension for better diversity. Should be used together with chassisId.
+   * Switch entity extension for better diversity. 
+ *  Should be used together with chassisId
    */
   port?: string;
 
@@ -29,14 +33,24 @@ interface SwitchInfo {
    */
   name?: string;
 
-  /** */
+  /**
+   */
   site?: SwitchSiteInfo;
 
-  /** */
+  /**
+   */
   emergencyAddress?: EmergencyAddressInfo;
 
-  /** */
+  /**
+   */
   emergencyLocation?: EmergencyLocationInfo;
+
+  /**
+   * Emergency response location (address) internal identifier. 
+ *  Only one of a pair `emergencyAddress` or `emergencyLocationId`
+ *  can be specified, otherwise the error is returned
+   */
+  emergencyLocationId?: string;
 }
 
 export default SwitchInfo;

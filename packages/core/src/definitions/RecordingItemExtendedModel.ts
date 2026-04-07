@@ -2,7 +2,7 @@ import ApiError from "./ApiError.js";
 import SessionRefModel from "./SessionRefModel.js";
 
 interface RecordingItemExtendedModel {
-  /**
+    /**
    * Internal object ID
    * Example: 78654321
    */
@@ -27,9 +27,10 @@ interface RecordingItemExtendedModel {
    * Required
    * Example: Available
    */
-  status?: "Processing" | "Available" | "Failed" | "Purged";
+  status?: ('Processing' | 'Available' | 'Failed' | 'Purged');
 
-  /** */
+  /**
+   */
   failureReason?: ApiError;
 
   /**
@@ -42,7 +43,7 @@ interface RecordingItemExtendedModel {
 
   /**
    * Indicates if Host or Admin has shared a recording.
-   *  Can be set to true only then recording status is 'Available'.
+ *  Can be set to true only then recording status is 'Available'.
    * Example: true
    */
   shared?: boolean;
@@ -62,7 +63,8 @@ interface RecordingItemExtendedModel {
    */
   recordingSharedUri?: string;
 
-  /** */
+  /**
+   */
   session?: SessionRefModel;
 }
 

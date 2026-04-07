@@ -1,7 +1,8 @@
 import RecordingModel from "./RecordingModel.js";
 
 interface SessionRecordingModel {
-  /** */
+    /**
+   */
   recording?: RecordingModel;
 }
 

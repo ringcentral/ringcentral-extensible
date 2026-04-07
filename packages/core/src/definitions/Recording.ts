@@ -2,9 +2,9 @@ import JsValue from "./JsValue.js";
 
 /**
  * Recording information
- */
+*/
 interface Recording {
-  /**
+    /**
    * Recording id
    * Required
    */
@@ -21,26 +21,20 @@ interface Recording {
    */
   url?: string;
 
-  /** */
+  /**
+   */
   metadata?: JsValue;
 
   /**
    * Recording processing status
    */
-  status?:
-    | "Processing"
-    | "Processed"
-    | "Error"
-    | "Corrupted"
-    | "InProgress"
-    | "Purged"
-    | "Failed";
+  status?: ('Processing' | 'Processed' | 'Error' | 'Corrupted' | 'InProgress' | 'Purged' | 'Failed');
 
   /**
    * Availability status
    * Required
    */
-  availabilityStatus?: "Alive" | "Deleted" | "Purged" | "NotAvailable";
+  availabilityStatus?: ('Alive' | 'Deleted' | 'Purged' | 'NotAvailable');
 
   /**
    * During meeting AI team analyze code and after meeting finished generates text summary about this meeting

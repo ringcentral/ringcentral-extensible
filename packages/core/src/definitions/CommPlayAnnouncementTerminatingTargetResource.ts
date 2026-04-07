@@ -1,7 +1,7 @@
 import CommTerminatingPromptResource from "./CommTerminatingPromptResource.js";
 
 interface CommPlayAnnouncementTerminatingTargetResource {
-  /**
+    /**
    * Required
    */
   name?: string;
@@ -11,11 +11,7 @@ interface CommPlayAnnouncementTerminatingTargetResource {
    * Required
    * Example: PlayAnnouncementTerminatingTarget
    */
-  type?:
-    | "ExtensionTerminatingTarget"
-    | "PhoneNumberTerminatingTarget"
-    | "PlayAnnouncementTerminatingTarget"
-    | "VoiceMailTerminatingTarget";
+  type?: ('ExtensionTerminatingTarget' | 'PhoneNumberTerminatingTarget' | 'PlayAnnouncementTerminatingTarget' | 'VoiceMailTerminatingTarget');
 
   /**
    * Required
@@ -25,7 +21,7 @@ interface CommPlayAnnouncementTerminatingTargetResource {
   /**
    * Required
    */
-  dispatchingType?: "Ringing" | "Terminating";
+  dispatchingType?: ('Ringing' | 'Terminating');
 }
 
 export default CommPlayAnnouncementTerminatingTargetResource;

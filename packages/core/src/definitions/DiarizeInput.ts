@@ -1,5 +1,5 @@
 interface DiarizeInput {
-  /**
+    /**
    * Publicly facing uri
    * Format: uri
    */
@@ -10,7 +10,7 @@ interface DiarizeInput {
    * Required
    * Example: Wav
    */
-  encoding?: "Mpeg" | "Mp4" | "Wav" | "Webm" | "Webp" | "Aac" | "Avi" | "Ogg";
+  encoding?: ('Mpeg' | 'Mp4' | 'Wav' | 'Webm' | 'Webp' | 'Aac' | 'Avi' | 'Ogg');
 
   /**
    * Language spoken in the audio file.
@@ -29,13 +29,7 @@ interface DiarizeInput {
    * Type of the audio
    * Example: CallCenter
    */
-  audioType?:
-    | "CallCenter"
-    | "Meeting"
-    | "EarningsCalls"
-    | "Interview"
-    | "PressConference"
-    | "Voicemail";
+  audioType?: ('CallCenter' | 'Meeting' | 'EarningsCalls' | 'Interview' | 'PressConference' | 'Voicemail');
 
   /**
    * Set to True if the input audio is multi-channel and each channel has a separate speaker.
@@ -48,12 +42,6 @@ interface DiarizeInput {
    * Example: 2
    */
   speakerCount?: number;
-
-  /**
-   * Optional set of speakers to be identified from the call.
-   * Example: speakerId1,speakerId2
-   */
-  speakerIds?: string[];
 
   /**
    * Apply voice activity detection.

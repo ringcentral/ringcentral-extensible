@@ -1,5 +1,5 @@
 interface CallerIdDeviceInfo {
-  /**
+    /**
    * Internal identifier of a device
    */
   id?: string;

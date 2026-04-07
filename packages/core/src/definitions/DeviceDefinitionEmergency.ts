@@ -1,12 +1,14 @@
-import PostalAddress from "./PostalAddress.js";
 import DeviceDefinitionEmergencyLocation from "./DeviceDefinitionEmergencyLocation.js";
+import PostalAddress from "./PostalAddress.js";
 
 interface DeviceDefinitionEmergency {
-  /** */
-  address?: PostalAddress;
-
-  /** */
+    /**
+   */
   location?: DeviceDefinitionEmergencyLocation;
+
+  /**
+   */
+  address?: PostalAddress;
 }
 
 export default DeviceDefinitionEmergency;

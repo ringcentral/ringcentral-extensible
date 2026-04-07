@@ -1,5 +1,5 @@
 interface SummaryInsightUnit {
-  /**
+    /**
    * Value of the summary
    * Required
    * Example: conversational insights text

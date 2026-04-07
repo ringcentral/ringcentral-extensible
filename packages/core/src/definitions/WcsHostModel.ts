@@ -2,9 +2,9 @@ import RcwDomainUserModel from "./RcwDomainUserModel.js";
 
 /**
  * The internal IDs of RC-authenticated users.
- */
+*/
 interface WcsHostModel {
-  /**
+    /**
    * Describes host's license, 'true' - license is active
    * Required
    */
@@ -22,7 +22,8 @@ interface WcsHostModel {
    */
   accountId?: string;
 
-  /** */
+  /**
+   */
   linkedUser?: RcwDomainUserModel;
 }
 

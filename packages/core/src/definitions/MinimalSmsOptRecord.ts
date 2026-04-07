@@ -1,17 +1,26 @@
 interface MinimalSmsOptRecord {
-  /**
-   * The wildcard ('*') indicating that all account numbers should be opted out or opted in
+    /**
+   * Phone number in e.164 format (with '+' prefix)
    * Required
    * Example: +16501234567
    */
-  from?: "*";
+  to?: string;
+
+  /**
+   * Consent status of a recipient's phone number:
+ *  - `OptOut` - The number is opted out of receiving SMS.
+ *  - `OptIn` - The number is opted in to receiving SMS (if it was previously opted out).
+   * Required
+   * Example: OptOut
+   */
+  optStatus?: ('OptOut' | 'OptIn');
 
   /**
    * Phone number in e.164 format (with '+' prefix)
    * Required
    * Example: +16501234567
    */
-  to?: string;
+  from?: string;
 }
 
 export default MinimalSmsOptRecord;

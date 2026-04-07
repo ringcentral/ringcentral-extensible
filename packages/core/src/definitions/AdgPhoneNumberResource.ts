@@ -1,5 +1,5 @@
 interface AdgPhoneNumberResource {
-  /**
+    /**
    * Example: +1 (205) 6812029
    */
   formattedPhoneNumber?: string;
@@ -24,12 +24,7 @@ interface AdgPhoneNumberResource {
    * Usage type of phone number
    * Example: DirectNumber
    */
-  usageType?:
-    | "MobileNumber"
-    | "ContactNumber"
-    | "DirectNumber"
-    | "ForwardedNumber"
-    | "PartnerBusinessMobileNumber";
+  usageType?: ('MobileNumber' | 'ContactNumber' | 'DirectNumber' | 'ForwardedNumber' | 'PartnerBusinessMobileNumber');
 
   /**
    * Specifies if a phone number should be hidden or not
@@ -40,6 +35,28 @@ interface AdgPhoneNumberResource {
    * Specifies if the number is primary, i.e. displayed as 'main number' and called by default
    */
   primary?: boolean;
+
+  /**
+   * Phone number in E.164 format
+   * Example: +12056812029
+   */
+  e164?: string;
+
+  /**
+   * Formatted phone number
+   * Example: +1 (205) 681-2029
+   */
+  formatted?: string;
+
+  /**
+   * SMS availability status of a phone number
+   */
+  smsAvailabilityStatus?: ('Active' | 'Inactive' | 'Disabled' | 'Banned' | 'Suspended' | 'Deprovisioning' | 'InboundOnly' | 'Unknown');
+
+  /**
+   * SMS campaign identifier
+   */
+  smsCampaignId?: string;
 }
 
 export default AdgPhoneNumberResource;

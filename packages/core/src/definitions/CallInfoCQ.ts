@@ -3,12 +3,14 @@ import AdditionalCQInfo from "./AdditionalCQInfo.js";
 
 /**
  * Primary/additional CQ information
- */
+*/
 interface CallInfoCQ {
-  /** */
+    /**
+   */
   primary?: PrimaryCQInfo;
 
-  /** */
+  /**
+   */
   additional?: AdditionalCQInfo;
 }
 

@@ -2,20 +2,14 @@ import CommGreetingResource from "./CommGreetingResource.js";
 import CommDispatchingRequestActionsTargets from "./CommDispatchingRequestActionsTargets.js";
 
 interface CommDispatchingRequestActions {
-  /**
+    /**
    * Action type
    * Example: TerminatingAction
    */
-  type?:
-    | "PlayConnectingMessageAction"
-    | "PlayConnectingPromptAction"
-    | "PlayWelcomePromptAction"
-    | "ScreeningAction"
-    | "RingGroupAction"
-    | "RingAlwaysGroupAction"
-    | "TerminatingAction";
+  type?: ('PlayConnectingMessageAction' | 'PlayConnectingPromptAction' | 'PlayWelcomePromptAction' | 'ScreeningAction' | 'RingGroupAction' | 'RingAlwaysGroupAction' | 'TerminatingAction');
 
-  /** */
+  /**
+   */
   greeting?: CommGreetingResource;
 
   /**
@@ -26,10 +20,11 @@ interface CommDispatchingRequestActions {
   /**
    * Screening type
    */
-  screening?: "NoCallerId" | "UnknownCallerId" | "Always";
+  screening?: ('NoCallerId' | 'UnknownCallerId' | 'Always');
 
-  /** */
-  screeningResult?: "AskToAnswer" | "PlayCallerNameOnly";
+  /**
+   */
+  screeningResult?: ('AskToAnswer' | 'PlayCallerNameOnly');
 
   /**
    * Action information

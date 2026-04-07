@@ -1,7 +1,8 @@
 import WirelessPointValidated from "./WirelessPointValidated.js";
 
 interface ValidateMultipleWirelessPointsResponse {
-  /** */
+    /**
+   */
   records?: WirelessPointValidated[];
 }
 

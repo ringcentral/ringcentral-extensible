@@ -5,28 +5,40 @@ import NextStepsInsightUnit from "./NextStepsInsightUnit.js";
 import BulletedSummaryInsightUnit from "./BulletedSummaryInsightUnit.js";
 import AIScoreInsightUnit from "./AIScoreInsightUnit.js";
 import CallNotesInsightUnit from "./CallNotesInsightUnit.js";
+import SentimentInsightUnit from "./SentimentInsightUnit.js";
 
 interface AIInsights {
-  /** */
+    /**
+   */
   Transcript?: TranscriptInsightUnit[];
 
-  /** */
+  /**
+   */
   Summary?: SummaryInsightUnit[];
 
-  /** */
+  /**
+   */
   Highlights?: HighlightsInsightUnit[];
 
-  /** */
+  /**
+   */
   NextSteps?: NextStepsInsightUnit[];
 
-  /** */
+  /**
+   */
   BulletedSummary?: BulletedSummaryInsightUnit[];
 
-  /** */
+  /**
+   */
   AIScore?: AIScoreInsightUnit[];
 
-  /** */
+  /**
+   */
   CallNotes?: CallNotesInsightUnit[];
+
+  /**
+   */
+  Sentiment?: SentimentInsightUnit[];
 }
 
 export default AIInsights;

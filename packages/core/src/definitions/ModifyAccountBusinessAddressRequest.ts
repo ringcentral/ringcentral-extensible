@@ -1,7 +1,7 @@
 import BusinessAddressInfo from "./BusinessAddressInfo.js";
 
 interface ModifyAccountBusinessAddressRequest {
-  /**
+    /**
    * Company business name
    */
   company?: string;
@@ -12,7 +12,8 @@ interface ModifyAccountBusinessAddressRequest {
    */
   email?: string;
 
-  /** */
+  /**
+   */
   businessAddress?: BusinessAddressInfo;
 
   /**

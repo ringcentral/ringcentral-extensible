@@ -14,45 +14,58 @@ import CallsByQueueHours from "./CallsByQueueHours.js";
 
 /**
  * Call volume data for the specified grouping
- */
+*/
 interface CallsCounters {
-  /** */
+    /**
+   */
   allCalls?: AllCalls;
 
-  /** */
+  /**
+   */
   callsByDirection?: CallsByDirection;
 
-  /** */
+  /**
+   */
   callsByOrigin?: CallsByOrigin;
 
-  /** */
+  /**
+   */
   callsByResponse?: CallsByResponse;
 
-  /** */
+  /**
+   */
   callsSegments?: CallsBySegments;
 
-  /** */
+  /**
+   */
   callsByResult?: CallsByResult;
 
-  /** */
+  /**
+   */
   callsByEndingParty?: CallsByEndingParty;
 
-  /** */
+  /**
+   */
   callsActions?: CallsByActions;
 
-  /** */
+  /**
+   */
   callsByCompanyHours?: CallsByCompanyHours;
 
-  /** */
+  /**
+   */
   callsByQueueSla?: CallsByQueueSla;
 
-  /** */
+  /**
+   */
   callsByType?: CallsByType;
 
-  /** */
+  /**
+   */
   queueOpportunities?: QueueOpportunities;
 
-  /** */
+  /**
+   */
   callsByQueueHours?: CallsByQueueHours;
 }
 

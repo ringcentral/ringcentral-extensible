@@ -1,7 +1,7 @@
 import ApiVersionInfo from "./ApiVersionInfo.js";
 
 interface ApiVersionsList {
-  /**
+    /**
    * Canonical URI of the API version
    * Format: uri
    */

@@ -2,13 +2,13 @@ import CallsByDirectionBreakdown from "./CallsByDirectionBreakdown.js";
 
 /**
  * Data for calls with breakdown by direction (Inbound, Outbound)
- */
+*/
 interface CallsByDirection {
-  /**
+    /**
    * Unit of the result value
    * Required
    */
-  valueType?: "Percent" | "Seconds" | "Instances";
+  valueType?: ('Percent' | 'Seconds' | 'Instances');
 
   /**
    * Required

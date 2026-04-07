@@ -1,5 +1,5 @@
 interface RecordingSharingModel {
-  /**
+    /**
    * Shared URI of the recording. If a password was required to join a webinar, the URI should contain the password encoded
    * Required
    * Format: uri

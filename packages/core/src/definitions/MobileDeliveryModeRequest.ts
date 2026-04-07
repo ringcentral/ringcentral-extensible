@@ -1,9 +1,9 @@
 interface MobileDeliveryModeRequest {
-  /**
+    /**
    * The transport type for this subscription
    * Required
    */
-  transportType?: "RC/APNS" | "RC/GCM";
+  transportType?: ('RC/APNS' | 'RC/GCM');
 
   /**
    * Certificate name for mobile notification transports

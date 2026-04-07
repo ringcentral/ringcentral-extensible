@@ -1,5 +1,5 @@
 interface FaxRequestTo {
-  /**
+    /**
    * Phone number in E.164 (with '+' sign) format
    * Example: +18661234567
    */

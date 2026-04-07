@@ -2,17 +2,13 @@ import MessageBatchResponse from "../../../../../definitions/MessageBatchRespons
 import MessageBatchCreateRequest from "../../../../../definitions/MessageBatchCreateRequest.js";
 import BatchListResponse from "../../../../../definitions/BatchListResponse.js";
 import ListA2PBatchesParameters from "../../../../../definitions/ListA2PBatchesParameters.js";
-import {
-  ParentInterface,
-  RestRequestConfig,
-  RingCentralInterface,
-} from "../../../../../types.js";
+import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types.js';
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
   public batchId: string | null;
-
+  
   public constructor(_parent: ParentInterface, batchId: string | null = null) {
     this._parent = _parent;
     this.rc = _parent.rc;
@@ -20,51 +16,36 @@ class Index {
   }
   public path(withParameter = true): string {
     if (withParameter && this.batchId !== null) {
-      return `${this._parent.path()}/batches/${this.batchId}`;
+        return `${this._parent.path()}/batches/${this.batchId}`;
     }
     return `${this._parent.path()}/batches`;
   }
   /**
    * Returns the list of A2P batches sent from the current account.
-   * The list can be filtered by message batch ID and/or from phone number.
-   *
+ * The list can be filtered by message batch ID and/or from phone number.
+ * 
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/a2p-sms/batches
    * Rate Limit Group: Light
    * App Permission: A2PSMS
    */
-  public async list(
-    queryParams?: ListA2PBatchesParameters,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<BatchListResponse> {
-    const r = await this.rc.get<BatchListResponse>(
-      this.path(false),
-      queryParams,
-      restRequestConfig,
-    );
+  public async list(queryParams?: ListA2PBatchesParameters, restRequestConfig?: RestRequestConfig): Promise<BatchListResponse> {
+    const r = await this.rc.get<BatchListResponse>(this.path(false), queryParams, restRequestConfig);
     return r.data;
   }
 
   /**
    * Allows to send high volume of A2P (Application-to-Person) SMS messages
-   * (in message batches). Only phone number with the `A2PSmsSender` feature can
-   * be used as a sender.
-   *
+ * (in message batches). Only phone number with the `A2PSmsSender` feature can
+ * be used as a sender.
+ * 
    * HTTP Method: post
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/a2p-sms/batches
    * Rate Limit Group: Light
    * App Permission: A2PSMS
    */
-  public async post(
-    messageBatchCreateRequest: MessageBatchCreateRequest,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<MessageBatchResponse> {
-    const r = await this.rc.post<MessageBatchResponse>(
-      this.path(false),
-      messageBatchCreateRequest,
-      undefined,
-      restRequestConfig,
-    );
+  public async post(messageBatchCreateRequest: MessageBatchCreateRequest, restRequestConfig?: RestRequestConfig): Promise<MessageBatchResponse> {
+    const r = await this.rc.post<MessageBatchResponse>(this.path(false), messageBatchCreateRequest, undefined, restRequestConfig);
     return r.data;
   }
 
@@ -75,17 +56,12 @@ class Index {
    * Rate Limit Group: Light
    * App Permission: A2PSMS
    */
-  public async get(
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<MessageBatchResponse> {
-    if (this.batchId === null) {
-      throw new Error("batchId must be specified.");
+  public async get(restRequestConfig?: RestRequestConfig): Promise<MessageBatchResponse> {
+    if (this.batchId === null)
+    {
+        throw new Error('batchId must be specified.');
     }
-    const r = await this.rc.get<MessageBatchResponse>(
-      this.path(),
-      undefined,
-      restRequestConfig,
-    );
+    const r = await this.rc.get<MessageBatchResponse>(this.path(), undefined, restRequestConfig);
     return r.data;
   }
 }

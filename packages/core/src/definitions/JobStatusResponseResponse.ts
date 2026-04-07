@@ -5,7 +5,7 @@ import SpeakerInsightsObject from "./SpeakerInsightsObject.js";
 import ConversationalInsightsUnit from "./ConversationalInsightsUnit.js";
 
 interface JobStatusResponseResponse {
-  /**
+    /**
    * The number of speakers detected. Field is set only when enableSpeakerDiarization is true.
    * Format: int32
    * Example: 2
@@ -17,7 +17,8 @@ interface JobStatusResponseResponse {
    */
   utterances?: UtteranceObject[];
 
-  /** */
+  /**
+   */
   words?: WordSegment[];
 
   /**
@@ -31,13 +32,16 @@ interface JobStatusResponseResponse {
    */
   transcript?: string;
 
-  /** */
+  /**
+   */
   utteranceInsights?: UtteranceInsightsObject[];
 
-  /** */
+  /**
+   */
   speakerInsights?: SpeakerInsightsObject;
 
-  /** */
+  /**
+   */
   conversationalInsights?: ConversationalInsightsUnit[];
 }
 

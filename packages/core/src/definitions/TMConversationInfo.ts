@@ -1,7 +1,7 @@
 import TMChatMemberInfo from "./TMChatMemberInfo.js";
 
 interface TMConversationInfo {
-  /**
+    /**
    * Internal identifier of a conversation
    */
   id?: string;
@@ -9,7 +9,7 @@ interface TMConversationInfo {
   /**
    * Type of conversation
    */
-  type?: "Direct" | "Personal" | "Group";
+  type?: ('Direct' | 'Personal' | 'Group');
 
   /**
    * Conversation creation datetime in ISO 8601 format
@@ -23,7 +23,8 @@ interface TMConversationInfo {
    */
   lastModifiedTime?: string;
 
-  /** */
+  /**
+   */
   members?: TMChatMemberInfo[];
 }
 

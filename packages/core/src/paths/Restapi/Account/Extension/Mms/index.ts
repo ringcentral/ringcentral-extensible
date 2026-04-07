@@ -1,16 +1,12 @@
-import Utils from "../../../../../Utils.js";
+import Utils from '../../../../../Utils.js';
 import GetSMSMessageInfoResponse from "../../../../../definitions/GetSMSMessageInfoResponse.js";
 import CreateMMSMessage from "../../../../../definitions/CreateMMSMessage.js";
-import {
-  ParentInterface,
-  RestRequestConfig,
-  RingCentralInterface,
-} from "../../../../../types.js";
+import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types.js';
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
-
+  
   public constructor(_parent: ParentInterface) {
     this._parent = _parent;
     this.rc = _parent.rc;
@@ -20,26 +16,18 @@ class Index {
   }
   /**
    * Creates and sends a new media message or multiple messages. Sending MMS
-   * messages simultaneously to different recipients is limited up to 50
-   * requests per minute; relevant for all client applications.
-   *
+ * messages simultaneously to different recipients is limited up to 50
+ * requests per minute; relevant for all client applications.
+ * 
    * HTTP Method: post
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/mms
    * Rate Limit Group: Medium
    * App Permission: SMS
    * User Permission: OutboundSMS
    */
-  public async post(
-    createMMSMessage: CreateMMSMessage,
-    restRequestConfig?: RestRequestConfig,
-  ): Promise<GetSMSMessageInfoResponse> {
-    const formData = await Utils.getFormData(createMMSMessage);
-    const r = await this.rc.post<GetSMSMessageInfoResponse>(
-      this.path(),
-      formData,
-      undefined,
-      restRequestConfig,
-    );
+  public async post(createMMSMessage: CreateMMSMessage, restRequestConfig?: RestRequestConfig): Promise<GetSMSMessageInfoResponse> {
+const formData = await Utils.getFormData(createMMSMessage);
+    const r = await this.rc.post<GetSMSMessageInfoResponse>(this.path(), formData, undefined, restRequestConfig);
     return r.data;
   }
 }

@@ -1,5 +1,5 @@
 interface ExportTaskResultInfo {
-  /**
+    /**
    * Internal identifier of a dataset
    */
   id?: string;

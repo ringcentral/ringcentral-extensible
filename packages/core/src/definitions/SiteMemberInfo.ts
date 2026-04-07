@@ -1,5 +1,5 @@
 interface SiteMemberInfo {
-  /**
+    /**
    * Format: int64
    */
   id?: number;
@@ -9,13 +9,16 @@ interface SiteMemberInfo {
    */
   uri?: string;
 
-  /** */
+  /**
+   */
   extensionNumber?: string;
 
-  /** */
+  /**
+   */
   type?: string;
 
-  /** */
+  /**
+   */
   name?: string;
 }
 

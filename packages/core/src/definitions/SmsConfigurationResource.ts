@@ -2,7 +2,7 @@ import SmsCampaignInfo from "./SmsCampaignInfo.js";
 import SmsBrandInfo from "./SmsBrandInfo.js";
 
 interface SmsConfigurationResource {
-  /**
+    /**
    * Internal identifier of a phone number
    */
   phoneNumberId?: string;
@@ -13,10 +13,12 @@ interface SmsConfigurationResource {
    */
   phoneNumber?: string;
 
-  /** */
+  /**
+   */
   smsCampaignInfo?: SmsCampaignInfo;
 
-  /** */
+  /**
+   */
   smsBrandInfo?: SmsBrandInfo;
 }
 

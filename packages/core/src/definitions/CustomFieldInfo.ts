@@ -1,5 +1,5 @@
 interface CustomFieldInfo {
-  /**
+    /**
    * Internal identifier of a custom field
    */
   id?: string;
@@ -9,7 +9,8 @@ interface CustomFieldInfo {
    */
   value?: string;
 
-  /** */
+  /**
+   */
   displayName?: string;
 }
 

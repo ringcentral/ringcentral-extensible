@@ -1,12 +1,15 @@
 import DetailedCallInfo from "./DetailedCallInfo.js";
 import CallInfoCQ from "./CallInfoCQ.js";
+import AppearanceInfo from "./AppearanceInfo.js";
 
 interface ActiveCallInfo {
-  /** */
+    /**
+   */
   id?: string;
 
-  /** */
-  direction?: "Inbound" | "Outbound";
+  /**
+   */
+  direction?: ('Inbound' | 'Outbound');
 
   /**
    * Identifies if a call belongs to the call queue
@@ -42,17 +45,14 @@ interface ActiveCallInfo {
   /**
    * Telephony presence status
    */
-  telephonyStatus?:
-    | "NoCall"
-    | "CallConnected"
-    | "Ringing"
-    | "OnHold"
-    | "ParkedCall";
+  telephonyStatus?: ('NoCall' | 'CallConnected' | 'Ringing' | 'OnHold' | 'ParkedCall');
 
-  /** */
+  /**
+   */
   sipData?: DetailedCallInfo;
 
-  /** */
+  /**
+   */
   sessionId?: string;
 
   /**
@@ -70,11 +70,17 @@ interface ActiveCallInfo {
    */
   partyId?: string;
 
-  /** */
+  /**
+   */
   terminationType?: string;
 
-  /** */
+  /**
+   */
   callInfo?: CallInfoCQ;
+
+  /**
+   */
+  appearanceInfo?: AppearanceInfo;
 }
 
 export default ActiveCallInfo;

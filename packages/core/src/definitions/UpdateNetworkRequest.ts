@@ -3,7 +3,7 @@ import PublicIpRangeInfo from "./PublicIpRangeInfo.js";
 import PrivateIpRangeInfoRequest from "./PrivateIpRangeInfoRequest.js";
 
 interface UpdateNetworkRequest {
-  /**
+    /**
    * Internal identifier of a network
    * Example: 2874044
    */
@@ -14,7 +14,8 @@ interface UpdateNetworkRequest {
    */
   name?: string;
 
-  /** */
+  /**
+   */
   site?: AutomaticLocationUpdatesSiteInfo;
 
   /**
