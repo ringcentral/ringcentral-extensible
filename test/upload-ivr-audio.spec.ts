@@ -1,5 +1,5 @@
-import fs from "fs";
-import { describe, expect, test } from "vitest";
+import fs from "node:fs";
+import { describe, test } from "vitest";
 
 import ReusableRestClient from "./reusable-rest-client";
 

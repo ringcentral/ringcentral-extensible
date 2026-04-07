@@ -1,3 +1,4 @@
+import { EventEmitter } from "node:events";
 import type RingCentral from "@rc-ex/core";
 import type SubscriptionInfo from "@rc-ex/core/definitions/SubscriptionInfo";
 import RestException from "@rc-ex/core/RestException";
@@ -7,7 +8,6 @@ import type {
   RestRequestConfig,
   RestResponse,
 } from "@rc-ex/core/types";
-import { EventEmitter } from "events";
 import hyperid from "hyperid";
 import type { MessageEvent } from "isomorphic-ws";
 import WS from "isomorphic-ws";
@@ -233,7 +233,7 @@ class WebSocketExtension extends SdkExtension {
     if (this.ws?.readyState === OPEN || this.ws?.readyState === CONNECTING) {
       return;
     }
-    if (!this.wsc || !this.wsc.token) {
+    if (!this.wsc?.token) {
       await this.connect(false); // connect to WSG but do not recover
       return;
     }
@@ -275,7 +275,7 @@ class WebSocketExtension extends SdkExtension {
           },
         ]),
       );
-    } catch (e) {
+    } catch (_e) {
       this.ws.close(); // Explicitly mark WS as closed
     }
   }
@@ -367,7 +367,7 @@ class WebSocketExtension extends SdkExtension {
     this.eventEmitter.emit(Events.connectionReady, this.ws);
 
     // recover the subscription, if it exists and enabled
-    if (this.subscription && this.subscription.enabled) {
+    if (this.subscription?.enabled) {
       // because we have a new ws object
       this.subscription.setupWsEventListener();
       if (

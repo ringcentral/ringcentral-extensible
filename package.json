@@ -16,7 +16,7 @@
     "prepublishOnly": "yarn reset && yarn compile && yarn test",
     "test": "yarn workspace @rc-ex/test run vitest",
     "upgrade-all": "yarn-upgrade-all -W && yarn workspaces run yarn-upgrade-all && yarn install",
-    "format-lint": "biome check --write ."
+    "format-lint": "biome check --write --unsafe ."
   },
   "devDependencies": {
     "@biomejs/biome": "^2.4.10",

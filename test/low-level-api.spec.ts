@@ -1,8 +1,8 @@
+import fs from "node:fs";
+import path from "node:path";
 import type FaxResponse from "@rc-ex/core/definitions/FaxResponse";
 import type GetSMSMessageInfoResponse from "@rc-ex/core/definitions/GetSMSMessageInfoResponse";
 import Utils from "@rc-ex/core/Utils";
-import fs from "fs";
-import path from "path";
 import { describe, expect, test } from "vitest";
 
 import ReusableRestClient from "./reusable-rest-client";

@@ -1,9 +1,9 @@
+import fs from "node:fs";
+import path from "node:path";
 import type Attachment from "@rc-ex/core/definitions/Attachment";
 import type CreateFaxMessageRequest from "@rc-ex/core/definitions/CreateFaxMessageRequest";
 import type FaxResponse from "@rc-ex/core/definitions/FaxResponse";
 import Utils from "@rc-ex/core/Utils";
-import fs from "fs";
-import path from "path";
 import { describe, expect, test } from "vitest";
 
 import ReusableRestClient from "./reusable-rest-client";

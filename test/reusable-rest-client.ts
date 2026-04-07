@@ -1,5 +1,4 @@
 import RingCentral from "@rc-ex/core";
-import { describe, expect, test } from "vitest";
 
 class ReusableRestClient {
   private static rc: RingCentral;

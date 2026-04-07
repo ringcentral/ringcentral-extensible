@@ -30,7 +30,7 @@ class RetryExtension extends SdkExtension {
     this.options.shouldRetry ??= (restException, retriesAttempted) =>
       retriesAttempted < 3 &&
       [429, 503].includes(restException.response.status);
-    this.options.retryInterval ??= (restException, retriesAttempted) =>
+    this.options.retryInterval ??= (_restException, retriesAttempted) =>
       60 * 1000 * 2 ** retriesAttempted; // exponential back off
   }
 

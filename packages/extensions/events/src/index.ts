@@ -1,3 +1,4 @@
+import { EventEmitter } from "node:events";
 import type RingCentral from "@rc-ex/core";
 import type GetTokenRequest from "@rc-ex/core/definitions/GetTokenRequest";
 import RestException from "@rc-ex/core/RestException";
@@ -7,7 +8,6 @@ import type {
   RestRequestConfig,
   RestResponse,
 } from "@rc-ex/core/types";
-import { EventEmitter } from "events";
 
 export enum Events {
   beforeRequest = "beforeRequest",

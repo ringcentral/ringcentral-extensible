@@ -1,4 +1,3 @@
-import RestException from "@rc-ex/core/RestException";
 import type { RestResponse } from "@rc-ex/core/types";
 import { describe, expect, test } from "vitest";
 

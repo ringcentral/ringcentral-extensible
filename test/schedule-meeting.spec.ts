@@ -6,7 +6,7 @@
 // } from '@rc-ex/core/definitions';
 
 // import {createRingCentral} from './utils';
-import { describe, expect, test } from "vitest";
+import { describe, test } from "vitest";
 
 // meetings has been replaced by RCV
 describe("schedule meeting", () => {
