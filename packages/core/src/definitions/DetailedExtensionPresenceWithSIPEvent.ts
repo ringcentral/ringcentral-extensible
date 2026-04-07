@@ -1,4 +1,4 @@
-import DetailedExtensionPresenceWithSIPEventBody from "./DetailedExtensionPresenceWithSIPEventBody.js";
+import type DetailedExtensionPresenceWithSIPEventBody from "./DetailedExtensionPresenceWithSIPEventBody.js";
 
 interface DetailedExtensionPresenceWithSIPEvent {
   /**

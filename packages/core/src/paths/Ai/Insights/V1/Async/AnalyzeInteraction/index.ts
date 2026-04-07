@@ -1,7 +1,7 @@
-import CaiAsyncApiResponse from "../../../../../../definitions/CaiAsyncApiResponse.js";
-import CaiAnalyzeInteractionParameters from "../../../../../../definitions/CaiAnalyzeInteractionParameters.js";
-import InteractionInput from "../../../../../../definitions/InteractionInput.js";
-import {
+import type CaiAsyncApiResponse from "../../../../../../definitions/CaiAsyncApiResponse.js";
+import type CaiAnalyzeInteractionParameters from "../../../../../../definitions/CaiAnalyzeInteractionParameters.js";
+import type InteractionInput from "../../../../../../definitions/InteractionInput.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

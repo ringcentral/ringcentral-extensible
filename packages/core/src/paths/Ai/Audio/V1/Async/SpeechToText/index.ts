@@ -1,7 +1,7 @@
-import CaiAsyncApiResponse from "../../../../../../definitions/CaiAsyncApiResponse.js";
-import CaiSpeechToTextParameters from "../../../../../../definitions/CaiSpeechToTextParameters.js";
-import AsrInput from "../../../../../../definitions/AsrInput.js";
-import {
+import type CaiAsyncApiResponse from "../../../../../../definitions/CaiAsyncApiResponse.js";
+import type CaiSpeechToTextParameters from "../../../../../../definitions/CaiSpeechToTextParameters.js";
+import type AsrInput from "../../../../../../definitions/AsrInput.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

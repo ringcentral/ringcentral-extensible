@@ -1,4 +1,4 @@
-import AccountPresenceEventBody from "./AccountPresenceEventBody.js";
+import type AccountPresenceEventBody from "./AccountPresenceEventBody.js";
 
 interface AccountPresenceEvent {
   /**

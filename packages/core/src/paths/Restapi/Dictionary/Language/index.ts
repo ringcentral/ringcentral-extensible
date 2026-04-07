@@ -1,6 +1,6 @@
-import LanguageInfo from "../../../../definitions/LanguageInfo.js";
-import LanguageList from "../../../../definitions/LanguageList.js";
-import {
+import type LanguageInfo from "../../../../definitions/LanguageInfo.js";
+import type LanguageList from "../../../../definitions/LanguageList.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

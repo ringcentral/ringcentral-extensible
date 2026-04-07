@@ -1,4 +1,4 @@
-import CommDispatchingRequest from "./CommDispatchingRequest.js";
+import type CommDispatchingRequest from "./CommDispatchingRequest.js";
 
 /**
  * Interaction rule update request

@@ -1,7 +1,7 @@
-import PresenceInfoRequest from "../../../../../definitions/PresenceInfoRequest.js";
-import PresenceInfoResponse from "../../../../../definitions/PresenceInfoResponse.js";
-import ReadUserPresenceStatusParameters from "../../../../../definitions/ReadUserPresenceStatusParameters.js";
-import {
+import type PresenceInfoRequest from "../../../../../definitions/PresenceInfoRequest.js";
+import type PresenceInfoResponse from "../../../../../definitions/PresenceInfoResponse.js";
+import type ReadUserPresenceStatusParameters from "../../../../../definitions/ReadUserPresenceStatusParameters.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

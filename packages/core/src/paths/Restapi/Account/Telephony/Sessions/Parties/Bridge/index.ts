@@ -1,6 +1,6 @@
-import CallParty from "../../../../../../../definitions/CallParty.js";
-import BridgeTargetRequest from "../../../../../../../definitions/BridgeTargetRequest.js";
-import {
+import type CallParty from "../../../../../../../definitions/CallParty.js";
+import type BridgeTargetRequest from "../../../../../../../definitions/BridgeTargetRequest.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

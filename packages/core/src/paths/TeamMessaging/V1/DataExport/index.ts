@@ -1,8 +1,8 @@
-import DataExportTask from "../../../../definitions/DataExportTask.js";
-import CreateDataExportTaskRequest from "../../../../definitions/CreateDataExportTaskRequest.js";
-import DataExportTaskList from "../../../../definitions/DataExportTaskList.js";
-import ListDataExportTasksNewParameters from "../../../../definitions/ListDataExportTasksNewParameters.js";
-import {
+import type DataExportTask from "../../../../definitions/DataExportTask.js";
+import type CreateDataExportTaskRequest from "../../../../definitions/CreateDataExportTaskRequest.js";
+import type DataExportTaskList from "../../../../definitions/DataExportTaskList.js";
+import type ListDataExportTasksNewParameters from "../../../../definitions/ListDataExportTasksNewParameters.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

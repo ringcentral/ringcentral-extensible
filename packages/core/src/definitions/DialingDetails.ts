@@ -1,5 +1,5 @@
-import DialingDetailsServiceCode from "./DialingDetailsServiceCode.js";
-import DialingDetailsSpecialPrefix from "./DialingDetailsSpecialPrefix.js";
+import type DialingDetailsServiceCode from "./DialingDetailsServiceCode.js";
+import type DialingDetailsSpecialPrefix from "./DialingDetailsSpecialPrefix.js";
 
 /**
  * Absent if the request's parameter `resultContent.includeDialingDetails` value is set to `false`.

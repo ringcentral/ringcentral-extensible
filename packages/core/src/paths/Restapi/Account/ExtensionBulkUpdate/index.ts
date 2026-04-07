@@ -1,7 +1,7 @@
 import Tasks from "./Tasks/index.js";
-import ExtensionBulkUpdateTaskResource from "../../../../definitions/ExtensionBulkUpdateTaskResource.js";
-import ExtensionBulkUpdateRequest from "../../../../definitions/ExtensionBulkUpdateRequest.js";
-import {
+import type ExtensionBulkUpdateTaskResource from "../../../../definitions/ExtensionBulkUpdateTaskResource.js";
+import type ExtensionBulkUpdateRequest from "../../../../definitions/ExtensionBulkUpdateRequest.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

@@ -1,4 +1,4 @@
-import ScimPatchOperation from "./ScimPatchOperation.js";
+import type ScimPatchOperation from "./ScimPatchOperation.js";
 
 interface ScimUserPatch {
   /**

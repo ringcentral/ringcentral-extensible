@@ -1,5 +1,5 @@
-import MessageBatchResponse from "./MessageBatchResponse.js";
-import NonEnumeratedPagingModel from "./NonEnumeratedPagingModel.js";
+import type MessageBatchResponse from "./MessageBatchResponse.js";
+import type NonEnumeratedPagingModel from "./NonEnumeratedPagingModel.js";
 
 /**
  * The list of batches retrieved for an account and other filter criteria such as

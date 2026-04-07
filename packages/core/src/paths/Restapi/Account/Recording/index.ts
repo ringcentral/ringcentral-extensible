@@ -1,6 +1,6 @@
 import Content from "./Content/index.js";
-import GetCallRecordingResponse from "../../../../definitions/GetCallRecordingResponse.js";
-import {
+import type GetCallRecordingResponse from "../../../../definitions/GetCallRecordingResponse.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

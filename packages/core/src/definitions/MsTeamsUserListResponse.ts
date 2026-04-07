@@ -1,4 +1,4 @@
-import MsTeamsUserListResponseMappings from "./MsTeamsUserListResponseMappings.js";
+import type MsTeamsUserListResponseMappings from "./MsTeamsUserListResponseMappings.js";
 
 interface MsTeamsUserListResponse {
   /**

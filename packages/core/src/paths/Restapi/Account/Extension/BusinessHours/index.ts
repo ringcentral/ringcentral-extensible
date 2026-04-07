@@ -1,7 +1,7 @@
-import UserBusinessHoursUpdateResponse from "../../../../../definitions/UserBusinessHoursUpdateResponse.js";
-import UserBusinessHoursUpdateRequest from "../../../../../definitions/UserBusinessHoursUpdateRequest.js";
-import GetUserBusinessHoursResponse from "../../../../../definitions/GetUserBusinessHoursResponse.js";
-import {
+import type UserBusinessHoursUpdateResponse from "../../../../../definitions/UserBusinessHoursUpdateResponse.js";
+import type UserBusinessHoursUpdateRequest from "../../../../../definitions/UserBusinessHoursUpdateRequest.js";
+import type GetUserBusinessHoursResponse from "../../../../../definitions/GetUserBusinessHoursResponse.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

@@ -1,5 +1,5 @@
-import MessageTemplateInfo from "./MessageTemplateInfo.js";
-import Site from "./Site.js";
+import type MessageTemplateInfo from "./MessageTemplateInfo.js";
+import type Site from "./Site.js";
 
 interface MessageTemplateRequest {
   /**

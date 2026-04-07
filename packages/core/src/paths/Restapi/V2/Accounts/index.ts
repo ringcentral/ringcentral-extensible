@@ -8,8 +8,8 @@ import CostCenters from "./CostCenters/index.js";
 import Extensions from "./Extensions/index.js";
 import Devices from "./Devices/index.js";
 import Sms from "./Sms/index.js";
-import AccountInfo from "../../../../definitions/AccountInfo.js";
-import {
+import type AccountInfo from "../../../../definitions/AccountInfo.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

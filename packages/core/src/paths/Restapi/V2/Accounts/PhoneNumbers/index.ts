@@ -1,12 +1,12 @@
 import BulkAdd from "./BulkAdd/index.js";
 import Replace from "./Replace/index.js";
-import AccountPhoneNumberInfo from "../../../../../definitions/AccountPhoneNumberInfo.js";
-import AssignPhoneNumberRequest from "../../../../../definitions/AssignPhoneNumberRequest.js";
-import DeletePhoneNumbersResponse from "../../../../../definitions/DeletePhoneNumbersResponse.js";
-import DeletePhoneNumbersRequest from "../../../../../definitions/DeletePhoneNumbersRequest.js";
-import AccountPhoneNumberList from "../../../../../definitions/AccountPhoneNumberList.js";
-import ListAccountPhoneNumbersV2Parameters from "../../../../../definitions/ListAccountPhoneNumbersV2Parameters.js";
-import {
+import type AccountPhoneNumberInfo from "../../../../../definitions/AccountPhoneNumberInfo.js";
+import type AssignPhoneNumberRequest from "../../../../../definitions/AssignPhoneNumberRequest.js";
+import type DeletePhoneNumbersResponse from "../../../../../definitions/DeletePhoneNumbersResponse.js";
+import type DeletePhoneNumbersRequest from "../../../../../definitions/DeletePhoneNumbersRequest.js";
+import type AccountPhoneNumberList from "../../../../../definitions/AccountPhoneNumberList.js";
+import type ListAccountPhoneNumbersV2Parameters from "../../../../../definitions/ListAccountPhoneNumbersV2Parameters.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

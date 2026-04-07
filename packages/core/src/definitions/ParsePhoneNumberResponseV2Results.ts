@@ -1,5 +1,5 @@
-import DialingDetails from "./DialingDetails.js";
-import NumberDetails from "./NumberDetails.js";
+import type DialingDetails from "./DialingDetails.js";
+import type NumberDetails from "./NumberDetails.js";
 
 interface ParsePhoneNumberResponseV2Results {
   /**

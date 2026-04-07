@@ -1,4 +1,4 @@
-import AddressBookBulkUploadResource from "./AddressBookBulkUploadResource.js";
+import type AddressBookBulkUploadResource from "./AddressBookBulkUploadResource.js";
 
 interface AddressBookBulkUploadRequest {
   /**

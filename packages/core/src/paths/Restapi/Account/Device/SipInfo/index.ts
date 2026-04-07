@@ -1,5 +1,5 @@
-import SipInfoResource from "../../../../../definitions/SipInfoResource.js";
-import {
+import type SipInfoResource from "../../../../../definitions/SipInfoResource.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

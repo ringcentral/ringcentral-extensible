@@ -1,9 +1,9 @@
-import UpdateNetworkRequest from "../../../../../definitions/UpdateNetworkRequest.js";
-import NetworkInfo from "../../../../../definitions/NetworkInfo.js";
-import CreateNetworkRequest from "../../../../../definitions/CreateNetworkRequest.js";
-import NetworksList from "../../../../../definitions/NetworksList.js";
-import ListNetworksParameters from "../../../../../definitions/ListNetworksParameters.js";
-import {
+import type UpdateNetworkRequest from "../../../../../definitions/UpdateNetworkRequest.js";
+import type NetworkInfo from "../../../../../definitions/NetworkInfo.js";
+import type CreateNetworkRequest from "../../../../../definitions/CreateNetworkRequest.js";
+import type NetworksList from "../../../../../definitions/NetworksList.js";
+import type ListNetworksParameters from "../../../../../definitions/ListNetworksParameters.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

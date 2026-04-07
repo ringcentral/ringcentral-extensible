@@ -4,7 +4,7 @@ import Wstoken from "./Wstoken/index.js";
 import Revoke from "./Revoke/index.js";
 import Token from "./Token/index.js";
 import Jwks from "./Jwks/index.js";
-import { RingCentralInterface, ParentInterface } from "../../../types.js";
+import type { RingCentralInterface, ParentInterface } from "../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

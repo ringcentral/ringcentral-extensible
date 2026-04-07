@@ -1,8 +1,8 @@
-import CompanyAnsweringRuleCallersInfoRequest from "./CompanyAnsweringRuleCallersInfoRequest.js";
-import CompanyAnsweringRuleCalledNumberInfo from "./CompanyAnsweringRuleCalledNumberInfo.js";
-import CompanyAnsweringRuleScheduleInfoRequest from "./CompanyAnsweringRuleScheduleInfoRequest.js";
-import CompanyAnsweringRuleExtensionInfo from "./CompanyAnsweringRuleExtensionInfo.js";
-import GreetingInfo from "./GreetingInfo.js";
+import type CompanyAnsweringRuleCallersInfoRequest from "./CompanyAnsweringRuleCallersInfoRequest.js";
+import type CompanyAnsweringRuleCalledNumberInfo from "./CompanyAnsweringRuleCalledNumberInfo.js";
+import type CompanyAnsweringRuleScheduleInfoRequest from "./CompanyAnsweringRuleScheduleInfoRequest.js";
+import type CompanyAnsweringRuleExtensionInfo from "./CompanyAnsweringRuleExtensionInfo.js";
+import type GreetingInfo from "./GreetingInfo.js";
 
 interface CompanyAnsweringRuleUpdate {
   /**

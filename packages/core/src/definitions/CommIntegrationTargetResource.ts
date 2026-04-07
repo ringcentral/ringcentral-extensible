@@ -1,4 +1,4 @@
-import CommIntegrationResource from "./CommIntegrationResource.js";
+import type CommIntegrationResource from "./CommIntegrationResource.js";
 
 interface CommIntegrationTargetResource {
   /**

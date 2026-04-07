@@ -1,6 +1,6 @@
-import RecordingDownloadModel from "../../../../../../definitions/RecordingDownloadModel.js";
-import RcwHistoryGetRecordingDownloadParameters from "../../../../../../definitions/RcwHistoryGetRecordingDownloadParameters.js";
-import {
+import type RecordingDownloadModel from "../../../../../../definitions/RecordingDownloadModel.js";
+import type RcwHistoryGetRecordingDownloadParameters from "../../../../../../definitions/RcwHistoryGetRecordingDownloadParameters.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

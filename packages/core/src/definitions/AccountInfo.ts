@@ -1,6 +1,6 @@
-import PostalAddress from "./PostalAddress.js";
-import ServiceInfoV2 from "./ServiceInfoV2.js";
-import SystemUserContactInfo from "./SystemUserContactInfo.js";
+import type PostalAddress from "./PostalAddress.js";
+import type ServiceInfoV2 from "./ServiceInfoV2.js";
+import type SystemUserContactInfo from "./SystemUserContactInfo.js";
 
 interface AccountInfo {
   /**

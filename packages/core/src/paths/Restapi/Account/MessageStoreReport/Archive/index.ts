@@ -1,5 +1,5 @@
-import MessageStoreReportArchive from "../../../../../definitions/MessageStoreReportArchive.js";
-import {
+import type MessageStoreReportArchive from "../../../../../definitions/MessageStoreReportArchive.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

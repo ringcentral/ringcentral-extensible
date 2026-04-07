@@ -1,5 +1,5 @@
-import TMAddTeamMembersRequest from "../../../../../definitions/TMAddTeamMembersRequest.js";
-import {
+import type TMAddTeamMembersRequest from "../../../../../definitions/TMAddTeamMembersRequest.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

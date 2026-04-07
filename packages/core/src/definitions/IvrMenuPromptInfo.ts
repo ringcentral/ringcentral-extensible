@@ -1,5 +1,5 @@
-import AudioPromptInfo from "./AudioPromptInfo.js";
-import PromptLanguageInfo from "./PromptLanguageInfo.js";
+import type AudioPromptInfo from "./AudioPromptInfo.js";
+import type PromptLanguageInfo from "./PromptLanguageInfo.js";
 
 /**
  * Prompt metadata

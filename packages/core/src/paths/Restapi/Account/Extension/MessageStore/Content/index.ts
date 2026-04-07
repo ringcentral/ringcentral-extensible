@@ -1,5 +1,5 @@
-import ReadMessageContentParameters from "../../../../../../definitions/ReadMessageContentParameters.js";
-import {
+import type ReadMessageContentParameters from "../../../../../../definitions/ReadMessageContentParameters.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

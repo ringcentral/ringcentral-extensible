@@ -1,10 +1,10 @@
-import VoicemailsInfo from "./VoicemailsInfo.js";
-import InboundFaxesInfo from "./InboundFaxesInfo.js";
-import OutboundFaxesInfo from "./OutboundFaxesInfo.js";
-import InboundTextsInfo from "./InboundTextsInfo.js";
-import MissedCallsInfo from "./MissedCallsInfo.js";
-import EmailRecipientInfo from "./EmailRecipientInfo.js";
-import CallNotesInfo from "./CallNotesInfo.js";
+import type VoicemailsInfo from "./VoicemailsInfo.js";
+import type InboundFaxesInfo from "./InboundFaxesInfo.js";
+import type OutboundFaxesInfo from "./OutboundFaxesInfo.js";
+import type InboundTextsInfo from "./InboundTextsInfo.js";
+import type MissedCallsInfo from "./MissedCallsInfo.js";
+import type EmailRecipientInfo from "./EmailRecipientInfo.js";
+import type CallNotesInfo from "./CallNotesInfo.js";
 
 interface NotificationSettings {
   /**

@@ -1,4 +1,4 @@
-import SessionLivestreamMinimalModel from "./SessionLivestreamMinimalModel.js";
+import type SessionLivestreamMinimalModel from "./SessionLivestreamMinimalModel.js";
 
 interface SessionLivestreamListModel {
   /**

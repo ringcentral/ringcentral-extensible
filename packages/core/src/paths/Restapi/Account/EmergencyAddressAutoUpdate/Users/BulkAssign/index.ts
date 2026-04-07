@@ -1,5 +1,5 @@
-import EmergencyAddressAutoUpdateUsersBulkAssignResource from "../../../../../../definitions/EmergencyAddressAutoUpdateUsersBulkAssignResource.js";
-import {
+import type EmergencyAddressAutoUpdateUsersBulkAssignResource from "../../../../../../definitions/EmergencyAddressAutoUpdateUsersBulkAssignResource.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

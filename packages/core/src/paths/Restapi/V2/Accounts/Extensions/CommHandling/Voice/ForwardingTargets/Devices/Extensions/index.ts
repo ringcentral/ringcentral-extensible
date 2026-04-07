@@ -1,5 +1,5 @@
-import CommExtensionListResource from "../../../../../../../../../../definitions/CommExtensionListResource.js";
-import {
+import type CommExtensionListResource from "../../../../../../../../../../definitions/CommExtensionListResource.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

@@ -1,9 +1,9 @@
-import CompanyAnsweringRuleUpdate from "../../../../definitions/CompanyAnsweringRuleUpdate.js";
-import CompanyAnsweringRuleInfo from "../../../../definitions/CompanyAnsweringRuleInfo.js";
-import CompanyAnsweringRuleRequest from "../../../../definitions/CompanyAnsweringRuleRequest.js";
-import CompanyAnsweringRuleList from "../../../../definitions/CompanyAnsweringRuleList.js";
-import ListCompanyAnsweringRulesParameters from "../../../../definitions/ListCompanyAnsweringRulesParameters.js";
-import {
+import type CompanyAnsweringRuleUpdate from "../../../../definitions/CompanyAnsweringRuleUpdate.js";
+import type CompanyAnsweringRuleInfo from "../../../../definitions/CompanyAnsweringRuleInfo.js";
+import type CompanyAnsweringRuleRequest from "../../../../definitions/CompanyAnsweringRuleRequest.js";
+import type CompanyAnsweringRuleList from "../../../../definitions/CompanyAnsweringRuleList.js";
+import type ListCompanyAnsweringRulesParameters from "../../../../definitions/ListCompanyAnsweringRulesParameters.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

@@ -1,8 +1,8 @@
-import Host from "./Host.js";
-import Participant from "./Participant.js";
-import Recording from "./Recording.js";
-import Transcriptions from "./Transcriptions.js";
-import MeetingNotes from "./MeetingNotes.js";
+import type Host from "./Host.js";
+import type Participant from "./Participant.js";
+import type Recording from "./Recording.js";
+import type Transcriptions from "./Transcriptions.js";
+import type MeetingNotes from "./MeetingNotes.js";
 
 /**
  * Meeting information

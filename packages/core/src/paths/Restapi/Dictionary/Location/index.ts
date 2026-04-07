@@ -1,6 +1,6 @@
-import GetLocationListResponse from "../../../../definitions/GetLocationListResponse.js";
-import ListLocationsParameters from "../../../../definitions/ListLocationsParameters.js";
-import {
+import type GetLocationListResponse from "../../../../definitions/GetLocationListResponse.js";
+import type ListLocationsParameters from "../../../../definitions/ListLocationsParameters.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

@@ -1,7 +1,7 @@
-import ContactBusinessAddressInfo from "./ContactBusinessAddressInfo.js";
-import RegionalSettings from "./RegionalSettings.js";
-import SiteOperatorReference from "./SiteOperatorReference.js";
-import CostCenterInfo from "./CostCenterInfo.js";
+import type ContactBusinessAddressInfo from "./ContactBusinessAddressInfo.js";
+import type RegionalSettings from "./RegionalSettings.js";
+import type SiteOperatorReference from "./SiteOperatorReference.js";
+import type CostCenterInfo from "./CostCenterInfo.js";
 
 interface CreateSiteRequest {
   /**

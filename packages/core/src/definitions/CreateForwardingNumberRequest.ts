@@ -1,4 +1,4 @@
-import CreateForwardingNumberDeviceInfo from "./CreateForwardingNumberDeviceInfo.js";
+import type CreateForwardingNumberDeviceInfo from "./CreateForwardingNumberDeviceInfo.js";
 
 interface CreateForwardingNumberRequest {
   /**

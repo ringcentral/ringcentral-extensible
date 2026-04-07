@@ -1,6 +1,6 @@
-import TokenInfo from "../../../../definitions/TokenInfo.js";
-import GetTokenRequest from "../../../../definitions/GetTokenRequest.js";
-import {
+import type TokenInfo from "../../../../definitions/TokenInfo.js";
+import type GetTokenRequest from "../../../../definitions/GetTokenRequest.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

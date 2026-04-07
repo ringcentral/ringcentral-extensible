@@ -1,4 +1,4 @@
-import ApiError from "./ApiError.js";
+import type ApiError from "./ApiError.js";
 
 interface BulkItemResultModel {
   /**

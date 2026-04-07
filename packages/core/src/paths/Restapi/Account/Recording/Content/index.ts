@@ -1,5 +1,5 @@
-import ReadCallRecordingContentParameters from "../../../../../definitions/ReadCallRecordingContentParameters.js";
-import {
+import type ReadCallRecordingContentParameters from "../../../../../definitions/ReadCallRecordingContentParameters.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

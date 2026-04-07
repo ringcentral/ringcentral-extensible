@@ -1,4 +1,4 @@
-import TaskResultInfo from "./TaskResultInfo.js";
+import type TaskResultInfo from "./TaskResultInfo.js";
 
 interface AutomaticLocationUpdatesTaskInfo {
   /**

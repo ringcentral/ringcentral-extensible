@@ -1,4 +1,4 @@
-import CallQueueMember from "./CallQueueMember.js";
+import type CallQueueMember from "./CallQueueMember.js";
 
 interface CallQueueMemberPresence {
   /**

@@ -1,8 +1,8 @@
 import Utils from "../../../../Utils.js";
-import TMAddFile from "../../../../definitions/TMAddFile.js";
-import CreateGlipFileNewParameters from "../../../../definitions/CreateGlipFileNewParameters.js";
-import CreateGlipFileNewRequest from "../../../../definitions/CreateGlipFileNewRequest.js";
-import {
+import type TMAddFile from "../../../../definitions/TMAddFile.js";
+import type CreateGlipFileNewParameters from "../../../../definitions/CreateGlipFileNewParameters.js";
+import type CreateGlipFileNewRequest from "../../../../definitions/CreateGlipFileNewRequest.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

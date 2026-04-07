@@ -1,6 +1,6 @@
-import BulkOperationExtensionReference from "./BulkOperationExtensionReference.js";
-import BulkAddDevicesItemEmergency from "./BulkAddDevicesItemEmergency.js";
-import BulkAddDevicesItemPhoneInfo from "./BulkAddDevicesItemPhoneInfo.js";
+import type BulkOperationExtensionReference from "./BulkOperationExtensionReference.js";
+import type BulkAddDevicesItemEmergency from "./BulkAddDevicesItemEmergency.js";
+import type BulkAddDevicesItemPhoneInfo from "./BulkAddDevicesItemPhoneInfo.js";
 
 interface BulkAddDevicesItem {
   /**

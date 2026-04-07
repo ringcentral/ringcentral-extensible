@@ -1,5 +1,5 @@
-import TMPersonInfo from "../../../../definitions/TMPersonInfo.js";
-import {
+import type TMPersonInfo from "../../../../definitions/TMPersonInfo.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

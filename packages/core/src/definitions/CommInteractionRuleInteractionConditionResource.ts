@@ -1,4 +1,4 @@
-import CommFromResource from "./CommFromResource.js";
+import type CommFromResource from "./CommFromResource.js";
 
 interface CommInteractionRuleInteractionConditionResource {
   /**

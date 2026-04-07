@@ -1,5 +1,5 @@
 import Parse from "./Parse/index.js";
-import { RingCentralInterface, ParentInterface } from "../../../../types.js";
+import type { RingCentralInterface, ParentInterface } from "../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

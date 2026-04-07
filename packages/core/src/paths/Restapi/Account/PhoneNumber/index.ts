@@ -1,7 +1,7 @@
-import CompanyPhoneNumberInfo from "../../../../definitions/CompanyPhoneNumberInfo.js";
-import AccountPhoneNumbers from "../../../../definitions/AccountPhoneNumbers.js";
-import ListAccountPhoneNumbersParameters from "../../../../definitions/ListAccountPhoneNumbersParameters.js";
-import {
+import type CompanyPhoneNumberInfo from "../../../../definitions/CompanyPhoneNumberInfo.js";
+import type AccountPhoneNumbers from "../../../../definitions/AccountPhoneNumbers.js";
+import type ListAccountPhoneNumbersParameters from "../../../../definitions/ListAccountPhoneNumbersParameters.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

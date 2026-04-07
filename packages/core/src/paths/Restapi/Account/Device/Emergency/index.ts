@@ -1,6 +1,6 @@
-import DeviceResource from "../../../../../definitions/DeviceResource.js";
-import AccountDeviceUpdate from "../../../../../definitions/AccountDeviceUpdate.js";
-import {
+import type DeviceResource from "../../../../../definitions/DeviceResource.js";
+import type AccountDeviceUpdate from "../../../../../definitions/AccountDeviceUpdate.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

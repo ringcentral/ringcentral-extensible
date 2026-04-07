@@ -1,5 +1,5 @@
-import SiteMembersBulkUpdate from "../../../../../definitions/SiteMembersBulkUpdate.js";
-import {
+import type SiteMembersBulkUpdate from "../../../../../definitions/SiteMembersBulkUpdate.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

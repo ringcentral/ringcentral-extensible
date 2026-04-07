@@ -1,4 +1,4 @@
-import FeatureInfo from "./FeatureInfo.js";
+import type FeatureInfo from "./FeatureInfo.js";
 
 interface FeatureList {
   /**

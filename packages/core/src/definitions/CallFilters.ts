@@ -1,7 +1,7 @@
-import ExtensionFilters from "./ExtensionFilters.js";
-import CallSegmentFilter from "./CallSegmentFilter.js";
-import CallDurationFilter from "./CallDurationFilter.js";
-import TimeSpentFilter from "./TimeSpentFilter.js";
+import type ExtensionFilters from "./ExtensionFilters.js";
+import type CallSegmentFilter from "./CallSegmentFilter.js";
+import type CallDurationFilter from "./CallDurationFilter.js";
+import type TimeSpentFilter from "./TimeSpentFilter.js";
 
 /**
  * Optional filters that limit the scope of calls (joined via AND)

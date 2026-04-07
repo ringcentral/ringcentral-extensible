@@ -1,6 +1,6 @@
-import BridgeResponse from "../../../../../../definitions/BridgeResponse.js";
-import GetBridgeByPstnPinParameters from "../../../../../../definitions/GetBridgeByPstnPinParameters.js";
-import {
+import type BridgeResponse from "../../../../../../definitions/BridgeResponse.js";
+import type GetBridgeByPstnPinParameters from "../../../../../../definitions/GetBridgeByPstnPinParameters.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

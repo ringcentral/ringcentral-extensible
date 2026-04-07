@@ -1,6 +1,6 @@
-import BulkAddDevicesResponse from "../../../../../../definitions/BulkAddDevicesResponse.js";
-import BulkAddDevicesRequest from "../../../../../../definitions/BulkAddDevicesRequest.js";
-import {
+import type BulkAddDevicesResponse from "../../../../../../definitions/BulkAddDevicesResponse.js";
+import type BulkAddDevicesRequest from "../../../../../../definitions/BulkAddDevicesRequest.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

@@ -1,4 +1,4 @@
-import CommTerminatingPromptResource from "./CommTerminatingPromptResource.js";
+import type CommTerminatingPromptResource from "./CommTerminatingPromptResource.js";
 
 interface CommPlayAnnouncementTerminatingTargetResource {
   /**

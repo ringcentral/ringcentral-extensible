@@ -1,6 +1,6 @@
-import TMWebhookInfo from "../../../../../definitions/TMWebhookInfo.js";
-import TMWebhookList from "../../../../../definitions/TMWebhookList.js";
-import {
+import type TMWebhookInfo from "../../../../../definitions/TMWebhookInfo.js";
+import type TMWebhookList from "../../../../../definitions/TMWebhookList.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

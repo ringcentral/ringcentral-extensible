@@ -1,4 +1,4 @@
-import CountryContext from "./CountryContext.js";
+import type CountryContext from "./CountryContext.js";
 
 /**
  * The manually set parsing context to override the context parameter values taken from the context source.

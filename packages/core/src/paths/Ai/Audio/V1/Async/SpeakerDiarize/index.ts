@@ -1,7 +1,7 @@
-import CaiAsyncApiResponse from "../../../../../../definitions/CaiAsyncApiResponse.js";
-import CaiSpeakerDiarizeParameters from "../../../../../../definitions/CaiSpeakerDiarizeParameters.js";
-import DiarizeInput from "../../../../../../definitions/DiarizeInput.js";
-import {
+import type CaiAsyncApiResponse from "../../../../../../definitions/CaiAsyncApiResponse.js";
+import type CaiSpeakerDiarizeParameters from "../../../../../../definitions/CaiSpeakerDiarizeParameters.js";
+import type DiarizeInput from "../../../../../../definitions/DiarizeInput.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

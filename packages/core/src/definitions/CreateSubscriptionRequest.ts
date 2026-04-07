@@ -1,4 +1,4 @@
-import NotificationDeliveryModeRequest from "./NotificationDeliveryModeRequest.js";
+import type NotificationDeliveryModeRequest from "./NotificationDeliveryModeRequest.js";
 
 interface CreateSubscriptionRequest {
   /**

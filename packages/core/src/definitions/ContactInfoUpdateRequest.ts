@@ -1,5 +1,5 @@
-import ContactBusinessAddressInfo from "./ContactBusinessAddressInfo.js";
-import PronouncedNameInfo from "./PronouncedNameInfo.js";
+import type ContactBusinessAddressInfo from "./ContactBusinessAddressInfo.js";
+import type PronouncedNameInfo from "./PronouncedNameInfo.js";
 
 interface ContactInfoUpdateRequest {
   /**

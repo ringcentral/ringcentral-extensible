@@ -1,6 +1,6 @@
-import CallQueueMembers from "../../../../../definitions/CallQueueMembers.js";
-import ListCallQueueMembersParameters from "../../../../../definitions/ListCallQueueMembersParameters.js";
-import {
+import type CallQueueMembers from "../../../../../definitions/CallQueueMembers.js";
+import type ListCallQueueMembersParameters from "../../../../../definitions/ListCallQueueMembersParameters.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

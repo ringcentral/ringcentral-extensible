@@ -1,6 +1,6 @@
-import ReplyParty from "../../../../../../../definitions/ReplyParty.js";
-import CallPartyReply from "../../../../../../../definitions/CallPartyReply.js";
-import {
+import type ReplyParty from "../../../../../../../definitions/ReplyParty.js";
+import type CallPartyReply from "../../../../../../../definitions/CallPartyReply.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

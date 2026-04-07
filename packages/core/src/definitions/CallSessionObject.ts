@@ -1,5 +1,5 @@
-import OriginInfo from "./OriginInfo.js";
-import CallParty from "./CallParty.js";
+import type OriginInfo from "./OriginInfo.js";
+import type CallParty from "./CallParty.js";
 
 /**
  * Call session information

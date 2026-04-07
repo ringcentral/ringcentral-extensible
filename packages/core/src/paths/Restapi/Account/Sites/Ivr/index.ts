@@ -1,6 +1,6 @@
-import SiteIVRSettingsUpdate from "../../../../../definitions/SiteIVRSettingsUpdate.js";
-import SiteIVRSettings from "../../../../../definitions/SiteIVRSettings.js";
-import {
+import type SiteIVRSettingsUpdate from "../../../../../definitions/SiteIVRSettingsUpdate.js";
+import type SiteIVRSettings from "../../../../../definitions/SiteIVRSettings.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

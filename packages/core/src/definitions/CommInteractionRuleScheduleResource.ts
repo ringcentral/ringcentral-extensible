@@ -1,4 +1,4 @@
-import CommInteractionRuleScheduleResourceTriggers from "./CommInteractionRuleScheduleResourceTriggers.js";
+import type CommInteractionRuleScheduleResourceTriggers from "./CommInteractionRuleScheduleResourceTriggers.js";
 
 interface CommInteractionRuleScheduleResource {
   /**

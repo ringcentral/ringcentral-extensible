@@ -1,6 +1,6 @@
-import ParsePhoneNumberResponseV2 from "../../../../../definitions/ParsePhoneNumberResponseV2.js";
-import ParsePhoneNumbersRequest from "../../../../../definitions/ParsePhoneNumbersRequest.js";
-import {
+import type ParsePhoneNumberResponseV2 from "../../../../../definitions/ParsePhoneNumberResponseV2.js";
+import type ParsePhoneNumbersRequest from "../../../../../definitions/ParsePhoneNumbersRequest.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

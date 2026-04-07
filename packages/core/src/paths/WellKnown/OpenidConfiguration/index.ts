@@ -1,5 +1,5 @@
-import OpenIdDiscovery from "../../../definitions/OpenIdDiscovery.js";
-import {
+import type OpenIdDiscovery from "../../../definitions/OpenIdDiscovery.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

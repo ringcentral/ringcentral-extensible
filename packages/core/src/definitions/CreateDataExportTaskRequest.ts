@@ -1,4 +1,4 @@
-import DataExportTaskContactInfo from "./DataExportTaskContactInfo.js";
+import type DataExportTaskContactInfo from "./DataExportTaskContactInfo.js";
 
 interface CreateDataExportTaskRequest {
   /**

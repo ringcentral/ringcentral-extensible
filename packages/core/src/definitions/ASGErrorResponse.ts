@@ -1,4 +1,4 @@
-import ErrorEntry from "./ErrorEntry.js";
+import type ErrorEntry from "./ErrorEntry.js";
 
 /**
  * Error response

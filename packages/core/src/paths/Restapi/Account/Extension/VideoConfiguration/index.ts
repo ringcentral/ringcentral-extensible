@@ -1,5 +1,5 @@
-import UserVideoConfiguration from "../../../../../definitions/UserVideoConfiguration.js";
-import {
+import type UserVideoConfiguration from "../../../../../definitions/UserVideoConfiguration.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

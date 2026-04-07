@@ -1,5 +1,5 @@
-import AddressBookBulkUploadResponse from "../../../../../definitions/AddressBookBulkUploadResponse.js";
-import {
+import type AddressBookBulkUploadResponse from "../../../../../definitions/AddressBookBulkUploadResponse.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

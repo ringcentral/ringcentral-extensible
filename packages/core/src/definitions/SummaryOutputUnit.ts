@@ -1,4 +1,4 @@
-import SummaryTimingsUnit from "./SummaryTimingsUnit.js";
+import type SummaryTimingsUnit from "./SummaryTimingsUnit.js";
 
 interface SummaryOutputUnit {
   /**

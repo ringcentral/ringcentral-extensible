@@ -1,5 +1,5 @@
-import SendWelcomeEmailV2Request from "../../../../../definitions/SendWelcomeEmailV2Request.js";
-import {
+import type SendWelcomeEmailV2Request from "../../../../../definitions/SendWelcomeEmailV2Request.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

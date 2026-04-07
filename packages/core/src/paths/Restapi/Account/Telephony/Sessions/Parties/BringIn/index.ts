@@ -1,6 +1,6 @@
-import CallParty from "../../../../../../../definitions/CallParty.js";
-import AddPartyRequest from "../../../../../../../definitions/AddPartyRequest.js";
-import {
+import type CallParty from "../../../../../../../definitions/CallParty.js";
+import type AddPartyRequest from "../../../../../../../definitions/AddPartyRequest.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

@@ -1,6 +1,6 @@
-import CallQueueUpdatePresence from "../../../../../definitions/CallQueueUpdatePresence.js";
-import CallQueuePresence from "../../../../../definitions/CallQueuePresence.js";
-import {
+import type CallQueueUpdatePresence from "../../../../../definitions/CallQueueUpdatePresence.js";
+import type CallQueuePresence from "../../../../../definitions/CallQueuePresence.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

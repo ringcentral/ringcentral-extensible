@@ -1,8 +1,8 @@
-import MessageBatchResponse from "../../../../../definitions/MessageBatchResponse.js";
-import MessageBatchCreateRequest from "../../../../../definitions/MessageBatchCreateRequest.js";
-import BatchListResponse from "../../../../../definitions/BatchListResponse.js";
-import ListA2PBatchesParameters from "../../../../../definitions/ListA2PBatchesParameters.js";
-import {
+import type MessageBatchResponse from "../../../../../definitions/MessageBatchResponse.js";
+import type MessageBatchCreateRequest from "../../../../../definitions/MessageBatchCreateRequest.js";
+import type BatchListResponse from "../../../../../definitions/BatchListResponse.js";
+import type ListA2PBatchesParameters from "../../../../../definitions/ListA2PBatchesParameters.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

@@ -1,5 +1,5 @@
-import NumberParserContext from "./NumberParserContext.js";
-import ResultContent from "./ResultContent.js";
+import type NumberParserContext from "./NumberParserContext.js";
+import type ResultContent from "./ResultContent.js";
 
 /**
  * Phone Number Parser service's Parse Phone Numbers API request schema.

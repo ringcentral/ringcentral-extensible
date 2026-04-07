@@ -1,5 +1,5 @@
-import ParamsInfo from "./ParamsInfo.js";
-import ReasonInfo from "./ReasonInfo.js";
+import type ParamsInfo from "./ParamsInfo.js";
+import type ReasonInfo from "./ReasonInfo.js";
 
 interface FeatureInfo {
   /**

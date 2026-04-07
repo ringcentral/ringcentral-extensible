@@ -1,4 +1,4 @@
-import CallsByEndingPartyBreakdown from "./CallsByEndingPartyBreakdown.js";
+import type CallsByEndingPartyBreakdown from "./CallsByEndingPartyBreakdown.js";
 
 interface CallsByEndingParty {
   /**

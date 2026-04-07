@@ -1,4 +1,4 @@
-import ClientErrorsResponseErrors from "./ClientErrorsResponseErrors.js";
+import type ClientErrorsResponseErrors from "./ClientErrorsResponseErrors.js";
 
 /**
  * Phone Number Parser service's Parse Phone Numbers API 4xx error response schema.

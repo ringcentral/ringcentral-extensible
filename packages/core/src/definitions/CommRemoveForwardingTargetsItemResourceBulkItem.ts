@@ -1,7 +1,7 @@
-import CommReferencedExtensionResource from "./CommReferencedExtensionResource.js";
-import CommDeviceRequest from "./CommDeviceRequest.js";
-import CommIntegrationRequest from "./CommIntegrationRequest.js";
-import CommPhoneNumberResource from "./CommPhoneNumberResource.js";
+import type CommReferencedExtensionResource from "./CommReferencedExtensionResource.js";
+import type CommDeviceRequest from "./CommDeviceRequest.js";
+import type CommIntegrationRequest from "./CommIntegrationRequest.js";
+import type CommPhoneNumberResource from "./CommPhoneNumberResource.js";
 
 interface CommRemoveForwardingTargetsItemResourceBulkItem {
   /**

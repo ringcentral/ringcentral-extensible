@@ -1,4 +1,4 @@
-import CountryInfoShortModel from "./CountryInfoShortModel.js";
+import type CountryInfoShortModel from "./CountryInfoShortModel.js";
 
 interface PhoneNumberInfoConferencing {
   /**

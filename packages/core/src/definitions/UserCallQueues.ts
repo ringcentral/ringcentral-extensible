@@ -1,4 +1,4 @@
-import QueueShortInfoResource from "./QueueShortInfoResource.js";
+import type QueueShortInfoResource from "./QueueShortInfoResource.js";
 
 interface UserCallQueues {
   /**

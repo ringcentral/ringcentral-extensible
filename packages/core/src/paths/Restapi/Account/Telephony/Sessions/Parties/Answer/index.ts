@@ -1,6 +1,6 @@
-import CallParty from "../../../../../../../definitions/CallParty.js";
-import AnswerTarget from "../../../../../../../definitions/AnswerTarget.js";
-import {
+import type CallParty from "../../../../../../../definitions/CallParty.js";
+import type AnswerTarget from "../../../../../../../definitions/AnswerTarget.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

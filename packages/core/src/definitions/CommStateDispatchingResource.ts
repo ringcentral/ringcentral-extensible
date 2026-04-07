@@ -1,4 +1,4 @@
-import CommStateDispatchingResourceActions from "./CommStateDispatchingResourceActions.js";
+import type CommStateDispatchingResourceActions from "./CommStateDispatchingResourceActions.js";
 
 interface CommStateDispatchingResource {
   /**

@@ -1,7 +1,7 @@
-import DirectoryResource from "../../../../../../definitions/DirectoryResource.js";
-import SearchDirectoryEntriesParameters from "../../../../../../definitions/SearchDirectoryEntriesParameters.js";
-import SearchDirectoryEntriesRequest from "../../../../../../definitions/SearchDirectoryEntriesRequest.js";
-import {
+import type DirectoryResource from "../../../../../../definitions/DirectoryResource.js";
+import type SearchDirectoryEntriesParameters from "../../../../../../definitions/SearchDirectoryEntriesParameters.js";
+import type SearchDirectoryEntriesRequest from "../../../../../../definitions/SearchDirectoryEntriesRequest.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

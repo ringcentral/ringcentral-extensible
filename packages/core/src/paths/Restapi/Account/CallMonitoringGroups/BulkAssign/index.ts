@@ -1,5 +1,5 @@
-import CallMonitoringBulkAssign from "../../../../../definitions/CallMonitoringBulkAssign.js";
-import {
+import type CallMonitoringBulkAssign from "../../../../../definitions/CallMonitoringBulkAssign.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

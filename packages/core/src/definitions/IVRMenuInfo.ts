@@ -1,6 +1,6 @@
-import IvrMenuSiteInfo from "./IvrMenuSiteInfo.js";
-import IvrMenuPromptInfo from "./IvrMenuPromptInfo.js";
-import IvrMenuActionsInfo from "./IvrMenuActionsInfo.js";
+import type IvrMenuSiteInfo from "./IvrMenuSiteInfo.js";
+import type IvrMenuPromptInfo from "./IvrMenuPromptInfo.js";
+import type IvrMenuActionsInfo from "./IvrMenuActionsInfo.js";
 
 interface IvrMenuInfo {
   /**

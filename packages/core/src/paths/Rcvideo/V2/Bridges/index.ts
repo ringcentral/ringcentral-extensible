@@ -1,8 +1,8 @@
 import Pin from "./Pin/index.js";
-import UpdateBridgeRequest from "../../../../definitions/UpdateBridgeRequest.js";
-import BridgeResponse from "../../../../definitions/BridgeResponse.js";
-import GetBridgeParameters from "../../../../definitions/GetBridgeParameters.js";
-import {
+import type UpdateBridgeRequest from "../../../../definitions/UpdateBridgeRequest.js";
+import type BridgeResponse from "../../../../definitions/BridgeResponse.js";
+import type GetBridgeParameters from "../../../../definitions/GetBridgeParameters.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

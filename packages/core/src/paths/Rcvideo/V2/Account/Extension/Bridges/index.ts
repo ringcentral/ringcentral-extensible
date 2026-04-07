@@ -1,7 +1,7 @@
 import Default from "./Default/index.js";
-import BridgeResponse from "../../../../../../definitions/BridgeResponse.js";
-import CreateBridgeRequest from "../../../../../../definitions/CreateBridgeRequest.js";
-import {
+import type BridgeResponse from "../../../../../../definitions/BridgeResponse.js";
+import type CreateBridgeRequest from "../../../../../../definitions/CreateBridgeRequest.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

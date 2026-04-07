@@ -1,7 +1,7 @@
-import CaiAsyncApiResponse from "../../../../../../definitions/CaiAsyncApiResponse.js";
-import CaiSummarizeParameters from "../../../../../../definitions/CaiSummarizeParameters.js";
-import SummaryInput from "../../../../../../definitions/SummaryInput.js";
-import {
+import type CaiAsyncApiResponse from "../../../../../../definitions/CaiAsyncApiResponse.js";
+import type CaiSummarizeParameters from "../../../../../../definitions/CaiSummarizeParameters.js";
+import type SummaryInput from "../../../../../../definitions/SummaryInput.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

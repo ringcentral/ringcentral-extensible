@@ -1,5 +1,5 @@
-import ApiError from "./ApiError.js";
-import CommRemoveForwardingTargetsItemResourceBulkItem from "./CommRemoveForwardingTargetsItemResourceBulkItem.js";
+import type ApiError from "./ApiError.js";
+import type CommRemoveForwardingTargetsItemResourceBulkItem from "./CommRemoveForwardingTargetsItemResourceBulkItem.js";
 
 interface CommRemoveForwardingTargetsItemResource {
   /**

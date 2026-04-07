@@ -1,5 +1,5 @@
-import GetMessageInfoResponse from "./GetMessageInfoResponse.js";
-import SyncInfoMessages from "./SyncInfoMessages.js";
+import type GetMessageInfoResponse from "./GetMessageInfoResponse.js";
+import type SyncInfoMessages from "./SyncInfoMessages.js";
 
 interface GetMessageSyncResponse {
   /**

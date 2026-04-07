@@ -1,4 +1,4 @@
-import CallerIdData from "./CallerIdData.js";
+import type CallerIdData from "./CallerIdData.js";
 
 /**
  * Caller ID settings by feature

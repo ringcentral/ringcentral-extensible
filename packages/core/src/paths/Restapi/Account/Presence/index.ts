@@ -1,6 +1,6 @@
-import AccountPresenceInfo from "../../../../definitions/AccountPresenceInfo.js";
-import ReadAccountPresenceParameters from "../../../../definitions/ReadAccountPresenceParameters.js";
-import {
+import type AccountPresenceInfo from "../../../../definitions/AccountPresenceInfo.js";
+import type ReadAccountPresenceParameters from "../../../../definitions/ReadAccountPresenceParameters.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

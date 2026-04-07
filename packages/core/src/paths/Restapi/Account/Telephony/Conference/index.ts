@@ -1,5 +1,5 @@
-import CallSession from "../../../../../definitions/CallSession.js";
-import {
+import type CallSession from "../../../../../definitions/CallSession.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

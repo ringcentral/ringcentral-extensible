@@ -1,12 +1,12 @@
-import ExtensionInfoCallLog from "./ExtensionInfoCallLog.js";
-import CallLogRecordLegInfoTransferTarget from "./CallLogRecordLegInfoTransferTarget.js";
-import CallLogRecordLegInfoTransferee from "./CallLogRecordLegInfoTransferee.js";
-import CallLogFromParty from "./CallLogFromParty.js";
-import CallLogToParty from "./CallLogToParty.js";
-import CallLogRecordMessage from "./CallLogRecordMessage.js";
-import CallLogDelegateInfo from "./CallLogDelegateInfo.js";
-import CallLogRecordingInfo from "./CallLogRecordingInfo.js";
-import BillingInfo from "./BillingInfo.js";
+import type ExtensionInfoCallLog from "./ExtensionInfoCallLog.js";
+import type CallLogRecordLegInfoTransferTarget from "./CallLogRecordLegInfoTransferTarget.js";
+import type CallLogRecordLegInfoTransferee from "./CallLogRecordLegInfoTransferee.js";
+import type CallLogFromParty from "./CallLogFromParty.js";
+import type CallLogToParty from "./CallLogToParty.js";
+import type CallLogRecordMessage from "./CallLogRecordMessage.js";
+import type CallLogDelegateInfo from "./CallLogDelegateInfo.js";
+import type CallLogRecordingInfo from "./CallLogRecordingInfo.js";
+import type BillingInfo from "./BillingInfo.js";
 
 /**
  * Call leg record

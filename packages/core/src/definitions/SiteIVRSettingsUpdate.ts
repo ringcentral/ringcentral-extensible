@@ -1,5 +1,5 @@
-import SiteIVRTopMenuUpdate from "./SiteIVRTopMenuUpdate.js";
-import SiteIvrActions from "./SiteIvrActions.js";
+import type SiteIVRTopMenuUpdate from "./SiteIVRTopMenuUpdate.js";
+import type SiteIvrActions from "./SiteIvrActions.js";
 
 interface SiteIVRSettingsUpdate {
   /**

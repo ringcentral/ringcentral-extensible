@@ -1,6 +1,6 @@
-import RecordingInsights from "../../../../../../../../../definitions/RecordingInsights.js";
-import GetRecordingInsightsParameters from "../../../../../../../../../definitions/GetRecordingInsightsParameters.js";
-import {
+import type RecordingInsights from "../../../../../../../../../definitions/RecordingInsights.js";
+import type GetRecordingInsightsParameters from "../../../../../../../../../definitions/GetRecordingInsightsParameters.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

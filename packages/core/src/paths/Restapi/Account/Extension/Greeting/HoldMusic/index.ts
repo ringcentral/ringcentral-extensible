@@ -1,5 +1,5 @@
-import CustomUserGreetingInfo from "../../../../../../definitions/CustomUserGreetingInfo.js";
-import {
+import type CustomUserGreetingInfo from "../../../../../../definitions/CustomUserGreetingInfo.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

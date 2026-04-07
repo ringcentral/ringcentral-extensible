@@ -1,7 +1,7 @@
-import RoleResource from "../../../../definitions/RoleResource.js";
-import RolesCollectionResource from "../../../../definitions/RolesCollectionResource.js";
-import ListStandardUserRoleParameters from "../../../../definitions/ListStandardUserRoleParameters.js";
-import {
+import type RoleResource from "../../../../definitions/RoleResource.js";
+import type RolesCollectionResource from "../../../../definitions/RolesCollectionResource.js";
+import type ListStandardUserRoleParameters from "../../../../definitions/ListStandardUserRoleParameters.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

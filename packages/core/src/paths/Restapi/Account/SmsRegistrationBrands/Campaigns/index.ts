@@ -1,7 +1,7 @@
 import SubmitPhoneNumbers from "./SubmitPhoneNumbers/index.js";
-import TcrCampaignRecord from "../../../../../definitions/TcrCampaignRecord.js";
-import CampaignListResponse from "../../../../../definitions/CampaignListResponse.js";
-import {
+import type TcrCampaignRecord from "../../../../../definitions/TcrCampaignRecord.js";
+import type CampaignListResponse from "../../../../../definitions/CampaignListResponse.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

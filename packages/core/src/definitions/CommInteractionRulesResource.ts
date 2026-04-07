@@ -1,5 +1,5 @@
-import CommInteractionRuleResource from "./CommInteractionRuleResource.js";
-import EnumeratedPagingModel from "./EnumeratedPagingModel.js";
+import type CommInteractionRuleResource from "./CommInteractionRuleResource.js";
+import type EnumeratedPagingModel from "./EnumeratedPagingModel.js";
 
 interface CommInteractionRulesResource {
   /**

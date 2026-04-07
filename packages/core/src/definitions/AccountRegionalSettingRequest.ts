@@ -1,8 +1,8 @@
-import AccountCountryInfoRequest from "./AccountCountryInfoRequest.js";
-import AccountTimezoneInfoRequest from "./AccountTimezoneInfoRequest.js";
-import AccountLanguageInfoRequest from "./AccountLanguageInfoRequest.js";
-import AccountGreetingLanguageInfoRequest from "./AccountGreetingLanguageInfoRequest.js";
-import AccountFormattingLocaleInfoRequest from "./AccountFormattingLocaleInfoRequest.js";
+import type AccountCountryInfoRequest from "./AccountCountryInfoRequest.js";
+import type AccountTimezoneInfoRequest from "./AccountTimezoneInfoRequest.js";
+import type AccountLanguageInfoRequest from "./AccountLanguageInfoRequest.js";
+import type AccountGreetingLanguageInfoRequest from "./AccountGreetingLanguageInfoRequest.js";
+import type AccountFormattingLocaleInfoRequest from "./AccountFormattingLocaleInfoRequest.js";
 
 interface AccountRegionalSettingRequest {
   /**

@@ -1,4 +1,4 @@
-import WebhookDeliveryModeRequest from "./WebhookDeliveryModeRequest.js";
+import type WebhookDeliveryModeRequest from "./WebhookDeliveryModeRequest.js";
 
 interface CreateWebhookSubscriptionRequest {
   /**

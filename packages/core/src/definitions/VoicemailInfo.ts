@@ -1,4 +1,4 @@
-import RecipientInfo from "./RecipientInfo.js";
+import type RecipientInfo from "./RecipientInfo.js";
 
 /**
  * Specifies whether to take a voicemail and who should do it

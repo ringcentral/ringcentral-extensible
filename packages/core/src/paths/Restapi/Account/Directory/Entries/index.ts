@@ -1,9 +1,9 @@
 import Search from "./Search/index.js";
-import ContactResource from "../../../../../definitions/ContactResource.js";
-import ReadDirectoryEntryParameters from "../../../../../definitions/ReadDirectoryEntryParameters.js";
-import DirectoryResource from "../../../../../definitions/DirectoryResource.js";
-import ListDirectoryEntriesParameters from "../../../../../definitions/ListDirectoryEntriesParameters.js";
-import {
+import type ContactResource from "../../../../../definitions/ContactResource.js";
+import type ReadDirectoryEntryParameters from "../../../../../definitions/ReadDirectoryEntryParameters.js";
+import type DirectoryResource from "../../../../../definitions/DirectoryResource.js";
+import type ListDirectoryEntriesParameters from "../../../../../definitions/ListDirectoryEntriesParameters.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

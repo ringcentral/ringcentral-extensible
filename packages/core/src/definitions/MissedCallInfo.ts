@@ -1,5 +1,5 @@
-import MissedCallExtensionInfo from "./MissedCallExtensionInfo.js";
-import MissedCallExtensionInfoExternalNumber from "./MissedCallExtensionInfoExternalNumber.js";
+import type MissedCallExtensionInfo from "./MissedCallExtensionInfo.js";
+import type MissedCallExtensionInfoExternalNumber from "./MissedCallExtensionInfoExternalNumber.js";
 
 /**
  * Specifies behavior for the missed call scenario. Returned only if `enabled` parameter of a voicemail is set to 'false'

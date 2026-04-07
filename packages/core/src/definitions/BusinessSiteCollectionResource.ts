@@ -1,4 +1,4 @@
-import RolesBusinessSiteResource from "./RolesBusinessSiteResource.js";
+import type RolesBusinessSiteResource from "./RolesBusinessSiteResource.js";
 
 interface BusinessSiteCollectionResource {
   /**

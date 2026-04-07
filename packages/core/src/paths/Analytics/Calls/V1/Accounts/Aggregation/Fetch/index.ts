@@ -1,7 +1,7 @@
-import AggregationResponse from "../../../../../../../definitions/AggregationResponse.js";
-import AnalyticsCallsAggregationFetchParameters from "../../../../../../../definitions/AnalyticsCallsAggregationFetchParameters.js";
-import AggregationRequest from "../../../../../../../definitions/AggregationRequest.js";
-import {
+import type AggregationResponse from "../../../../../../../definitions/AggregationResponse.js";
+import type AnalyticsCallsAggregationFetchParameters from "../../../../../../../definitions/AnalyticsCallsAggregationFetchParameters.js";
+import type AggregationRequest from "../../../../../../../definitions/AggregationRequest.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

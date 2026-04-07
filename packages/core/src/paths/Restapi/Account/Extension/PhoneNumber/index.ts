@@ -1,7 +1,7 @@
 import SmsConfiguration from "./SmsConfiguration/index.js";
-import GetExtensionPhoneNumbersResponse from "../../../../../definitions/GetExtensionPhoneNumbersResponse.js";
-import ListExtensionPhoneNumbersParameters from "../../../../../definitions/ListExtensionPhoneNumbersParameters.js";
-import {
+import type GetExtensionPhoneNumbersResponse from "../../../../../definitions/GetExtensionPhoneNumbersResponse.js";
+import type ListExtensionPhoneNumbersParameters from "../../../../../definitions/ListExtensionPhoneNumbersParameters.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

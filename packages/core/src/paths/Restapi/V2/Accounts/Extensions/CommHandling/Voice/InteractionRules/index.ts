@@ -1,9 +1,9 @@
-import CommInteractionRuleUpdateRequest from "../../../../../../../../definitions/CommInteractionRuleUpdateRequest.js";
-import CommInteractionRuleResource from "../../../../../../../../definitions/CommInteractionRuleResource.js";
-import CommInteractionRuleCreateRequest from "../../../../../../../../definitions/CommInteractionRuleCreateRequest.js";
-import CommInteractionRulesResource from "../../../../../../../../definitions/CommInteractionRulesResource.js";
-import ListVoiceInteractionRulesParameters from "../../../../../../../../definitions/ListVoiceInteractionRulesParameters.js";
-import {
+import type CommInteractionRuleUpdateRequest from "../../../../../../../../definitions/CommInteractionRuleUpdateRequest.js";
+import type CommInteractionRuleResource from "../../../../../../../../definitions/CommInteractionRuleResource.js";
+import type CommInteractionRuleCreateRequest from "../../../../../../../../definitions/CommInteractionRuleCreateRequest.js";
+import type CommInteractionRulesResource from "../../../../../../../../definitions/CommInteractionRulesResource.js";
+import type ListVoiceInteractionRulesParameters from "../../../../../../../../definitions/ListVoiceInteractionRulesParameters.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

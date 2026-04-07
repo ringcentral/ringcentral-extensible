@@ -1,13 +1,13 @@
-import ForwardingInfoCreateRuleRequest from "./ForwardingInfoCreateRuleRequest.js";
-import CallersInfoRequest from "./CallersInfoRequest.js";
-import CalledNumberInfo from "./CalledNumberInfo.js";
-import ScheduleInfo from "./ScheduleInfo.js";
-import UnconditionalForwardingInfo from "./UnconditionalForwardingInfo.js";
-import QueueInfo from "./QueueInfo.js";
-import VoicemailInfo from "./VoicemailInfo.js";
-import MissedCallInfo from "./MissedCallInfo.js";
-import GreetingInfo from "./GreetingInfo.js";
-import TransferredExtensionInfo from "./TransferredExtensionInfo.js";
+import type ForwardingInfoCreateRuleRequest from "./ForwardingInfoCreateRuleRequest.js";
+import type CallersInfoRequest from "./CallersInfoRequest.js";
+import type CalledNumberInfo from "./CalledNumberInfo.js";
+import type ScheduleInfo from "./ScheduleInfo.js";
+import type UnconditionalForwardingInfo from "./UnconditionalForwardingInfo.js";
+import type QueueInfo from "./QueueInfo.js";
+import type VoicemailInfo from "./VoicemailInfo.js";
+import type MissedCallInfo from "./MissedCallInfo.js";
+import type GreetingInfo from "./GreetingInfo.js";
+import type TransferredExtensionInfo from "./TransferredExtensionInfo.js";
 
 interface UpdateAnsweringRuleRequest {
   /**

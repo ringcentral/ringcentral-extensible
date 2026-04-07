@@ -1,5 +1,5 @@
-import CalledNumberInfo from "./CalledNumberInfo.js";
-import CompanyAnsweringRuleExtensionInfo from "./CompanyAnsweringRuleExtensionInfo.js";
+import type CalledNumberInfo from "./CalledNumberInfo.js";
+import type CompanyAnsweringRuleExtensionInfo from "./CompanyAnsweringRuleExtensionInfo.js";
 
 interface ListCompanyAnsweringRuleInfo {
   /**

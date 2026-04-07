@@ -1,9 +1,9 @@
-import TMUpdatePostRequest from "../../../../../definitions/TMUpdatePostRequest.js";
-import TMPostInfo from "../../../../../definitions/TMPostInfo.js";
-import TMCreatePostRequest from "../../../../../definitions/TMCreatePostRequest.js";
-import TMPostsList from "../../../../../definitions/TMPostsList.js";
-import ReadGlipPostsNewParameters from "../../../../../definitions/ReadGlipPostsNewParameters.js";
-import {
+import type TMUpdatePostRequest from "../../../../../definitions/TMUpdatePostRequest.js";
+import type TMPostInfo from "../../../../../definitions/TMPostInfo.js";
+import type TMCreatePostRequest from "../../../../../definitions/TMCreatePostRequest.js";
+import type TMPostsList from "../../../../../definitions/TMPostsList.js";
+import type ReadGlipPostsNewParameters from "../../../../../definitions/ReadGlipPostsNewParameters.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

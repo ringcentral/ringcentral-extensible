@@ -1,6 +1,6 @@
-import AccountRegionalSettingRequest from "../../../../../definitions/AccountRegionalSettingRequest.js";
-import RegionalSettings from "../../../../../definitions/RegionalSettings.js";
-import {
+import type AccountRegionalSettingRequest from "../../../../../definitions/AccountRegionalSettingRequest.js";
+import type RegionalSettings from "../../../../../definitions/RegionalSettings.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

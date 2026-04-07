@@ -1,5 +1,5 @@
-import AdminAccessMeeting from "./AdminAccessMeeting.js";
-import Paging from "./Paging.js";
+import type AdminAccessMeeting from "./AdminAccessMeeting.js";
+import type Paging from "./Paging.js";
 
 /**
  * Meetings page

@@ -1,5 +1,5 @@
-import AddressBookBulkUploadResource from "./AddressBookBulkUploadResource.js";
-import ErrorEntity from "./ErrorEntity.js";
+import type AddressBookBulkUploadResource from "./AddressBookBulkUploadResource.js";
+import type ErrorEntity from "./ErrorEntity.js";
 
 interface AddressBookBulkUploadTaskResult {
   /**

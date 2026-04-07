@@ -1,4 +1,4 @@
-import CommRemoveForwardingTargetsRequestRecords from "./CommRemoveForwardingTargetsRequestRecords.js";
+import type CommRemoveForwardingTargetsRequestRecords from "./CommRemoveForwardingTargetsRequestRecords.js";
 
 interface CommRemoveForwardingTargetsRequest {
   /**

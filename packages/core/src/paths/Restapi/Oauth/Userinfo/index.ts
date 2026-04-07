@@ -1,5 +1,5 @@
-import UserInfoResource from "../../../../definitions/UserInfoResource.js";
-import {
+import type UserInfoResource from "../../../../definitions/UserInfoResource.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

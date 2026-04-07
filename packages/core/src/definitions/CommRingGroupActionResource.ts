@@ -1,4 +1,4 @@
-import CommRingGroupActionResourceTargets from "./CommRingGroupActionResourceTargets.js";
+import type CommRingGroupActionResourceTargets from "./CommRingGroupActionResourceTargets.js";
 
 /**
  * Action information

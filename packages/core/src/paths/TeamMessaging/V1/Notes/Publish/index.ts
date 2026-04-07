@@ -1,5 +1,5 @@
-import TMNoteInfo from "../../../../../definitions/TMNoteInfo.js";
-import {
+import type TMNoteInfo from "../../../../../definitions/TMNoteInfo.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

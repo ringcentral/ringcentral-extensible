@@ -1,4 +1,4 @@
-import CommRemoveForwardingTargetsItemResource from "./CommRemoveForwardingTargetsItemResource.js";
+import type CommRemoveForwardingTargetsItemResource from "./CommRemoveForwardingTargetsItemResource.js";
 
 interface CommRemoveForwardingTargetsResponse {
   /**

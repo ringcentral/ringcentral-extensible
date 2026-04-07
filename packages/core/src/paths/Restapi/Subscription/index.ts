@@ -1,9 +1,9 @@
 import Renew from "./Renew/index.js";
-import UpdateSubscriptionRequest from "../../../definitions/UpdateSubscriptionRequest.js";
-import SubscriptionInfo from "../../../definitions/SubscriptionInfo.js";
-import CreateSubscriptionRequest from "../../../definitions/CreateSubscriptionRequest.js";
-import SubscriptionListResource from "../../../definitions/SubscriptionListResource.js";
-import {
+import type UpdateSubscriptionRequest from "../../../definitions/UpdateSubscriptionRequest.js";
+import type SubscriptionInfo from "../../../definitions/SubscriptionInfo.js";
+import type CreateSubscriptionRequest from "../../../definitions/CreateSubscriptionRequest.js";
+import type SubscriptionListResource from "../../../definitions/SubscriptionListResource.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

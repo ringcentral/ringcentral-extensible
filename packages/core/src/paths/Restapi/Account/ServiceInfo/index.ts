@@ -1,5 +1,5 @@
-import AccountServiceInfo from "../../../../definitions/AccountServiceInfo.js";
-import {
+import type AccountServiceInfo from "../../../../definitions/AccountServiceInfo.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

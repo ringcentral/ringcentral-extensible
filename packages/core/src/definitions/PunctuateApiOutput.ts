@@ -1,4 +1,4 @@
-import PunctuateApiResponse from "./PunctuateApiResponse.js";
+import type PunctuateApiResponse from "./PunctuateApiResponse.js";
 
 interface PunctuateApiOutput {
   /**

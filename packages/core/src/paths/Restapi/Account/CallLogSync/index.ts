@@ -1,6 +1,6 @@
-import CallLogSyncResponse from "../../../../definitions/CallLogSyncResponse.js";
-import SyncAccountCallLogParameters from "../../../../definitions/SyncAccountCallLogParameters.js";
-import {
+import type CallLogSyncResponse from "../../../../definitions/CallLogSyncResponse.js";
+import type SyncAccountCallLogParameters from "../../../../definitions/SyncAccountCallLogParameters.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

@@ -1,7 +1,7 @@
-import MessageAttachmentInfo from "./MessageAttachmentInfo.js";
-import ConversationInfo from "./ConversationInfo.js";
-import MessageStoreCallerInfoResponseFrom from "./MessageStoreCallerInfoResponseFrom.js";
-import MessageStoreCallerInfoResponseTo from "./MessageStoreCallerInfoResponseTo.js";
+import type MessageAttachmentInfo from "./MessageAttachmentInfo.js";
+import type ConversationInfo from "./ConversationInfo.js";
+import type MessageStoreCallerInfoResponseFrom from "./MessageStoreCallerInfoResponseFrom.js";
+import type MessageStoreCallerInfoResponseTo from "./MessageStoreCallerInfoResponseTo.js";
 
 interface GetInternalTextMessageInfoResponse {
   /**

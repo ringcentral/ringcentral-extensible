@@ -1,4 +1,4 @@
-import CommStateScheduleResourceTriggers from "./CommStateScheduleResourceTriggers.js";
+import type CommStateScheduleResourceTriggers from "./CommStateScheduleResourceTriggers.js";
 
 interface CommStateScheduleResource {
   /**

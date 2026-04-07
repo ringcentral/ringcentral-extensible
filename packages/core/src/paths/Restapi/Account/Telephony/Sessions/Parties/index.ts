@@ -13,9 +13,9 @@ import Reply from "./Reply/index.js";
 import Park from "./Park/index.js";
 import Flip from "./Flip/index.js";
 import Hold from "./Hold/index.js";
-import PartyUpdateRequest from "../../../../../../definitions/PartyUpdateRequest.js";
-import CallParty from "../../../../../../definitions/CallParty.js";
-import {
+import type PartyUpdateRequest from "../../../../../../definitions/PartyUpdateRequest.js";
+import type CallParty from "../../../../../../definitions/CallParty.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

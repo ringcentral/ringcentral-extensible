@@ -1,6 +1,6 @@
-import PresenceInfoResponse from "./PresenceInfoResponse.js";
-import PresenceNavigationInfo from "./PresenceNavigationInfo.js";
-import PresencePagingInfo from "./PresencePagingInfo.js";
+import type PresenceInfoResponse from "./PresenceInfoResponse.js";
+import type PresenceNavigationInfo from "./PresenceNavigationInfo.js";
+import type PresencePagingInfo from "./PresencePagingInfo.js";
 
 interface AccountPresenceInfo {
   /**

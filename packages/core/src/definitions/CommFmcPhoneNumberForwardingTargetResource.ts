@@ -1,4 +1,4 @@
-import CommPhoneNumberResource from "./CommPhoneNumberResource.js";
+import type CommPhoneNumberResource from "./CommPhoneNumberResource.js";
 
 interface CommFmcPhoneNumberForwardingTargetResource {
   /**

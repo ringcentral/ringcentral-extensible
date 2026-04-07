@@ -1,4 +1,4 @@
-import MsTeamsUserEntry from "./MsTeamsUserEntry.js";
+import type MsTeamsUserEntry from "./MsTeamsUserEntry.js";
 
 interface ConnectTeamsUsersRequest {
   /**

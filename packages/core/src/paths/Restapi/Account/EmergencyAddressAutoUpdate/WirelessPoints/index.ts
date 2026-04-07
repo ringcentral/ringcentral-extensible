@@ -1,9 +1,9 @@
-import UpdateWirelessPoint from "../../../../../definitions/UpdateWirelessPoint.js";
-import WirelessPointInfo from "../../../../../definitions/WirelessPointInfo.js";
-import CreateWirelessPoint from "../../../../../definitions/CreateWirelessPoint.js";
-import WirelessPointsList from "../../../../../definitions/WirelessPointsList.js";
-import ListWirelessPointsParameters from "../../../../../definitions/ListWirelessPointsParameters.js";
-import {
+import type UpdateWirelessPoint from "../../../../../definitions/UpdateWirelessPoint.js";
+import type WirelessPointInfo from "../../../../../definitions/WirelessPointInfo.js";
+import type CreateWirelessPoint from "../../../../../definitions/CreateWirelessPoint.js";
+import type WirelessPointsList from "../../../../../definitions/WirelessPointsList.js";
+import type ListWirelessPointsParameters from "../../../../../definitions/ListWirelessPointsParameters.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

@@ -1,4 +1,4 @@
-import JWKey from "./JWKey.js";
+import type JWKey from "./JWKey.js";
 
 interface JWKeySet {
   /**

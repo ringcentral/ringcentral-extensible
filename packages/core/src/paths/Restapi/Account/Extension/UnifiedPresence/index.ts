@@ -1,6 +1,6 @@
-import UpdateUnifiedPresence from "../../../../../definitions/UpdateUnifiedPresence.js";
-import UnifiedPresence from "../../../../../definitions/UnifiedPresence.js";
-import {
+import type UpdateUnifiedPresence from "../../../../../definitions/UpdateUnifiedPresence.js";
+import type UnifiedPresence from "../../../../../definitions/UnifiedPresence.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

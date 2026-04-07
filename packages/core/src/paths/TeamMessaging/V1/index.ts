@@ -14,7 +14,7 @@ import Tasks from "./Tasks/index.js";
 import Notes from "./Notes/index.js";
 import Teams from "./Teams/index.js";
 import Chats from "./Chats/index.js";
-import { RingCentralInterface, ParentInterface } from "../../../types.js";
+import type { RingCentralInterface, ParentInterface } from "../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

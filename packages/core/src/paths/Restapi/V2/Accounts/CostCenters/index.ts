@@ -1,5 +1,5 @@
-import CostCenterList from "../../../../../definitions/CostCenterList.js";
-import {
+import type CostCenterList from "../../../../../definitions/CostCenterList.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

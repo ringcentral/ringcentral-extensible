@@ -1,9 +1,9 @@
 import Export from "./Export/index.js";
-import OptRecordsModificationSummary from "../../../../../../definitions/OptRecordsModificationSummary.js";
-import UpdateOptRecordList from "../../../../../../definitions/UpdateOptRecordList.js";
-import OptRecordList from "../../../../../../definitions/OptRecordList.js";
-import ListSmsConsentRecordsParameters from "../../../../../../definitions/ListSmsConsentRecordsParameters.js";
-import {
+import type OptRecordsModificationSummary from "../../../../../../definitions/OptRecordsModificationSummary.js";
+import type UpdateOptRecordList from "../../../../../../definitions/UpdateOptRecordList.js";
+import type OptRecordList from "../../../../../../definitions/OptRecordList.js";
+import type ListSmsConsentRecordsParameters from "../../../../../../definitions/ListSmsConsentRecordsParameters.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

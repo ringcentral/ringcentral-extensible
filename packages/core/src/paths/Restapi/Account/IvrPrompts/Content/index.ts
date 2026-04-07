@@ -1,5 +1,5 @@
-import ReadIVRPromptContentParameters from "../../../../../definitions/ReadIVRPromptContentParameters.js";
-import {
+import type ReadIVRPromptContentParameters from "../../../../../definitions/ReadIVRPromptContentParameters.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

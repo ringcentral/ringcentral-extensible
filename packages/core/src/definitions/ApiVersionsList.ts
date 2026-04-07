@@ -1,4 +1,4 @@
-import ApiVersionInfo from "./ApiVersionInfo.js";
+import type ApiVersionInfo from "./ApiVersionInfo.js";
 
 interface ApiVersionsList {
   /**

@@ -1,7 +1,7 @@
 import PhoneNumbers from "./PhoneNumbers/index.js";
-import CallerBlockingSettingsUpdate from "../../../../../definitions/CallerBlockingSettingsUpdate.js";
-import CallerBlockingSettings from "../../../../../definitions/CallerBlockingSettings.js";
-import {
+import type CallerBlockingSettingsUpdate from "../../../../../definitions/CallerBlockingSettingsUpdate.js";
+import type CallerBlockingSettings from "../../../../../definitions/CallerBlockingSettings.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

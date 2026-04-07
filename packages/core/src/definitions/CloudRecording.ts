@@ -1,4 +1,4 @@
-import Host from "./Host.js";
+import type Host from "./Host.js";
 
 /**
  * Meeting information

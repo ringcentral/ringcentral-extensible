@@ -1,4 +1,4 @@
-import CommReferencedExtensionResource from "./CommReferencedExtensionResource.js";
+import type CommReferencedExtensionResource from "./CommReferencedExtensionResource.js";
 
 interface CommRingAlwaysGroupActionRequestTargets {
   /**

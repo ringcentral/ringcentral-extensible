@@ -1,5 +1,5 @@
-import AccountHistoryPublicRecord from "./AccountHistoryPublicRecord.js";
-import AccountHistoryPaging from "./AccountHistoryPaging.js";
+import type AccountHistoryPublicRecord from "./AccountHistoryPublicRecord.js";
+import type AccountHistoryPaging from "./AccountHistoryPaging.js";
 
 interface AccountHistorySearchPublicResponse {
   /**

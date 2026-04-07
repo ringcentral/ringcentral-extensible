@@ -1,7 +1,7 @@
-import GetBulkAddTaskResultsV2Response from "../../../../../../definitions/GetBulkAddTaskResultsV2Response.js";
-import AddPhoneNumbersResponse from "../../../../../../definitions/AddPhoneNumbersResponse.js";
-import AddPhoneNumbersRequest from "../../../../../../definitions/AddPhoneNumbersRequest.js";
-import {
+import type GetBulkAddTaskResultsV2Response from "../../../../../../definitions/GetBulkAddTaskResultsV2Response.js";
+import type AddPhoneNumbersResponse from "../../../../../../definitions/AddPhoneNumbersResponse.js";
+import type AddPhoneNumbersRequest from "../../../../../../definitions/AddPhoneNumbersRequest.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

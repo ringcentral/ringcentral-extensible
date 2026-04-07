@@ -1,6 +1,6 @@
-import CommonEmergencyLocationResource from "./CommonEmergencyLocationResource.js";
-import EmergencyLocationsPaging from "./EmergencyLocationsPaging.js";
-import PageNavigationModel from "./PageNavigationModel.js";
+import type CommonEmergencyLocationResource from "./CommonEmergencyLocationResource.js";
+import type EmergencyLocationsPaging from "./EmergencyLocationsPaging.js";
+import type PageNavigationModel from "./PageNavigationModel.js";
 
 interface EmergencyLocationsResource {
   /**

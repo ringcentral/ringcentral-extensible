@@ -1,5 +1,5 @@
-import DelegatorsListResult from "../../../../../../definitions/DelegatorsListResult.js";
-import {
+import type DelegatorsListResult from "../../../../../../definitions/DelegatorsListResult.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

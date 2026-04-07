@@ -4,9 +4,9 @@ import Dictionary from "./Dictionary/index.js";
 import Account from "./Account/index.js";
 import Oauth from "./Oauth/index.js";
 import V2 from "./V2/index.js";
-import ApiVersionInfo from "../../definitions/ApiVersionInfo.js";
-import ApiVersionsList from "../../definitions/ApiVersionsList.js";
-import { RingCentralInterface, RestRequestConfig } from "../../types.js";
+import type ApiVersionInfo from "../../definitions/ApiVersionInfo.js";
+import type ApiVersionsList from "../../definitions/ApiVersionsList.js";
+import type { RingCentralInterface, RestRequestConfig } from "../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

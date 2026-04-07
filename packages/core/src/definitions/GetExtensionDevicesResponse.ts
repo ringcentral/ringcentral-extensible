@@ -1,6 +1,6 @@
-import DeviceResource from "./DeviceResource.js";
-import PageNavigationModel from "./PageNavigationModel.js";
-import EnumeratedPagingModel from "./EnumeratedPagingModel.js";
+import type DeviceResource from "./DeviceResource.js";
+import type PageNavigationModel from "./PageNavigationModel.js";
+import type EnumeratedPagingModel from "./EnumeratedPagingModel.js";
 
 interface GetExtensionDevicesResponse {
   /**

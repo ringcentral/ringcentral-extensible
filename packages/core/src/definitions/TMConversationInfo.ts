@@ -1,4 +1,4 @@
-import TMChatMemberInfo from "./TMChatMemberInfo.js";
+import type TMChatMemberInfo from "./TMChatMemberInfo.js";
 
 interface TMConversationInfo {
   /**

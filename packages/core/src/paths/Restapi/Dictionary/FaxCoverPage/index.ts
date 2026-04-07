@@ -1,6 +1,6 @@
-import ListFaxCoverPagesResponse from "../../../../definitions/ListFaxCoverPagesResponse.js";
-import ListFaxCoverPagesParameters from "../../../../definitions/ListFaxCoverPagesParameters.js";
-import {
+import type ListFaxCoverPagesResponse from "../../../../definitions/ListFaxCoverPagesResponse.js";
+import type ListFaxCoverPagesParameters from "../../../../definitions/ListFaxCoverPagesParameters.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

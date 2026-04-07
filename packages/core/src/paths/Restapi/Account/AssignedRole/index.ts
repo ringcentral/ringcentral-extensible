@@ -1,6 +1,6 @@
-import ExtensionWithRolesCollectionResource from "../../../../definitions/ExtensionWithRolesCollectionResource.js";
-import ListAssignedRolesParameters from "../../../../definitions/ListAssignedRolesParameters.js";
-import {
+import type ExtensionWithRolesCollectionResource from "../../../../definitions/ExtensionWithRolesCollectionResource.js";
+import type ListAssignedRolesParameters from "../../../../definitions/ListAssignedRolesParameters.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

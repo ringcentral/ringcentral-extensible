@@ -1,6 +1,6 @@
-import CallQueueOverflowSettingsRequestResource from "../../../../../definitions/CallQueueOverflowSettingsRequestResource.js";
-import CallQueueOverflowSettings from "../../../../../definitions/CallQueueOverflowSettings.js";
-import {
+import type CallQueueOverflowSettingsRequestResource from "../../../../../definitions/CallQueueOverflowSettingsRequestResource.js";
+import type CallQueueOverflowSettings from "../../../../../definitions/CallQueueOverflowSettings.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

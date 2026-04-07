@@ -1,9 +1,9 @@
 import CallFlipNumbers from "./CallFlipNumbers/index.js";
 import CommHandling from "./CommHandling/index.js";
 import Devices from "./Devices/index.js";
-import BulkDeleteUsersResponse from "../../../../../definitions/BulkDeleteUsersResponse.js";
-import BulkDeleteUsersRequest from "../../../../../definitions/BulkDeleteUsersRequest.js";
-import {
+import type BulkDeleteUsersResponse from "../../../../../definitions/BulkDeleteUsersResponse.js";
+import type BulkDeleteUsersRequest from "../../../../../definitions/BulkDeleteUsersRequest.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

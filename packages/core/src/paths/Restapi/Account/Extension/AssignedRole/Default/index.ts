@@ -1,5 +1,5 @@
-import AssignedRolesResource from "../../../../../../definitions/AssignedRolesResource.js";
-import {
+import type AssignedRolesResource from "../../../../../../definitions/AssignedRolesResource.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

@@ -1,5 +1,5 @@
 import Replace from "./Replace/index.js";
-import {
+import type {
   RingCentralInterface,
   ParentInterface,
 } from "../../../../../../types.js";

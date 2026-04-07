@@ -38,8 +38,8 @@ import MsTeams from "./MsTeams/index.js";
 import A2pSms from "./A2pSms/index.js";
 import Device from "./Device/index.js";
 import Sites from "./Sites/index.js";
-import GetAccountInfoResponse from "../../../definitions/GetAccountInfoResponse.js";
-import {
+import type GetAccountInfoResponse from "../../../definitions/GetAccountInfoResponse.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

@@ -1,5 +1,5 @@
-import TMConversationInfo from "./TMConversationInfo.js";
-import TMNavigationInfo from "./TMNavigationInfo.js";
+import type TMConversationInfo from "./TMConversationInfo.js";
+import type TMNavigationInfo from "./TMNavigationInfo.js";
 
 interface TMConversationList {
   /**

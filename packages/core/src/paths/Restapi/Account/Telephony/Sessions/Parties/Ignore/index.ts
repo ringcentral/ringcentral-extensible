@@ -1,5 +1,5 @@
-import IgnoreRequestBody from "../../../../../../../definitions/IgnoreRequestBody.js";
-import {
+import type IgnoreRequestBody from "../../../../../../../definitions/IgnoreRequestBody.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

@@ -1,7 +1,7 @@
 import Invitees from "./Invitees/index.js";
-import WcsSessionResource from "../../../../../../definitions/WcsSessionResource.js";
-import WcsSessionWithLocaleCodeModel from "../../../../../../definitions/WcsSessionWithLocaleCodeModel.js";
-import {
+import type WcsSessionResource from "../../../../../../definitions/WcsSessionResource.js";
+import type WcsSessionWithLocaleCodeModel from "../../../../../../definitions/WcsSessionWithLocaleCodeModel.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

@@ -1,4 +1,4 @@
-import CommWeeklyItemsResource from "./CommWeeklyItemsResource.js";
+import type CommWeeklyItemsResource from "./CommWeeklyItemsResource.js";
 
 interface CommStateScheduleRequestTriggers {
   /**

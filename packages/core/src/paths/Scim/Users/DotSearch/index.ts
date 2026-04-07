@@ -1,6 +1,6 @@
-import ScimUserSearchResponse from "../../../../definitions/ScimUserSearchResponse.js";
-import ScimSearchRequest from "../../../../definitions/ScimSearchRequest.js";
-import {
+import type ScimUserSearchResponse from "../../../../definitions/ScimUserSearchResponse.js";
+import type ScimSearchRequest from "../../../../definitions/ScimSearchRequest.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

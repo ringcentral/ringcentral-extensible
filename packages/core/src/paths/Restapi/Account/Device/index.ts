@@ -1,10 +1,10 @@
 import Emergency from "./Emergency/index.js";
 import SipInfo from "./SipInfo/index.js";
-import UpdateDeviceParameters from "../../../../definitions/UpdateDeviceParameters.js";
-import AccountDeviceUpdate from "../../../../definitions/AccountDeviceUpdate.js";
-import DeviceResource from "../../../../definitions/DeviceResource.js";
-import ReadDeviceParameters from "../../../../definitions/ReadDeviceParameters.js";
-import {
+import type UpdateDeviceParameters from "../../../../definitions/UpdateDeviceParameters.js";
+import type AccountDeviceUpdate from "../../../../definitions/AccountDeviceUpdate.js";
+import type DeviceResource from "../../../../definitions/DeviceResource.js";
+import type ReadDeviceParameters from "../../../../definitions/ReadDeviceParameters.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

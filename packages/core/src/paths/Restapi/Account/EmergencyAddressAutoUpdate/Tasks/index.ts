@@ -1,5 +1,5 @@
-import AutomaticLocationUpdatesTaskInfo from "../../../../../definitions/AutomaticLocationUpdatesTaskInfo.js";
-import {
+import type AutomaticLocationUpdatesTaskInfo from "../../../../../definitions/AutomaticLocationUpdatesTaskInfo.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

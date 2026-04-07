@@ -1,4 +1,4 @@
-import BulkDeleteUsersResponseRecords from "./BulkDeleteUsersResponseRecords.js";
+import type BulkDeleteUsersResponseRecords from "./BulkDeleteUsersResponseRecords.js";
 
 interface BulkDeleteUsersResponse {
   /**

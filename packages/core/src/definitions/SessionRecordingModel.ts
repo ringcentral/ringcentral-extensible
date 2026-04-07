@@ -1,4 +1,4 @@
-import RecordingModel from "./RecordingModel.js";
+import type RecordingModel from "./RecordingModel.js";
 
 interface SessionRecordingModel {
   /**

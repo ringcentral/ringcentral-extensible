@@ -1,5 +1,5 @@
-import CallRecordingIds from "../../../../definitions/CallRecordingIds.js";
-import {
+import type CallRecordingIds from "../../../../definitions/CallRecordingIds.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

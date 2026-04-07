@@ -1,7 +1,7 @@
-import UpdateConferencingInfoRequest from "../../../../../definitions/UpdateConferencingInfoRequest.js";
-import GetConferencingInfoResponse from "../../../../../definitions/GetConferencingInfoResponse.js";
-import ReadConferencingSettingsParameters from "../../../../../definitions/ReadConferencingSettingsParameters.js";
-import {
+import type UpdateConferencingInfoRequest from "../../../../../definitions/UpdateConferencingInfoRequest.js";
+import type GetConferencingInfoResponse from "../../../../../definitions/GetConferencingInfoResponse.js";
+import type ReadConferencingSettingsParameters from "../../../../../definitions/ReadConferencingSettingsParameters.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

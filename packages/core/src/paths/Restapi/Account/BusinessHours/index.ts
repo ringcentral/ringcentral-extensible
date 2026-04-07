@@ -1,6 +1,6 @@
-import CompanyBusinessHoursUpdateRequest from "../../../../definitions/CompanyBusinessHoursUpdateRequest.js";
-import CompanyBusinessHours from "../../../../definitions/CompanyBusinessHours.js";
-import {
+import type CompanyBusinessHoursUpdateRequest from "../../../../definitions/CompanyBusinessHoursUpdateRequest.js";
+import type CompanyBusinessHours from "../../../../definitions/CompanyBusinessHours.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

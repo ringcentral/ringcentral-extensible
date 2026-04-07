@@ -1,8 +1,8 @@
-import TMNoteInfo from "../../../../../definitions/TMNoteInfo.js";
-import TMCreateNoteRequest from "../../../../../definitions/TMCreateNoteRequest.js";
-import TMNoteList from "../../../../../definitions/TMNoteList.js";
-import ListChatNotesNewParameters from "../../../../../definitions/ListChatNotesNewParameters.js";
-import {
+import type TMNoteInfo from "../../../../../definitions/TMNoteInfo.js";
+import type TMCreateNoteRequest from "../../../../../definitions/TMCreateNoteRequest.js";
+import type TMNoteList from "../../../../../definitions/TMNoteList.js";
+import type ListChatNotesNewParameters from "../../../../../definitions/ListChatNotesNewParameters.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

@@ -1,6 +1,6 @@
-import CallParty from "../../../../../../../definitions/CallParty.js";
-import PickupTarget from "../../../../../../../definitions/PickupTarget.js";
-import {
+import type CallParty from "../../../../../../../definitions/CallParty.js";
+import type PickupTarget from "../../../../../../../definitions/PickupTarget.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

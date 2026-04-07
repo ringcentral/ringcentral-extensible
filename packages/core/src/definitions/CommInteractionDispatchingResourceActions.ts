@@ -1,5 +1,5 @@
-import CommGreetingResource from "./CommGreetingResource.js";
-import CommInteractionDispatchingResourceActionsTargets from "./CommInteractionDispatchingResourceActionsTargets.js";
+import type CommGreetingResource from "./CommGreetingResource.js";
+import type CommInteractionDispatchingResourceActionsTargets from "./CommInteractionDispatchingResourceActionsTargets.js";
 
 interface CommInteractionDispatchingResourceActions {
   /**

@@ -1,7 +1,7 @@
-import MessageDetailsResponse from "../../../../../definitions/MessageDetailsResponse.js";
-import MessageListResponse from "../../../../../definitions/MessageListResponse.js";
-import ListA2PSMSParameters from "../../../../../definitions/ListA2PSMSParameters.js";
-import {
+import type MessageDetailsResponse from "../../../../../definitions/MessageDetailsResponse.js";
+import type MessageListResponse from "../../../../../definitions/MessageListResponse.js";
+import type ListA2PSMSParameters from "../../../../../definitions/ListA2PSMSParameters.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

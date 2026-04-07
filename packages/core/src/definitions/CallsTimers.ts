@@ -1,14 +1,14 @@
-import AllCalls from "./AllCalls.js";
-import CallsByDirection from "./CallsByDirection.js";
-import CallsByOrigin from "./CallsByOrigin.js";
-import CallsByResponse from "./CallsByResponse.js";
-import CallsBySegments from "./CallsBySegments.js";
-import CallsByResult from "./CallsByResult.js";
-import CallsByEndingParty from "./CallsByEndingParty.js";
-import CallsByCompanyHours from "./CallsByCompanyHours.js";
-import CallsByQueueSla from "./CallsByQueueSla.js";
-import CallsByType from "./CallsByType.js";
-import CallsByQueueHours from "./CallsByQueueHours.js";
+import type AllCalls from "./AllCalls.js";
+import type CallsByDirection from "./CallsByDirection.js";
+import type CallsByOrigin from "./CallsByOrigin.js";
+import type CallsByResponse from "./CallsByResponse.js";
+import type CallsBySegments from "./CallsBySegments.js";
+import type CallsByResult from "./CallsByResult.js";
+import type CallsByEndingParty from "./CallsByEndingParty.js";
+import type CallsByCompanyHours from "./CallsByCompanyHours.js";
+import type CallsByQueueSla from "./CallsByQueueSla.js";
+import type CallsByType from "./CallsByType.js";
+import type CallsByQueueHours from "./CallsByQueueHours.js";
 
 /**
  * Call length data for the specified grouping

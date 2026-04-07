@@ -1,6 +1,6 @@
-import AutomaticLocationUpdatesSiteInfo from "./AutomaticLocationUpdatesSiteInfo.js";
-import PublicIpRangeInfo from "./PublicIpRangeInfo.js";
-import PrivateIpRangeInfo from "./PrivateIpRangeInfo.js";
+import type AutomaticLocationUpdatesSiteInfo from "./AutomaticLocationUpdatesSiteInfo.js";
+import type PublicIpRangeInfo from "./PublicIpRangeInfo.js";
+import type PrivateIpRangeInfo from "./PrivateIpRangeInfo.js";
 
 interface NetworkInfo {
   /**

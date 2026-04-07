@@ -1,7 +1,7 @@
-import TemplateInfo from "../../../../definitions/TemplateInfo.js";
-import UserTemplates from "../../../../definitions/UserTemplates.js";
-import ListUserTemplatesParameters from "../../../../definitions/ListUserTemplatesParameters.js";
-import {
+import type TemplateInfo from "../../../../definitions/TemplateInfo.js";
+import type UserTemplates from "../../../../definitions/UserTemplates.js";
+import type ListUserTemplatesParameters from "../../../../definitions/ListUserTemplatesParameters.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

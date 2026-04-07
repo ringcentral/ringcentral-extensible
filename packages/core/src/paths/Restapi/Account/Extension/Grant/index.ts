@@ -1,6 +1,6 @@
-import GetExtensionGrantListResponse from "../../../../../definitions/GetExtensionGrantListResponse.js";
-import ListExtensionGrantsParameters from "../../../../../definitions/ListExtensionGrantsParameters.js";
-import {
+import type GetExtensionGrantListResponse from "../../../../../definitions/GetExtensionGrantListResponse.js";
+import type ListExtensionGrantsParameters from "../../../../../definitions/ListExtensionGrantsParameters.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

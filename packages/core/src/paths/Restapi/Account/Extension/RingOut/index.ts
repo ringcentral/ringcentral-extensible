@@ -1,6 +1,6 @@
-import GetRingOutStatusResponse from "../../../../../definitions/GetRingOutStatusResponse.js";
-import MakeRingOutRequest from "../../../../../definitions/MakeRingOutRequest.js";
-import {
+import type GetRingOutStatusResponse from "../../../../../definitions/GetRingOutStatusResponse.js";
+import type MakeRingOutRequest from "../../../../../definitions/MakeRingOutRequest.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

@@ -1,6 +1,6 @@
-import BatchProvisionUsersResponse from "../../../../../../definitions/BatchProvisionUsersResponse.js";
-import BatchProvisionUsersRequest from "../../../../../../definitions/BatchProvisionUsersRequest.js";
-import {
+import type BatchProvisionUsersResponse from "../../../../../../definitions/BatchProvisionUsersResponse.js";
+import type BatchProvisionUsersRequest from "../../../../../../definitions/BatchProvisionUsersRequest.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

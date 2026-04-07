@@ -1,4 +1,4 @@
-import CommIntegrationRequest from "./CommIntegrationRequest.js";
+import type CommIntegrationRequest from "./CommIntegrationRequest.js";
 
 interface CommIntegrationRingTargetRequest {
   /**

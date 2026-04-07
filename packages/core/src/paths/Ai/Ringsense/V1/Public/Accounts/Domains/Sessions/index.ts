@@ -1,5 +1,5 @@
 import Insights from "./Insights/index.js";
-import {
+import type {
   RingCentralInterface,
   ParentInterface,
 } from "../../../../../../../../types.js";

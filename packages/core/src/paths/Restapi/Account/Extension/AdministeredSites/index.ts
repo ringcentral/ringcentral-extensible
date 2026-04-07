@@ -1,6 +1,6 @@
-import BusinessSiteCollectionRequest from "../../../../../definitions/BusinessSiteCollectionRequest.js";
-import BusinessSiteCollectionResource from "../../../../../definitions/BusinessSiteCollectionResource.js";
-import {
+import type BusinessSiteCollectionRequest from "../../../../../definitions/BusinessSiteCollectionRequest.js";
+import type BusinessSiteCollectionResource from "../../../../../definitions/BusinessSiteCollectionResource.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

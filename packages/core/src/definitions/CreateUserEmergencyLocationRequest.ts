@@ -1,5 +1,5 @@
-import EmergencyAddressResourceRequest from "./EmergencyAddressResourceRequest.js";
-import SiteBasicInfo from "./SiteBasicInfo.js";
+import type EmergencyAddressResourceRequest from "./EmergencyAddressResourceRequest.js";
+import type SiteBasicInfo from "./SiteBasicInfo.js";
 
 interface CreateUserEmergencyLocationRequest {
   /**

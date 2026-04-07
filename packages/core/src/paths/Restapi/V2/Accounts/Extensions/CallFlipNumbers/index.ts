@@ -1,5 +1,5 @@
-import CallFlipNumberListResource from "../../../../../../definitions/CallFlipNumberListResource.js";
-import {
+import type CallFlipNumberListResource from "../../../../../../definitions/CallFlipNumberListResource.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

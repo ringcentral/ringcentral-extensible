@@ -1,4 +1,4 @@
-import CommInteractionDispatchingResource from "./CommInteractionDispatchingResource.js";
+import type CommInteractionDispatchingResource from "./CommInteractionDispatchingResource.js";
 
 /**
  * Interaction rule

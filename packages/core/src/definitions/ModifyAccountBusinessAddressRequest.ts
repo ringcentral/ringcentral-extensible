@@ -1,4 +1,4 @@
-import BusinessAddressInfo from "./BusinessAddressInfo.js";
+import type BusinessAddressInfo from "./BusinessAddressInfo.js";
 
 interface ModifyAccountBusinessAddressRequest {
   /**

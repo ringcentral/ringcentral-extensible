@@ -1,6 +1,6 @@
-import SuperviseCallSessionResponse from "../../../../../../definitions/SuperviseCallSessionResponse.js";
-import SuperviseCallSessionRequest from "../../../../../../definitions/SuperviseCallSessionRequest.js";
-import {
+import type SuperviseCallSessionResponse from "../../../../../../definitions/SuperviseCallSessionResponse.js";
+import type SuperviseCallSessionRequest from "../../../../../../definitions/SuperviseCallSessionRequest.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

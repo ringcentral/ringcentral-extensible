@@ -1,7 +1,7 @@
-import GetStateInfoResponse from "../../../../definitions/GetStateInfoResponse.js";
-import GetStateListResponse from "../../../../definitions/GetStateListResponse.js";
-import ListStatesParameters from "../../../../definitions/ListStatesParameters.js";
-import {
+import type GetStateInfoResponse from "../../../../definitions/GetStateInfoResponse.js";
+import type GetStateListResponse from "../../../../definitions/GetStateListResponse.js";
+import type ListStatesParameters from "../../../../definitions/ListStatesParameters.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

@@ -1,6 +1,6 @@
-import CreateSipRegistrationResponse from "../../../../definitions/CreateSipRegistrationResponse.js";
-import CreateSipRegistrationRequest from "../../../../definitions/CreateSipRegistrationRequest.js";
-import {
+import type CreateSipRegistrationResponse from "../../../../definitions/CreateSipRegistrationResponse.js";
+import type CreateSipRegistrationRequest from "../../../../definitions/CreateSipRegistrationRequest.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

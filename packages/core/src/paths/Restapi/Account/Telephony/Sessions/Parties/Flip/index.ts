@@ -1,5 +1,5 @@
-import CallPartyFlip from "../../../../../../../definitions/CallPartyFlip.js";
-import {
+import type CallPartyFlip from "../../../../../../../definitions/CallPartyFlip.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

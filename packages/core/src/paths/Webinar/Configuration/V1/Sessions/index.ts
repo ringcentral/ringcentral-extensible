@@ -1,6 +1,6 @@
-import WcsSessionGlobalListResource from "../../../../../definitions/WcsSessionGlobalListResource.js";
-import RcwConfigListAllSessionsParameters from "../../../../../definitions/RcwConfigListAllSessionsParameters.js";
-import {
+import type WcsSessionGlobalListResource from "../../../../../definitions/WcsSessionGlobalListResource.js";
+import type RcwConfigListAllSessionsParameters from "../../../../../definitions/RcwConfigListAllSessionsParameters.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

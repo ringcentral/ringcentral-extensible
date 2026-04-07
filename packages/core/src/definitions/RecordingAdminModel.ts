@@ -1,5 +1,5 @@
-import ApiError from "./ApiError.js";
-import SessionRefAdminModel from "./SessionRefAdminModel.js";
+import type ApiError from "./ApiError.js";
+import type SessionRefAdminModel from "./SessionRefAdminModel.js";
 
 interface RecordingAdminModel {
   /**

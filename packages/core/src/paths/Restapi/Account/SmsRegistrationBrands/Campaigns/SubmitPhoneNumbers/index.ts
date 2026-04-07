@@ -1,5 +1,5 @@
-import AssignNumbersRequest from "../../../../../../definitions/AssignNumbersRequest.js";
-import {
+import type AssignNumbersRequest from "../../../../../../definitions/AssignNumbersRequest.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

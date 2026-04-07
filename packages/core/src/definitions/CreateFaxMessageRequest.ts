@@ -1,5 +1,5 @@
-import FaxReceiver from "./FaxReceiver.js";
-import Attachment from "./Attachment.js";
+import type FaxReceiver from "./FaxReceiver.js";
+import type Attachment from "./Attachment.js";
 
 /**
  * Request body for operation createFaxMessage

@@ -1,4 +1,4 @@
-import CommGreetingResource from "./CommGreetingResource.js";
+import type CommGreetingResource from "./CommGreetingResource.js";
 
 interface CommTerminatingPromptResource {
   /**

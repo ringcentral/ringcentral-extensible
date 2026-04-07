@@ -1,6 +1,6 @@
-import UtteranceInsightsObject from "./UtteranceInsightsObject.js";
-import SpeakerInsightsObject from "./SpeakerInsightsObject.js";
-import ConversationalInsightsUnit from "./ConversationalInsightsUnit.js";
+import type UtteranceInsightsObject from "./UtteranceInsightsObject.js";
+import type SpeakerInsightsObject from "./SpeakerInsightsObject.js";
+import type ConversationalInsightsUnit from "./ConversationalInsightsUnit.js";
 
 interface InteractionObject {
   /**

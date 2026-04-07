@@ -1,5 +1,5 @@
-import TMChatInfo from "./TMChatInfo.js";
-import TMNavigationInfo from "./TMNavigationInfo.js";
+import type TMChatInfo from "./TMChatInfo.js";
+import type TMNavigationInfo from "./TMNavigationInfo.js";
 
 interface TMChatList {
   /**

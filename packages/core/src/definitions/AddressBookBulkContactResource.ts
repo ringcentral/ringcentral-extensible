@@ -1,4 +1,4 @@
-import AddressBookBulkContactAddressInfo from "./AddressBookBulkContactAddressInfo.js";
+import type AddressBookBulkContactAddressInfo from "./AddressBookBulkContactAddressInfo.js";
 
 interface AddressBookBulkContactResource {
   /**

@@ -1,4 +1,4 @@
-import TaskResultRecordErrorsInfo from "./TaskResultRecordErrorsInfo.js";
+import type TaskResultRecordErrorsInfo from "./TaskResultRecordErrorsInfo.js";
 
 interface TaskResultRecord {
   /**

@@ -1,7 +1,7 @@
 import Conference from "./Conference/index.js";
 import CallOut from "./CallOut/index.js";
 import Sessions from "./Sessions/index.js";
-import { RingCentralInterface, ParentInterface } from "../../../../types.js";
+import type { RingCentralInterface, ParentInterface } from "../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

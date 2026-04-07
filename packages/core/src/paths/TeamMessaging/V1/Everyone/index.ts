@@ -1,6 +1,6 @@
-import UpdateEveryoneTeamRequest from "../../../../definitions/UpdateEveryoneTeamRequest.js";
-import EveryoneTeamInfo from "../../../../definitions/EveryoneTeamInfo.js";
-import {
+import type UpdateEveryoneTeamRequest from "../../../../definitions/UpdateEveryoneTeamRequest.js";
+import type EveryoneTeamInfo from "../../../../definitions/EveryoneTeamInfo.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

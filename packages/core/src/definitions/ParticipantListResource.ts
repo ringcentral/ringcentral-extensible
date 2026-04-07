@@ -1,5 +1,5 @@
-import ParticipantExtendedModel from "./ParticipantExtendedModel.js";
-import RcwPagingModel from "./RcwPagingModel.js";
+import type ParticipantExtendedModel from "./ParticipantExtendedModel.js";
+import type RcwPagingModel from "./RcwPagingModel.js";
 
 interface ParticipantListResource {
   /**

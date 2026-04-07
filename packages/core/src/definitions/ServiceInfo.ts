@@ -1,8 +1,8 @@
-import BillingPlanInfo from "./BillingPlanInfo.js";
-import BrandInfo from "./BrandInfo.js";
-import ServicePlanInfo from "./ServicePlanInfo.js";
-import CountryInfoShortModel from "./CountryInfoShortModel.js";
-import UBrandInfo from "./UBrandInfo.js";
+import type BillingPlanInfo from "./BillingPlanInfo.js";
+import type BrandInfo from "./BrandInfo.js";
+import type ServicePlanInfo from "./ServicePlanInfo.js";
+import type CountryInfoShortModel from "./CountryInfoShortModel.js";
+import type UBrandInfo from "./UBrandInfo.js";
 
 /**
  * Account service information, including brand, sub-brand, service plan and

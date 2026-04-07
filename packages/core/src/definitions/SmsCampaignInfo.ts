@@ -1,5 +1,5 @@
-import ApiError from "./ApiError.js";
-import ConsentSettings from "./ConsentSettings.js";
+import type ApiError from "./ApiError.js";
+import type ConsentSettings from "./ConsentSettings.js";
 
 interface SmsCampaignInfo {
   /**

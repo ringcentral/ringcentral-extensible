@@ -1,4 +1,4 @@
-import PagerCallerInfoRequest from "./PagerCallerInfoRequest.js";
+import type PagerCallerInfoRequest from "./PagerCallerInfoRequest.js";
 
 interface CreateInternalTextMessageRequest {
   /**

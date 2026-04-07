@@ -1,5 +1,5 @@
-import SubscriptionInfo from "../../../../definitions/SubscriptionInfo.js";
-import {
+import type SubscriptionInfo from "../../../../definitions/SubscriptionInfo.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

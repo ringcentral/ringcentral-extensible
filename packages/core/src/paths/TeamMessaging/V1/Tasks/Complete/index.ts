@@ -1,5 +1,5 @@
-import TMCompleteTaskRequest from "../../../../../definitions/TMCompleteTaskRequest.js";
-import {
+import type TMCompleteTaskRequest from "../../../../../definitions/TMCompleteTaskRequest.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

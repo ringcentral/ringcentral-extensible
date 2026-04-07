@@ -1,5 +1,5 @@
-import SmsConfigurationResource from "../../../../../../definitions/SmsConfigurationResource.js";
-import {
+import type SmsConfigurationResource from "../../../../../../definitions/SmsConfigurationResource.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

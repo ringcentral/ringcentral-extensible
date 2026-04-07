@@ -1,8 +1,8 @@
 import CustomGreetings from "./CustomGreetings/index.js";
 import BulkAssign from "./BulkAssign/index.js";
 import Extensions from "./Extensions/index.js";
-import CallRecordingSettingsResource from "../../../../definitions/CallRecordingSettingsResource.js";
-import {
+import type CallRecordingSettingsResource from "../../../../definitions/CallRecordingSettingsResource.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

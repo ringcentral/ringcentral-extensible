@@ -1,7 +1,7 @@
-import CallRecording from "../../../../../../../definitions/CallRecording.js";
-import PauseResumeCallRecordingParameters from "../../../../../../../definitions/PauseResumeCallRecordingParameters.js";
-import CallRecordingUpdate from "../../../../../../../definitions/CallRecordingUpdate.js";
-import {
+import type CallRecording from "../../../../../../../definitions/CallRecording.js";
+import type PauseResumeCallRecordingParameters from "../../../../../../../definitions/PauseResumeCallRecordingParameters.js";
+import type CallRecordingUpdate from "../../../../../../../definitions/CallRecordingUpdate.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

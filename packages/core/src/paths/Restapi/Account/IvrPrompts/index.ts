@@ -1,10 +1,10 @@
 import Content from "./Content/index.js";
 import Utils from "../../../../Utils.js";
-import UpdateIVRPromptRequest from "../../../../definitions/UpdateIVRPromptRequest.js";
-import PromptInfo from "../../../../definitions/PromptInfo.js";
-import CreateIVRPromptRequest from "../../../../definitions/CreateIVRPromptRequest.js";
-import IvrPrompts from "../../../../definitions/IvrPrompts.js";
-import {
+import type UpdateIVRPromptRequest from "../../../../definitions/UpdateIVRPromptRequest.js";
+import type PromptInfo from "../../../../definitions/PromptInfo.js";
+import type CreateIVRPromptRequest from "../../../../definitions/CreateIVRPromptRequest.js";
+import type IvrPrompts from "../../../../definitions/IvrPrompts.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

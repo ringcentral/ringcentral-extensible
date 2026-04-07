@@ -36,12 +36,12 @@ import Grant from "./Grant/index.js";
 import Mms from "./Mms/index.js";
 import Sms from "./Sms/index.js";
 import Fax from "./Fax/index.js";
-import ExtensionUpdateRequest from "../../../../definitions/ExtensionUpdateRequest.js";
-import GetExtensionInfoResponse from "../../../../definitions/GetExtensionInfoResponse.js";
-import ExtensionCreationRequest from "../../../../definitions/ExtensionCreationRequest.js";
-import GetExtensionListResponse from "../../../../definitions/GetExtensionListResponse.js";
-import ListExtensionsParameters from "../../../../definitions/ListExtensionsParameters.js";
-import {
+import type ExtensionUpdateRequest from "../../../../definitions/ExtensionUpdateRequest.js";
+import type GetExtensionInfoResponse from "../../../../definitions/GetExtensionInfoResponse.js";
+import type ExtensionCreationRequest from "../../../../definitions/ExtensionCreationRequest.js";
+import type GetExtensionListResponse from "../../../../definitions/GetExtensionListResponse.js";
+import type ListExtensionsParameters from "../../../../definitions/ListExtensionsParameters.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

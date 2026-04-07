@@ -1,4 +1,4 @@
-import BulkTaskInfo from "./BulkTaskInfo.js";
+import type BulkTaskInfo from "./BulkTaskInfo.js";
 
 interface UpdateMultipleWirelessPointsResponse {
   /**

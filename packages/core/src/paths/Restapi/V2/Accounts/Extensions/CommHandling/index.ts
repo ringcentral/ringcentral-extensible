@@ -1,6 +1,6 @@
 import States from "./States/index.js";
 import Voice from "./Voice/index.js";
-import {
+import type {
   RingCentralInterface,
   ParentInterface,
 } from "../../../../../../types.js";

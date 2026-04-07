@@ -1,5 +1,5 @@
-import SiteMembersList from "../../../../../definitions/SiteMembersList.js";
-import {
+import type SiteMembersList from "../../../../../definitions/SiteMembersList.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

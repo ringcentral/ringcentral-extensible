@@ -1,6 +1,6 @@
-import AdminAccessMeetings from "../../../../../../definitions/AdminAccessMeetings.js";
-import ListAccountMeetingsParameters from "../../../../../../definitions/ListAccountMeetingsParameters.js";
-import {
+import type AdminAccessMeetings from "../../../../../../definitions/AdminAccessMeetings.js";
+import type ListAccountMeetingsParameters from "../../../../../../definitions/ListAccountMeetingsParameters.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

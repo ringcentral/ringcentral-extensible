@@ -1,5 +1,5 @@
-import JobStatusResponse from "../../../../../definitions/JobStatusResponse.js";
-import {
+import type JobStatusResponse from "../../../../../definitions/JobStatusResponse.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

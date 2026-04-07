@@ -1,5 +1,5 @@
-import MessageListMessageResponse from "./MessageListMessageResponse.js";
-import NonEnumeratedPagingModel from "./NonEnumeratedPagingModel.js";
+import type MessageListMessageResponse from "./MessageListMessageResponse.js";
+import type NonEnumeratedPagingModel from "./NonEnumeratedPagingModel.js";
 
 /**
  * List of messages retrieved for an account and other filter criteria such as `batchId` and `fromPhoneNumber` specified in the request

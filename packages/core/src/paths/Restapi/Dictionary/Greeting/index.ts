@@ -1,7 +1,7 @@
-import DictionaryGreetingInfo from "../../../../definitions/DictionaryGreetingInfo.js";
-import DictionaryGreetingList from "../../../../definitions/DictionaryGreetingList.js";
-import ListStandardGreetingsParameters from "../../../../definitions/ListStandardGreetingsParameters.js";
-import {
+import type DictionaryGreetingInfo from "../../../../definitions/DictionaryGreetingInfo.js";
+import type DictionaryGreetingList from "../../../../definitions/DictionaryGreetingList.js";
+import type ListStandardGreetingsParameters from "../../../../definitions/ListStandardGreetingsParameters.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

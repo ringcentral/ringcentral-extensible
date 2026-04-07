@@ -1,4 +1,4 @@
-import CommGreetingIdResource from "./CommGreetingIdResource.js";
+import type CommGreetingIdResource from "./CommGreetingIdResource.js";
 
 interface CommGreetingResource {
   /**

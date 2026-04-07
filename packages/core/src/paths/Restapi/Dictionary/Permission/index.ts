@@ -1,8 +1,8 @@
-import PermissionResource from "../../../../definitions/PermissionResource.js";
-import ReadPermissionParameters from "../../../../definitions/ReadPermissionParameters.js";
-import PermissionCollectionResource from "../../../../definitions/PermissionCollectionResource.js";
-import ListPermissionsParameters from "../../../../definitions/ListPermissionsParameters.js";
-import {
+import type PermissionResource from "../../../../definitions/PermissionResource.js";
+import type ReadPermissionParameters from "../../../../definitions/ReadPermissionParameters.js";
+import type PermissionCollectionResource from "../../../../definitions/PermissionCollectionResource.js";
+import type ListPermissionsParameters from "../../../../definitions/ListPermissionsParameters.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

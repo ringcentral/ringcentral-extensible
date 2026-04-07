@@ -1,7 +1,7 @@
-import TimelineResponse from "../../../../../../../definitions/TimelineResponse.js";
-import AnalyticsCallsTimelineFetchParameters from "../../../../../../../definitions/AnalyticsCallsTimelineFetchParameters.js";
-import TimelineRequest from "../../../../../../../definitions/TimelineRequest.js";
-import {
+import type TimelineResponse from "../../../../../../../definitions/TimelineResponse.js";
+import type AnalyticsCallsTimelineFetchParameters from "../../../../../../../definitions/AnalyticsCallsTimelineFetchParameters.js";
+import type TimelineRequest from "../../../../../../../definitions/TimelineRequest.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

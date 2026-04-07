@@ -1,6 +1,6 @@
-import EmergencyAddressAutoUpdateSiteInfo from "./EmergencyAddressAutoUpdateSiteInfo.js";
-import EmergencyAddressInfo from "./EmergencyAddressInfo.js";
-import EmergencyLocationInfo from "./EmergencyLocationInfo.js";
+import type EmergencyAddressAutoUpdateSiteInfo from "./EmergencyAddressAutoUpdateSiteInfo.js";
+import type EmergencyAddressInfo from "./EmergencyAddressInfo.js";
+import type EmergencyLocationInfo from "./EmergencyLocationInfo.js";
 
 interface CreateWirelessPoint {
   /**

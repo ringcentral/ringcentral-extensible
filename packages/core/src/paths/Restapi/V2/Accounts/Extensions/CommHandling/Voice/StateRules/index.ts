@@ -1,8 +1,8 @@
-import CommStateBasedRuleUpdateRequest from "../../../../../../../../definitions/CommStateBasedRuleUpdateRequest.js";
-import CommStateBasedRuleResource from "../../../../../../../../definitions/CommStateBasedRuleResource.js";
-import CommStateBasedRulesResource from "../../../../../../../../definitions/CommStateBasedRulesResource.js";
-import ListVoiceStateBasedRulesParameters from "../../../../../../../../definitions/ListVoiceStateBasedRulesParameters.js";
-import {
+import type CommStateBasedRuleUpdateRequest from "../../../../../../../../definitions/CommStateBasedRuleUpdateRequest.js";
+import type CommStateBasedRuleResource from "../../../../../../../../definitions/CommStateBasedRuleResource.js";
+import type CommStateBasedRulesResource from "../../../../../../../../definitions/CommStateBasedRulesResource.js";
+import type ListVoiceStateBasedRulesParameters from "../../../../../../../../definitions/ListVoiceStateBasedRulesParameters.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

@@ -1,5 +1,5 @@
-import CommStateResource from "./CommStateResource.js";
-import EnumeratedPagingModel from "./EnumeratedPagingModel.js";
+import type CommStateResource from "./CommStateResource.js";
+import type EnumeratedPagingModel from "./EnumeratedPagingModel.js";
 
 interface CommStatesResource {
   /**

@@ -1,8 +1,8 @@
-import TMEventInfo from "../../../../definitions/TMEventInfo.js";
-import TMCreateEventRequest from "../../../../definitions/TMCreateEventRequest.js";
-import TMEventList from "../../../../definitions/TMEventList.js";
-import ReadGlipEventsNewParameters from "../../../../definitions/ReadGlipEventsNewParameters.js";
-import {
+import type TMEventInfo from "../../../../definitions/TMEventInfo.js";
+import type TMCreateEventRequest from "../../../../definitions/TMCreateEventRequest.js";
+import type TMEventList from "../../../../definitions/TMEventList.js";
+import type ReadGlipEventsNewParameters from "../../../../definitions/ReadGlipEventsNewParameters.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

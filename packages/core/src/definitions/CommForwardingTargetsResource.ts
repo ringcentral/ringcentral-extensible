@@ -1,5 +1,5 @@
-import CommForwardingTargetsResourceRecords from "./CommForwardingTargetsResourceRecords.js";
-import EnumeratedPagingModel from "./EnumeratedPagingModel.js";
+import type CommForwardingTargetsResourceRecords from "./CommForwardingTargetsResourceRecords.js";
+import type EnumeratedPagingModel from "./EnumeratedPagingModel.js";
 
 interface CommForwardingTargetsResource {
   /**

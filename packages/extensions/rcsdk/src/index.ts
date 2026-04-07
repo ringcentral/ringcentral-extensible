@@ -6,7 +6,7 @@ import type {
 } from "@rc-ex/core/types";
 import SdkExtension from "@rc-ex/core/SdkExtension";
 import RestException from "@rc-ex/core/RestException";
-import { SDK } from "@ringcentral/sdk";
+import type { SDK } from "@ringcentral/sdk";
 
 export interface RcSdkOptions {
   rcSdk: SDK;

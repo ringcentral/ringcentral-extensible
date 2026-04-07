@@ -1,7 +1,7 @@
 import BulkAdd from "./BulkAdd/index.js";
-import RemoveLineResponse from "../../../../../definitions/RemoveLineResponse.js";
-import RemoveLineRequest from "../../../../../definitions/RemoveLineRequest.js";
-import {
+import type RemoveLineResponse from "../../../../../definitions/RemoveLineResponse.js";
+import type RemoveLineRequest from "../../../../../definitions/RemoveLineRequest.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

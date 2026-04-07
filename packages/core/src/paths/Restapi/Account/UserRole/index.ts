@@ -1,13 +1,13 @@
 import BulkAssign from "./BulkAssign/index.js";
 import Default from "./Default/index.js";
-import DeleteCustomRoleParameters from "../../../../definitions/DeleteCustomRoleParameters.js";
-import UpdateUserRoleParameters from "../../../../definitions/UpdateUserRoleParameters.js";
-import ReadUserRoleParameters from "../../../../definitions/ReadUserRoleParameters.js";
-import CreateCustomRoleParameters from "../../../../definitions/CreateCustomRoleParameters.js";
-import RoleResource from "../../../../definitions/RoleResource.js";
-import RolesCollectionResource from "../../../../definitions/RolesCollectionResource.js";
-import ListUserRolesParameters from "../../../../definitions/ListUserRolesParameters.js";
-import {
+import type DeleteCustomRoleParameters from "../../../../definitions/DeleteCustomRoleParameters.js";
+import type UpdateUserRoleParameters from "../../../../definitions/UpdateUserRoleParameters.js";
+import type ReadUserRoleParameters from "../../../../definitions/ReadUserRoleParameters.js";
+import type CreateCustomRoleParameters from "../../../../definitions/CreateCustomRoleParameters.js";
+import type RoleResource from "../../../../definitions/RoleResource.js";
+import type RolesCollectionResource from "../../../../definitions/RolesCollectionResource.js";
+import type ListUserRolesParameters from "../../../../definitions/ListUserRolesParameters.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

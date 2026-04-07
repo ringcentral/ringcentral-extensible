@@ -1,4 +1,4 @@
-import TcrBrandRecord from "./TcrBrandRecord.js";
+import type TcrBrandRecord from "./TcrBrandRecord.js";
 
 interface BrandListResponse {
   /**

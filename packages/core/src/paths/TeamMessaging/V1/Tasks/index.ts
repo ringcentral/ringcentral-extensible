@@ -1,8 +1,8 @@
 import Complete from "./Complete/index.js";
-import TMTaskList from "../../../../definitions/TMTaskList.js";
-import TMUpdateTaskRequest from "../../../../definitions/TMUpdateTaskRequest.js";
-import TMTaskInfo from "../../../../definitions/TMTaskInfo.js";
-import {
+import type TMTaskList from "../../../../definitions/TMTaskList.js";
+import type TMUpdateTaskRequest from "../../../../definitions/TMUpdateTaskRequest.js";
+import type TMTaskInfo from "../../../../definitions/TMTaskInfo.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

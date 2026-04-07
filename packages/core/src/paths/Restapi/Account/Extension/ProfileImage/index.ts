@@ -1,8 +1,8 @@
 import Utils from "../../../../../Utils.js";
-import ReadScaledProfileImageParameters from "../../../../../definitions/ReadScaledProfileImageParameters.js";
-import UpdateUserProfileImageRequest from "../../../../../definitions/UpdateUserProfileImageRequest.js";
-import CreateUserProfileImageRequest from "../../../../../definitions/CreateUserProfileImageRequest.js";
-import {
+import type ReadScaledProfileImageParameters from "../../../../../definitions/ReadScaledProfileImageParameters.js";
+import type UpdateUserProfileImageRequest from "../../../../../definitions/UpdateUserProfileImageRequest.js";
+import type CreateUserProfileImageRequest from "../../../../../definitions/CreateUserProfileImageRequest.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

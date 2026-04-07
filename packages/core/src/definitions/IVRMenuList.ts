@@ -1,4 +1,4 @@
-import IvrMenuListInfo from "./IvrMenuListInfo.js";
+import type IvrMenuListInfo from "./IvrMenuListInfo.js";
 
 interface IvrMenuList {
   /**

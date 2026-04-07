@@ -1,5 +1,5 @@
-import ExtensionCallerIdInfo from "../../../../../definitions/ExtensionCallerIdInfo.js";
-import {
+import type ExtensionCallerIdInfo from "../../../../../definitions/ExtensionCallerIdInfo.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

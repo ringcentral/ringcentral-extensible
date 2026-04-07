@@ -1,5 +1,5 @@
-import ContactCenterProvider from "./ContactCenterProvider.js";
-import AccountPhoneNumberInfoExtension from "./AccountPhoneNumberInfoExtension.js";
+import type ContactCenterProvider from "./ContactCenterProvider.js";
+import type AccountPhoneNumberInfoExtension from "./AccountPhoneNumberInfoExtension.js";
 
 interface AccountPhoneNumberInfo {
   /**

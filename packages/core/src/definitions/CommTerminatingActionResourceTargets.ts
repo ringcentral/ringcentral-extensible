@@ -1,6 +1,6 @@
-import CommReferencedExtensionResource from "./CommReferencedExtensionResource.js";
-import CommTerminatingPromptResource from "./CommTerminatingPromptResource.js";
-import CommPhoneNumberResource from "./CommPhoneNumberResource.js";
+import type CommReferencedExtensionResource from "./CommReferencedExtensionResource.js";
+import type CommTerminatingPromptResource from "./CommTerminatingPromptResource.js";
+import type CommPhoneNumberResource from "./CommPhoneNumberResource.js";
 
 interface CommTerminatingActionResourceTargets {
   /**

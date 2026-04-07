@@ -1,5 +1,5 @@
-import CommDeviceResource from "./CommDeviceResource.js";
-import CommReferencedExtensionResource from "./CommReferencedExtensionResource.js";
+import type CommDeviceResource from "./CommDeviceResource.js";
+import type CommReferencedExtensionResource from "./CommReferencedExtensionResource.js";
 
 interface CommDeviceRingTargetResource {
   /**

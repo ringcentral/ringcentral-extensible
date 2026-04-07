@@ -1,4 +1,4 @@
-import WirelessPointInfo from "./WirelessPointInfo.js";
+import type WirelessPointInfo from "./WirelessPointInfo.js";
 
 interface ValidateMultipleWirelessPointsRequest {
   /**

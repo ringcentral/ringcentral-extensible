@@ -1,4 +1,4 @@
-import DetailedExtensionPresenceEventBody from "./DetailedExtensionPresenceEventBody.js";
+import type DetailedExtensionPresenceEventBody from "./DetailedExtensionPresenceEventBody.js";
 
 interface DetailedExtensionPresenceEvent {
   /**

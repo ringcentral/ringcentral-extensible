@@ -1,10 +1,10 @@
 import HoldMusic from "./HoldMusic/index.js";
 import Content from "./Content/index.js";
 import Utils from "../../../../../Utils.js";
-import CustomUserGreetingInfo from "../../../../../definitions/CustomUserGreetingInfo.js";
-import CreateCustomUserGreetingParameters from "../../../../../definitions/CreateCustomUserGreetingParameters.js";
-import CreateCustomUserGreetingRequest from "../../../../../definitions/CreateCustomUserGreetingRequest.js";
-import {
+import type CustomUserGreetingInfo from "../../../../../definitions/CustomUserGreetingInfo.js";
+import type CreateCustomUserGreetingParameters from "../../../../../definitions/CreateCustomUserGreetingParameters.js";
+import type CreateCustomUserGreetingRequest from "../../../../../definitions/CreateCustomUserGreetingRequest.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

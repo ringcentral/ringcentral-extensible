@@ -1,7 +1,7 @@
 import Tasks from "./Tasks/index.js";
-import AddressBookBulkUploadResponse from "../../../../definitions/AddressBookBulkUploadResponse.js";
-import AddressBookBulkUploadRequest from "../../../../definitions/AddressBookBulkUploadRequest.js";
-import {
+import type AddressBookBulkUploadResponse from "../../../../definitions/AddressBookBulkUploadResponse.js";
+import type AddressBookBulkUploadRequest from "../../../../definitions/AddressBookBulkUploadRequest.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

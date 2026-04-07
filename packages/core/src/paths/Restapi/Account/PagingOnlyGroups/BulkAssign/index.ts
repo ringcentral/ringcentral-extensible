@@ -1,5 +1,5 @@
-import EditPagingGroupRequest from "../../../../../definitions/EditPagingGroupRequest.js";
-import {
+import type EditPagingGroupRequest from "../../../../../definitions/EditPagingGroupRequest.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

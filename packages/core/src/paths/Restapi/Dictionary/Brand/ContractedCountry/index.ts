@@ -1,7 +1,7 @@
-import CountryListDictionaryModel from "../../../../../definitions/CountryListDictionaryModel.js";
-import ListDomesticCountriesParameters from "../../../../../definitions/ListDomesticCountriesParameters.js";
-import ContractedCountryListResponse from "../../../../../definitions/ContractedCountryListResponse.js";
-import {
+import type CountryListDictionaryModel from "../../../../../definitions/CountryListDictionaryModel.js";
+import type ListDomesticCountriesParameters from "../../../../../definitions/ListDomesticCountriesParameters.js";
+import type ContractedCountryListResponse from "../../../../../definitions/ContractedCountryListResponse.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

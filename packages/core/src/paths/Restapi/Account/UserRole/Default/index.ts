@@ -1,6 +1,6 @@
-import DefaultUserRoleRequest from "../../../../../definitions/DefaultUserRoleRequest.js";
-import DefaultUserRole from "../../../../../definitions/DefaultUserRole.js";
-import {
+import type DefaultUserRoleRequest from "../../../../../definitions/DefaultUserRoleRequest.js";
+import type DefaultUserRole from "../../../../../definitions/DefaultUserRole.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

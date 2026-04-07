@@ -1,5 +1,5 @@
-import TMEventInfo from "./TMEventInfo.js";
-import TMNavigationInfo from "./TMNavigationInfo.js";
+import type TMEventInfo from "./TMEventInfo.js";
+import type TMNavigationInfo from "./TMNavigationInfo.js";
 
 interface TMEventList {
   /**

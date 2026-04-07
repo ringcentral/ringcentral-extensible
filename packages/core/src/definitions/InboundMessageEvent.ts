@@ -1,4 +1,4 @@
-import NotificationInfo from "./NotificationInfo.js";
+import type NotificationInfo from "./NotificationInfo.js";
 
 interface InboundMessageEvent {
   /**

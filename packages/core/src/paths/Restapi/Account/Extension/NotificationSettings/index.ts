@@ -1,6 +1,6 @@
-import NotificationSettingsUpdateRequest from "../../../../../definitions/NotificationSettingsUpdateRequest.js";
-import NotificationSettings from "../../../../../definitions/NotificationSettings.js";
-import {
+import type NotificationSettingsUpdateRequest from "../../../../../definitions/NotificationSettingsUpdateRequest.js";
+import type NotificationSettings from "../../../../../definitions/NotificationSettings.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

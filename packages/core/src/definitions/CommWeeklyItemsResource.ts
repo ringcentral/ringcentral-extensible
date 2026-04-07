@@ -1,4 +1,4 @@
-import CommWeeklyRangeResource from "./CommWeeklyRangeResource.js";
+import type CommWeeklyRangeResource from "./CommWeeklyRangeResource.js";
 
 interface CommWeeklyItemsResource {
   /**

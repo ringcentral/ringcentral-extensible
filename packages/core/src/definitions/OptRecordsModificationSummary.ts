@@ -1,4 +1,4 @@
-import SmsOptFailureRecord from "./SmsOptFailureRecord.js";
+import type SmsOptFailureRecord from "./SmsOptFailureRecord.js";
 
 interface OptRecordsModificationSummary {
   /**

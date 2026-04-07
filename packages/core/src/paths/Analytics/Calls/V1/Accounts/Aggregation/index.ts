@@ -1,5 +1,5 @@
 import Fetch from "./Fetch/index.js";
-import {
+import type {
   RingCentralInterface,
   ParentInterface,
 } from "../../../../../../types.js";

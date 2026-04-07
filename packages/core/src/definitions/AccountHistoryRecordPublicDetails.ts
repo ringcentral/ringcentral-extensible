@@ -1,4 +1,4 @@
-import AccountHistoryRecordDetailsParameters from "./AccountHistoryRecordDetailsParameters.js";
+import type AccountHistoryRecordDetailsParameters from "./AccountHistoryRecordDetailsParameters.js";
 
 interface AccountHistoryRecordPublicDetails {
   /**

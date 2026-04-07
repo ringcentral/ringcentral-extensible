@@ -1,4 +1,4 @@
-import DeviceAddonInfo from "./DeviceAddonInfo.js";
+import type DeviceAddonInfo from "./DeviceAddonInfo.js";
 
 /**
  * HardPhone model information

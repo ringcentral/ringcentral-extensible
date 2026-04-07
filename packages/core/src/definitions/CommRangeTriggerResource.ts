@@ -1,4 +1,4 @@
-import CommRangeResource from "./CommRangeResource.js";
+import type CommRangeResource from "./CommRangeResource.js";
 
 interface CommRangeTriggerResource {
   /**

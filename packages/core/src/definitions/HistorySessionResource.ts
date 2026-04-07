@@ -1,5 +1,5 @@
-import RecordingExtendedModel from "./RecordingExtendedModel.js";
-import SessionLivestreamMinimalModel from "./SessionLivestreamMinimalModel.js";
+import type RecordingExtendedModel from "./RecordingExtendedModel.js";
+import type SessionLivestreamMinimalModel from "./SessionLivestreamMinimalModel.js";
 
 interface HistorySessionResource {
   /**

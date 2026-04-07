@@ -1,5 +1,5 @@
 import Domains from "./Domains/index.js";
-import {
+import type {
   RingCentralInterface,
   ParentInterface,
 } from "../../../../../../types.js";

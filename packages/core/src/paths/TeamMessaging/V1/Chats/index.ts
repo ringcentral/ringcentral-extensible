@@ -4,10 +4,10 @@ import Favorite from "./Favorite/index.js";
 import Tasks from "./Tasks/index.js";
 import Notes from "./Notes/index.js";
 import Posts from "./Posts/index.js";
-import TMChatInfo from "../../../../definitions/TMChatInfo.js";
-import TMChatList from "../../../../definitions/TMChatList.js";
-import ListGlipChatsNewParameters from "../../../../definitions/ListGlipChatsNewParameters.js";
-import {
+import type TMChatInfo from "../../../../definitions/TMChatInfo.js";
+import type TMChatList from "../../../../definitions/TMChatList.js";
+import type ListGlipChatsNewParameters from "../../../../definitions/ListGlipChatsNewParameters.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

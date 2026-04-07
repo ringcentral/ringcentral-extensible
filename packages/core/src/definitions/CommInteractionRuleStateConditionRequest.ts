@@ -1,4 +1,4 @@
-import CommReferenceStateResource from "./CommReferenceStateResource.js";
+import type CommReferenceStateResource from "./CommReferenceStateResource.js";
 
 interface CommInteractionRuleStateConditionRequest {
   /**

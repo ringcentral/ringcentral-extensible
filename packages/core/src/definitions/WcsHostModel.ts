@@ -1,4 +1,4 @@
-import RcwDomainUserModel from "./RcwDomainUserModel.js";
+import type RcwDomainUserModel from "./RcwDomainUserModel.js";
 
 /**
  * The internal IDs of RC-authenticated users.

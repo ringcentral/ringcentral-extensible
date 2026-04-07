@@ -1,7 +1,7 @@
-import TimezoneInfoBase from "../../../../definitions/TimezoneInfoBase.js";
-import GetTimezoneListResponse from "../../../../definitions/GetTimezoneListResponse.js";
-import ListTimezonesParameters from "../../../../definitions/ListTimezonesParameters.js";
-import {
+import type TimezoneInfoBase from "../../../../definitions/TimezoneInfoBase.js";
+import type GetTimezoneListResponse from "../../../../definitions/GetTimezoneListResponse.js";
+import type ListTimezonesParameters from "../../../../definitions/ListTimezonesParameters.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

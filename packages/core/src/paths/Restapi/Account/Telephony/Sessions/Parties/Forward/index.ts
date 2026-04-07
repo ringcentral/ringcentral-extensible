@@ -1,6 +1,6 @@
-import ForwardCallPartyResponse from "../../../../../../../definitions/ForwardCallPartyResponse.js";
-import ForwardTarget from "../../../../../../../definitions/ForwardTarget.js";
-import {
+import type ForwardCallPartyResponse from "../../../../../../../definitions/ForwardCallPartyResponse.js";
+import type ForwardTarget from "../../../../../../../definitions/ForwardTarget.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

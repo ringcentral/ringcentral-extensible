@@ -1,5 +1,5 @@
 import Extensions from "./Extensions/index.js";
-import {
+import type {
   RingCentralInterface,
   ParentInterface,
 } from "../../../../../../../../../types.js";

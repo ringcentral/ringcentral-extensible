@@ -1,5 +1,5 @@
-import ScimProviderConfig from "../../../definitions/ScimProviderConfig.js";
-import {
+import type ScimProviderConfig from "../../../definitions/ScimProviderConfig.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

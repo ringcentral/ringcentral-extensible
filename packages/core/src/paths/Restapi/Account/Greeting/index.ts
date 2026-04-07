@@ -1,8 +1,8 @@
 import Content from "./Content/index.js";
 import Utils from "../../../../Utils.js";
-import CustomCompanyGreetingInfo from "../../../../definitions/CustomCompanyGreetingInfo.js";
-import CreateCompanyGreetingRequest from "../../../../definitions/CreateCompanyGreetingRequest.js";
-import {
+import type CustomCompanyGreetingInfo from "../../../../definitions/CustomCompanyGreetingInfo.js";
+import type CreateCompanyGreetingRequest from "../../../../definitions/CreateCompanyGreetingRequest.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

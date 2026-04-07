@@ -1,8 +1,8 @@
 import Download from "./Download/index.js";
-import RecordingItemExtendedModel from "../../../../../definitions/RecordingItemExtendedModel.js";
-import RecordingListResource from "../../../../../definitions/RecordingListResource.js";
-import RcwHistoryListRecordingsParameters from "../../../../../definitions/RcwHistoryListRecordingsParameters.js";
-import {
+import type RecordingItemExtendedModel from "../../../../../definitions/RecordingItemExtendedModel.js";
+import type RecordingListResource from "../../../../../definitions/RecordingListResource.js";
+import type RcwHistoryListRecordingsParameters from "../../../../../definitions/RcwHistoryListRecordingsParameters.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

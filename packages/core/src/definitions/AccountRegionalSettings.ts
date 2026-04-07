@@ -1,9 +1,9 @@
-import CountryInfoShortModel from "./CountryInfoShortModel.js";
-import TimezoneInfoBase from "./TimezoneInfoBase.js";
-import RegionalLanguageInfo from "./RegionalLanguageInfo.js";
-import GreetingLanguageInfo from "./GreetingLanguageInfo.js";
-import FormattingLocaleInfo from "./FormattingLocaleInfo.js";
-import CurrencyInfo from "./CurrencyInfo.js";
+import type CountryInfoShortModel from "./CountryInfoShortModel.js";
+import type TimezoneInfoBase from "./TimezoneInfoBase.js";
+import type RegionalLanguageInfo from "./RegionalLanguageInfo.js";
+import type GreetingLanguageInfo from "./GreetingLanguageInfo.js";
+import type FormattingLocaleInfo from "./FormattingLocaleInfo.js";
+import type CurrencyInfo from "./CurrencyInfo.js";
 
 /**
  * Regional data (timezone, home country, language) of an extension/account.

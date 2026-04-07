@@ -1,11 +1,11 @@
 import BulkAssign from "./BulkAssign/index.js";
 import Members from "./Members/index.js";
 import Ivr from "./Ivr/index.js";
-import SiteUpdateRequest from "../../../../definitions/SiteUpdateRequest.js";
-import SiteInfo from "../../../../definitions/SiteInfo.js";
-import CreateSiteRequest from "../../../../definitions/CreateSiteRequest.js";
-import SitesList from "../../../../definitions/SitesList.js";
-import {
+import type SiteUpdateRequest from "../../../../definitions/SiteUpdateRequest.js";
+import type SiteInfo from "../../../../definitions/SiteInfo.js";
+import type CreateSiteRequest from "../../../../definitions/CreateSiteRequest.js";
+import type SitesList from "../../../../definitions/SitesList.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

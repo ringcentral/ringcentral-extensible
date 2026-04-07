@@ -1,4 +1,4 @@
-import CommStateReferenceResource from "./CommStateReferenceResource.js";
+import type CommStateReferenceResource from "./CommStateReferenceResource.js";
 
 interface CommStateRefConditionResource {
   /**

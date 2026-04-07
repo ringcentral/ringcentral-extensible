@@ -1,8 +1,8 @@
-import CommStateUpdateRequest from "../../../../../../../definitions/CommStateUpdateRequest.js";
-import CommStateResource from "../../../../../../../definitions/CommStateResource.js";
-import CommStatesResource from "../../../../../../../definitions/CommStatesResource.js";
-import ListCicStatesParameters from "../../../../../../../definitions/ListCicStatesParameters.js";
-import {
+import type CommStateUpdateRequest from "../../../../../../../definitions/CommStateUpdateRequest.js";
+import type CommStateResource from "../../../../../../../definitions/CommStateResource.js";
+import type CommStatesResource from "../../../../../../../definitions/CommStatesResource.js";
+import type ListCicStatesParameters from "../../../../../../../definitions/ListCicStatesParameters.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

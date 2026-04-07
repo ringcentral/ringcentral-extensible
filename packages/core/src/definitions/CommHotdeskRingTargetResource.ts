@@ -1,4 +1,4 @@
-import CommDeviceResource from "./CommDeviceResource.js";
+import type CommDeviceResource from "./CommDeviceResource.js";
 
 interface CommHotdeskRingTargetResource {
   /**

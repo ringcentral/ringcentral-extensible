@@ -1,4 +1,4 @@
-import UpdateSmsOptRecord from "./UpdateSmsOptRecord.js";
+import type UpdateSmsOptRecord from "./UpdateSmsOptRecord.js";
 
 /**
  * A list of records for updating SMS consents

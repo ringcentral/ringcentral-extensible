@@ -1,4 +1,4 @@
-import CommRingAlwaysGroupActionRequestTargets from "./CommRingAlwaysGroupActionRequestTargets.js";
+import type CommRingAlwaysGroupActionRequestTargets from "./CommRingAlwaysGroupActionRequestTargets.js";
 
 /**
  * Action information

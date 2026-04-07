@@ -1,11 +1,11 @@
 import BulkAssign from "./BulkAssign/index.js";
 import Presence from "./Presence/index.js";
 import Members from "./Members/index.js";
-import CallQueueDetailsForUpdate from "../../../../definitions/CallQueueDetailsForUpdate.js";
-import CallQueueDetails from "../../../../definitions/CallQueueDetails.js";
-import CallQueueList from "../../../../definitions/CallQueueList.js";
-import ListCallQueuesParameters from "../../../../definitions/ListCallQueuesParameters.js";
-import {
+import type CallQueueDetailsForUpdate from "../../../../definitions/CallQueueDetailsForUpdate.js";
+import type CallQueueDetails from "../../../../definitions/CallQueueDetails.js";
+import type CallQueueList from "../../../../definitions/CallQueueList.js";
+import type ListCallQueuesParameters from "../../../../definitions/ListCallQueuesParameters.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

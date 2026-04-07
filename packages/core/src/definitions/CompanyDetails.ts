@@ -1,5 +1,5 @@
-import BusinessAddress from "./BusinessAddress.js";
-import Contact from "./Contact.js";
+import type BusinessAddress from "./BusinessAddress.js";
+import type Contact from "./Contact.js";
 
 interface CompanyDetails {
   /**

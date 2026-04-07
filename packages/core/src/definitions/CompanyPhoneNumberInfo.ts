@@ -1,6 +1,6 @@
-import ExtensionInfo from "./ExtensionInfo.js";
-import TemporaryNumberInfo from "./TemporaryNumberInfo.js";
-import ContactCenterProvider from "./ContactCenterProvider.js";
+import type ExtensionInfo from "./ExtensionInfo.js";
+import type TemporaryNumberInfo from "./TemporaryNumberInfo.js";
+import type ContactCenterProvider from "./ContactCenterProvider.js";
 
 interface CompanyPhoneNumberInfo {
   /**

@@ -1,5 +1,5 @@
-import UserCallQueues from "../../../../../definitions/UserCallQueues.js";
-import {
+import type UserCallQueues from "../../../../../definitions/UserCallQueues.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

@@ -1,5 +1,5 @@
-import AssignMultipleDevicesAutomaticLocationUpdates from "../../../../../../definitions/AssignMultipleDevicesAutomaticLocationUpdates.js";
-import {
+import type AssignMultipleDevicesAutomaticLocationUpdates from "../../../../../../definitions/AssignMultipleDevicesAutomaticLocationUpdates.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

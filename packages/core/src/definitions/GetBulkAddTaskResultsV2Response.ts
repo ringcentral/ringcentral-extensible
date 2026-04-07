@@ -1,4 +1,4 @@
-import AddPhoneNumbersResponseItem from "./AddPhoneNumbersResponseItem.js";
+import type AddPhoneNumbersResponseItem from "./AddPhoneNumbersResponseItem.js";
 
 interface GetBulkAddTaskResultsV2Response {
   /**

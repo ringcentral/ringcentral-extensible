@@ -1,5 +1,5 @@
-import Meeting from "./Meeting.js";
-import BasicPaging from "./BasicPaging.js";
+import type Meeting from "./Meeting.js";
+import type BasicPaging from "./BasicPaging.js";
 
 /**
  * Meetings page

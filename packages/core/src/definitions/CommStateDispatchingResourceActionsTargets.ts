@@ -1,8 +1,8 @@
-import CommReferencedExtensionResource from "./CommReferencedExtensionResource.js";
-import CommDeviceResource from "./CommDeviceResource.js";
-import CommPhoneNumberResource from "./CommPhoneNumberResource.js";
-import CommIntegrationResource from "./CommIntegrationResource.js";
-import CommTerminatingPromptResource from "./CommTerminatingPromptResource.js";
+import type CommReferencedExtensionResource from "./CommReferencedExtensionResource.js";
+import type CommDeviceResource from "./CommDeviceResource.js";
+import type CommPhoneNumberResource from "./CommPhoneNumberResource.js";
+import type CommIntegrationResource from "./CommIntegrationResource.js";
+import type CommTerminatingPromptResource from "./CommTerminatingPromptResource.js";
 
 interface CommStateDispatchingResourceActionsTargets {
   /**

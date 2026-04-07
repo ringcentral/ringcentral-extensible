@@ -1,6 +1,6 @@
-import GetMessageInfoResponse from "./GetMessageInfoResponse.js";
-import MessagingNavigationInfo from "./MessagingNavigationInfo.js";
-import MessagingPagingInfo from "./MessagingPagingInfo.js";
+import type GetMessageInfoResponse from "./GetMessageInfoResponse.js";
+import type MessagingNavigationInfo from "./MessagingNavigationInfo.js";
+import type MessagingPagingInfo from "./MessagingPagingInfo.js";
 
 interface GetMessageList {
   /**

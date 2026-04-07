@@ -1,5 +1,5 @@
-import CommReferencedExtensionResource from "./CommReferencedExtensionResource.js";
-import EnumeratedPagingModel from "./EnumeratedPagingModel.js";
+import type CommReferencedExtensionResource from "./CommReferencedExtensionResource.js";
+import type EnumeratedPagingModel from "./EnumeratedPagingModel.js";
 
 interface CommExtensionListResource {
   /**

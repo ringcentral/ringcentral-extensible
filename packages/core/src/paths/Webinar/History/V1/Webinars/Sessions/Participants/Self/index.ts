@@ -1,5 +1,5 @@
-import ParticipantReducedModel from "../../../../../../../../definitions/ParticipantReducedModel.js";
-import {
+import type ParticipantReducedModel from "../../../../../../../../definitions/ParticipantReducedModel.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

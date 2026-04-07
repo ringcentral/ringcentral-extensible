@@ -1,5 +1,5 @@
-import CallQueueBulkAssignResource from "../../../../../definitions/CallQueueBulkAssignResource.js";
-import {
+import type CallQueueBulkAssignResource from "../../../../../definitions/CallQueueBulkAssignResource.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

@@ -1,6 +1,6 @@
-import CloudRecordings from "../../../../../definitions/CloudRecordings.js";
-import GetAccountRecordingsParameters from "../../../../../definitions/GetAccountRecordingsParameters.js";
-import {
+import type CloudRecordings from "../../../../../definitions/CloudRecordings.js";
+import type GetAccountRecordingsParameters from "../../../../../definitions/GetAccountRecordingsParameters.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

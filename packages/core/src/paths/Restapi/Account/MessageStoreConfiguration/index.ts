@@ -1,5 +1,5 @@
-import MessageStoreConfiguration from "../../../../definitions/MessageStoreConfiguration.js";
-import {
+import type MessageStoreConfiguration from "../../../../definitions/MessageStoreConfiguration.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

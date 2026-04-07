@@ -1,4 +1,4 @@
-import AlertInfo from "./AlertInfo.js";
+import type AlertInfo from "./AlertInfo.js";
 
 /**
  * Information on a notification

@@ -1,4 +1,4 @@
-import CallsByQueueHoursBreakdown from "./CallsByQueueHoursBreakdown.js";
+import type CallsByQueueHoursBreakdown from "./CallsByQueueHoursBreakdown.js";
 
 /**
  * Data for calls with breakdown by queue hours (BusinessHours, AfterHours)

@@ -1,4 +1,4 @@
-import ExtensionUpdateShortResult from "./ExtensionUpdateShortResult.js";
+import type ExtensionUpdateShortResult from "./ExtensionUpdateShortResult.js";
 
 interface ExtensionBulkUpdateTaskResultAffectedItems {
   /**

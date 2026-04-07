@@ -1,4 +1,4 @@
-import TcrCampaignRecord from "./TcrCampaignRecord.js";
+import type TcrCampaignRecord from "./TcrCampaignRecord.js";
 
 interface CampaignListResponse {
   /**

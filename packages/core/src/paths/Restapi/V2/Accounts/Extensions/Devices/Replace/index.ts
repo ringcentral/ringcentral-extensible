@@ -1,5 +1,5 @@
-import SwapDeviceRequest from "../../../../../../../definitions/SwapDeviceRequest.js";
-import {
+import type SwapDeviceRequest from "../../../../../../../definitions/SwapDeviceRequest.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

@@ -1,4 +1,4 @@
-import CallSessionObject from "./CallSessionObject.js";
+import type CallSessionObject from "./CallSessionObject.js";
 
 interface CallSession {
   /**

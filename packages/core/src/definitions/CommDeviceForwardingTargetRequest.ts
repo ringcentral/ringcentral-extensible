@@ -1,5 +1,5 @@
-import CommDeviceRequest from "./CommDeviceRequest.js";
-import CommReferencedExtensionResource from "./CommReferencedExtensionResource.js";
+import type CommDeviceRequest from "./CommDeviceRequest.js";
+import type CommReferencedExtensionResource from "./CommReferencedExtensionResource.js";
 
 interface CommDeviceForwardingTargetRequest {
   /**

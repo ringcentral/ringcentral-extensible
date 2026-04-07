@@ -1,4 +1,4 @@
-import WcsHostModel from "./WcsHostModel.js";
+import type WcsHostModel from "./WcsHostModel.js";
 
 interface WebinarGeneratedModel {
   /**

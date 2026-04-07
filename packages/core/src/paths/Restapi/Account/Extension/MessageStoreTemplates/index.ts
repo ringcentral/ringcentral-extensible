@@ -1,9 +1,9 @@
-import MessageTemplateUpdateRequest from "../../../../../definitions/MessageTemplateUpdateRequest.js";
-import MessageTemplateResponse from "../../../../../definitions/MessageTemplateResponse.js";
-import MessageTemplateRequest from "../../../../../definitions/MessageTemplateRequest.js";
-import MessageTemplatesListResponse from "../../../../../definitions/MessageTemplatesListResponse.js";
-import ListUserMessageTemplatesParameters from "../../../../../definitions/ListUserMessageTemplatesParameters.js";
-import {
+import type MessageTemplateUpdateRequest from "../../../../../definitions/MessageTemplateUpdateRequest.js";
+import type MessageTemplateResponse from "../../../../../definitions/MessageTemplateResponse.js";
+import type MessageTemplateRequest from "../../../../../definitions/MessageTemplateRequest.js";
+import type MessageTemplatesListResponse from "../../../../../definitions/MessageTemplatesListResponse.js";
+import type ListUserMessageTemplatesParameters from "../../../../../definitions/ListUserMessageTemplatesParameters.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

@@ -1,6 +1,6 @@
-import CallMonitoringGroupMemberList from "../../../../../definitions/CallMonitoringGroupMemberList.js";
-import ListCallMonitoringGroupMembersParameters from "../../../../../definitions/ListCallMonitoringGroupMembersParameters.js";
-import {
+import type CallMonitoringGroupMemberList from "../../../../../definitions/CallMonitoringGroupMemberList.js";
+import type ListCallMonitoringGroupMembersParameters from "../../../../../definitions/ListCallMonitoringGroupMembersParameters.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

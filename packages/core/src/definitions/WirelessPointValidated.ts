@@ -1,4 +1,4 @@
-import ValidationError from "./ValidationError.js";
+import type ValidationError from "./ValidationError.js";
 
 interface WirelessPointValidated {
   /**

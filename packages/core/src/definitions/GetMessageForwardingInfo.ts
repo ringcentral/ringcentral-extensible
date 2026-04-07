@@ -1,4 +1,4 @@
-import MessageStoreCallerInfoResponseTo from "./MessageStoreCallerInfoResponseTo.js";
+import type MessageStoreCallerInfoResponseTo from "./MessageStoreCallerInfoResponseTo.js";
 
 interface GetMessageForwardingInfo {
   /**

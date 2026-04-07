@@ -1,7 +1,7 @@
 import Utils from "../../../../../Utils.js";
-import FaxResponse from "../../../../../definitions/FaxResponse.js";
-import CreateFaxMessageRequest from "../../../../../definitions/CreateFaxMessageRequest.js";
-import {
+import type FaxResponse from "../../../../../definitions/FaxResponse.js";
+import type CreateFaxMessageRequest from "../../../../../definitions/CreateFaxMessageRequest.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

@@ -1,4 +1,4 @@
-import DeviceDefinition from "./DeviceDefinition.js";
+import type DeviceDefinition from "./DeviceDefinition.js";
 
 interface BatchProvisionUsersRequestItemDevices {
   /**

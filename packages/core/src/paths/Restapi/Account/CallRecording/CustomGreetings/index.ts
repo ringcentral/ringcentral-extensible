@@ -1,6 +1,6 @@
-import CallRecordingCustomGreetings from "../../../../../definitions/CallRecordingCustomGreetings.js";
-import ListCallRecordingCustomGreetingsParameters from "../../../../../definitions/ListCallRecordingCustomGreetingsParameters.js";
-import {
+import type CallRecordingCustomGreetings from "../../../../../definitions/CallRecordingCustomGreetings.js";
+import type ListCallRecordingCustomGreetingsParameters from "../../../../../definitions/ListCallRecordingCustomGreetingsParameters.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

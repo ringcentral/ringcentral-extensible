@@ -1,4 +1,4 @@
-import CommRangeRequest from "./CommRangeRequest.js";
+import type CommRangeRequest from "./CommRangeRequest.js";
 
 interface CommRangeTriggerRequest {
   /**

@@ -1,6 +1,6 @@
-import AuthorizeRequest from "../../../../definitions/AuthorizeRequest.js";
-import AuthorizeParameters from "../../../../definitions/AuthorizeParameters.js";
-import {
+import type AuthorizeRequest from "../../../../definitions/AuthorizeRequest.js";
+import type AuthorizeParameters from "../../../../definitions/AuthorizeParameters.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

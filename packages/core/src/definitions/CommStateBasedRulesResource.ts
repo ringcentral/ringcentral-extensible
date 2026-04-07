@@ -1,5 +1,5 @@
-import CommStateBasedRuleResource from "./CommStateBasedRuleResource.js";
-import EnumeratedPagingModel from "./EnumeratedPagingModel.js";
+import type CommStateBasedRuleResource from "./CommStateBasedRuleResource.js";
+import type EnumeratedPagingModel from "./EnumeratedPagingModel.js";
 
 /**
  * State-based rule information

@@ -1,4 +1,4 @@
-import JobStatusResponseResponse from "./JobStatusResponseResponse.js";
+import type JobStatusResponseResponse from "./JobStatusResponseResponse.js";
 
 interface JobStatusResponse {
   /**

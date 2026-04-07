@@ -1,6 +1,6 @@
-import CommStateDispatchingResource from "./CommStateDispatchingResource.js";
-import CommStateDispatchingRefResource from "./CommStateDispatchingRefResource.js";
-import CommStateResource from "./CommStateResource.js";
+import type CommStateDispatchingResource from "./CommStateDispatchingResource.js";
+import type CommStateDispatchingRefResource from "./CommStateDispatchingRefResource.js";
+import type CommStateResource from "./CommStateResource.js";
 
 /**
  * State-based rule information

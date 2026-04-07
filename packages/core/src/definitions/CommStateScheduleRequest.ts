@@ -1,4 +1,4 @@
-import CommStateScheduleRequestTriggers from "./CommStateScheduleRequestTriggers.js";
+import type CommStateScheduleRequestTriggers from "./CommStateScheduleRequestTriggers.js";
 
 interface CommStateScheduleRequest {
   /**

@@ -1,5 +1,5 @@
-import TMCompanyInfo from "../../../../definitions/TMCompanyInfo.js";
-import {
+import type TMCompanyInfo from "../../../../definitions/TMCompanyInfo.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

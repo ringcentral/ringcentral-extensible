@@ -1,6 +1,6 @@
-import UpdateMultipleSwitchesResponse from "../../../../../definitions/UpdateMultipleSwitchesResponse.js";
-import UpdateMultipleSwitchesRequest from "../../../../../definitions/UpdateMultipleSwitchesRequest.js";
-import {
+import type UpdateMultipleSwitchesResponse from "../../../../../definitions/UpdateMultipleSwitchesResponse.js";
+import type UpdateMultipleSwitchesRequest from "../../../../../definitions/UpdateMultipleSwitchesRequest.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

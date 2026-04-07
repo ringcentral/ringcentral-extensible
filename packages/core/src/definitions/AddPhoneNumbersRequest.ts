@@ -1,4 +1,4 @@
-import AddPhoneNumberRequestItem from "./AddPhoneNumberRequestItem.js";
+import type AddPhoneNumberRequestItem from "./AddPhoneNumberRequestItem.js";
 
 interface AddPhoneNumbersRequest {
   /**

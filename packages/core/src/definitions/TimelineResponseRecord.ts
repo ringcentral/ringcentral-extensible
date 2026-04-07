@@ -1,5 +1,5 @@
-import KeyInfo from "./KeyInfo.js";
-import TimelineResponsePoint from "./TimelineResponsePoint.js";
+import type KeyInfo from "./KeyInfo.js";
+import type TimelineResponsePoint from "./TimelineResponsePoint.js";
 
 interface TimelineResponseRecord {
   /**

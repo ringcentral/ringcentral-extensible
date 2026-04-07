@@ -1,6 +1,6 @@
-import FeatureList from "../../../../../definitions/FeatureList.js";
-import ReadExtensionFeaturesParameters from "../../../../../definitions/ReadExtensionFeaturesParameters.js";
-import {
+import type FeatureList from "../../../../../definitions/FeatureList.js";
+import type ReadExtensionFeaturesParameters from "../../../../../definitions/ReadExtensionFeaturesParameters.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

@@ -9,7 +9,7 @@ import Greeting from "./Greeting/index.js";
 import Country from "./Country/index.js";
 import State from "./State/index.js";
 import Brand from "./Brand/index.js";
-import { RingCentralInterface, ParentInterface } from "../../../types.js";
+import type { RingCentralInterface, ParentInterface } from "../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

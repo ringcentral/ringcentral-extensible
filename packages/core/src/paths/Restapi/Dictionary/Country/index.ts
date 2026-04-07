@@ -1,7 +1,7 @@
-import CountryInfoDictionaryModel from "../../../../definitions/CountryInfoDictionaryModel.js";
-import CountryListDictionaryModel from "../../../../definitions/CountryListDictionaryModel.js";
-import ListCountriesParameters from "../../../../definitions/ListCountriesParameters.js";
-import {
+import type CountryInfoDictionaryModel from "../../../../definitions/CountryInfoDictionaryModel.js";
+import type CountryListDictionaryModel from "../../../../definitions/CountryListDictionaryModel.js";
+import type ListCountriesParameters from "../../../../definitions/ListCountriesParameters.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

@@ -1,6 +1,6 @@
 import Registrants from "./Registrants/index.js";
-import RegSessionModel from "../../../../../definitions/RegSessionModel.js";
-import {
+import type RegSessionModel from "../../../../../definitions/RegSessionModel.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

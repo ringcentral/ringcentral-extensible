@@ -1,6 +1,6 @@
-import PartyInfo from "./PartyInfo.js";
-import OwnerInfo from "./OwnerInfo.js";
-import CallStatusInfo from "./CallStatusInfo.js";
+import type PartyInfo from "./PartyInfo.js";
+import type OwnerInfo from "./OwnerInfo.js";
+import type CallStatusInfo from "./CallStatusInfo.js";
 
 interface PartySuperviseResponse {
   /**

@@ -1,5 +1,5 @@
-import ScimSchemaAttribute from "./ScimSchemaAttribute.js";
-import ScimMeta from "./ScimMeta.js";
+import type ScimSchemaAttribute from "./ScimSchemaAttribute.js";
+import type ScimMeta from "./ScimMeta.js";
 
 interface ScimSchemaResponse {
   /**

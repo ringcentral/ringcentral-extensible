@@ -1,6 +1,6 @@
-import MessageStatusesResponse from "../../../../../definitions/MessageStatusesResponse.js";
-import AggregateA2PSMSStatusesParameters from "../../../../../definitions/AggregateA2PSMSStatusesParameters.js";
-import {
+import type MessageStatusesResponse from "../../../../../definitions/MessageStatusesResponse.js";
+import type AggregateA2PSMSStatusesParameters from "../../../../../definitions/AggregateA2PSMSStatusesParameters.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

@@ -1,7 +1,7 @@
-import CaiAsyncApiResponse from "../../../../../../definitions/CaiAsyncApiResponse.js";
-import CaiPunctuateParameters from "../../../../../../definitions/CaiPunctuateParameters.js";
-import PunctuateInput from "../../../../../../definitions/PunctuateInput.js";
-import {
+import type CaiAsyncApiResponse from "../../../../../../definitions/CaiAsyncApiResponse.js";
+import type CaiPunctuateParameters from "../../../../../../definitions/CaiPunctuateParameters.js";
+import type PunctuateInput from "../../../../../../definitions/PunctuateInput.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

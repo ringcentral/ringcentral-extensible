@@ -1,9 +1,9 @@
-import CallLogRecord from "../../../../../definitions/CallLogRecord.js";
-import ReadUserCallRecordParameters from "../../../../../definitions/ReadUserCallRecordParameters.js";
-import DeleteUserCallLogParameters from "../../../../../definitions/DeleteUserCallLogParameters.js";
-import CallLogResponse from "../../../../../definitions/CallLogResponse.js";
-import ReadUserCallLogParameters from "../../../../../definitions/ReadUserCallLogParameters.js";
-import {
+import type CallLogRecord from "../../../../../definitions/CallLogRecord.js";
+import type ReadUserCallRecordParameters from "../../../../../definitions/ReadUserCallRecordParameters.js";
+import type DeleteUserCallLogParameters from "../../../../../definitions/DeleteUserCallLogParameters.js";
+import type CallLogResponse from "../../../../../definitions/CallLogResponse.js";
+import type ReadUserCallLogParameters from "../../../../../definitions/ReadUserCallLogParameters.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

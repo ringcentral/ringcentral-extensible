@@ -1,6 +1,6 @@
 import Sessions from "./Sessions/index.js";
-import HistoryWebinarResource from "../../../../../definitions/HistoryWebinarResource.js";
-import {
+import type HistoryWebinarResource from "../../../../../definitions/HistoryWebinarResource.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

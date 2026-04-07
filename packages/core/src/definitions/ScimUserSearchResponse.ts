@@ -1,4 +1,4 @@
-import ScimUserShortInfo from "./ScimUserShortInfo.js";
+import type ScimUserShortInfo from "./ScimUserShortInfo.js";
 
 interface ScimUserSearchResponse {
   /**

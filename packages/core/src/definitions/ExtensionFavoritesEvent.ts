@@ -1,4 +1,4 @@
-import ExtensionFavoritesEventBody from "./ExtensionFavoritesEventBody.js";
+import type ExtensionFavoritesEventBody from "./ExtensionFavoritesEventBody.js";
 
 interface ExtensionFavoritesEvent {
   /**

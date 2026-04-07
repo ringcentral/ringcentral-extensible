@@ -1,16 +1,16 @@
-import AggregationResponseOptionsCountersAllCalls from "./AggregationResponseOptionsCountersAllCalls.js";
-import AggregationResponseOptionsCountersCallsByDirection from "./AggregationResponseOptionsCountersCallsByDirection.js";
-import AggregationResponseOptionsCountersCallsByOrigin from "./AggregationResponseOptionsCountersCallsByOrigin.js";
-import AggregationResponseOptionsCountersCallsByResponse from "./AggregationResponseOptionsCountersCallsByResponse.js";
-import AggregationResponseOptionsCountersCallsSegments from "./AggregationResponseOptionsCountersCallsSegments.js";
-import AggregationResponseOptionsCountersCallsByResult from "./AggregationResponseOptionsCountersCallsByResult.js";
-import AggregationResponseOptionsCountersCallsByCompanyHours from "./AggregationResponseOptionsCountersCallsByCompanyHours.js";
-import AggregationResponseOptionsCountersCallsByQueueSla from "./AggregationResponseOptionsCountersCallsByQueueSla.js";
-import AggregationResponseOptionsCountersCallsByActions from "./AggregationResponseOptionsCountersCallsByActions.js";
-import AggregationResponseOptionsCountersCallsByType from "./AggregationResponseOptionsCountersCallsByType.js";
-import AggregationResponseOptionsCountersCallsByEndingParty from "./AggregationResponseOptionsCountersCallsByEndingParty.js";
-import AggregationResponseOptionsCountersQueueOpportunities from "./AggregationResponseOptionsCountersQueueOpportunities.js";
-import AggregationResponseOptionsCountersCallsByQueueHours from "./AggregationResponseOptionsCountersCallsByQueueHours.js";
+import type AggregationResponseOptionsCountersAllCalls from "./AggregationResponseOptionsCountersAllCalls.js";
+import type AggregationResponseOptionsCountersCallsByDirection from "./AggregationResponseOptionsCountersCallsByDirection.js";
+import type AggregationResponseOptionsCountersCallsByOrigin from "./AggregationResponseOptionsCountersCallsByOrigin.js";
+import type AggregationResponseOptionsCountersCallsByResponse from "./AggregationResponseOptionsCountersCallsByResponse.js";
+import type AggregationResponseOptionsCountersCallsSegments from "./AggregationResponseOptionsCountersCallsSegments.js";
+import type AggregationResponseOptionsCountersCallsByResult from "./AggregationResponseOptionsCountersCallsByResult.js";
+import type AggregationResponseOptionsCountersCallsByCompanyHours from "./AggregationResponseOptionsCountersCallsByCompanyHours.js";
+import type AggregationResponseOptionsCountersCallsByQueueSla from "./AggregationResponseOptionsCountersCallsByQueueSla.js";
+import type AggregationResponseOptionsCountersCallsByActions from "./AggregationResponseOptionsCountersCallsByActions.js";
+import type AggregationResponseOptionsCountersCallsByType from "./AggregationResponseOptionsCountersCallsByType.js";
+import type AggregationResponseOptionsCountersCallsByEndingParty from "./AggregationResponseOptionsCountersCallsByEndingParty.js";
+import type AggregationResponseOptionsCountersQueueOpportunities from "./AggregationResponseOptionsCountersQueueOpportunities.js";
+import type AggregationResponseOptionsCountersCallsByQueueHours from "./AggregationResponseOptionsCountersCallsByQueueHours.js";
 
 /**
  * The formula is defined by `aggregationType` and `aggregationInterval` for every counter individually.

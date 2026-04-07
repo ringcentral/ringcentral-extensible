@@ -1,4 +1,4 @@
-import CustomGreetingAnsweringRuleInfo from "./CustomGreetingAnsweringRuleInfo.js";
+import type CustomGreetingAnsweringRuleInfo from "./CustomGreetingAnsweringRuleInfo.js";
 
 interface CustomUserGreetingInfo {
   /**

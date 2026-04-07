@@ -1,7 +1,7 @@
 import Participants from "./Participants/index.js";
 import Invitees from "./Invitees/index.js";
-import HistorySessionResource from "../../../../../../definitions/HistorySessionResource.js";
-import {
+import type HistorySessionResource from "../../../../../../definitions/HistorySessionResource.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

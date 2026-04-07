@@ -1,7 +1,7 @@
-import Meeting from "../../../../../definitions/Meeting.js";
-import MeetingPage from "../../../../../definitions/MeetingPage.js";
-import ListVideoMeetingsParameters from "../../../../../definitions/ListVideoMeetingsParameters.js";
-import {
+import type Meeting from "../../../../../definitions/Meeting.js";
+import type MeetingPage from "../../../../../definitions/MeetingPage.js";
+import type ListVideoMeetingsParameters from "../../../../../definitions/ListVideoMeetingsParameters.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

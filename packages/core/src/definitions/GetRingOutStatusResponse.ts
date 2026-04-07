@@ -1,4 +1,4 @@
-import RingOutStatusInfo from "./RingOutStatusInfo.js";
+import type RingOutStatusInfo from "./RingOutStatusInfo.js";
 
 interface GetRingOutStatusResponse {
   /**

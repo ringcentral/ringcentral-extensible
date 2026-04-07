@@ -1,6 +1,6 @@
-import EmergencyLocationAddressResource from "./EmergencyLocationAddressResource.js";
-import SiteBasicInfo from "./SiteBasicInfo.js";
-import LocationOwnerInfo from "./LocationOwnerInfo.js";
+import type EmergencyLocationAddressResource from "./EmergencyLocationAddressResource.js";
+import type SiteBasicInfo from "./SiteBasicInfo.js";
+import type LocationOwnerInfo from "./LocationOwnerInfo.js";
 
 /**
  * Company emergency response location details

@@ -1,9 +1,9 @@
-import MessageAttachmentInfo from "./MessageAttachmentInfo.js";
-import ConversationInfo from "./ConversationInfo.js";
-import MessageStoreCallerInfoResponseFrom from "./MessageStoreCallerInfoResponseFrom.js";
-import MessageStoreCallerInfoResponseTo from "./MessageStoreCallerInfoResponseTo.js";
-import OwnerResource from "./OwnerResource.js";
-import GetMessageForwardingInfo from "./GetMessageForwardingInfo.js";
+import type MessageAttachmentInfo from "./MessageAttachmentInfo.js";
+import type ConversationInfo from "./ConversationInfo.js";
+import type MessageStoreCallerInfoResponseFrom from "./MessageStoreCallerInfoResponseFrom.js";
+import type MessageStoreCallerInfoResponseTo from "./MessageStoreCallerInfoResponseTo.js";
+import type OwnerResource from "./OwnerResource.js";
+import type GetMessageForwardingInfo from "./GetMessageForwardingInfo.js";
 
 interface GetSingleMessageInfoResponse {
   /**

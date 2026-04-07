@@ -1,4 +1,4 @@
-import CommInteractionRuleScheduleResource from "./CommInteractionRuleScheduleResource.js";
+import type CommInteractionRuleScheduleResource from "./CommInteractionRuleScheduleResource.js";
 
 interface CommInteractionRuleScheduleConditionResource {
   /**

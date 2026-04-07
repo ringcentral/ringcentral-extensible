@@ -1,6 +1,6 @@
-import FavoriteCollection from "../../../../../definitions/FavoriteCollection.js";
-import FavoriteContactList from "../../../../../definitions/FavoriteContactList.js";
-import {
+import type FavoriteCollection from "../../../../../definitions/FavoriteCollection.js";
+import type FavoriteContactList from "../../../../../definitions/FavoriteContactList.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

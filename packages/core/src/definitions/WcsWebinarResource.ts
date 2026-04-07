@@ -1,5 +1,5 @@
-import WcsWebinarSettingsModel from "./WcsWebinarSettingsModel.js";
-import WcsHostModel from "./WcsHostModel.js";
+import type WcsWebinarSettingsModel from "./WcsWebinarSettingsModel.js";
+import type WcsHostModel from "./WcsHostModel.js";
 
 interface WcsWebinarResource {
   /**

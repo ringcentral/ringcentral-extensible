@@ -1,4 +1,4 @@
-import CommTerminatingActionResourceTargets from "./CommTerminatingActionResourceTargets.js";
+import type CommTerminatingActionResourceTargets from "./CommTerminatingActionResourceTargets.js";
 
 /**
  * Action information

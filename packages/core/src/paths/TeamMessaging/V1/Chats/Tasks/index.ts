@@ -1,8 +1,8 @@
-import TMTaskInfo from "../../../../../definitions/TMTaskInfo.js";
-import TMCreateTaskRequest from "../../../../../definitions/TMCreateTaskRequest.js";
-import TMTaskList from "../../../../../definitions/TMTaskList.js";
-import ListChatTasksNewParameters from "../../../../../definitions/ListChatTasksNewParameters.js";
-import {
+import type TMTaskInfo from "../../../../../definitions/TMTaskInfo.js";
+import type TMCreateTaskRequest from "../../../../../definitions/TMCreateTaskRequest.js";
+import type TMTaskList from "../../../../../definitions/TMTaskList.js";
+import type ListChatTasksNewParameters from "../../../../../definitions/ListChatTasksNewParameters.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

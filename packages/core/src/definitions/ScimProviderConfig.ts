@@ -1,7 +1,7 @@
-import ScimAuthenticationScheme from "./ScimAuthenticationScheme.js";
-import ScimBulkSupported from "./ScimBulkSupported.js";
-import ScimSupported from "./ScimSupported.js";
-import ScimFilterSupported from "./ScimFilterSupported.js";
+import type ScimAuthenticationScheme from "./ScimAuthenticationScheme.js";
+import type ScimBulkSupported from "./ScimBulkSupported.js";
+import type ScimSupported from "./ScimSupported.js";
+import type ScimFilterSupported from "./ScimFilterSupported.js";
 
 interface ScimProviderConfig {
   /**

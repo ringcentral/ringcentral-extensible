@@ -1,7 +1,7 @@
 import Self from "./Self/index.js";
-import ParticipantListResource from "../../../../../../../definitions/ParticipantListResource.js";
-import RcwHistoryListParticipantsParameters from "../../../../../../../definitions/RcwHistoryListParticipantsParameters.js";
-import {
+import type ParticipantListResource from "../../../../../../../definitions/ParticipantListResource.js";
+import type RcwHistoryListParticipantsParameters from "../../../../../../../definitions/RcwHistoryListParticipantsParameters.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

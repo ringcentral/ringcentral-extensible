@@ -1,4 +1,4 @@
-import ScimResourceTypeResponse from "./ScimResourceTypeResponse.js";
+import type ScimResourceTypeResponse from "./ScimResourceTypeResponse.js";
 
 interface ScimResourceTypeSearchResponse {
   /**

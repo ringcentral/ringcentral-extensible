@@ -1,5 +1,5 @@
-import WsTokenResponse from "../../../../definitions/WsTokenResponse.js";
-import {
+import type WsTokenResponse from "../../../../definitions/WsTokenResponse.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

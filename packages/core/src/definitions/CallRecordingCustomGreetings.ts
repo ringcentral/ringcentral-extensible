@@ -1,4 +1,4 @@
-import CallRecordingCustomGreeting from "./CallRecordingCustomGreeting.js";
+import type CallRecordingCustomGreeting from "./CallRecordingCustomGreeting.js";
 
 /**
  * Returns data on call recording custom greetings.

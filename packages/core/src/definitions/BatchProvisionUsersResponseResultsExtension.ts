@@ -1,4 +1,4 @@
-import BatchProvisionUsersResponseResultsExtensionDevices from "./BatchProvisionUsersResponseResultsExtensionDevices.js";
+import type BatchProvisionUsersResponseResultsExtensionDevices from "./BatchProvisionUsersResponseResultsExtensionDevices.js";
 
 interface BatchProvisionUsersResponseResultsExtension {
   /**

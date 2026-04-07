@@ -1,6 +1,6 @@
-import CallLogResponse from "../../../../../definitions/CallLogResponse.js";
-import ListExtensionActiveCallsParameters from "../../../../../definitions/ListExtensionActiveCallsParameters.js";
-import {
+import type CallLogResponse from "../../../../../definitions/CallLogResponse.js";
+import type ListExtensionActiveCallsParameters from "../../../../../definitions/ListExtensionActiveCallsParameters.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

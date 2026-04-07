@@ -1,6 +1,6 @@
-import SessionGlobalListResource from "../../../../../definitions/SessionGlobalListResource.js";
-import RcwHistoryListAllSessionsParameters from "../../../../../definitions/RcwHistoryListAllSessionsParameters.js";
-import {
+import type SessionGlobalListResource from "../../../../../definitions/SessionGlobalListResource.js";
+import type RcwHistoryListAllSessionsParameters from "../../../../../definitions/RcwHistoryListAllSessionsParameters.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

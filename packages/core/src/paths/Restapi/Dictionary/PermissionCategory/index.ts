@@ -1,7 +1,7 @@
-import PermissionCategoryResource from "../../../../definitions/PermissionCategoryResource.js";
-import PermissionCategoryCollectionResource from "../../../../definitions/PermissionCategoryCollectionResource.js";
-import ListPermissionCategoriesParameters from "../../../../definitions/ListPermissionCategoriesParameters.js";
-import {
+import type PermissionCategoryResource from "../../../../definitions/PermissionCategoryResource.js";
+import type PermissionCategoryCollectionResource from "../../../../definitions/PermissionCategoryCollectionResource.js";
+import type ListPermissionCategoriesParameters from "../../../../definitions/ListPermissionCategoriesParameters.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

@@ -1,6 +1,6 @@
-import SessionsInsightsResource from "../../../../../../../../../definitions/SessionsInsightsResource.js";
-import GetSessionInsightsParameters from "../../../../../../../../../definitions/GetSessionInsightsParameters.js";
-import {
+import type SessionsInsightsResource from "../../../../../../../../../definitions/SessionsInsightsResource.js";
+import type GetSessionInsightsParameters from "../../../../../../../../../definitions/GetSessionInsightsParameters.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

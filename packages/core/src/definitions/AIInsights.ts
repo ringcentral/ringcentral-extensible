@@ -1,11 +1,11 @@
-import TranscriptInsightUnit from "./TranscriptInsightUnit.js";
-import SummaryInsightUnit from "./SummaryInsightUnit.js";
-import HighlightsInsightUnit from "./HighlightsInsightUnit.js";
-import NextStepsInsightUnit from "./NextStepsInsightUnit.js";
-import BulletedSummaryInsightUnit from "./BulletedSummaryInsightUnit.js";
-import AIScoreInsightUnit from "./AIScoreInsightUnit.js";
-import CallNotesInsightUnit from "./CallNotesInsightUnit.js";
-import SentimentInsightUnit from "./SentimentInsightUnit.js";
+import type TranscriptInsightUnit from "./TranscriptInsightUnit.js";
+import type SummaryInsightUnit from "./SummaryInsightUnit.js";
+import type HighlightsInsightUnit from "./HighlightsInsightUnit.js";
+import type NextStepsInsightUnit from "./NextStepsInsightUnit.js";
+import type BulletedSummaryInsightUnit from "./BulletedSummaryInsightUnit.js";
+import type AIScoreInsightUnit from "./AIScoreInsightUnit.js";
+import type CallNotesInsightUnit from "./CallNotesInsightUnit.js";
+import type SentimentInsightUnit from "./SentimentInsightUnit.js";
 
 interface AIInsights {
   /**

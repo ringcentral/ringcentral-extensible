@@ -1,5 +1,5 @@
-import JWKeySet from "../../../../definitions/JWKeySet.js";
-import {
+import type JWKeySet from "../../../../definitions/JWKeySet.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

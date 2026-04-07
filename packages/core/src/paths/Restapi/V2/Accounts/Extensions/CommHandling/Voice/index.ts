@@ -1,7 +1,7 @@
 import ForwardingTargets from "./ForwardingTargets/index.js";
 import InteractionRules from "./InteractionRules/index.js";
 import StateRules from "./StateRules/index.js";
-import {
+import type {
   RingCentralInterface,
   ParentInterface,
 } from "../../../../../../../types.js";

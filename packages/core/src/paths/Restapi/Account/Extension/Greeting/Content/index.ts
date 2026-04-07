@@ -1,5 +1,5 @@
-import ReadGreetingContentParameters from "../../../../../../definitions/ReadGreetingContentParameters.js";
-import {
+import type ReadGreetingContentParameters from "../../../../../../definitions/ReadGreetingContentParameters.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

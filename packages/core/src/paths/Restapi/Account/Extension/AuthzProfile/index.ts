@@ -1,7 +1,7 @@
 import Check from "./Check/index.js";
-import AuthProfileResource from "../../../../../definitions/AuthProfileResource.js";
-import ReadAuthorizationProfileParameters from "../../../../../definitions/ReadAuthorizationProfileParameters.js";
-import {
+import type AuthProfileResource from "../../../../../definitions/AuthProfileResource.js";
+import type ReadAuthorizationProfileParameters from "../../../../../definitions/ReadAuthorizationProfileParameters.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

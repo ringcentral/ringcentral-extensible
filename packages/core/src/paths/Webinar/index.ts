@@ -2,7 +2,7 @@ import Configuration from "./Configuration/index.js";
 import Notifications from "./Notifications/index.js";
 import Registration from "./Registration/index.js";
 import History from "./History/index.js";
-import { RingCentralInterface } from "../../types.js";
+import type { RingCentralInterface } from "../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

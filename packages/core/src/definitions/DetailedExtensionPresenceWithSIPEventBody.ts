@@ -1,5 +1,5 @@
-import ActiveCallInfo from "./ActiveCallInfo.js";
-import AppearancesInfo from "./AppearancesInfo.js";
+import type ActiveCallInfo from "./ActiveCallInfo.js";
+import type AppearancesInfo from "./AppearancesInfo.js";
 
 /**
  * Notification payload body

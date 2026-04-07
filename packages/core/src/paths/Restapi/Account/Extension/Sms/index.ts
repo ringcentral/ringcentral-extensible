@@ -1,7 +1,7 @@
 import Utils from "../../../../../Utils.js";
-import GetSMSMessageInfoResponse from "../../../../../definitions/GetSMSMessageInfoResponse.js";
-import CreateSMSMessage from "../../../../../definitions/CreateSMSMessage.js";
-import {
+import type GetSMSMessageInfoResponse from "../../../../../definitions/GetSMSMessageInfoResponse.js";
+import type CreateSMSMessage from "../../../../../definitions/CreateSMSMessage.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,

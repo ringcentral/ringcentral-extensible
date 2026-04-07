@@ -1,5 +1,5 @@
-import BridgeResponse from "../../../../../../../definitions/BridgeResponse.js";
-import {
+import type BridgeResponse from "../../../../../../../definitions/BridgeResponse.js";
+import type {
   RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
