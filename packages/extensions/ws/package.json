@@ -44,7 +44,7 @@
     "hyperid": "^3.3.0",
     "isomorphic-ws": "^5.0.0",
     "wait-for-async": "^0.8.0",
-    "ws": "^8.19.0"
+    "ws": "^8.20.0"
   },
   "scripts": {
     "build": "tsup --config tsup.config.ts && tsc -p tsconfig.esm.json --declaration --emitDeclarationOnly --outDir dist"

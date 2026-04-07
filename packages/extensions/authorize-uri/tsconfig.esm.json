@@ -3,17 +3,10 @@
     "esModuleInterop": true,
     "module": "ESNext",
     "moduleResolution": "Bundler",
+    "rootDir": "./src",
+    "types": ["node"],
     "target": "ES2022",
-    "skipLibCheck": true,
-    "baseUrl": ".",
-    "paths": {
-      "@rc-ex/core": [
-        "../../core/src/index.ts"
-      ],
-      "@rc-ex/core/*": [
-        "../../core/src/*"
-      ]
-    }
+    "skipLibCheck": true
   },
   "include": [
     "src/**/*.ts"

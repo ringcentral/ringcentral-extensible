@@ -3,6 +3,7 @@
     "esModuleInterop": true,
     "module": "ESNext",
     "moduleResolution": "Bundler",
+    "rootDir": "./src",
     "target": "ES2022",
     "skipLibCheck": true
   },

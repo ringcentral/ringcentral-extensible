@@ -13,7 +13,7 @@
     "@rc-ex/ws": "^1.5.0",
     "@ringcentral/sdk": "^5.0.6",
     "dotenv-override-true": "^6.2.2",
-    "vitest": "^4.0.16",
+    "vitest": "^4.1.3",
     "wait-for-async": "^0.8.0",
     "winston": "^3.19.0"
   },
