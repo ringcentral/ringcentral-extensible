@@ -1,8 +1,8 @@
 /**
  * Duration bounds for the segment
-*/
+ */
 interface CallSegmentLengthFilter {
-    /**
+  /**
    * Minimum duration of segment in seconds
    * Format: int64
    */

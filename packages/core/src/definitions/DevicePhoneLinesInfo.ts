@@ -2,7 +2,7 @@ import DevicePhoneLinesEmergencyAddressInfo from "./DevicePhoneLinesEmergencyAdd
 import DevicePhoneNumberInfo from "./DevicePhoneNumberInfo.js";
 
 interface DevicePhoneLinesInfo {
-    /**
+  /**
    * Internal identifier of a phone line
    */
   id?: string;
@@ -10,7 +10,7 @@ interface DevicePhoneLinesInfo {
   /**
    * Type of phone line
    */
-  lineType?: ('Standalone' | 'StandaloneFree' | 'BlaPrimary' | 'BlaSecondary');
+  lineType?: "Standalone" | "StandaloneFree" | "BlaPrimary" | "BlaSecondary";
 
   /**
    */

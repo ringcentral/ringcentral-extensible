@@ -1,10 +1,10 @@
 interface CommDailyTriggerRequest {
-    /**
+  /**
    * Trigger type
    * Required
    * Example: Daily
    */
-  triggerType?: ('Daily' | 'Weekly' | 'Range');
+  triggerType?: "Daily" | "Weekly" | "Range";
 
   /**
    * Start time in format hh:mm:ss

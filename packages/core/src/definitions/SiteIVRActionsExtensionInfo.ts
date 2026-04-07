@@ -1,8 +1,8 @@
 /**
  * Extension information
-*/
+ */
 interface SiteIVRActionsExtensionInfo {
-    /**
+  /**
    * Internal identifier of an extension
    */
   id?: string;

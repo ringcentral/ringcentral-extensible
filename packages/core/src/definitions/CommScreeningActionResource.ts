@@ -1,19 +1,26 @@
 /**
  * Action information
-*/
+ */
 interface CommScreeningActionResource {
-    /**
+  /**
    * Action type
    * Required
    * Example: ScreeningAction
    */
-  type?: ('PlayConnectingMessageAction' | 'PlayConnectingPromptAction' | 'PlayWelcomePromptAction' | 'ScreeningAction' | 'RingGroupAction' | 'RingAlwaysGroupAction' | 'TerminatingAction');
+  type?:
+    | "PlayConnectingMessageAction"
+    | "PlayConnectingPromptAction"
+    | "PlayWelcomePromptAction"
+    | "ScreeningAction"
+    | "RingGroupAction"
+    | "RingAlwaysGroupAction"
+    | "TerminatingAction";
 
   /**
    * Screening type
    * Required
    */
-  screening?: ('NoCallerId' | 'UnknownCallerId' | 'Always');
+  screening?: "NoCallerId" | "UnknownCallerId" | "Always";
 
   /**
    * Specifies if an action is enabled
@@ -23,7 +30,7 @@ interface CommScreeningActionResource {
   /**
    * Required
    */
-  screeningResult?: ('AskToAnswer' | 'PlayCallerNameOnly');
+  screeningResult?: "AskToAnswer" | "PlayCallerNameOnly";
 }
 
 export default CommScreeningActionResource;

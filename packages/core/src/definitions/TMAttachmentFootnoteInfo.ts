@@ -1,5 +1,5 @@
 interface TMAttachmentFootnoteInfo {
-    /**
+  /**
    * Text of a footer
    */
   text?: string;

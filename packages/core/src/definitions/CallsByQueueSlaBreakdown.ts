@@ -1,8 +1,8 @@
 /**
  * Result breakdown by queue SLA
-*/
+ */
 interface CallsByQueueSlaBreakdown {
-    /**
+  /**
    * Value for InSla queue SLA
    * Required
    * Format: double

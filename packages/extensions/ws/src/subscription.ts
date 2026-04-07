@@ -32,10 +32,11 @@ class Subscription {
     this.eventFilters = eventFilters;
     this.eventListener = (mEvent: MessageEvent) => {
       const event = mEvent as WsgEvent;
-      const [meta, body]: [WsgMeta, { subscriptionId: string }] = Utils
-        .splitWsgData(event.data);
+      const [meta, body]: [WsgMeta, { subscriptionId: string }] =
+        Utils.splitWsgData(event.data);
       if (
-        this.enabled && meta.type === "ServerNotification" &&
+        this.enabled &&
+        meta.type === "ServerNotification" &&
         body.subscriptionId === this.subscriptionInfo!.id
       ) {
         callback(body);

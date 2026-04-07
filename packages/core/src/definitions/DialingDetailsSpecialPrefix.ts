@@ -1,5 +1,5 @@
 interface DialingDetailsSpecialPrefix {
-    /**
+  /**
    * Example: 18001
    */
   dialing?: string;

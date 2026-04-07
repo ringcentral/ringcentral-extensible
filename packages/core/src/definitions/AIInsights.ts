@@ -8,7 +8,7 @@ import CallNotesInsightUnit from "./CallNotesInsightUnit.js";
 import SentimentInsightUnit from "./SentimentInsightUnit.js";
 
 interface AIInsights {
-    /**
+  /**
    */
   Transcript?: TranscriptInsightUnit[];
 

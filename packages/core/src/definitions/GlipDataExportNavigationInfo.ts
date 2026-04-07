@@ -1,7 +1,7 @@
 import GlipDataExportNavigationInfoUri from "./GlipDataExportNavigationInfoUri.js";
 
 interface GlipDataExportNavigationInfo {
-    /**
+  /**
    */
   firstPage?: GlipDataExportNavigationInfoUri;
 

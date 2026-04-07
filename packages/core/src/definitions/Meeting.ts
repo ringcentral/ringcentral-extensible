@@ -6,9 +6,9 @@ import MeetingNotes from "./MeetingNotes.js";
 
 /**
  * Meeting information
-*/
+ */
 interface Meeting {
-    /**
+  /**
    * Meeting id
    * Required
    */
@@ -55,19 +55,19 @@ interface Meeting {
    * Meeting type
    * Required
    */
-  type?: ('Meeting' | 'Call');
+  type?: "Meeting" | "Call";
 
   /**
    * Meeting status
    * Required
    */
-  status?: ('InProgress' | 'Done');
+  status?: "InProgress" | "Done";
 
   /**
    * Describe access rights which has participants to meeting
    * Required
    */
-  rights?: ('delete' | 'download' | 'share')[];
+  rights?: ("delete" | "download" | "share")[];
 
   /**
    * During meeting AI team analyze code and after meeting finished generates text summary about this meeting

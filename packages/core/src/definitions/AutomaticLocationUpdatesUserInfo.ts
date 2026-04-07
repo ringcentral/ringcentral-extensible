@@ -1,7 +1,7 @@
 import AutomaticLocationUpdatesSiteInfo from "./AutomaticLocationUpdatesSiteInfo.js";
 
 interface AutomaticLocationUpdatesUserInfo {
-    /**
+  /**
    * Internal identifier of a device
    */
   id?: string;
@@ -23,7 +23,7 @@ interface AutomaticLocationUpdatesUserInfo {
   /**
    * User extension type
    */
-  type?: ('User' | 'Limited');
+  type?: "User" | "Limited";
 
   /**
    */

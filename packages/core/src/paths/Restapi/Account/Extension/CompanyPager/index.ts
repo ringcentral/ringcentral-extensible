@@ -1,11 +1,15 @@
 import GetInternalTextMessageInfoResponse from "../../../../../definitions/GetInternalTextMessageInfoResponse.js";
 import CreateInternalTextMessageRequest from "../../../../../definitions/CreateInternalTextMessageRequest.js";
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types.js';
+import {
+  RingCentralInterface,
+  ParentInterface,
+  RestRequestConfig,
+} from "../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
-  
+
   public constructor(_parent: ParentInterface) {
     this._parent = _parent;
     this.rc = _parent.rc;
@@ -21,8 +25,16 @@ class Index {
    * App Permission: InternalMessages
    * User Permission: InternalSMS
    */
-  public async post(createInternalTextMessageRequest: CreateInternalTextMessageRequest, restRequestConfig?: RestRequestConfig): Promise<GetInternalTextMessageInfoResponse> {
-    const r = await this.rc.post<GetInternalTextMessageInfoResponse>(this.path(), createInternalTextMessageRequest, undefined, restRequestConfig);
+  public async post(
+    createInternalTextMessageRequest: CreateInternalTextMessageRequest,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<GetInternalTextMessageInfoResponse> {
+    const r = await this.rc.post<GetInternalTextMessageInfoResponse>(
+      this.path(),
+      createInternalTextMessageRequest,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

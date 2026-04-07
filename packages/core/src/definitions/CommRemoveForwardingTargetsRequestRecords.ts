@@ -4,7 +4,7 @@ import CommIntegrationRequest from "./CommIntegrationRequest.js";
 import CommPhoneNumberResource from "./CommPhoneNumberResource.js";
 
 interface CommRemoveForwardingTargetsRequestRecords {
-    /**
+  /**
    */
   name?: string;
 
@@ -12,7 +12,13 @@ interface CommRemoveForwardingTargetsRequestRecords {
    * Ring target type
    * Example: PhoneNumberRingTarget
    */
-  type?: ('CoworkerAppsRingTarget' | 'CoworkerRingTarget' | 'DeviceRingTarget' | 'ImsPhoneNumberRingTarget' | 'IntegrationRingTarget' | 'PhoneNumberRingTarget');
+  type?:
+    | "CoworkerAppsRingTarget"
+    | "CoworkerRingTarget"
+    | "DeviceRingTarget"
+    | "ImsPhoneNumberRingTarget"
+    | "IntegrationRingTarget"
+    | "PhoneNumberRingTarget";
 
   /**
    */

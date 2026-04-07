@@ -3,7 +3,7 @@ import CallsTimers from "./CallsTimers.js";
 import CallsCounters from "./CallsCounters.js";
 
 interface AggregationResponseRecord {
-    /**
+  /**
    * Grouping key
    * Required
    */

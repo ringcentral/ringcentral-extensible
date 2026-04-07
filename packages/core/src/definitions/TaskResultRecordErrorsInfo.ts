@@ -1,5 +1,5 @@
 interface TaskResultRecordErrorsInfo {
-    /**
+  /**
    */
   errorCode?: string;
 

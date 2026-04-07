@@ -1,5 +1,5 @@
 interface MsTeamsUserEntry {
-    /**
+  /**
    * RingCentral extension ID of the user to connect
    * Required
    */

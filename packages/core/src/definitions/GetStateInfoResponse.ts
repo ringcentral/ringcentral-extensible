@@ -1,7 +1,7 @@
 import CountryInfoMinimalModel from "./CountryInfoMinimalModel.js";
 
 interface GetStateInfoResponse {
-    /**
+  /**
    * Internal identifier of a state
    */
   id?: string;

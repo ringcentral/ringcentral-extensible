@@ -2,14 +2,21 @@ import CommRingGroupActionResourceTargets from "./CommRingGroupActionResourceTar
 
 /**
  * Action information
-*/
+ */
 interface CommRingGroupActionResource {
-    /**
+  /**
    * Action type
    * Required
    * Example: RingGroupAction
    */
-  type?: ('PlayConnectingMessageAction' | 'PlayConnectingPromptAction' | 'PlayWelcomePromptAction' | 'ScreeningAction' | 'RingGroupAction' | 'RingAlwaysGroupAction' | 'TerminatingAction');
+  type?:
+    | "PlayConnectingMessageAction"
+    | "PlayConnectingPromptAction"
+    | "PlayWelcomePromptAction"
+    | "ScreeningAction"
+    | "RingGroupAction"
+    | "RingAlwaysGroupAction"
+    | "TerminatingAction";
 
   /**
    * Specifies if an action is enabled

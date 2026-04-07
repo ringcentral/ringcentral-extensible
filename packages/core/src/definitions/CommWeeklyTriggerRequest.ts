@@ -1,12 +1,12 @@
 import CommWeeklyItemsResource from "./CommWeeklyItemsResource.js";
 
 interface CommWeeklyTriggerRequest {
-    /**
+  /**
    * Trigger type
    * Required
    * Example: Weekly
    */
-  triggerType?: ('Daily' | 'Weekly' | 'Range');
+  triggerType?: "Daily" | "Weekly" | "Range";
 
   /**
    * Required

@@ -2,14 +2,21 @@ import CommTerminatingActionRequestTargets from "./CommTerminatingActionRequestT
 
 /**
  * Action information
-*/
+ */
 interface CommTerminatingActionRequest {
-    /**
+  /**
    * Action type
    * Required
    * Example: TerminatingAction
    */
-  type?: ('PlayConnectingMessageAction' | 'PlayConnectingPromptAction' | 'PlayWelcomePromptAction' | 'ScreeningAction' | 'RingGroupAction' | 'RingAlwaysGroupAction' | 'TerminatingAction');
+  type?:
+    | "PlayConnectingMessageAction"
+    | "PlayConnectingPromptAction"
+    | "PlayWelcomePromptAction"
+    | "ScreeningAction"
+    | "RingGroupAction"
+    | "RingAlwaysGroupAction"
+    | "TerminatingAction";
 
   /**
    * Action information

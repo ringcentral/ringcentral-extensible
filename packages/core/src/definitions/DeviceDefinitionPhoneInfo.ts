@@ -1,14 +1,14 @@
 interface DeviceDefinitionPhoneInfo {
-    /**
+  /**
    * Indicates if a number is toll or toll-free
    * Example: Toll
    */
-  tollType?: ('Toll' | 'TollFree');
+  tollType?: "Toll" | "TollFree";
 
   /**
    * Type of a phone number
    */
-  type?: ('VoiceFax' | 'VoiceOnly' | 'FaxOnly');
+  type?: "VoiceFax" | "VoiceOnly" | "FaxOnly";
 
   /**
    * Preferred area code to use if the numbers are available

@@ -2,7 +2,7 @@ import CommReferencedExtensionResource from "./CommReferencedExtensionResource.j
 import CommTerminatingPromptResource from "./CommTerminatingPromptResource.js";
 
 interface CommVoiceMailTerminatingTargetResource {
-    /**
+  /**
    * Required
    */
   name?: string;
@@ -12,7 +12,11 @@ interface CommVoiceMailTerminatingTargetResource {
    * Required
    * Example: VoiceMailTerminatingTarget
    */
-  type?: ('ExtensionTerminatingTarget' | 'PhoneNumberTerminatingTarget' | 'PlayAnnouncementTerminatingTarget' | 'VoiceMailTerminatingTarget');
+  type?:
+    | "ExtensionTerminatingTarget"
+    | "PhoneNumberTerminatingTarget"
+    | "PlayAnnouncementTerminatingTarget"
+    | "VoiceMailTerminatingTarget";
 
   /**
    */

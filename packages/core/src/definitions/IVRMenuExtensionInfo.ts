@@ -1,8 +1,8 @@
 /**
  * For 'Connect' or 'Voicemail' actions only. Extension reference
-*/
+ */
 interface IvrMenuExtensionInfo {
-    /**
+  /**
    * Link to an extension resource
    * Format: uri
    */

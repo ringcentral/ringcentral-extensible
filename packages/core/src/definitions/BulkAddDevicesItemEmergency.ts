@@ -2,7 +2,7 @@ import BulkAddDevicesItemEmergencyLocation from "./BulkAddDevicesItemEmergencyLo
 import PostalAddress from "./PostalAddress.js";
 
 interface BulkAddDevicesItemEmergency {
-    /**
+  /**
    */
   location?: BulkAddDevicesItemEmergencyLocation;
 

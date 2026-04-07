@@ -1,7 +1,7 @@
 import CommIntegrationResource from "./CommIntegrationResource.js";
 
 interface CommIntegrationRingTargetResource {
-    /**
+  /**
    * Required
    */
   name?: string;
@@ -11,7 +11,16 @@ interface CommIntegrationRingTargetResource {
    * Required
    * Example: IntegrationRingTarget
    */
-  type?: ('AllDesktopRingTarget' | 'AllMobileRingTarget' | 'CoworkerRingTarget' | 'DeviceRingTarget' | 'HotdeskRingTarget' | 'ImsPhoneNumberRingTarget' | 'FmcPhoneNumberRingTarget' | 'IntegrationRingTarget' | 'PhoneNumberRingTarget');
+  type?:
+    | "AllDesktopRingTarget"
+    | "AllMobileRingTarget"
+    | "CoworkerRingTarget"
+    | "DeviceRingTarget"
+    | "HotdeskRingTarget"
+    | "ImsPhoneNumberRingTarget"
+    | "FmcPhoneNumberRingTarget"
+    | "IntegrationRingTarget"
+    | "PhoneNumberRingTarget";
 
   /**
    * Required

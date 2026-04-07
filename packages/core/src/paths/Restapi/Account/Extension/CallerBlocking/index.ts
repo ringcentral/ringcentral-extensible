@@ -1,12 +1,16 @@
-import PhoneNumbers from './PhoneNumbers/index.js';
+import PhoneNumbers from "./PhoneNumbers/index.js";
 import CallerBlockingSettingsUpdate from "../../../../../definitions/CallerBlockingSettingsUpdate.js";
 import CallerBlockingSettings from "../../../../../definitions/CallerBlockingSettings.js";
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types.js';
+import {
+  RingCentralInterface,
+  ParentInterface,
+  RestRequestConfig,
+} from "../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
-  
+
   public constructor(_parent: ParentInterface) {
     this._parent = _parent;
     this.rc = _parent.rc;
@@ -22,8 +26,14 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadBlockedNumbers
    */
-  public async get(restRequestConfig?: RestRequestConfig): Promise<CallerBlockingSettings> {
-    const r = await this.rc.get<CallerBlockingSettings>(this.path(), undefined, restRequestConfig);
+  public async get(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<CallerBlockingSettings> {
+    const r = await this.rc.get<CallerBlockingSettings>(
+      this.path(),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -35,12 +45,20 @@ class Index {
    * App Permission: EditExtensions
    * User Permission: EditBlockedNumbers
    */
-  public async put(callerBlockingSettingsUpdate: CallerBlockingSettingsUpdate, restRequestConfig?: RestRequestConfig): Promise<CallerBlockingSettings> {
-    const r = await this.rc.put<CallerBlockingSettings>(this.path(), callerBlockingSettingsUpdate, undefined, restRequestConfig);
+  public async put(
+    callerBlockingSettingsUpdate: CallerBlockingSettingsUpdate,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<CallerBlockingSettings> {
+    const r = await this.rc.put<CallerBlockingSettings>(
+      this.path(),
+      callerBlockingSettingsUpdate,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
-  public phoneNumbers(blockedNumberId: (string | null) = null): PhoneNumbers {
+  public phoneNumbers(blockedNumberId: string | null = null): PhoneNumbers {
     return new PhoneNumbers(this, blockedNumberId);
   }
 }

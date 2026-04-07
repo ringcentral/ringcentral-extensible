@@ -2,9 +2,9 @@ import Host from "./Host.js";
 
 /**
  * Meeting information
-*/
+ */
 interface CloudRecording {
-    /**
+  /**
    * Meeting id
    * Required
    */

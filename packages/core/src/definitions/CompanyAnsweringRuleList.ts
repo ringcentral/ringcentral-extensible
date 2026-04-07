@@ -3,7 +3,7 @@ import EnumeratedPagingModel from "./EnumeratedPagingModel.js";
 import PageNavigationModel from "./PageNavigationModel.js";
 
 interface CompanyAnsweringRuleList {
-    /**
+  /**
    * Link to an answering rule resource
    * Format: uri
    */

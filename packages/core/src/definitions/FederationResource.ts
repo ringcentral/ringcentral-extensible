@@ -1,7 +1,7 @@
 import FederatedAccountResource from "./FederatedAccountResource.js";
 
 interface FederationResource {
-    /**
+  /**
    */
   accounts?: FederatedAccountResource[];
 
@@ -26,7 +26,7 @@ interface FederationResource {
   /**
    * Federation type
    */
-  type?: ('Regular' | 'AdminOnly');
+  type?: "Regular" | "AdminOnly";
 }
 
 export default FederationResource;

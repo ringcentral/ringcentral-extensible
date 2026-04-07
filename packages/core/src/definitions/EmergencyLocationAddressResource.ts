@@ -1,5 +1,5 @@
 interface EmergencyLocationAddressResource {
-    /**
+  /**
    * Country name
    */
   country?: string;
@@ -52,7 +52,7 @@ interface EmergencyLocationAddressResource {
 
   /**
    * Second line address (apartment, suite, unit, building, floor,
- *  etc.)
+   *  etc.)
    */
   street2?: string;
 

@@ -1,5 +1,5 @@
 interface ScimUserAddress {
-    /**
+  /**
    */
   country?: string;
 
@@ -22,7 +22,7 @@ interface ScimUserAddress {
   /**
    * Required
    */
-  type?: ('work');
+  type?: "work";
 }
 
 export default ScimUserAddress;

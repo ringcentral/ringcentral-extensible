@@ -5,11 +5,15 @@ import CommIntegrationRequest from "./CommIntegrationRequest.js";
 import CommTerminatingPromptResource from "./CommTerminatingPromptResource.js";
 
 interface CommDispatchingRequestActionsTargets {
-    /**
+  /**
    * Terminating target type
    * Example: ExtensionTerminatingTarget
    */
-  type?: ('ExtensionTerminatingTarget' | 'PhoneNumberTerminatingTarget' | 'PlayAnnouncementTerminatingTarget' | 'VoiceMailTerminatingTarget');
+  type?:
+    | "ExtensionTerminatingTarget"
+    | "PhoneNumberTerminatingTarget"
+    | "PlayAnnouncementTerminatingTarget"
+    | "VoiceMailTerminatingTarget";
 
   /**
    */
@@ -38,7 +42,7 @@ interface CommDispatchingRequestActionsTargets {
 
   /**
    */
-  dispatchingType?: ('Ringing' | 'Terminating');
+  dispatchingType?: "Ringing" | "Terminating";
 }
 
 export default CommDispatchingRequestActionsTargets;

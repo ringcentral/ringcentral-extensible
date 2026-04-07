@@ -1,5 +1,5 @@
 interface AccountLanguageInfoRequest {
-    /**
+  /**
    * Internal identifier of a language set as regional
    * Required
    */

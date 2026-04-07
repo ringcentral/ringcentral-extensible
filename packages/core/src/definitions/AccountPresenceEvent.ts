@@ -1,7 +1,7 @@
 import AccountPresenceEventBody from "./AccountPresenceEventBody.js";
 
 interface AccountPresenceEvent {
-    /**
+  /**
    * Universally unique identifier of a notification
    */
   uuid?: string;

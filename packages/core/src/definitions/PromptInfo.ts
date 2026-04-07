@@ -1,5 +1,5 @@
 interface PromptInfo {
-    /**
+  /**
    * Internal identifier of a prompt
    * Format: uri
    */

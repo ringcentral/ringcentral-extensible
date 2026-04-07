@@ -1,7 +1,7 @@
 import CommIntegrationResource from "./CommIntegrationResource.js";
 
 interface CommIntegrationTargetResource {
-    /**
+  /**
    * Required
    */
   integration?: CommIntegrationResource;
@@ -10,7 +10,7 @@ interface CommIntegrationTargetResource {
    * Ring target type
    * Example: IntegrationRingTarget
    */
-  type?: ('IntegrationRingTarget');
+  type?: "IntegrationRingTarget";
 }
 
 export default CommIntegrationTargetResource;

@@ -2,7 +2,7 @@ import SessionGlobalResource from "./SessionGlobalResource.js";
 import RcwPagingModel from "./RcwPagingModel.js";
 
 interface SessionGlobalListResource {
-    /**
+  /**
    * Required
    */
   records?: SessionGlobalResource[];

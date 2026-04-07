@@ -1,5 +1,5 @@
 interface AccountCountryInfoRequest {
-    /**
+  /**
    * Internal identifier of a country
    * Required
    */

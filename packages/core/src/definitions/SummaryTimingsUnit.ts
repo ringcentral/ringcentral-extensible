@@ -1,5 +1,5 @@
 interface SummaryTimingsUnit {
-    /**
+  /**
    * Format: float
    * Example: 0.97
    */

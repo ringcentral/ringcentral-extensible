@@ -4,7 +4,7 @@ import PartyInfo from "./PartyInfo.js";
 import OwnerInfo from "./OwnerInfo.js";
 
 interface ReplyParty {
-    /**
+  /**
    * Internal identifier of a party
    */
   id?: string;
@@ -42,7 +42,7 @@ interface ReplyParty {
   /**
    * Direction of a call
    */
-  direction?: ('Inbound' | 'Outbound');
+  direction?: "Inbound" | "Outbound";
 }
 
 export default ReplyParty;

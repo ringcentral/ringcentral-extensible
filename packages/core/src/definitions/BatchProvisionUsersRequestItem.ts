@@ -5,11 +5,11 @@ import BatchProvisionUsersRequestItemDevices from "./BatchProvisionUsersRequestI
 
 /**
  * Describes request for user extension provisioning
-*/
+ */
 interface BatchProvisionUsersRequestItem {
-    /**
+  /**
    * Short number of an extension.
- *  Actual max length depends on system length limit for extension.
+   *  Actual max length depends on system length limit for extension.
    * Example: 205
    */
   extensionNumber?: string;
@@ -19,7 +19,7 @@ interface BatchProvisionUsersRequestItem {
    * Required
    * Default: Enabled
    */
-  status?: ('Enabled');
+  status?: "Enabled";
 
   /**
    * Personal contact information

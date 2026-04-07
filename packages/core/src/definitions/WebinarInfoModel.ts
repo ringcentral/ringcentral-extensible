@@ -1,5 +1,5 @@
 interface WebinarInfoModel {
-    /**
+  /**
    * Webinar title
    * Example: All-Hands Webinar
    */

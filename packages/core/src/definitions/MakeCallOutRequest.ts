@@ -2,7 +2,7 @@ import MakeCallOutCallerInfoRequestFrom from "./MakeCallOutCallerInfoRequestFrom
 import MakeCallOutCallerInfoRequestTo from "./MakeCallOutCallerInfoRequestTo.js";
 
 interface MakeCallOutRequest {
-    /**
+  /**
    * Required
    */
   from?: MakeCallOutCallerInfoRequestFrom;

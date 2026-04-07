@@ -1,5 +1,5 @@
 interface RcwResourceBaseModel {
-    /**
+  /**
    * Internal object ID
    * Example: 78654321
    */

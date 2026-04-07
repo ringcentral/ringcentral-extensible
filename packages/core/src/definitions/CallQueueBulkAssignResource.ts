@@ -1,5 +1,5 @@
 interface CallQueueBulkAssignResource {
-    /**
+  /**
    */
   addedExtensionIds?: string[];
 

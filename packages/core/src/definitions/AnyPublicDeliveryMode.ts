@@ -1,12 +1,12 @@
 /**
  * Notification delivery transport information
-*/
+ */
 interface AnyPublicDeliveryMode {
-    /**
+  /**
    * The transport type for this subscription
    * Required
    */
-  transportType?: ('WebHook' | 'WebSocket');
+  transportType?: "WebHook" | "WebSocket";
 
   /**
    * The URL to which notifications should be delivered. This is only applicable for the `WebHook` transport type, for which it is a required field.

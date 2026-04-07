@@ -3,7 +3,7 @@ import PageNavigationModel from "./PageNavigationModel.js";
 import EnumeratedPagingModel from "./EnumeratedPagingModel.js";
 
 interface GetExtensionPhoneNumbersResponse {
-    /**
+  /**
    * Link to the user phone number list resource
    * Format: uri
    */

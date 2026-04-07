@@ -1,8 +1,8 @@
 /**
  * File information
-*/
+ */
 interface TMAddFile {
-    /**
+  /**
    * Internal identifier of a file
    * Required
    */

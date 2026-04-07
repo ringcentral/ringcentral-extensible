@@ -2,7 +2,7 @@ import BusinessAddress from "./BusinessAddress.js";
 import Contact from "./Contact.js";
 
 interface CompanyDetails {
-    /**
+  /**
    * Business contact email
    * Format: email
    */
@@ -26,7 +26,12 @@ interface CompanyDetails {
 
   /**
    */
-  commercialType?: ('SoleProprietor' | 'PrivateProfit' | 'PublicProfit' | 'NonProfit' | 'Government');
+  commercialType?:
+    | "SoleProprietor"
+    | "PrivateProfit"
+    | "PublicProfit"
+    | "NonProfit"
+    | "Government";
 
   /**
    */

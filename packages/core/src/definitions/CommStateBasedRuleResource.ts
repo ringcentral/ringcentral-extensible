@@ -4,19 +4,31 @@ import CommStateResource from "./CommStateResource.js";
 
 /**
  * State-based rule information
-*/
+ */
 interface CommStateBasedRuleResource {
-    /**
+  /**
    * Id/Type of a state the rule is based on
    * Required
    */
-  id?: ('after-hours' | 'work-hours' | 'dnd' | 'forward-all-calls' | 'agent' | 'busy');
+  id?:
+    | "after-hours"
+    | "work-hours"
+    | "dnd"
+    | "forward-all-calls"
+    | "agent"
+    | "busy";
 
   /**
    * Predefined name of a state-based rule (similar to the name of a state)
    * Required
    */
-  displayName?: ('After Hours' | 'Work Hours' | 'Do not disturb' | 'Forward all calls' | 'Agent' | 'Busy');
+  displayName?:
+    | "After Hours"
+    | "Work Hours"
+    | "Do not disturb"
+    | "Forward all calls"
+    | "Agent"
+    | "Busy";
 
   /**
    * Required

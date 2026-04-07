@@ -7,9 +7,7 @@
     "outDir": "./dist/esm",
     "skipLibCheck": true,
     "paths": {
-      "axios": [
-        "../../node_modules/axios/dist/esm/axios.js"
-      ]
+      "axios": ["../../node_modules/axios/dist/esm/axios.js"]
     }
   },
   "include": ["src/**/*.ts"]

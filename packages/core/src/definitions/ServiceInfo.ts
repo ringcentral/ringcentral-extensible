@@ -7,10 +7,10 @@ import UBrandInfo from "./UBrandInfo.js";
 /**
  * Account service information, including brand, sub-brand, service plan and
  * billing plan
- * 
-*/
+ *
+ */
 interface ServiceInfo {
-    /**
+  /**
    * Canonical URI of a service info resource
    * Format: uri
    */

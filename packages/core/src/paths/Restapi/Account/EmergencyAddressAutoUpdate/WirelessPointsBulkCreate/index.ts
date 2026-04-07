@@ -1,11 +1,15 @@
 import CreateMultipleWirelessPointsResponse from "../../../../../definitions/CreateMultipleWirelessPointsResponse.js";
 import CreateMultipleWirelessPointsRequest from "../../../../../definitions/CreateMultipleWirelessPointsRequest.js";
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types.js';
+import {
+  RingCentralInterface,
+  ParentInterface,
+  RestRequestConfig,
+} from "../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
-  
+
   public constructor(_parent: ParentInterface) {
     this._parent = _parent;
     this.rc = _parent.rc;
@@ -15,17 +19,25 @@ class Index {
   }
   /**
    * Creates multiple wireless points in a corporate map. The maximum
- * number of wireless points per request is 10 000; limitation for account is
- * 70 000.
- * 
+   * number of wireless points per request is 10 000; limitation for account is
+   * 70 000.
+   *
    * HTTP Method: post
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/wireless-points-bulk-create
    * Rate Limit Group: Heavy
    * App Permission: EditAccounts
    * User Permission: ConfigureEmergencyMaps
    */
-  public async post(createMultipleWirelessPointsRequest: CreateMultipleWirelessPointsRequest, restRequestConfig?: RestRequestConfig): Promise<CreateMultipleWirelessPointsResponse> {
-    const r = await this.rc.post<CreateMultipleWirelessPointsResponse>(this.path(), createMultipleWirelessPointsRequest, undefined, restRequestConfig);
+  public async post(
+    createMultipleWirelessPointsRequest: CreateMultipleWirelessPointsRequest,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<CreateMultipleWirelessPointsResponse> {
+    const r = await this.rc.post<CreateMultipleWirelessPointsResponse>(
+      this.path(),
+      createMultipleWirelessPointsRequest,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

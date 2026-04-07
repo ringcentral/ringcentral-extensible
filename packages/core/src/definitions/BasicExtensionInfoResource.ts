@@ -1,5 +1,5 @@
 interface BasicExtensionInfoResource {
-    /**
+  /**
    */
   id?: string;
 

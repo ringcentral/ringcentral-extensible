@@ -1,5 +1,5 @@
 interface DialingDetailsServiceCode {
-    /**
+  /**
    * Example: *811
    */
   dialing?: string;

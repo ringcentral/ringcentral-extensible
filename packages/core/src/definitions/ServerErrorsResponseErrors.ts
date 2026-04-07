@@ -1,5 +1,5 @@
 interface ServerErrorsResponseErrors {
-    /**
+  /**
    * Logical error code.
    */
   errorCode?: string;

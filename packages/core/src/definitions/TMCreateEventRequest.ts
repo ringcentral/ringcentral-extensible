@@ -1,7 +1,7 @@
 import EventRecurrenceInfo from "./EventRecurrenceInfo.js";
 
 interface TMCreateEventRequest {
-    /**
+  /**
    * Internal identifier of an event
    */
   id?: string;
@@ -44,7 +44,15 @@ interface TMCreateEventRequest {
    * Color of Event title (including its presentation in Calendar)
    * Default: Black
    */
-  color?: ('Black' | 'Red' | 'Orange' | 'Yellow' | 'Green' | 'Blue' | 'Purple' | 'Magenta');
+  color?:
+    | "Black"
+    | "Red"
+    | "Orange"
+    | "Yellow"
+    | "Green"
+    | "Blue"
+    | "Purple"
+    | "Magenta";
 
   /**
    * Event location

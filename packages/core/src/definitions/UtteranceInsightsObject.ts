@@ -1,7 +1,7 @@
 import WordTimingsUnit from "./WordTimingsUnit.js";
 
 interface UtteranceInsightsObject {
-    /**
+  /**
    * Required
    * Format: float
    * Example: 0.3

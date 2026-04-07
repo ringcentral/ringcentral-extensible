@@ -2,13 +2,17 @@ import CustomFieldUpdateRequest from "../../../../definitions/CustomFieldUpdateR
 import CustomFieldModel from "../../../../definitions/CustomFieldModel.js";
 import CustomFieldCreateRequest from "../../../../definitions/CustomFieldCreateRequest.js";
 import CustomFieldList from "../../../../definitions/CustomFieldList.js";
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types.js';
+import {
+  RingCentralInterface,
+  ParentInterface,
+  RestRequestConfig,
+} from "../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
   public fieldId: string | null;
-  
+
   public constructor(_parent: ParentInterface, fieldId: string | null = null) {
     this._parent = _parent;
     this.rc = _parent.rc;
@@ -16,7 +20,7 @@ class Index {
   }
   public path(withParameter = true): string {
     if (withParameter && this.fieldId !== null) {
-        return `${this._parent.path()}/custom-fields/${this.fieldId}`;
+      return `${this._parent.path()}/custom-fields/${this.fieldId}`;
     }
     return `${this._parent.path()}/custom-fields`;
   }
@@ -28,8 +32,14 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadUserInfo
    */
-  public async get(restRequestConfig?: RestRequestConfig): Promise<CustomFieldList> {
-    const r = await this.rc.get<CustomFieldList>(this.path(false), undefined, restRequestConfig);
+  public async get(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<CustomFieldList> {
+    const r = await this.rc.get<CustomFieldList>(
+      this.path(false),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -41,8 +51,16 @@ class Index {
    * App Permission: EditAccounts
    * User Permission: Users
    */
-  public async post(customFieldCreateRequest: CustomFieldCreateRequest, restRequestConfig?: RestRequestConfig): Promise<CustomFieldModel> {
-    const r = await this.rc.post<CustomFieldModel>(this.path(false), customFieldCreateRequest, undefined, restRequestConfig);
+  public async post(
+    customFieldCreateRequest: CustomFieldCreateRequest,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<CustomFieldModel> {
+    const r = await this.rc.post<CustomFieldModel>(
+      this.path(false),
+      customFieldCreateRequest,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -54,12 +72,19 @@ class Index {
    * App Permission: EditAccounts
    * User Permission: Users
    */
-  public async put(customFieldUpdateRequest: CustomFieldUpdateRequest, restRequestConfig?: RestRequestConfig): Promise<CustomFieldModel> {
-    if (this.fieldId === null)
-    {
-        throw new Error('fieldId must be specified.');
+  public async put(
+    customFieldUpdateRequest: CustomFieldUpdateRequest,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<CustomFieldModel> {
+    if (this.fieldId === null) {
+      throw new Error("fieldId must be specified.");
     }
-    const r = await this.rc.put<CustomFieldModel>(this.path(), customFieldUpdateRequest, undefined, restRequestConfig);
+    const r = await this.rc.put<CustomFieldModel>(
+      this.path(),
+      customFieldUpdateRequest,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -72,11 +97,15 @@ class Index {
    * User Permission: Users
    */
   public async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
-    if (this.fieldId === null)
-    {
-        throw new Error('fieldId must be specified.');
+    if (this.fieldId === null) {
+      throw new Error("fieldId must be specified.");
     }
-    const r = await this.rc.delete<string>(this.path(), {}, undefined, restRequestConfig);
+    const r = await this.rc.delete<string>(
+      this.path(),
+      {},
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

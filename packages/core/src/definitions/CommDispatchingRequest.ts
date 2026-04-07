@@ -2,7 +2,7 @@ import CommCallTypesResource from "./CommCallTypesResource.js";
 import CommDispatchingRequestActions from "./CommDispatchingRequestActions.js";
 
 interface CommDispatchingRequest {
-    /**
+  /**
    */
   callTypes?: CommCallTypesResource;
 
@@ -16,7 +16,7 @@ interface CommDispatchingRequest {
    * Call dispatching type
    * Required
    */
-  type?: ('RingAtOnce' | 'RingInOrder' | 'Custom' | 'Terminate');
+  type?: "RingAtOnce" | "RingInOrder" | "Custom" | "Terminate";
 }
 
 export default CommDispatchingRequest;

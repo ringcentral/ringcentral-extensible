@@ -3,7 +3,7 @@ import PageNavigationModel from "./PageNavigationModel.js";
 import EnumeratedPagingModel from "./EnumeratedPagingModel.js";
 
 interface CallMonitoringGroupMemberList {
-    /**
+  /**
    * Link to a call monitoring group members resource
    * Required
    * Format: uri

@@ -1,5 +1,5 @@
 interface AccountDirectoryProfileImageResource {
-    /**
+  /**
    * Example: tag
    */
   etag?: string;

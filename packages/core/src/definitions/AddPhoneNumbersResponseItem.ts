@@ -1,9 +1,9 @@
 import ApiError from "./ApiError.js";
 
 interface AddPhoneNumbersResponseItem {
-    /**
+  /**
    * Indicates if this item was processed successfully during bulk operation.
- *  If false, `bulkItemErrors` attribute contains the list of errors
+   *  If false, `bulkItemErrors` attribute contains the list of errors
    * Required
    * Example: true
    */
@@ -11,7 +11,7 @@ interface AddPhoneNumbersResponseItem {
 
   /**
    * The list of errors occurred during processing of particular item of bulk operation.
- *  Returned only if `bulkItemSuccessful` is false
+   *  Returned only if `bulkItemSuccessful` is false
    */
   bulkItemErrors?: ApiError[];
 
@@ -31,7 +31,7 @@ interface AddPhoneNumbersResponseItem {
   /**
    * Phone number activation status. Determine whether phone number migration is completed on the partner side.
    */
-  activationStatus?: ('Active' | 'Inactive');
+  activationStatus?: "Active" | "Inactive";
 }
 
 export default AddPhoneNumbersResponseItem;

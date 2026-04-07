@@ -44,7 +44,8 @@ class EventsExtension extends SdkExtension {
 
   public emit(event: Events, data: any) {
     if (
-      !this.options.enabledEvents || this.options.enabledEvents.includes(event)
+      !this.options.enabledEvents ||
+      this.options.enabledEvents.includes(event)
     ) {
       this.eventEmitter.emit(event, data);
     }

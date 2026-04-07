@@ -1,11 +1,15 @@
 import RecordingInsights from "../../../../../../../../../definitions/RecordingInsights.js";
 import GetRecordingInsightsParameters from "../../../../../../../../../definitions/GetRecordingInsightsParameters.js";
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../../../../types.js';
+import {
+  RingCentralInterface,
+  ParentInterface,
+  RestRequestConfig,
+} from "../../../../../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
-  
+
   public constructor(_parent: ParentInterface) {
     this._parent = _parent;
     this.rc = _parent.rc;
@@ -20,8 +24,15 @@ class Index {
    * Rate Limit Group: Light
    * App Permission: RingSense
    */
-  public async get(queryParams?: GetRecordingInsightsParameters, restRequestConfig?: RestRequestConfig): Promise<RecordingInsights> {
-    const r = await this.rc.get<RecordingInsights>(this.path(), queryParams, restRequestConfig);
+  public async get(
+    queryParams?: GetRecordingInsightsParameters,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<RecordingInsights> {
+    const r = await this.rc.get<RecordingInsights>(
+      this.path(),
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

@@ -2,9 +2,9 @@ import RcwDomainUserModel from "./RcwDomainUserModel.js";
 
 /**
  * The internal IDs of RC-authenticated users.
-*/
+ */
 interface HostModel {
-    /**
+  /**
    * First (given) name
    * Example: John
    */

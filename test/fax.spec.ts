@@ -12,9 +12,11 @@ describe("fax", () => {
   test("send fax", async () => {
     const rc = await ReusableRestClient.getInstance();
     const createFaxMessageRequest: CreateFaxMessageRequest = {};
-    createFaxMessageRequest.to = [{
-      phoneNumber: process.env.RINGCENTRAL_RECEIVER,
-    }];
+    createFaxMessageRequest.to = [
+      {
+        phoneNumber: process.env.RINGCENTRAL_RECEIVER,
+      },
+    ];
     const attachment1: Attachment = {};
     attachment1.filename = "text.txt";
     attachment1.content = "hello world";
@@ -24,9 +26,12 @@ describe("fax", () => {
     attachment2.content = fs.createReadStream(path.join(__dirname, "test.png"));
     attachment2.contentType = "image/png";
     createFaxMessageRequest.attachments = [attachment1, attachment2];
-    const messageInfo = await rc.restapi().account().extension().fax().post(
-      createFaxMessageRequest,
-    );
+    const messageInfo = await rc
+      .restapi()
+      .account()
+      .extension()
+      .fax()
+      .post(createFaxMessageRequest);
     expect(messageInfo).not.toBeUndefined();
     expect(messageInfo.id).not.toBeUndefined();
   });

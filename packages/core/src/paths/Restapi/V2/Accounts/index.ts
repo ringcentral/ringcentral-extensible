@@ -1,29 +1,33 @@
-import SendActivationEmail from './SendActivationEmail/index.js';
-import SendWelcomeEmail from './SendWelcomeEmail/index.js';
-import BatchProvisioning from './BatchProvisioning/index.js';
-import RegionalSettings from './RegionalSettings/index.js';
-import DeviceInventory from './DeviceInventory/index.js';
-import PhoneNumbers from './PhoneNumbers/index.js';
-import CostCenters from './CostCenters/index.js';
-import Extensions from './Extensions/index.js';
-import Devices from './Devices/index.js';
-import Sms from './Sms/index.js';
+import SendActivationEmail from "./SendActivationEmail/index.js";
+import SendWelcomeEmail from "./SendWelcomeEmail/index.js";
+import BatchProvisioning from "./BatchProvisioning/index.js";
+import RegionalSettings from "./RegionalSettings/index.js";
+import DeviceInventory from "./DeviceInventory/index.js";
+import PhoneNumbers from "./PhoneNumbers/index.js";
+import CostCenters from "./CostCenters/index.js";
+import Extensions from "./Extensions/index.js";
+import Devices from "./Devices/index.js";
+import Sms from "./Sms/index.js";
 import AccountInfo from "../../../../definitions/AccountInfo.js";
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types.js';
+import {
+  RingCentralInterface,
+  ParentInterface,
+  RestRequestConfig,
+} from "../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
   public accountId: string | null;
-  
-  public constructor(_parent: ParentInterface, accountId: string | null = '~') {
+
+  public constructor(_parent: ParentInterface, accountId: string | null = "~") {
     this._parent = _parent;
     this.rc = _parent.rc;
     this.accountId = accountId;
   }
   public path(withParameter = true): string {
     if (withParameter && this.accountId !== null) {
-        return `${this._parent.path()}/accounts/${this.accountId}`;
+      return `${this._parent.path()}/accounts/${this.accountId}`;
     }
     return `${this._parent.path()}/accounts`;
   }
@@ -35,12 +39,17 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadCompanyInfo
    */
-  public async get(restRequestConfig?: RestRequestConfig): Promise<AccountInfo> {
-    if (this.accountId === null)
-    {
-        throw new Error('accountId must be specified.');
+  public async get(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<AccountInfo> {
+    if (this.accountId === null) {
+      throw new Error("accountId must be specified.");
     }
-    const r = await this.rc.get<AccountInfo>(this.path(), undefined, restRequestConfig);
+    const r = await this.rc.get<AccountInfo>(
+      this.path(),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -48,11 +57,11 @@ class Index {
     return new Sms(this);
   }
 
-  public devices(deviceId: (string | null) = null): Devices {
+  public devices(deviceId: string | null = null): Devices {
     return new Devices(this, deviceId);
   }
 
-  public extensions(extensionId: (string | null) = '~'): Extensions {
+  public extensions(extensionId: string | null = "~"): Extensions {
     return new Extensions(this, extensionId);
   }
 
@@ -60,7 +69,7 @@ class Index {
     return new CostCenters(this);
   }
 
-  public phoneNumbers(phoneNumberId: (string | null) = null): PhoneNumbers {
+  public phoneNumbers(phoneNumberId: string | null = null): PhoneNumbers {
     return new PhoneNumbers(this, phoneNumberId);
   }
 

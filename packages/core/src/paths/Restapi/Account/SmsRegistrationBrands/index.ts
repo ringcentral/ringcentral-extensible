@@ -1,21 +1,28 @@
-import Campaigns from './Campaigns/index.js';
+import Campaigns from "./Campaigns/index.js";
 import TcrBrandRecord from "../../../../definitions/TcrBrandRecord.js";
 import BrandListResponse from "../../../../definitions/BrandListResponse.js";
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types.js';
+import {
+  RingCentralInterface,
+  ParentInterface,
+  RestRequestConfig,
+} from "../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
   public tcrBrandId: string | null;
-  
-  public constructor(_parent: ParentInterface, tcrBrandId: string | null = null) {
+
+  public constructor(
+    _parent: ParentInterface,
+    tcrBrandId: string | null = null,
+  ) {
     this._parent = _parent;
     this.rc = _parent.rc;
     this.tcrBrandId = tcrBrandId;
   }
   public path(withParameter = true): string {
     if (withParameter && this.tcrBrandId !== null) {
-        return `${this._parent.path()}/sms-registration-brands/${this.tcrBrandId}`;
+      return `${this._parent.path()}/sms-registration-brands/${this.tcrBrandId}`;
     }
     return `${this._parent.path()}/sms-registration-brands`;
   }
@@ -26,8 +33,14 @@ class Index {
    * Rate Limit Group: Light
    * App Permission: ReadAccounts
    */
-  public async list(restRequestConfig?: RestRequestConfig): Promise<BrandListResponse> {
-    const r = await this.rc.get<BrandListResponse>(this.path(false), undefined, restRequestConfig);
+  public async list(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<BrandListResponse> {
+    const r = await this.rc.get<BrandListResponse>(
+      this.path(false),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -39,16 +52,21 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadSMSRegistration
    */
-  public async get(restRequestConfig?: RestRequestConfig): Promise<TcrBrandRecord> {
-    if (this.tcrBrandId === null)
-    {
-        throw new Error('tcrBrandId must be specified.');
+  public async get(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<TcrBrandRecord> {
+    if (this.tcrBrandId === null) {
+      throw new Error("tcrBrandId must be specified.");
     }
-    const r = await this.rc.get<TcrBrandRecord>(this.path(), undefined, restRequestConfig);
+    const r = await this.rc.get<TcrBrandRecord>(
+      this.path(),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
-  public campaigns(tcrCampaignId: (string | null) = null): Campaigns {
+  public campaigns(tcrCampaignId: string | null = null): Campaigns {
     return new Campaigns(this, tcrCampaignId);
   }
 }

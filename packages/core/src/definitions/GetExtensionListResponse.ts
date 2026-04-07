@@ -3,7 +3,7 @@ import PageNavigationModel from "./PageNavigationModel.js";
 import EnumeratedPagingModel from "./EnumeratedPagingModel.js";
 
 interface GetExtensionListResponse {
-    /**
+  /**
    * Link to an extension list resource
    * Format: uri
    */

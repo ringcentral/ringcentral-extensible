@@ -1,7 +1,7 @@
 import RcwLinkedUserModel from "./RcwLinkedUserModel.js";
 
 interface WcsWebinarRefModel {
-    /**
+  /**
    * Internal object ID
    * Example: 78654321
    */

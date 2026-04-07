@@ -1,7 +1,7 @@
 import CaiErrorCodeResponse from "./CaiErrorCodeResponse.js";
 
 interface CaiErrorResponse {
-    /**
+  /**
    */
   errors?: CaiErrorCodeResponse[];
 }

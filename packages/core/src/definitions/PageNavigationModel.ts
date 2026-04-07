@@ -2,9 +2,9 @@ import PageNavigationUri from "./PageNavigationUri.js";
 
 /**
  * Links to other pages of the current result set
-*/
+ */
 interface PageNavigationModel {
-    /**
+  /**
    */
   firstPage?: PageNavigationUri;
 

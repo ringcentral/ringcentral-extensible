@@ -1,5 +1,5 @@
 interface ParamsInfo {
-    /**
+  /**
    * Parameter name
    */
   name?: string;

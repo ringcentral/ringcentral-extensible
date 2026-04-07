@@ -1,5 +1,5 @@
 interface CommDeviceResource {
-    /**
+  /**
    * Internal identifier of a device
    * Required
    * Example: 5423543

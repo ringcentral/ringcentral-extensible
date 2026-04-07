@@ -4,7 +4,7 @@ import DeviceUpdateExtensionInfo from "./DeviceUpdateExtensionInfo.js";
 import DeviceUpdatePhoneLinesInfo from "./DeviceUpdatePhoneLinesInfo.js";
 
 interface AccountDeviceUpdate {
-    /**
+  /**
    */
   emergencyServiceAddress?: EmergencyServiceAddressResourceRequest;
 
@@ -22,7 +22,7 @@ interface AccountDeviceUpdate {
 
   /**
    * Supported only for devices assigned to Limited extensions.
- *  If true, enables users to log in to this phone as a common phone
+   *  If true, enables users to log in to this phone as a common phone
    */
   useAsCommonPhone?: boolean;
 

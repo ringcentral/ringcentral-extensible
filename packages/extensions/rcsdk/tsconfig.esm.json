@@ -7,12 +7,8 @@
     "outDir": "./dist/esm",
     "skipLibCheck": true,
     "paths": {
-      "@rc-ex/core": [
-        "../../core/dist/esm/index"
-      ],
-      "@rc-ex/core/*": [
-        "../../core/dist/esm/*"
-      ],
+      "@rc-ex/core": ["../../core/dist/esm/index"],
+      "@rc-ex/core/*": ["../../core/dist/esm/*"],
       "@ringcentral/sdk": [
         "../../../node_modules/@ringcentral/sdk/es6/index.js"
       ]

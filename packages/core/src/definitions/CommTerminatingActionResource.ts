@@ -2,14 +2,21 @@ import CommTerminatingActionResourceTargets from "./CommTerminatingActionResourc
 
 /**
  * Action information
-*/
+ */
 interface CommTerminatingActionResource {
-    /**
+  /**
    * Action type
    * Required
    * Example: TerminatingAction
    */
-  type?: ('PlayConnectingMessageAction' | 'PlayConnectingPromptAction' | 'PlayWelcomePromptAction' | 'ScreeningAction' | 'RingGroupAction' | 'RingAlwaysGroupAction' | 'TerminatingAction');
+  type?:
+    | "PlayConnectingMessageAction"
+    | "PlayConnectingPromptAction"
+    | "PlayWelcomePromptAction"
+    | "ScreeningAction"
+    | "RingGroupAction"
+    | "RingAlwaysGroupAction"
+    | "TerminatingAction";
 
   /**
    * Action information
@@ -20,12 +27,20 @@ interface CommTerminatingActionResource {
   /**
    * Terminating target type
    */
-  ringingTargetType?: ('ExtensionTerminatingTarget' | 'PhoneNumberTerminatingTarget' | 'PlayAnnouncementTerminatingTarget' | 'VoiceMailTerminatingTarget');
+  ringingTargetType?:
+    | "ExtensionTerminatingTarget"
+    | "PhoneNumberTerminatingTarget"
+    | "PlayAnnouncementTerminatingTarget"
+    | "VoiceMailTerminatingTarget";
 
   /**
    * Terminating target type
    */
-  terminatingTargetType?: ('ExtensionTerminatingTarget' | 'PhoneNumberTerminatingTarget' | 'PlayAnnouncementTerminatingTarget' | 'VoiceMailTerminatingTarget');
+  terminatingTargetType?:
+    | "ExtensionTerminatingTarget"
+    | "PhoneNumberTerminatingTarget"
+    | "PlayAnnouncementTerminatingTarget"
+    | "VoiceMailTerminatingTarget";
 }
 
 export default CommTerminatingActionResource;

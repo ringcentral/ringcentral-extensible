@@ -1,7 +1,7 @@
 interface RSPagingModel {
-    /**
+  /**
    * Current page size, describes how many items are in each page.
- *  Matches "perPage" parameter from the request.
+   *  Matches "perPage" parameter from the request.
    * Required
    * Maximum: 1000
    * Minimum: 1
@@ -12,8 +12,8 @@ interface RSPagingModel {
 
   /**
    * The current page number. 1-indexed, so the first page is 1
- *  by default. May be omitted if result is empty (because non-existent page
- *  was specified or perPage=0 was requested)
+   *  by default. May be omitted if result is empty (because non-existent page
+   *  was specified or perPage=0 was requested)
    * Required
    * Maximum: 1000
    * Minimum: 1
@@ -24,7 +24,7 @@ interface RSPagingModel {
 
   /**
    * The zero-based number of the first element on the current page.
- *  Omitted if the page is omitted or result is empty
+   *  Omitted if the page is omitted or result is empty
    * Required
    * Format: int32
    */
@@ -32,7 +32,7 @@ interface RSPagingModel {
 
   /**
    * The zero-based index of the last element on the current page.
- *  Omitted if the page is omitted or result is empty
+   *  Omitted if the page is omitted or result is empty
    * Required
    * Format: int32
    * Example: 5
@@ -41,7 +41,7 @@ interface RSPagingModel {
 
   /**
    * The total number of pages in a dataset. May be omitted for
- *  some resources due to performance reasons
+   *  some resources due to performance reasons
    * Format: int32
    * Example: 25
    */
@@ -49,7 +49,7 @@ interface RSPagingModel {
 
   /**
    * The total number of elements in a dataset. May be omitted for
- *  some resource due to performance reasons
+   *  some resource due to performance reasons
    * Required
    * Format: int32
    * Example: 25

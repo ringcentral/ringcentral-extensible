@@ -1,8 +1,8 @@
 /**
  * Query parameters for operation listStandardUserRole
-*/
+ */
 interface ListStandardUserRoleParameters {
-    /**
+  /**
    * Internal identifier of a service plan.
    */
   servicePlanId?: string;
@@ -19,7 +19,7 @@ interface ListStandardUserRoleParameters {
 
   /**
    * The number of items per page. If the provided value in the request
- *  is greater than a maximum, the maximum value is applied
+   *  is greater than a maximum, the maximum value is applied
    * Maximum: 1000
    * Minimum: 1
    * Format: int32
@@ -30,7 +30,7 @@ interface ListStandardUserRoleParameters {
 
   /**
    * Specifies whether to return advanced permissions capabilities within `permissionsCapabilities` resource.
- *  The default value is false
+   *  The default value is false
    */
   advancedPermissions?: boolean;
 }

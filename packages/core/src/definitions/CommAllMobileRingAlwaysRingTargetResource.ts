@@ -2,20 +2,20 @@ import CommReferencedExtensionResource from "./CommReferencedExtensionResource.j
 
 /**
  * All Mobile Ring target
-*/
+ */
 interface CommAllMobileRingAlwaysRingTargetResource {
-    /**
+  /**
    * Required
    */
   name?: string;
 
   /**
    * Ring target type. Applicable for all desktop and mobile applications.
- *  Ensures applications ring all the time during a call
+   *  Ensures applications ring all the time during a call
    * Required
    * Example: AllMobileRingTarget
    */
-  type?: ('AllDesktopRingTarget' | 'AllMobileRingTarget');
+  type?: "AllDesktopRingTarget" | "AllMobileRingTarget";
 
   /**
    */

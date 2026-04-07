@@ -1,5 +1,5 @@
 interface ExtensionPresenceEventBody {
-    /**
+  /**
    * Internal identifier of an extension. Optional parameter
    * Default: ~
    */
@@ -8,12 +8,22 @@ interface ExtensionPresenceEventBody {
   /**
    * Telephony presence status. Returned if telephony status is changed.
    */
-  telephonyStatus?: ('NoCall' | 'CallConnected' | 'Ringing' | 'OnHold' | 'ParkedCall');
+  telephonyStatus?:
+    | "NoCall"
+    | "CallConnected"
+    | "Ringing"
+    | "OnHold"
+    | "ParkedCall";
 
   /**
    * Telephony status of the extension aggregated across all telephony status sources.
    */
-  aggregatedTelephonyStatus?: ('NoCall' | 'CallConnected' | 'Ringing' | 'OnHold' | 'ParkedCall');
+  aggregatedTelephonyStatus?:
+    | "NoCall"
+    | "CallConnected"
+    | "Ringing"
+    | "OnHold"
+    | "ParkedCall";
 
   /**
    * Order number of a notification to state the chronology
@@ -24,25 +34,30 @@ interface ExtensionPresenceEventBody {
   /**
    * Aggregated presence status, calculated from a number of sources
    */
-  presenceStatus?: ('Offline' | 'Busy' | 'Available');
+  presenceStatus?: "Offline" | "Busy" | "Available";
 
   /**
    * User-defined presence status (as previously published by the user)
    */
-  userStatus?: ('Offline' | 'Busy' | 'Available');
+  userStatus?: "Offline" | "Busy" | "Available";
 
   /**
    * Do Not Disturb status. Not applicable for User extensions
- *  if the new communication handling service is activated on account
+   *  if the new communication handling service is activated on account
    */
-  dndStatus?: ('TakeAllCalls' | 'DoNotAcceptDepartmentCalls' | 'TakeDepartmentCallsOnly' | 'DoNotAcceptAnyCalls' | 'Unknown');
+  dndStatus?:
+    | "TakeAllCalls"
+    | "DoNotAcceptDepartmentCalls"
+    | "TakeDepartmentCallsOnly"
+    | "DoNotAcceptAnyCalls"
+    | "Unknown";
 
   /**
    * Do Not Disturb status of a User extension. Connected to the DND State type.
- *  Applicable for User extensions if the new communication handling service is
- *  activated on account.
+   *  Applicable for User extensions if the new communication handling service is
+   *  activated on account.
    */
-  dndStatusPersonal?: ('TakeAllCalls' | 'DoNotAcceptAnyCalls' | 'Unknown');
+  dndStatusPersonal?: "TakeAllCalls" | "DoNotAcceptAnyCalls" | "Unknown";
 
   /**
    * If set to `true` enables other extensions to see the extension presence status
@@ -51,14 +66,14 @@ interface ExtensionPresenceEventBody {
 
   /**
    * Specifies if a Call Queue member extension will be able to receive Call Queue calls.
- *  Used for the Agent state type. Applicable for User extensions if the new communication
- *  handling service is activated on account
+   *  Used for the Agent state type. Applicable for User extensions if the new communication
+   *  handling service is activated on account
    */
   acceptCallQueueCalls?: boolean;
 
   /**
    * If `true` enables to ring extension phone, if any user monitored
- *  by this extension is ringing
+   *  by this extension is ringing
    */
   ringOnMonitoredCall?: boolean;
 
@@ -75,7 +90,7 @@ interface ExtensionPresenceEventBody {
   /**
    * CX telephony status
    */
-  cxTelephonyStatus?: ('NoCall' | 'CallConnected');
+  cxTelephonyStatus?: "NoCall" | "CallConnected";
 }
 
 export default ExtensionPresenceEventBody;

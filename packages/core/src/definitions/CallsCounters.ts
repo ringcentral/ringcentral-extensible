@@ -14,9 +14,9 @@ import CallsByQueueHours from "./CallsByQueueHours.js";
 
 /**
  * Call volume data for the specified grouping
-*/
+ */
 interface CallsCounters {
-    /**
+  /**
    */
   allCalls?: AllCalls;
 

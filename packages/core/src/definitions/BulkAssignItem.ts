@@ -1,5 +1,5 @@
 interface BulkAssignItem {
-    /**
+  /**
    */
   departmentId?: string;
 

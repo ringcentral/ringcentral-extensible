@@ -1,7 +1,7 @@
 interface NonEnumeratedPagingModel {
-    /**
+  /**
    * Current page size, describes how many items are in each page.
- *  Matches "perPage" parameter from the request.
+   *  Matches "perPage" parameter from the request.
    * Required
    * Maximum: 1000
    * Minimum: 1
@@ -12,7 +12,7 @@ interface NonEnumeratedPagingModel {
 
   /**
    * Current page token. May be omitted if result is empty (because non-existent page
- *  was specified or perPage=0 was requested)
+   *  was specified or perPage=0 was requested)
    */
   pageToken?: string;
 
@@ -23,7 +23,7 @@ interface NonEnumeratedPagingModel {
 
   /**
    * A page token to be used to fetch the previous page of the result set.
- *  May be omitted if the current page is the first one or if the result set does not support backward navigation.
+   *  May be omitted if the current page is the first one or if the result set does not support backward navigation.
    */
   previousPageToken?: string;
 

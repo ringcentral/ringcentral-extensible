@@ -1,15 +1,22 @@
 /**
  * Query parameters for operation listUserTemplates
-*/
+ */
 interface ListUserTemplatesParameters {
-    /**
+  /**
    * Type of template
    */
-  type?: ('CallHandling' | 'CallQueueCallHandling' | 'CallQueueSettings' | 'KeyTemplates' | 'LimitedExtensions' | 'SiteCallHandling' | 'UserSettings');
+  type?:
+    | "CallHandling"
+    | "CallQueueCallHandling"
+    | "CallQueueSettings"
+    | "KeyTemplates"
+    | "LimitedExtensions"
+    | "SiteCallHandling"
+    | "UserSettings";
 
   /**
    * Indicates a page number to retrieve. Only positive number values
- *  are allowed. Default value is '1'
+   *  are allowed. Default value is '1'
    * Format: int32
    * Default: 1
    */

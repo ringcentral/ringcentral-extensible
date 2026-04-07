@@ -1,8 +1,8 @@
 /**
  * Task creator information
-*/
+ */
 interface CreatorInfo {
-    /**
+  /**
    * Internal identifier of a user
    */
   id?: string;

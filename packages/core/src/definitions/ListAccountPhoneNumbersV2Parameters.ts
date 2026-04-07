@@ -1,8 +1,8 @@
 /**
  * Query parameters for operation listAccountPhoneNumbersV2
-*/
+ */
 interface ListAccountPhoneNumbersV2Parameters {
-    /**
+  /**
    * The result set page number (1-indexed) to return
    * Maximum: 1000
    * Minimum: 1
@@ -14,7 +14,7 @@ interface ListAccountPhoneNumbersV2Parameters {
 
   /**
    * The number of items per page. If the provided value in the request
- *  is greater than a maximum, the maximum value is applied
+   *  is greater than a maximum, the maximum value is applied
    * Maximum: 1000
    * Minimum: 1
    * Format: int32
@@ -26,30 +26,56 @@ interface ListAccountPhoneNumbersV2Parameters {
   /**
    * Types of phone numbers to be returned
    */
-  type?: ('VoiceFax' | 'VoiceOnly' | 'FaxOnly')[];
+  type?: ("VoiceFax" | "VoiceOnly" | "FaxOnly")[];
 
   /**
    * Usage type(s) of phone numbers to be returned
    */
-  usageType?: ('MainCompanyNumber' | 'DirectNumber' | 'Inventory' | 'InventoryPartnerBusinessMobileNumber' | 'InventoryFmcBusinessMobileNumber' | 'PartnerBusinessMobileNumber' | 'AdditionalCompanyNumber' | 'CompanyNumber' | 'PhoneLine' | 'CompanyFaxNumber' | 'ForwardedNumber' | 'ForwardedCompanyNumber' | 'ContactCenterNumber' | 'ConferencingNumber' | 'MeetingsNumber' | 'NumberStorage' | 'BusinessMobileNumber' | 'FmcBusinessMobileNumber' | 'ELIN' | 'InventoryMobileNumber')[];
+  usageType?: (
+    | "MainCompanyNumber"
+    | "DirectNumber"
+    | "Inventory"
+    | "InventoryPartnerBusinessMobileNumber"
+    | "InventoryFmcBusinessMobileNumber"
+    | "PartnerBusinessMobileNumber"
+    | "AdditionalCompanyNumber"
+    | "CompanyNumber"
+    | "PhoneLine"
+    | "CompanyFaxNumber"
+    | "ForwardedNumber"
+    | "ForwardedCompanyNumber"
+    | "ContactCenterNumber"
+    | "ConferencingNumber"
+    | "MeetingsNumber"
+    | "NumberStorage"
+    | "BusinessMobileNumber"
+    | "FmcBusinessMobileNumber"
+    | "ELIN"
+    | "InventoryMobileNumber"
+  )[];
 
   /**
    * Status of a phone number. If the value is `Normal`, the phone
- *  number is ready to be used. Otherwise, it is an external number not yet
- *  ported to RingCentral
+   *  number is ready to be used. Otherwise, it is an external number not yet
+   *  ported to RingCentral
    */
-  status?: ('Normal' | 'Pending' | 'PortedIn' | 'Temporary' | 'Unknown');
+  status?: "Normal" | "Pending" | "PortedIn" | "Temporary" | "Unknown";
 
   /**
    * Indicates if a number is toll or toll-free
    * Example: Toll
    */
-  tollType?: ('Toll' | 'TollFree');
+  tollType?: "Toll" | "TollFree";
 
   /**
    * Extension status
    */
-  extensionStatus?: ('Enabled' | 'Disabled' | 'Frozen' | 'NotActivated' | 'Unassigned');
+  extensionStatus?:
+    | "Enabled"
+    | "Disabled"
+    | "Frozen"
+    | "NotActivated"
+    | "Unassigned";
 
   /**
    * The parameter reflects whether this number is BYOC or not
@@ -63,9 +89,9 @@ interface ListAccountPhoneNumbersV2Parameters {
 
   /**
    * Phone number in e.164 format to be searched for.
- *  Parameter value can include wildcards (e.g. "+165012345**")
- *  or be an exact number "+16501234500" - single number is searched in that case.
- *  Make sure you escape the "+" in the URL as "%2B"
+   *  Parameter value can include wildcards (e.g. "+165012345**")
+   *  or be an exact number "+16501234500" - single number is searched in that case.
+   *  Make sure you escape the "+" in the URL as "%2B"
    */
   phoneNumber?: string;
 }

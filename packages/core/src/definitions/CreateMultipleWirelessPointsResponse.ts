@@ -1,7 +1,7 @@
 import BulkTaskInfo from "./BulkTaskInfo.js";
 
 interface CreateMultipleWirelessPointsResponse {
-    /**
+  /**
    */
   task?: BulkTaskInfo;
 }

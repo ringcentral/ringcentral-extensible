@@ -1,5 +1,5 @@
 interface BridgeTargetRequest {
-    /**
+  /**
    * Internal identifier of a call session to be connected to (bridged)
    * Required
    */

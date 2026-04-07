@@ -1,11 +1,15 @@
 import TMWebhookInfo from "../../../../../definitions/TMWebhookInfo.js";
 import TMWebhookList from "../../../../../definitions/TMWebhookList.js";
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types.js';
+import {
+  RingCentralInterface,
+  ParentInterface,
+  RestRequestConfig,
+} from "../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
-  
+
   public constructor(_parent: ParentInterface) {
     this._parent = _parent;
     this.rc = _parent.rc;
@@ -20,8 +24,14 @@ class Index {
    * Rate Limit Group: Medium
    * App Permission: TeamMessaging
    */
-  public async get(restRequestConfig?: RestRequestConfig): Promise<TMWebhookList> {
-    const r = await this.rc.get<TMWebhookList>(this.path(), undefined, restRequestConfig);
+  public async get(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<TMWebhookList> {
+    const r = await this.rc.get<TMWebhookList>(
+      this.path(),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -32,8 +42,15 @@ class Index {
    * Rate Limit Group: Medium
    * App Permission: TeamMessaging
    */
-  public async post(restRequestConfig?: RestRequestConfig): Promise<TMWebhookInfo> {
-    const r = await this.rc.post<TMWebhookInfo>(this.path(), {}, undefined, restRequestConfig);
+  public async post(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<TMWebhookInfo> {
+    const r = await this.rc.post<TMWebhookInfo>(
+      this.path(),
+      {},
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

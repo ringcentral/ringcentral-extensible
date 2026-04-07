@@ -1,9 +1,9 @@
 import AdaptiveCardColumnInfo from "./AdaptiveCardColumnInfo.js";
 
 interface AdaptiveCardInfoRequestItem {
-    /**
+  /**
    */
-  type?: ('TextBlock' | 'ColumnSet' | 'Column' | 'FactSet');
+  type?: "TextBlock" | "ColumnSet" | "Column" | "FactSet";
 
   /**
    */

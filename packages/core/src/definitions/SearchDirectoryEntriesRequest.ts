@@ -1,17 +1,26 @@
 import OrderBy from "./OrderBy.js";
 
 interface SearchDirectoryEntriesRequest {
-    /**
+  /**
    * String value to filter the contacts. The value specified is
- *  searched through the following fields: `firstName`, `lastName`, `extensionNumber`, `phoneNumber`, `email`,
- *  `jobTitle`, `department`, `customFieldValue`
+   *  searched through the following fields: `firstName`, `lastName`, `extensionNumber`, `phoneNumber`, `email`,
+   *  `jobTitle`, `department`, `customFieldValue`
    */
   searchString?: string;
 
   /**
    * The list of field to be searched for
    */
-  searchFields?: ('firstName' | 'lastName' | 'extensionNumber' | 'phoneNumber' | 'email' | 'jobTitle' | 'department' | 'customFieldValue')[];
+  searchFields?: (
+    | "firstName"
+    | "lastName"
+    | "extensionNumber"
+    | "phoneNumber"
+    | "email"
+    | "jobTitle"
+    | "department"
+    | "customFieldValue"
+  )[];
 
   /**
    * If `true` then contacts of all accounts in federation are returned, if it is in federation, account section will be returned. If `false` then only contacts of the current account are returned, and account section is eliminated in this case
@@ -28,7 +37,23 @@ interface SearchDirectoryEntriesRequest {
    * Type of directory contact to filter
    * Example: User
    */
-  extensionType?: ('User' | 'Department' | 'Announcement' | 'Voicemail' | 'SharedLinesGroup' | 'PagingOnly' | 'ParkLocation' | 'IvrMenu' | 'Limited' | 'ApplicationExtension' | 'Site' | 'Bot' | 'Room' | 'DelegatedLinesGroup' | 'GroupCallPickup' | 'External');
+  extensionType?:
+    | "User"
+    | "Department"
+    | "Announcement"
+    | "Voicemail"
+    | "SharedLinesGroup"
+    | "PagingOnly"
+    | "ParkLocation"
+    | "IvrMenu"
+    | "Limited"
+    | "ApplicationExtension"
+    | "Site"
+    | "Bot"
+    | "Room"
+    | "DelegatedLinesGroup"
+    | "GroupCallPickup"
+    | "External";
 
   /**
    * Internal identifier of the business site to which extensions belong
@@ -61,12 +86,36 @@ interface SearchDirectoryEntriesRequest {
   /**
    * Extension current state.
    */
-  extensionStatuses?: ('Enabled' | 'Disabled' | 'NotActivated')[];
+  extensionStatuses?: ("Enabled" | "Disabled" | "NotActivated")[];
 
   /**
    * Types of extension to filter the contacts
    */
-  extensionTypes?: ('User' | 'Department' | 'Announcement' | 'Voicemail' | 'DigitalUser' | 'VirtualUser' | 'FaxUser' | 'PagingOnly' | 'SharedLinesGroup' | 'IvrMenu' | 'ApplicationExtension' | 'ParkLocation' | 'Limited' | 'Bot' | 'Site' | 'Room' | 'ProxyAdmin' | 'DelegatedLinesGroup' | 'FlexibleUser' | 'GroupCallPickup' | 'RoomConnector' | 'TieLine' | 'External')[];
+  extensionTypes?: (
+    | "User"
+    | "Department"
+    | "Announcement"
+    | "Voicemail"
+    | "DigitalUser"
+    | "VirtualUser"
+    | "FaxUser"
+    | "PagingOnly"
+    | "SharedLinesGroup"
+    | "IvrMenu"
+    | "ApplicationExtension"
+    | "ParkLocation"
+    | "Limited"
+    | "Bot"
+    | "Site"
+    | "Room"
+    | "ProxyAdmin"
+    | "DelegatedLinesGroup"
+    | "FlexibleUser"
+    | "GroupCallPickup"
+    | "RoomConnector"
+    | "TieLine"
+    | "External"
+  )[];
 
   /**
    * The list of internal identifiers of the extension
@@ -75,12 +124,21 @@ interface SearchDirectoryEntriesRequest {
 
   /**
    */
-  integrationRoutingTypes?: ('Carrier' | 'Account')[];
+  integrationRoutingTypes?: ("Carrier" | "Account")[];
 
   /**
    * The list of SMS availability statuses to filter phone numbers
    */
-  phoneNumberSmsAvailabilityStatuses?: ('Active' | 'Inactive' | 'Disabled' | 'Banned' | 'Suspended' | 'Deprovisioning' | 'InboundOnly' | 'Unknown')[];
+  phoneNumberSmsAvailabilityStatuses?: (
+    | "Active"
+    | "Inactive"
+    | "Disabled"
+    | "Banned"
+    | "Suspended"
+    | "Deprovisioning"
+    | "InboundOnly"
+    | "Unknown"
+  )[];
 
   /**
    * The list of SMS campaign IDs to filter phone numbers

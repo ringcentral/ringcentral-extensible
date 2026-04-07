@@ -1,8 +1,8 @@
 /**
  * Account information
-*/
+ */
 interface GetExtensionAccountInfo {
-    /**
+  /**
    * Internal identifier of an account
    */
   id?: string;

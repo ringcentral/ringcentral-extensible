@@ -1,5 +1,5 @@
 interface BridgeJoinPstnPreferences {
-    /**
+  /**
    * Specifies whether to play 'Announce yourself' prompt
    * Default: true
    */

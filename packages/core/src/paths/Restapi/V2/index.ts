@@ -1,11 +1,11 @@
-import NumberParser from './NumberParser/index.js';
-import Accounts from './Accounts/index.js';
-import { RingCentralInterface, ParentInterface } from '../../../types.js';
+import NumberParser from "./NumberParser/index.js";
+import Accounts from "./Accounts/index.js";
+import { RingCentralInterface, ParentInterface } from "../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
-  
+
   public constructor(_parent: ParentInterface) {
     this._parent = _parent;
     this.rc = _parent.rc;
@@ -14,8 +14,7 @@ class Index {
     return `${this._parent.path(false)}/v2`;
   }
 
-
-  public accounts(accountId: (string | null) = '~'): Accounts {
+  public accounts(accountId: string | null = "~"): Accounts {
     return new Accounts(this, accountId);
   }
 

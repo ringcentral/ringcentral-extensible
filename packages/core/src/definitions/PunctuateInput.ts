@@ -1,5 +1,5 @@
 interface PunctuateInput {
-    /**
+  /**
    * Required
    */
   texts?: string[];

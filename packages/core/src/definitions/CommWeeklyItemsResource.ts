@@ -1,7 +1,7 @@
 import CommWeeklyRangeResource from "./CommWeeklyRangeResource.js";
 
 interface CommWeeklyItemsResource {
-    /**
+  /**
    */
   monday?: CommWeeklyRangeResource[];
 

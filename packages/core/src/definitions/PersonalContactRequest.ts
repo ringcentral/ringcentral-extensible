@@ -1,7 +1,7 @@
 import ContactAddressInfo from "./ContactAddressInfo.js";
 
 interface PersonalContactRequest {
-    /**
+  /**
    * First name of a contact
    * Example: Charlie
    */

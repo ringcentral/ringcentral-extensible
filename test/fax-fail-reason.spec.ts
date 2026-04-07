@@ -15,8 +15,8 @@ describe("fax fail reason", () => {
         direction: ["Outbound"],
         dateFrom: "2010-04-15T17:18:00.000Z",
       });
-    const failedFaxes = messages.records?.filter((m) =>
-      m.messageStatus === "SendingFailed"
+    const failedFaxes = messages.records?.filter(
+      (m) => m.messageStatus === "SendingFailed",
     );
     for (const failedFax of failedFaxes ?? []) {
       expect(

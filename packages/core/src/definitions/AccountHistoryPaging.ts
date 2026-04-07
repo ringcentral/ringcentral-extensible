@@ -1,7 +1,7 @@
 interface AccountHistoryPaging {
-    /**
+  /**
    * The current page number. 1-indexed, so the first page is 1 by default. May be omitted if result is empty
- *  (because non-existent page was specified or perPage=0 was requested)
+   *  (because non-existent page was specified or perPage=0 was requested)
    * Maximum: 1000
    * Minimum: 1
    * Format: int32

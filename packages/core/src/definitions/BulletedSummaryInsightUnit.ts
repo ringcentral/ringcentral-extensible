@@ -1,5 +1,5 @@
 interface BulletedSummaryInsightUnit {
-    /**
+  /**
    * Value of the summary
    * Required
    * Example: conversational insights text

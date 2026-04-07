@@ -2,7 +2,7 @@ import ContactBusinessAddressInfo from "./ContactBusinessAddressInfo.js";
 import PronouncedNameInfo from "./PronouncedNameInfo.js";
 
 interface ContactInfoUpdateRequest {
-    /**
+  /**
    * For User extension type only. Extension user first name
    */
   firstName?: string;
@@ -29,15 +29,15 @@ interface ContactInfoUpdateRequest {
 
   /**
    * Extension user contact phone number in
- *  [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I)
- *  format
+   *  [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I)
+   *  format
    */
   businessPhone?: string;
 
   /**
    * Extension user mobile (**non** Toll Free) phone number in
- *  [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I)
- *  (with '+' sign) format
+   *  [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I)
+   *  (with '+' sign) format
    */
   mobilePhone?: string;
 
@@ -47,8 +47,8 @@ interface ContactInfoUpdateRequest {
 
   /**
    * If `true` then contact email is enabled as login name for
- *  this user. Please note that email should be unique in this case.
- *  The default value is `false`
+   *  this user. Please note that email should be unique in this case.
+   *  The default value is `false`
    */
   emailAsLoginName?: boolean;
 

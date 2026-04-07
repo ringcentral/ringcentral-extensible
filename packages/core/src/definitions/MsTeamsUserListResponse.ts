@@ -1,7 +1,7 @@
 import MsTeamsUserListResponseMappings from "./MsTeamsUserListResponseMappings.js";
 
 interface MsTeamsUserListResponse {
-    /**
+  /**
    * Required
    */
   mappings?: MsTeamsUserListResponseMappings[];

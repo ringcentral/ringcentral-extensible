@@ -1,8 +1,8 @@
 /**
  * Query parameters for operation readUserPresenceStatus
-*/
+ */
 interface ReadUserPresenceStatusParameters {
-    /**
+  /**
    * Specifies whether to return a detailed telephony state or not
    */
   detailedTelephonyState?: boolean;

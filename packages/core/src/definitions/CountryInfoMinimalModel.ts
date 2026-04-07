@@ -1,5 +1,5 @@
 interface CountryInfoMinimalModel {
-    /**
+  /**
    * Internal identifier of a country
    */
   id?: string;

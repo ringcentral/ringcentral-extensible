@@ -1,12 +1,16 @@
 import CaiAsyncApiResponse from "../../../../../../definitions/CaiAsyncApiResponse.js";
 import CaiAnalyzeInteractionParameters from "../../../../../../definitions/CaiAnalyzeInteractionParameters.js";
 import InteractionInput from "../../../../../../definitions/InteractionInput.js";
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../types.js';
+import {
+  RingCentralInterface,
+  ParentInterface,
+  RestRequestConfig,
+} from "../../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
-  
+
   public constructor(_parent: ParentInterface) {
     this._parent = _parent;
     this.rc = _parent.rc;
@@ -16,14 +20,23 @@ class Index {
   }
   /**
    * Returns multiple insights including summaries, key phrases, questions asked, and more in a single API call.
- * 
+   *
    * HTTP Method: post
    * Endpoint: /ai/insights/v1/async/analyze-interaction
    * Rate Limit Group: Heavy
    * App Permission: AI
    */
-  public async post(interactionInput: InteractionInput, queryParams?: CaiAnalyzeInteractionParameters, restRequestConfig?: RestRequestConfig): Promise<CaiAsyncApiResponse> {
-    const r = await this.rc.post<CaiAsyncApiResponse>(this.path(), interactionInput, queryParams, restRequestConfig);
+  public async post(
+    interactionInput: InteractionInput,
+    queryParams?: CaiAnalyzeInteractionParameters,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<CaiAsyncApiResponse> {
+    const r = await this.rc.post<CaiAsyncApiResponse>(
+      this.path(),
+      interactionInput,
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

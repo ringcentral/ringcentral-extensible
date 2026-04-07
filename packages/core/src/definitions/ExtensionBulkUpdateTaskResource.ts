@@ -2,10 +2,10 @@ import ExtensionBulkUpdateTaskResult from "./ExtensionBulkUpdateTaskResult.js";
 
 /**
  * Information on a task for updating multiple extensions
- * 
-*/
+ *
+ */
 interface ExtensionBulkUpdateTaskResource {
-    /**
+  /**
    * Link to a task resource
    * Required
    * Format: uri
@@ -22,7 +22,7 @@ interface ExtensionBulkUpdateTaskResource {
    * Task status
    * Required
    */
-  status?: ('Accepted' | 'InProgress' | 'Completed' | 'Failed');
+  status?: "Accepted" | "InProgress" | "Completed" | "Failed";
 
   /**
    * Task creation date/time

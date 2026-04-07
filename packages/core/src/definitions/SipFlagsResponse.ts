@@ -1,8 +1,8 @@
 /**
  * SIP flags information
-*/
+ */
 interface SipFlagsResponse {
-    /**
+  /**
    * Indicates that VoIP calling feature is enabled
    */
   voipFeatureEnabled?: boolean;

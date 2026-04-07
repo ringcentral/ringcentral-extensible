@@ -3,9 +3,9 @@ import CallerIdData from "./CallerIdData.js";
 
 /**
  * Caller ID settings by device
-*/
+ */
 interface CallerIdByDevice {
-    /**
+  /**
    */
   device?: CallerIdDeviceInfo;
 

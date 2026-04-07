@@ -1,5 +1,5 @@
 interface ContactAddressInfo {
-    /**
+  /**
    * Street address
    * Example: 20 Davis Dr.
    */

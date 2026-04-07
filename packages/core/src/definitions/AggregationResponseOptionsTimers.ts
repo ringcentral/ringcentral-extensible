@@ -15,9 +15,9 @@ import AggregationResponseOptionsTimersCallsDurationByQueueHours from "./Aggrega
  * If `aggregationType` is `Sum` or `Percent`, `aggregationInterval` is not supported.
  * If `aggregationType` is `Min`, `Max` or `Average`, `aggregationInterval` is supported, but not required.
  * If left empty, aggregation will be performed on per-call basis
-*/
+ */
 interface AggregationResponseOptionsTimers {
-    /**
+  /**
    * Aggregation of all calls duration
    */
   allCallsDuration?: AggregationResponseOptionsTimersAllCallsDuration;

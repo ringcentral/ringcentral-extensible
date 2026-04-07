@@ -1,11 +1,15 @@
 import FederationResource from "../../../../../definitions/FederationResource.js";
 import ReadDirectoryFederationParameters from "../../../../../definitions/ReadDirectoryFederationParameters.js";
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types.js';
+import {
+  RingCentralInterface,
+  ParentInterface,
+  RestRequestConfig,
+} from "../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
-  
+
   public constructor(_parent: ParentInterface) {
     this._parent = _parent;
     this.rc = _parent.rc;
@@ -21,8 +25,15 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadCompanyInfo
    */
-  public async get(queryParams?: ReadDirectoryFederationParameters, restRequestConfig?: RestRequestConfig): Promise<FederationResource> {
-    const r = await this.rc.get<FederationResource>(this.path(), queryParams, restRequestConfig);
+  public async get(
+    queryParams?: ReadDirectoryFederationParameters,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<FederationResource> {
+    const r = await this.rc.get<FederationResource>(
+      this.path(),
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

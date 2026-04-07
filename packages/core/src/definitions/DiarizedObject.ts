@@ -1,7 +1,7 @@
 import DiarizeSegment from "./DiarizeSegment.js";
 
 interface DiarizedObject {
-    /**
+  /**
    * Required
    * Format: int32
    * Example: 2

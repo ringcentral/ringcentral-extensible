@@ -1,11 +1,11 @@
-import Recordings from './Recordings/index.js';
-import Sessions from './Sessions/index.js';
-import { RingCentralInterface, ParentInterface } from '../../../../../types.js';
+import Recordings from "./Recordings/index.js";
+import Sessions from "./Sessions/index.js";
+import { RingCentralInterface, ParentInterface } from "../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
-  
+
   public constructor(_parent: ParentInterface) {
     this._parent = _parent;
     this.rc = _parent.rc;
@@ -14,12 +14,11 @@ class Index {
     return `${this._parent.path(false)}/company`;
   }
 
-
   public sessions(): Sessions {
     return new Sessions(this);
   }
 
-  public recordings(recordingId: (string | null) = null): Recordings {
+  public recordings(recordingId: string | null = null): Recordings {
     return new Recordings(this, recordingId);
   }
 }

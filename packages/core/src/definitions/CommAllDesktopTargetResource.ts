@@ -2,9 +2,9 @@ import CommReferencedExtensionResource from "./CommReferencedExtensionResource.j
 
 /**
  * All Desktop Ring target
-*/
+ */
 interface CommAllDesktopTargetResource {
-    /**
+  /**
    */
   extension?: CommReferencedExtensionResource;
 
@@ -16,7 +16,7 @@ interface CommAllDesktopTargetResource {
   /**
    * Example: AllDesktopRingTarget
    */
-  type?: ('AllDesktopRingTarget');
+  type?: "AllDesktopRingTarget";
 }
 
 export default CommAllDesktopTargetResource;

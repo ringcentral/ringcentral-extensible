@@ -3,9 +3,9 @@ import Paging from "./Paging.js";
 
 /**
  * Meetings page
-*/
+ */
 interface AdminAccessMeetings {
-    /**
+  /**
    * Meetings array
    * Required
    */

@@ -3,9 +3,9 @@ import ParsePhoneNumberResponseV2Results from "./ParsePhoneNumberResponseV2Resul
 
 /**
  * Phone Number Parser service's Parse Phone Numbers API successful response schema.
-*/
+ */
 interface ParsePhoneNumberResponseV2 {
-    /**
+  /**
    */
   context?: NumberParserContext;
 

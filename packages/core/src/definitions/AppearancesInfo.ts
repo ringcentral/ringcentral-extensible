@@ -1,8 +1,8 @@
 /**
  * Appearance phone numbers information. Supported only for Delegated Lines Group extensions
-*/
+ */
 interface AppearancesInfo {
-    /**
+  /**
    * Appearance phone number
    */
   phoneNumber?: string;
@@ -16,7 +16,7 @@ interface AppearancesInfo {
   /**
    * Appearance line status. The two possible values: 'Seized' - the phone line is busy; 'Released' - the phone line is open
    */
-  lineStatus?: ('Seized' | 'Released');
+  lineStatus?: "Seized" | "Released";
 }
 
 export default AppearancesInfo;

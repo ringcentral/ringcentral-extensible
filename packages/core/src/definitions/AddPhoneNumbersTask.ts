@@ -1,5 +1,5 @@
 interface AddPhoneNumbersTask {
-    /**
+  /**
    * Internal identifier of a task
    */
   id?: string;

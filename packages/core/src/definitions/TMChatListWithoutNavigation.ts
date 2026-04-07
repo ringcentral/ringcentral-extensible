@@ -1,7 +1,7 @@
 import TMChatInfo from "./TMChatInfo.js";
 
 interface TMChatListWithoutNavigation {
-    /**
+  /**
    * List of chats
    * Required
    */

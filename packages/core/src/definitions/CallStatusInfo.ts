@@ -3,17 +3,58 @@ import MobilePickupData from "./MobilePickupData.js";
 
 /**
  * Status data of a call session
-*/
+ */
 interface CallStatusInfo {
-    /**
+  /**
    * Status code of a call
    */
-  code?: ('Setup' | 'Proceeding' | 'Answered' | 'Disconnected' | 'Gone' | 'Parked' | 'Hold' | 'VoiceMail' | 'FaxReceive' | 'Tds' | 'VoiceMailScreening');
+  code?:
+    | "Setup"
+    | "Proceeding"
+    | "Answered"
+    | "Disconnected"
+    | "Gone"
+    | "Parked"
+    | "Hold"
+    | "VoiceMail"
+    | "FaxReceive"
+    | "Tds"
+    | "VoiceMailScreening";
 
   /**
    * Reason for a call status, might be specified for some codes
    */
-  reason?: ('Pickup' | 'Supervising' | 'TakeOver' | 'Timeout' | 'BlindTransfer' | 'RccTransfer' | 'AttendedTransfer' | 'CallerInputRedirect' | 'CallFlip' | 'ParkLocation' | 'DtmfTransfer' | 'AgentAnswered' | 'AgentDropped' | 'Rejected' | 'Cancelled' | 'InternalError' | 'NoAnswer' | 'TargetBusy' | 'InvalidNumber' | 'InternationalDisabled' | 'DestinationBlocked' | 'NotEnoughFunds' | 'NoSuchUser' | 'CallPark' | 'CallRedirected' | 'CallReplied' | 'CallSwitch' | 'CallFinished' | 'CallDropped' | 'Voicemail');
+  reason?:
+    | "Pickup"
+    | "Supervising"
+    | "TakeOver"
+    | "Timeout"
+    | "BlindTransfer"
+    | "RccTransfer"
+    | "AttendedTransfer"
+    | "CallerInputRedirect"
+    | "CallFlip"
+    | "ParkLocation"
+    | "DtmfTransfer"
+    | "AgentAnswered"
+    | "AgentDropped"
+    | "Rejected"
+    | "Cancelled"
+    | "InternalError"
+    | "NoAnswer"
+    | "TargetBusy"
+    | "InvalidNumber"
+    | "InternationalDisabled"
+    | "DestinationBlocked"
+    | "NotEnoughFunds"
+    | "NoSuchUser"
+    | "CallPark"
+    | "CallRedirected"
+    | "CallReplied"
+    | "CallSwitch"
+    | "CallFinished"
+    | "CallDropped"
+    | "Voicemail";
 
   /**
    * Optional message

@@ -1,11 +1,15 @@
 import UpdateUnifiedPresence from "../../../../../definitions/UpdateUnifiedPresence.js";
 import UnifiedPresence from "../../../../../definitions/UnifiedPresence.js";
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types.js';
+import {
+  RingCentralInterface,
+  ParentInterface,
+  RestRequestConfig,
+} from "../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
-  
+
   public constructor(_parent: ParentInterface) {
     this._parent = _parent;
     this.rc = _parent.rc;
@@ -21,8 +25,14 @@ class Index {
    * App Permission: ReadPresence
    * User Permission: ReadPresenceStatus
    */
-  public async get(restRequestConfig?: RestRequestConfig): Promise<UnifiedPresence> {
-    const r = await this.rc.get<UnifiedPresence>(this.path(), undefined, restRequestConfig);
+  public async get(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<UnifiedPresence> {
+    const r = await this.rc.get<UnifiedPresence>(
+      this.path(),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -34,8 +44,16 @@ class Index {
    * App Permission: EditPresence
    * User Permission: EditPresenceStatus
    */
-  public async patch(updateUnifiedPresence: UpdateUnifiedPresence, restRequestConfig?: RestRequestConfig): Promise<UnifiedPresence> {
-    const r = await this.rc.patch<UnifiedPresence>(this.path(), updateUnifiedPresence, undefined, restRequestConfig);
+  public async patch(
+    updateUnifiedPresence: UpdateUnifiedPresence,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<UnifiedPresence> {
+    const r = await this.rc.patch<UnifiedPresence>(
+      this.path(),
+      updateUnifiedPresence,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

@@ -1,5 +1,5 @@
 interface DevicePhoneLinesEmergencyAddressInfo {
-    /**
+  /**
    * Indicates that emergency address is required
    */
   required?: boolean;
@@ -12,7 +12,7 @@ interface DevicePhoneLinesEmergencyAddressInfo {
   /**
    * Digital line provisioning status
    */
-  lineProvisioningStatus?: ('Invalid' | 'Provisioning' | 'Valid');
+  lineProvisioningStatus?: "Invalid" | "Provisioning" | "Valid";
 }
 
 export default DevicePhoneLinesEmergencyAddressInfo;

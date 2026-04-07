@@ -3,7 +3,7 @@ import PageNavigationModel from "./PageNavigationModel.js";
 import EnumeratedPagingModel from "./EnumeratedPagingModel.js";
 
 interface AccountPhoneNumbers {
-    /**
+  /**
    * Link to a list of account phone numbers
    * Format: uri
    */

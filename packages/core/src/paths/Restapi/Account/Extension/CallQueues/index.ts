@@ -1,10 +1,14 @@
 import UserCallQueues from "../../../../../definitions/UserCallQueues.js";
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types.js';
+import {
+  RingCentralInterface,
+  ParentInterface,
+  RestRequestConfig,
+} from "../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
-  
+
   public constructor(_parent: ParentInterface) {
     this._parent = _parent;
     this.rc = _parent.rc;
@@ -14,18 +18,26 @@ class Index {
   }
   /**
    * Updates a list of call queues where the user is an agent. This
- * is a full update request, which means that if any call queue where the user is
- * an agent is not mentioned in request, then the user is automatically removed
- * from this queue.
- * 
+   * is a full update request, which means that if any call queue where the user is
+   * an agent is not mentioned in request, then the user is automatically removed
+   * from this queue.
+   *
    * HTTP Method: put
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/call-queues
    * Rate Limit Group: Medium
    * App Permission: EditAccounts
    * User Permission: EditCallQueuePresence
    */
-  public async put(userCallQueues: UserCallQueues, restRequestConfig?: RestRequestConfig): Promise<UserCallQueues> {
-    const r = await this.rc.put<UserCallQueues>(this.path(), userCallQueues, undefined, restRequestConfig);
+  public async put(
+    userCallQueues: UserCallQueues,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<UserCallQueues> {
+    const r = await this.rc.put<UserCallQueues>(
+      this.path(),
+      userCallQueues,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

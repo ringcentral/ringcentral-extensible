@@ -1,5 +1,5 @@
 interface RecordingInfo {
-    /**
+  /**
    * Internal identifier of a recording resource
    */
   id?: string;

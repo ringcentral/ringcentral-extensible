@@ -1,5 +1,5 @@
 interface AddonInfo {
-    /**
+  /**
    */
   id?: string;
 

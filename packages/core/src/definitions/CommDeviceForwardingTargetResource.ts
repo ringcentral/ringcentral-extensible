@@ -2,12 +2,19 @@ import CommDeviceResource from "./CommDeviceResource.js";
 import CommReferencedExtensionResource from "./CommReferencedExtensionResource.js";
 
 interface CommDeviceForwardingTargetResource {
-    /**
+  /**
    * Ring target type
    * Required
    * Example: DeviceRingTarget
    */
-  type?: ('CoworkerAppsRingTarget' | 'CoworkerRingTarget' | 'DeviceRingTarget' | 'ImsPhoneNumberRingTarget' | 'FmcPhoneNumberRingTarget' | 'IntegrationRingTarget' | 'PhoneNumberRingTarget');
+  type?:
+    | "CoworkerAppsRingTarget"
+    | "CoworkerRingTarget"
+    | "DeviceRingTarget"
+    | "ImsPhoneNumberRingTarget"
+    | "FmcPhoneNumberRingTarget"
+    | "IntegrationRingTarget"
+    | "PhoneNumberRingTarget";
 
   /**
    * Required

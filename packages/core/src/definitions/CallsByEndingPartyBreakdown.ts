@@ -1,5 +1,5 @@
 interface CallsByEndingPartyBreakdown {
-    /**
+  /**
    * Value for Caller ending party
    * Required
    * Format: double

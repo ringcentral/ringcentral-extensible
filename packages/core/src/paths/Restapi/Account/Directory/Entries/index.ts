@@ -1,15 +1,19 @@
-import Search from './Search/index.js';
+import Search from "./Search/index.js";
 import ContactResource from "../../../../../definitions/ContactResource.js";
 import ReadDirectoryEntryParameters from "../../../../../definitions/ReadDirectoryEntryParameters.js";
 import DirectoryResource from "../../../../../definitions/DirectoryResource.js";
 import ListDirectoryEntriesParameters from "../../../../../definitions/ListDirectoryEntriesParameters.js";
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types.js';
+import {
+  RingCentralInterface,
+  ParentInterface,
+  RestRequestConfig,
+} from "../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
   public entryId: string | null;
-  
+
   public constructor(_parent: ParentInterface, entryId: string | null = null) {
     this._parent = _parent;
     this.rc = _parent.rc;
@@ -17,7 +21,7 @@ class Index {
   }
   public path(withParameter = true): string {
     if (withParameter && this.entryId !== null) {
-        return `${this._parent.path()}/entries/${this.entryId}`;
+      return `${this._parent.path()}/entries/${this.entryId}`;
     }
     return `${this._parent.path()}/entries`;
   }
@@ -28,8 +32,15 @@ class Index {
    * Rate Limit Group: Medium
    * App Permission: ReadAccounts
    */
-  public async list(queryParams?: ListDirectoryEntriesParameters, restRequestConfig?: RestRequestConfig): Promise<DirectoryResource> {
-    const r = await this.rc.get<DirectoryResource>(this.path(false), queryParams, restRequestConfig);
+  public async list(
+    queryParams?: ListDirectoryEntriesParameters,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<DirectoryResource> {
+    const r = await this.rc.get<DirectoryResource>(
+      this.path(false),
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -40,12 +51,18 @@ class Index {
    * Rate Limit Group: Medium
    * App Permission: ReadAccounts
    */
-  public async get(queryParams?: ReadDirectoryEntryParameters, restRequestConfig?: RestRequestConfig): Promise<ContactResource> {
-    if (this.entryId === null)
-    {
-        throw new Error('entryId must be specified.');
+  public async get(
+    queryParams?: ReadDirectoryEntryParameters,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<ContactResource> {
+    if (this.entryId === null) {
+      throw new Error("entryId must be specified.");
     }
-    const r = await this.rc.get<ContactResource>(this.path(), queryParams, restRequestConfig);
+    const r = await this.rc.get<ContactResource>(
+      this.path(),
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 

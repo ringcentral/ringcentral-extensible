@@ -2,7 +2,7 @@ import PermissionIdResource from "./PermissionIdResource.js";
 import EffectiveRoleResource from "./EffectiveRoleResource.js";
 
 interface ActivePermissionResource {
-    /**
+  /**
    */
   permission?: PermissionIdResource;
 
@@ -12,7 +12,15 @@ interface ActivePermissionResource {
 
   /**
    */
-  scopes?: ('Account' | 'AllExtensions' | 'Federation' | 'NonUserExtensions' | 'RoleBased' | 'Self' | 'UserExtensions')[];
+  scopes?: (
+    | "Account"
+    | "AllExtensions"
+    | "Federation"
+    | "NonUserExtensions"
+    | "RoleBased"
+    | "Self"
+    | "UserExtensions"
+  )[];
 }
 
 export default ActivePermissionResource;

@@ -2,7 +2,7 @@ import CommDeviceRequest from "./CommDeviceRequest.js";
 import CommReferencedExtensionResource from "./CommReferencedExtensionResource.js";
 
 interface CommDeviceTargetRequest {
-    /**
+  /**
    * Required
    */
   device?: CommDeviceRequest;
@@ -15,7 +15,7 @@ interface CommDeviceTargetRequest {
    * Ring target type
    * Example: DeviceRingTarget
    */
-  type?: ('DeviceRingTarget');
+  type?: "DeviceRingTarget";
 }
 
 export default CommDeviceTargetRequest;

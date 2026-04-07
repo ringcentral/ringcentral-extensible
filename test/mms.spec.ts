@@ -17,9 +17,12 @@ describe("mms", () => {
     attachment.content = fs.createReadStream(path.join(__dirname, "test.png"));
     attachment.contentType = "image/png";
     createMMSMessage.attachments = [attachment];
-    const messageInfo = await rc.restapi().account().extension().mms().post(
-      createMMSMessage,
-    );
+    const messageInfo = await rc
+      .restapi()
+      .account()
+      .extension()
+      .mms()
+      .post(createMMSMessage);
     expect(messageInfo).not.toBeUndefined();
     expect(messageInfo.id).not.toBeUndefined();
   });

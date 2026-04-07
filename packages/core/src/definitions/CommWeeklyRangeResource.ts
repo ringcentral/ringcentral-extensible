@@ -1,5 +1,5 @@
 interface CommWeeklyRangeResource {
-    /**
+  /**
    * Start time in format hh:mm:ss
    * Required
    * Format: time

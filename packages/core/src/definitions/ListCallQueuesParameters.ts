@@ -1,8 +1,8 @@
 /**
  * Query parameters for operation listCallQueues
-*/
+ */
 interface ListCallQueuesParameters {
-    /**
+  /**
    * Indicates a page number to retrieve. Only positive number values are accepted
    * Format: int32
    * Default: 1

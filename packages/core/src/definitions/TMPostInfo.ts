@@ -2,7 +2,7 @@ import TMMessageAttachmentInfo from "./TMMessageAttachmentInfo.js";
 import TMMentionsInfo from "./TMMentionsInfo.js";
 
 interface TMPostInfo {
-    /**
+  /**
    * Internal identifier of a post
    */
   id?: string;
@@ -15,7 +15,7 @@ interface TMPostInfo {
   /**
    * Type of post
    */
-  type?: ('TextMessage' | 'PersonJoined' | 'PersonsAdded');
+  type?: "TextMessage" | "PersonJoined" | "PersonsAdded";
 
   /**
    * For 'TextMessage' post type only. Text of a message

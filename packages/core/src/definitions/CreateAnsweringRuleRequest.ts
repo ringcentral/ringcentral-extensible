@@ -10,9 +10,9 @@ import MissedCallInfo from "./MissedCallInfo.js";
 import GreetingInfo from "./GreetingInfo.js";
 
 interface CreateAnsweringRuleRequest {
-    /**
+  /**
    * Specifies if the rule is active or inactive. The default value
- *  is `true`
+   *  is `true`
    */
   enabled?: boolean;
 
@@ -45,7 +45,14 @@ interface CreateAnsweringRuleRequest {
   /**
    * Specifies how incoming calls are forwarded
    */
-  callHandlingAction?: ('ForwardCalls' | 'UnconditionalForwarding' | 'AgentQueue' | 'TransferToExtension' | 'TakeMessagesOnly' | 'PlayAnnouncementOnly' | 'SharedLines');
+  callHandlingAction?:
+    | "ForwardCalls"
+    | "UnconditionalForwarding"
+    | "AgentQueue"
+    | "TransferToExtension"
+    | "TakeMessagesOnly"
+    | "PlayAnnouncementOnly"
+    | "SharedLines";
 
   /**
    */
@@ -73,20 +80,20 @@ interface CreateAnsweringRuleRequest {
 
   /**
    * Greetings applied for an answering rule; only predefined greetings
- *  can be applied, see Dictionary Greeting List
+   *  can be applied, see Dictionary Greeting List
    */
   greetings?: GreetingInfo[];
 
   /**
    * Call screening status. 'Off' - no call screening; 'NoCallerId'
- *  - if caller ID is missing, then callers are asked to say their name before
- *  connecting; 'UnknownCallerId' - if caller ID is not in contact list, then
- *  callers are asked to say their name before connecting; 'Always' - the
- *  callers are always asked to say their name before connecting. The default
- *  value is 'Off'
+   *  - if caller ID is missing, then callers are asked to say their name before
+   *  connecting; 'UnknownCallerId' - if caller ID is not in contact list, then
+   *  callers are asked to say their name before connecting; 'Always' - the
+   *  callers are always asked to say their name before connecting. The default
+   *  value is 'Off'
    * Default: Off
    */
-  screening?: ('Off' | 'NoCallerId' | 'UnknownCallerId' | 'Always');
+  screening?: "Off" | "NoCallerId" | "UnknownCallerId" | "Always";
 }
 
 export default CreateAnsweringRuleRequest;

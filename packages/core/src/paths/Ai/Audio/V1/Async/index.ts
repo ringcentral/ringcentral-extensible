@@ -1,11 +1,11 @@
-import SpeakerDiarize from './SpeakerDiarize/index.js';
-import SpeechToText from './SpeechToText/index.js';
-import { RingCentralInterface, ParentInterface } from '../../../../../types.js';
+import SpeakerDiarize from "./SpeakerDiarize/index.js";
+import SpeechToText from "./SpeechToText/index.js";
+import { RingCentralInterface, ParentInterface } from "../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
-  
+
   public constructor(_parent: ParentInterface) {
     this._parent = _parent;
     this.rc = _parent.rc;
@@ -13,7 +13,6 @@ class Index {
   public path(): string {
     return `${this._parent.path(false)}/async`;
   }
-
 
   public speechToText(): SpeechToText {
     return new SpeechToText(this);

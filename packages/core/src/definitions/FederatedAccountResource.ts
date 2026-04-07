@@ -1,7 +1,7 @@
 import AdgPhoneNumberResource from "./AdgPhoneNumberResource.js";
 
 interface FederatedAccountResource {
-    /**
+  /**
    */
   companyName?: string;
 

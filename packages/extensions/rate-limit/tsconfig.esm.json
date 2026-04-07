@@ -7,9 +7,7 @@
     "outDir": "./dist/esm",
     "skipLibCheck": true,
     "paths": {
-      "@rc-ex/retry": [
-        "../../../node_modules/@rc-ex/retry/dist/esm/index.js"
-      ]
+      "@rc-ex/retry": ["../../../node_modules/@rc-ex/retry/dist/esm/index.js"]
     }
   },
   "include": ["src/**/*.ts"]

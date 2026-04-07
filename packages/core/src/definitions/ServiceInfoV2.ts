@@ -6,9 +6,9 @@ import ServiceInfoPlanV2 from "./ServiceInfoPlanV2.js";
 
 /**
  * Service Plan information (billing package, brand, etc.)
-*/
+ */
 interface ServiceInfoV2 {
-    /**
+  /**
    * Required
    */
   package?: ServiceInfoPackage;

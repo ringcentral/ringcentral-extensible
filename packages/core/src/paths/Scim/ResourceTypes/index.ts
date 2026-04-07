@@ -1,12 +1,16 @@
 import ScimResourceTypeResponse from "../../../definitions/ScimResourceTypeResponse.js";
 import ScimResourceTypeSearchResponse from "../../../definitions/ScimResourceTypeSearchResponse.js";
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../types.js';
+import {
+  RingCentralInterface,
+  ParentInterface,
+  RestRequestConfig,
+} from "../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
   public type: string | null;
-  
+
   public constructor(_parent: ParentInterface, type: string | null = null) {
     this._parent = _parent;
     this.rc = _parent.rc;
@@ -14,7 +18,7 @@ class Index {
   }
   public path(withParameter = true): string {
     if (withParameter && this.type !== null) {
-        return `${this._parent.path()}/ResourceTypes/${this.type}`;
+      return `${this._parent.path()}/ResourceTypes/${this.type}`;
     }
     return `${this._parent.path()}/ResourceTypes`;
   }
@@ -25,8 +29,14 @@ class Index {
    * Rate Limit Group: Light
    * App Permission: ReadAccounts
    */
-  public async list(restRequestConfig?: RestRequestConfig): Promise<ScimResourceTypeSearchResponse> {
-    const r = await this.rc.get<ScimResourceTypeSearchResponse>(this.path(false), undefined, restRequestConfig);
+  public async list(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<ScimResourceTypeSearchResponse> {
+    const r = await this.rc.get<ScimResourceTypeSearchResponse>(
+      this.path(false),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -37,12 +47,17 @@ class Index {
    * Rate Limit Group: Light
    * App Permission: ReadAccounts
    */
-  public async get(restRequestConfig?: RestRequestConfig): Promise<ScimResourceTypeResponse> {
-    if (this.type === null)
-    {
-        throw new Error('type must be specified.');
+  public async get(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<ScimResourceTypeResponse> {
+    if (this.type === null) {
+      throw new Error("type must be specified.");
     }
-    const r = await this.rc.get<ScimResourceTypeResponse>(this.path(), undefined, restRequestConfig);
+    const r = await this.rc.get<ScimResourceTypeResponse>(
+      this.path(),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

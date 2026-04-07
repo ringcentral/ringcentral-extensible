@@ -1,5 +1,5 @@
 interface PermissionCategoryIdResource {
-    /**
+  /**
    * Format: uri
    */
   uri?: string;

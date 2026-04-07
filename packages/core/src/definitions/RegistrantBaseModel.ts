@@ -1,5 +1,5 @@
 interface RegistrantBaseModel {
-    /**
+  /**
    * First (given) name
    * Required
    * Example: John

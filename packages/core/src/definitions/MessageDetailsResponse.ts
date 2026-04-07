@@ -1,8 +1,8 @@
 /**
  * Complete details of the message
-*/
+ */
 interface MessageDetailsResponse {
-    /**
+  /**
    * Internal identifier of a message
    * Example: 1234
    */
@@ -10,14 +10,14 @@ interface MessageDetailsResponse {
 
   /**
    * Phone number in [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I)
- *  format from which the message was sent
+   *  format from which the message was sent
    * Example: +15551234567
    */
   from?: string;
 
   /**
    * List of phone numbers in [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I)
- *  format to which the message was sent
+   *  format to which the message was sent
    * Example: +15551234567
    */
   to?: string[];
@@ -44,7 +44,12 @@ interface MessageDetailsResponse {
    * Status of the message
    * Example: Queued
    */
-  messageStatus?: ('Queued' | 'Delivered' | 'Sent' | 'SendingFailed' | 'DeliveryFailed');
+  messageStatus?:
+    | "Queued"
+    | "Delivered"
+    | "Sent"
+    | "SendingFailed"
+    | "DeliveryFailed";
 
   /**
    * Number of segments of a message
@@ -69,7 +74,7 @@ interface MessageDetailsResponse {
   /**
    * Message direction (inbound or outbound)
    */
-  direction?: ('Inbound' | 'Outbound');
+  direction?: "Inbound" | "Outbound";
 
   /**
    * The RC error code of the message sending failure reason

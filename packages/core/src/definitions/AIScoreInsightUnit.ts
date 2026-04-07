@@ -1,5 +1,5 @@
 interface AIScoreInsightUnit {
-    /**
+  /**
    * Value of the score
    * Required
    * Example: 7

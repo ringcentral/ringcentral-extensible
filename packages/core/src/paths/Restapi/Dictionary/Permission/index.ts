@@ -2,21 +2,28 @@ import PermissionResource from "../../../../definitions/PermissionResource.js";
 import ReadPermissionParameters from "../../../../definitions/ReadPermissionParameters.js";
 import PermissionCollectionResource from "../../../../definitions/PermissionCollectionResource.js";
 import ListPermissionsParameters from "../../../../definitions/ListPermissionsParameters.js";
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types.js';
+import {
+  RingCentralInterface,
+  ParentInterface,
+  RestRequestConfig,
+} from "../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
   public permissionId: string | null;
-  
-  public constructor(_parent: ParentInterface, permissionId: string | null = null) {
+
+  public constructor(
+    _parent: ParentInterface,
+    permissionId: string | null = null,
+  ) {
     this._parent = _parent;
     this.rc = _parent.rc;
     this.permissionId = permissionId;
   }
   public path(withParameter = true): string {
     if (withParameter && this.permissionId !== null) {
-        return `${this._parent.path()}/permission/${this.permissionId}`;
+      return `${this._parent.path()}/permission/${this.permissionId}`;
     }
     return `${this._parent.path()}/permission`;
   }
@@ -26,8 +33,15 @@ class Index {
    * Endpoint: /restapi/{apiVersion}/dictionary/permission
    * Rate Limit Group: Light
    */
-  public async list(queryParams?: ListPermissionsParameters, restRequestConfig?: RestRequestConfig): Promise<PermissionCollectionResource> {
-    const r = await this.rc.get<PermissionCollectionResource>(this.path(false), queryParams, restRequestConfig);
+  public async list(
+    queryParams?: ListPermissionsParameters,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<PermissionCollectionResource> {
+    const r = await this.rc.get<PermissionCollectionResource>(
+      this.path(false),
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -37,12 +51,18 @@ class Index {
    * Endpoint: /restapi/{apiVersion}/dictionary/permission/{permissionId}
    * Rate Limit Group: Light
    */
-  public async get(queryParams?: ReadPermissionParameters, restRequestConfig?: RestRequestConfig): Promise<PermissionResource> {
-    if (this.permissionId === null)
-    {
-        throw new Error('permissionId must be specified.');
+  public async get(
+    queryParams?: ReadPermissionParameters,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<PermissionResource> {
+    if (this.permissionId === null) {
+      throw new Error("permissionId must be specified.");
     }
-    const r = await this.rc.get<PermissionResource>(this.path(), queryParams, restRequestConfig);
+    const r = await this.rc.get<PermissionResource>(
+      this.path(),
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

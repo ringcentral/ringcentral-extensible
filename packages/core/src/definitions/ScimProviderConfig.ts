@@ -4,7 +4,7 @@ import ScimSupported from "./ScimSupported.js";
 import ScimFilterSupported from "./ScimFilterSupported.js";
 
 interface ScimProviderConfig {
-    /**
+  /**
    */
   authenticationSchemes?: ScimAuthenticationScheme[];
 
@@ -30,7 +30,7 @@ interface ScimProviderConfig {
 
   /**
    */
-  schemas?: ('urn:ietf:params:scim:schemas:core:2.0:ServiceProviderConfig')[];
+  schemas?: "urn:ietf:params:scim:schemas:core:2.0:ServiceProviderConfig"[];
 
   /**
    */

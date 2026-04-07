@@ -2,7 +2,7 @@ import TcrCampaignRecordBrand from "./TcrCampaignRecordBrand.js";
 import ApiErrorWithParameter from "./ApiErrorWithParameter.js";
 
 interface TcrCampaignRecord {
-    /**
+  /**
    * Identifier of a TCR campaign
    * Format: int64
    */
@@ -15,7 +15,18 @@ interface TcrCampaignRecord {
 
   /**
    */
-  status?: ('Created' | 'Submitted' | 'Confirmed' | 'SubmitFailed' | 'UpdateRequested' | 'DeleteRequested' | 'CampaignSuspended' | 'CampaignExpired' | 'Draft' | 'PreventFailed' | 'Unconfirmed');
+  status?:
+    | "Created"
+    | "Submitted"
+    | "Confirmed"
+    | "SubmitFailed"
+    | "UpdateRequested"
+    | "DeleteRequested"
+    | "CampaignSuspended"
+    | "CampaignExpired"
+    | "Draft"
+    | "PreventFailed"
+    | "Unconfirmed";
 
   /**
    * Registration time
@@ -35,11 +46,27 @@ interface TcrCampaignRecord {
 
   /**
    */
-  registrationTier?: ('LowVolume' | 'StandardVolume');
+  registrationTier?: "LowVolume" | "StandardVolume";
 
   /**
    */
-  useCases?: ('AccountNotification' | 'ConversationsInternal' | 'ConversationsExternal' | 'CustomerCare' | 'DeliveryNotification' | 'FraudAlert' | 'HigherEducation' | 'K12Education' | 'MachineToMachine' | 'Marketing' | 'Mixed' | 'PollingVoting' | 'PublicServiceAnnouncement' | 'SecurityAlert' | 'Unknown')[];
+  useCases?: (
+    | "AccountNotification"
+    | "ConversationsInternal"
+    | "ConversationsExternal"
+    | "CustomerCare"
+    | "DeliveryNotification"
+    | "FraudAlert"
+    | "HigherEducation"
+    | "K12Education"
+    | "MachineToMachine"
+    | "Marketing"
+    | "Mixed"
+    | "PollingVoting"
+    | "PublicServiceAnnouncement"
+    | "SecurityAlert"
+    | "Unknown"
+  )[];
 
   /**
    */

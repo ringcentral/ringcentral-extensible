@@ -3,7 +3,7 @@ import OwnerInfo from "./OwnerInfo.js";
 import CallStatusInfo from "./CallStatusInfo.js";
 
 interface PartySuperviseResponse {
-    /**
+  /**
    */
   from?: PartyInfo;
 
@@ -14,7 +14,7 @@ interface PartySuperviseResponse {
   /**
    * Direction of a call
    */
-  direction?: ('Outbound' | 'Inbound');
+  direction?: "Outbound" | "Inbound";
 
   /**
    * Internal identifier of a party that monitors a call
@@ -42,8 +42,8 @@ interface PartySuperviseResponse {
 
   /**
    * If `true` then the party is not connected to a session voice
- *  conference, `false` means the party is connected to other parties in a
- *  session
+   *  conference, `false` means the party is connected to other parties in a
+   *  session
    */
   standAlone?: boolean;
 

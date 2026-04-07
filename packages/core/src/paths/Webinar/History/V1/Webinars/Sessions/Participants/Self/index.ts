@@ -1,10 +1,14 @@
 import ParticipantReducedModel from "../../../../../../../../definitions/ParticipantReducedModel.js";
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../../../types.js';
+import {
+  RingCentralInterface,
+  ParentInterface,
+  RestRequestConfig,
+} from "../../../../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
-  
+
   public constructor(_parent: ParentInterface) {
     this._parent = _parent;
     this.rc = _parent.rc;
@@ -14,15 +18,21 @@ class Index {
   }
   /**
    * Returns the participant information specific to a webinar session. Accessible by any authenticated participant.
- * For a non-authenticated participant, API returns error.
- * 
+   * For a non-authenticated participant, API returns error.
+   *
    * HTTP Method: get
    * Endpoint: /webinar/history/v1/webinars/{webinarId}/sessions/{sessionId}/participants/self
    * Rate Limit Group: Heavy
    * App Permission: ReadWebinars
    */
-  public async get(restRequestConfig?: RestRequestConfig): Promise<ParticipantReducedModel> {
-    const r = await this.rc.get<ParticipantReducedModel>(this.path(), undefined, restRequestConfig);
+  public async get(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<ParticipantReducedModel> {
+    const r = await this.rc.get<ParticipantReducedModel>(
+      this.path(),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

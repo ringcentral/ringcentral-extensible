@@ -2,7 +2,7 @@ import EmergencyAddressResourceRequest from "./EmergencyAddressResourceRequest.j
 import SiteBasicInfo from "./SiteBasicInfo.js";
 
 interface EmergencyLocationRequestResource {
-    /**
+  /**
    */
   address?: EmergencyAddressResourceRequest;
 
@@ -22,15 +22,15 @@ interface EmergencyLocationRequestResource {
 
   /**
    * Visibility of an emergency response location. If `Private`
- *  is set, then a location is visible only for restricted number of users,
- *  specified in `owners` array
+   *  is set, then a location is visible only for restricted number of users,
+   *  specified in `owners` array
    * Default: Public
    */
-  visibility?: ('Public');
+  visibility?: "Public";
 
   /**
    * Specifies emergency address validation during the ERL creation/update.
- *  If set to 'true', then address validation for non-US addresses is skipped
+   *  If set to 'true', then address validation for non-US addresses is skipped
    */
   trusted?: boolean;
 }

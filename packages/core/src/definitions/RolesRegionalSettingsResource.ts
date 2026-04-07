@@ -4,7 +4,7 @@ import RolesLanguageResource from "./RolesLanguageResource.js";
 import CurrencyResource from "./CurrencyResource.js";
 
 interface RolesRegionalSettingsResource {
-    /**
+  /**
    */
   timezone?: RolesTimezoneResource;
 
@@ -28,7 +28,7 @@ interface RolesRegionalSettingsResource {
    * Time format (12-hours or 24-hours).
    * Default: 12h
    */
-  timeFormat?: ('12h' | '24h');
+  timeFormat?: "12h" | "24h";
 
   /**
    */

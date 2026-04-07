@@ -1,8 +1,8 @@
 /**
  * Postal address/location
-*/
+ */
 interface PostalAddress {
-    /**
+  /**
    * Street address
    * Required
    * Example: 20 Davis Dr
@@ -35,8 +35,8 @@ interface PostalAddress {
   zip?: string;
 
   /**
-   * ISO-3166-1 2-letter country code (alpha2). 
- *  For available countries, see GET /dictionary/country
+   * ISO-3166-1 2-letter country code (alpha2).
+   *  For available countries, see GET /dictionary/country
    * Required
    * Example: US
    */

@@ -1,5 +1,5 @@
 interface Contact {
-    /**
+  /**
    * First name
    */
   firstName?: string;

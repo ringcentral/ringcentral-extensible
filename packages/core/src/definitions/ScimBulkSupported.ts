@@ -1,5 +1,5 @@
 interface ScimBulkSupported {
-    /**
+  /**
    * Format: int32
    */
   maxOperations?: number;

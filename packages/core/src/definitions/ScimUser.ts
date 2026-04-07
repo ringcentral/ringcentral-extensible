@@ -6,7 +6,7 @@ import ScimPhoto from "./ScimPhoto.js";
 import ScimEnterpriseUser from "./ScimEnterpriseUser.js";
 
 interface ScimUser {
-    /**
+  /**
    * User status
    */
   active?: boolean;
@@ -46,7 +46,7 @@ interface ScimUser {
   /**
    * Required
    */
-  schemas?: ('urn:ietf:params:scim:schemas:core:2.0:User')[];
+  schemas?: "urn:ietf:params:scim:schemas:core:2.0:User"[];
 
   /**
    * User title
@@ -55,7 +55,7 @@ interface ScimUser {
 
   /**
    */
-  'urn:ietf:params:scim:schemas:extension:enterprise:2.0:User'?: ScimEnterpriseUser;
+  "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User"?: ScimEnterpriseUser;
 
   /**
    * MUST be same as work type email address

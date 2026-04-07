@@ -1,5 +1,5 @@
 interface RolesLanguageResource {
-    /**
+  /**
    */
   id?: string;
 

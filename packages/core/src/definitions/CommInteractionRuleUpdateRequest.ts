@@ -2,9 +2,9 @@ import CommDispatchingRequest from "./CommDispatchingRequest.js";
 
 /**
  * Interaction rule update request
-*/
+ */
 interface CommInteractionRuleUpdateRequest {
-    /**
+  /**
    */
   conditions?: object[];
 

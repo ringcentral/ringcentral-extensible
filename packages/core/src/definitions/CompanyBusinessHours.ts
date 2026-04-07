@@ -1,7 +1,7 @@
 import CompanyBusinessHoursScheduleInfo from "./CompanyBusinessHoursScheduleInfo.js";
 
 interface CompanyBusinessHours {
-    /**
+  /**
    * Canonical URI of a business-hours resource
    * Format: uri
    */

@@ -1,7 +1,7 @@
 import ScimResourceTypeResponse from "./ScimResourceTypeResponse.js";
 
 interface ScimResourceTypeSearchResponse {
-    /**
+  /**
    * Resource type list
    */
   Resources?: ScimResourceTypeResponse[];
@@ -13,7 +13,7 @@ interface ScimResourceTypeSearchResponse {
 
   /**
    */
-  schemas?: ('urn:ietf:params:scim:api:messages:2.0:ListResponse')[];
+  schemas?: "urn:ietf:params:scim:api:messages:2.0:ListResponse"[];
 
   /**
    * Format: int64

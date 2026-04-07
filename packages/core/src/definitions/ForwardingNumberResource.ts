@@ -1,5 +1,5 @@
 interface ForwardingNumberResource {
-    /**
+  /**
    * Format: uri
    */
   uri?: string;
@@ -18,7 +18,7 @@ interface ForwardingNumberResource {
 
   /**
    */
-  features?: ('CallFlip' | 'CallForwarding')[];
+  features?: ("CallFlip" | "CallForwarding")[];
 
   /**
    */
@@ -27,7 +27,7 @@ interface ForwardingNumberResource {
   /**
    * Forwarding phone number type
    */
-  type?: ('Home' | 'Mobile' | 'Work' | 'PhoneLine' | 'Outage' | 'Other');
+  type?: "Home" | "Mobile" | "Work" | "PhoneLine" | "Outage" | "Other";
 }
 
 export default ForwardingNumberResource;

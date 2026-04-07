@@ -1,7 +1,7 @@
 import CustomGreetingAnsweringRuleInfo from "./CustomGreetingAnsweringRuleInfo.js";
 
 interface CustomUserGreetingInfo {
-    /**
+  /**
    * Link to a custom user greeting
    * Format: uri
    */
@@ -15,12 +15,22 @@ interface CustomUserGreetingInfo {
   /**
    * Type of custom user greeting
    */
-  type?: ('Introductory' | 'Announcement' | 'InterruptPrompt' | 'ConnectingAudio' | 'ConnectingMessage' | 'Voicemail' | 'Unavailable' | 'HoldMusic' | 'PronouncedName' | 'TemplateGreeting');
+  type?:
+    | "Introductory"
+    | "Announcement"
+    | "InterruptPrompt"
+    | "ConnectingAudio"
+    | "ConnectingMessage"
+    | "Voicemail"
+    | "Unavailable"
+    | "HoldMusic"
+    | "PronouncedName"
+    | "TemplateGreeting";
 
   /**
    * Content media type
    */
-  contentType?: ('audio/mpeg' | 'audio/wav');
+  contentType?: "audio/mpeg" | "audio/wav";
 
   /**
    * Link to a greeting content (audio file)

@@ -1,11 +1,11 @@
 /**
  * Query parameters for operation listCompanyAnsweringRules
-*/
+ */
 interface ListCompanyAnsweringRulesParameters {
-    /**
+  /**
    * Type of an answering rule. Multiple values are supported
    */
-  type?: ('BusinessHours' | 'AfterHours' | 'Custom')[];
+  type?: ("BusinessHours" | "AfterHours" | "Custom")[];
 
   /**
    * The result set page number (1-indexed) to return
@@ -19,7 +19,7 @@ interface ListCompanyAnsweringRulesParameters {
 
   /**
    * The number of items per page. If the provided value in the request
- *  is greater than a maximum, the maximum value is applied
+   *  is greater than a maximum, the maximum value is applied
    * Maximum: 1000
    * Minimum: 1
    * Format: int32

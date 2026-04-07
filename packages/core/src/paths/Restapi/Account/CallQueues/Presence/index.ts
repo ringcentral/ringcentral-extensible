@@ -1,11 +1,15 @@
 import CallQueueUpdatePresence from "../../../../../definitions/CallQueueUpdatePresence.js";
 import CallQueuePresence from "../../../../../definitions/CallQueuePresence.js";
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types.js';
+import {
+  RingCentralInterface,
+  ParentInterface,
+  RestRequestConfig,
+} from "../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
-  
+
   public constructor(_parent: ParentInterface) {
     this._parent = _parent;
     this.rc = _parent.rc;
@@ -20,8 +24,14 @@ class Index {
    * Rate Limit Group: Light
    * App Permission: ReadPresence
    */
-  public async get(restRequestConfig?: RestRequestConfig): Promise<CallQueuePresence> {
-    const r = await this.rc.get<CallQueuePresence>(this.path(), undefined, restRequestConfig);
+  public async get(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<CallQueuePresence> {
+    const r = await this.rc.get<CallQueuePresence>(
+      this.path(),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -32,8 +42,16 @@ class Index {
    * Rate Limit Group: Medium
    * App Permission: EditPresence
    */
-  public async put(callQueueUpdatePresence: CallQueueUpdatePresence, restRequestConfig?: RestRequestConfig): Promise<CallQueuePresence> {
-    const r = await this.rc.put<CallQueuePresence>(this.path(), callQueueUpdatePresence, undefined, restRequestConfig);
+  public async put(
+    callQueueUpdatePresence: CallQueueUpdatePresence,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<CallQueuePresence> {
+    const r = await this.rc.put<CallQueuePresence>(
+      this.path(),
+      callQueueUpdatePresence,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

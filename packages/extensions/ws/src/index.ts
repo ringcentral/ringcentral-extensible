@@ -110,9 +110,9 @@ class WebSocketExtension extends SdkExtension {
         }
         if (
           // the following cannot be done with WebSocket
-          config?.headers?.getContentType?.toString()?.includes(
-            "multipart/form-data",
-          ) ||
+          config?.headers?.getContentType
+            ?.toString()
+            ?.includes("multipart/form-data") ||
           config?.responseType === "arraybuffer" ||
           endpoint.startsWith("/restapi/oauth/") // token, revoke, wstoken
         ) {
@@ -372,7 +372,8 @@ class WebSocketExtension extends SdkExtension {
       // because we have a new ws object
       this.subscription.setupWsEventListener();
       if (
-        !recoverSession || this.connectionDetails.recoveryState === "Failed"
+        !recoverSession ||
+        this.connectionDetails.recoveryState === "Failed"
       ) {
         // create new subscription if don't recover existing one
         await this.subscription.subscribe();

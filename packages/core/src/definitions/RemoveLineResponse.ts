@@ -1,5 +1,5 @@
 interface RemoveLineResponse {
-    /**
+  /**
    * Internal identifier of a source device
    * Required
    */
@@ -10,7 +10,19 @@ interface RemoveLineResponse {
    * Required
    * Default: HardPhone
    */
-  type?: ('HardPhone' | 'SoftPhone' | 'OtherPhone' | 'MobileDevice' | 'BLA' | 'Paging' | 'WebPhone' | 'WebRTC' | 'ZoomMobile' | 'ZoomPhone' | 'Room' | 'Unknown');
+  type?:
+    | "HardPhone"
+    | "SoftPhone"
+    | "OtherPhone"
+    | "MobileDevice"
+    | "BLA"
+    | "Paging"
+    | "WebPhone"
+    | "WebRTC"
+    | "ZoomMobile"
+    | "ZoomPhone"
+    | "Room"
+    | "Unknown";
 
   /**
    * The display name of a source device

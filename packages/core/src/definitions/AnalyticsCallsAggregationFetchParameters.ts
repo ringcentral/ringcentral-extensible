@@ -1,8 +1,8 @@
 /**
  * Query parameters for operation analyticsCallsAggregationFetch
-*/
+ */
 interface AnalyticsCallsAggregationFetchParameters {
-    /**
+  /**
    * The current page number (positive numbers only)
    * Minimum: 1
    * Format: int32

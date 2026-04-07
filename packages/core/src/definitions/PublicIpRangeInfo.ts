@@ -1,5 +1,5 @@
 interface PublicIpRangeInfo {
-    /**
+  /**
    */
   id?: string;
 

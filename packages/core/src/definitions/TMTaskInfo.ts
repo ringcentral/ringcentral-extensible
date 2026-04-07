@@ -4,7 +4,7 @@ import TaskRecurrenceInfo from "./TaskRecurrenceInfo.js";
 import TaskAttachment from "./TaskAttachment.js";
 
 interface TMTaskInfo {
-    /**
+  /**
    * Internal identifier of a task
    */
   id?: string;
@@ -24,7 +24,7 @@ interface TMTaskInfo {
   /**
    * Task type
    */
-  type?: ('Task');
+  type?: "Task";
 
   /**
    */
@@ -38,7 +38,7 @@ interface TMTaskInfo {
   /**
    * Task execution status
    */
-  status?: ('Pending' | 'InProgress' | 'Completed');
+  status?: "Pending" | "InProgress" | "Completed";
 
   /**
    * Task name/subject
@@ -53,7 +53,7 @@ interface TMTaskInfo {
   /**
    * How the task completeness should be determined
    */
-  completenessCondition?: ('Simple' | 'AllAssignees' | 'Percentage');
+  completenessCondition?: "Simple" | "AllAssignees" | "Percentage";
 
   /**
    * Current completeness percentage of the task with the specified percentage completeness condition
@@ -77,7 +77,15 @@ interface TMTaskInfo {
   /**
    * Font color of a post with the current task
    */
-  color?: ('Black' | 'Red' | 'Orange' | 'Yellow' | 'Green' | 'Blue' | 'Purple' | 'Magenta');
+  color?:
+    | "Black"
+    | "Red"
+    | "Orange"
+    | "Yellow"
+    | "Green"
+    | "Blue"
+    | "Purple"
+    | "Magenta";
 
   /**
    * Task section to group / search by

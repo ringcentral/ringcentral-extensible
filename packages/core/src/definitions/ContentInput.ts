@@ -1,5 +1,5 @@
 interface ContentInput {
-    /**
+  /**
    * Publicly facing uri
    * Format: uri
    */

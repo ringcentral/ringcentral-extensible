@@ -1,5 +1,5 @@
 interface BusinessSiteResource {
-    /**
+  /**
    * Example: 872781820006
    */
   id?: string;

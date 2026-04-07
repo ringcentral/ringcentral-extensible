@@ -1,5 +1,5 @@
 interface MsTeamsUserListResponseMappings {
-    /**
+  /**
    * RingCentral extension ID of the user to connect
    */
   extensionId?: string;
@@ -13,7 +13,15 @@ interface MsTeamsUserListResponseMappings {
   /**
    * Connection status of the Microsoft Teams Direct Routing user
    */
-  status?: ('Connected' | 'Initial' | 'RemoteNotFound' | 'OutOfSync' | 'Connecting' | 'Disconnecting' | 'DisconnectFailed' | 'RemoteUserRemoved');
+  status?:
+    | "Connected"
+    | "Initial"
+    | "RemoteNotFound"
+    | "OutOfSync"
+    | "Connecting"
+    | "Disconnecting"
+    | "DisconnectFailed"
+    | "RemoteUserRemoved";
 }
 
 export default MsTeamsUserListResponseMappings;

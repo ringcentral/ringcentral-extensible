@@ -2,9 +2,9 @@ import Attachment from "./Attachment.js";
 
 /**
  * Request body for operation createIVRPrompt
-*/
+ */
 interface CreateIVRPromptRequest {
-    /**
+  /**
    * Audio file that will be used as a prompt. Attachment cannot be empty, only audio files are supported
    * Required
    */

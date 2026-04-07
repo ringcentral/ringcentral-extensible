@@ -1,11 +1,15 @@
 import CallSession from "../../../../../definitions/CallSession.js";
 import MakeCallOutRequest from "../../../../../definitions/MakeCallOutRequest.js";
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types.js';
+import {
+  RingCentralInterface,
+  ParentInterface,
+  RestRequestConfig,
+} from "../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
-  
+
   public constructor(_parent: ParentInterface) {
     this._parent = _parent;
     this.rc = _parent.rc;
@@ -20,8 +24,16 @@ class Index {
    * Rate Limit Group: Heavy
    * App Permission: CallControl
    */
-  public async post(makeCallOutRequest: MakeCallOutRequest, restRequestConfig?: RestRequestConfig): Promise<CallSession> {
-    const r = await this.rc.post<CallSession>(this.path(), makeCallOutRequest, undefined, restRequestConfig);
+  public async post(
+    makeCallOutRequest: MakeCallOutRequest,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<CallSession> {
+    const r = await this.rc.post<CallSession>(
+      this.path(),
+      makeCallOutRequest,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

@@ -1,8 +1,8 @@
 /**
  * Meeting host
-*/
+ */
 interface Host {
-    /**
+  /**
    * Account id
    */
   accountId?: string;

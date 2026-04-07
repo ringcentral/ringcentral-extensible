@@ -1,7 +1,7 @@
 import CallMonitoringExtensionInfo from "./CallMonitoringExtensionInfo.js";
 
 interface CallMonitoringBulkAssign {
-    /**
+  /**
    */
   addedExtensions?: CallMonitoringExtensionInfo[];
 

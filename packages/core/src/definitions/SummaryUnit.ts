@@ -1,5 +1,5 @@
 interface SummaryUnit {
-    /**
+  /**
    * Required
    * Example: JohnDoe
    */

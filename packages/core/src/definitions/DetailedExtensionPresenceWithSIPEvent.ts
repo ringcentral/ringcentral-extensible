@@ -1,7 +1,7 @@
 import DetailedExtensionPresenceWithSIPEventBody from "./DetailedExtensionPresenceWithSIPEventBody.js";
 
 interface DetailedExtensionPresenceWithSIPEvent {
-    /**
+  /**
    * Universally unique identifier of a notification
    */
   uuid?: string;

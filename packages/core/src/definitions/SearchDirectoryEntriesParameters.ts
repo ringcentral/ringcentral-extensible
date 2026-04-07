@@ -1,8 +1,8 @@
 /**
  * Query parameters for operation searchDirectoryEntries
-*/
+ */
 interface SearchDirectoryEntriesParameters {
-    /**
+  /**
    * Allows to make lookups across a whole directory skipping a filtering logic of Cross-Site access management feature.
    * Default: true
    */
@@ -32,7 +32,31 @@ interface SearchDirectoryEntriesParameters {
   /**
    * Types of extension to filter the contacts
    */
-  extensionType?: ('User' | 'Department' | 'Announcement' | 'Voicemail' | 'DigitalUser' | 'VirtualUser' | 'FaxUser' | 'PagingOnly' | 'SharedLinesGroup' | 'IvrMenu' | 'ApplicationExtension' | 'ParkLocation' | 'Limited' | 'Bot' | 'Site' | 'Room' | 'ProxyAdmin' | 'DelegatedLinesGroup' | 'FlexibleUser' | 'GroupCallPickup' | 'RoomConnector' | 'TieLine' | 'External')[];
+  extensionType?: (
+    | "User"
+    | "Department"
+    | "Announcement"
+    | "Voicemail"
+    | "DigitalUser"
+    | "VirtualUser"
+    | "FaxUser"
+    | "PagingOnly"
+    | "SharedLinesGroup"
+    | "IvrMenu"
+    | "ApplicationExtension"
+    | "ParkLocation"
+    | "Limited"
+    | "Bot"
+    | "Site"
+    | "Room"
+    | "ProxyAdmin"
+    | "DelegatedLinesGroup"
+    | "FlexibleUser"
+    | "GroupCallPickup"
+    | "RoomConnector"
+    | "TieLine"
+    | "External"
+  )[];
 }
 
 export default SearchDirectoryEntriesParameters;

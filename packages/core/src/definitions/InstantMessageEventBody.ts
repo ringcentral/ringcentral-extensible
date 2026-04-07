@@ -5,9 +5,9 @@ import ConversationInfo from "./ConversationInfo.js";
 
 /**
  * Notification payload body
-*/
+ */
 interface InstantMessageEventBody {
-    /**
+  /**
    * Internal identifier of a message
    */
   id?: string;
@@ -28,14 +28,14 @@ interface InstantMessageEventBody {
 
   /**
    * Message creation date/time in ISO 8601 format including timezone,
- *  for example 2016-03-10T18:07:52.534Z
+   *  for example 2016-03-10T18:07:52.534Z
    * Format: date-time
    */
   creationTime?: string;
 
   /**
    * Date/time when the message was modified in ISO 8601 format including
- *  timezone, for example 2016-03-10T18:07:52.534Z
+   *  timezone, for example 2016-03-10T18:07:52.534Z
    * Format: date-time
    */
   lastModifiedTime?: string;
@@ -43,12 +43,12 @@ interface InstantMessageEventBody {
   /**
    * Message read status
    */
-  readStatus?: ('Read' | 'Unread');
+  readStatus?: "Read" | "Unread";
 
   /**
    * Message priority
    */
-  priority?: ('Normal' | 'High');
+  priority?: "Normal" | "High";
 
   /**
    * Message attachment data
@@ -58,36 +58,42 @@ interface InstantMessageEventBody {
   /**
    * Message direction (inbound or outbound)
    */
-  direction?: ('Inbound' | 'Outbound');
+  direction?: "Inbound" | "Outbound";
 
   /**
    * Message availability status. Message in `Deleted` state is still
- *  preserved with all its attachments and can be restored. `Purged` means
- *  that all attachments are already deleted and the message itself is about
- *  to be physically deleted shortly
+   *  preserved with all its attachments and can be restored. `Purged` means
+   *  that all attachments are already deleted and the message itself is about
+   *  to be physically deleted shortly
    */
-  availability?: ('Alive' | 'Deleted' | 'Purged');
+  availability?: "Alive" | "Deleted" | "Purged";
 
   /**
    * Message subject. It replicates message text which is also returned
- *  as an attachment
+   *  as an attachment
    */
   subject?: string;
 
   /**
    * Message status. Different message types may have different
- *  allowed status values. For outbound faxes the aggregated message status
- *  is returned. If, for multi-recipient outbound message, a status for
- *  at least one recipient is `Queued`, then the `Queued` value is returned.
- *  If a status for at least one recipient is `SendingFailed`,
- *  then the 'SendingFailed' value is returned. In other cases,
- *  the `Sent` status is returned
+   *  allowed status values. For outbound faxes the aggregated message status
+   *  is returned. If, for multi-recipient outbound message, a status for
+   *  at least one recipient is `Queued`, then the `Queued` value is returned.
+   *  If a status for at least one recipient is `SendingFailed`,
+   *  then the 'SendingFailed' value is returned. In other cases,
+   *  the `Sent` status is returned
    */
-  messageStatus?: ('Queued' | 'Sent' | 'Delivered' | 'DeliveryFailed' | 'SendingFailed' | 'Received');
+  messageStatus?:
+    | "Queued"
+    | "Sent"
+    | "Delivered"
+    | "DeliveryFailed"
+    | "SendingFailed"
+    | "Received";
 
   /**
    * Deprecated. Identifier of a conversation the message belongs
- *  to
+   *  to
    */
   conversationId?: string;
 

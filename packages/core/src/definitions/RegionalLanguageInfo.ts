@@ -1,8 +1,8 @@
 /**
  * Information on a language set as regional
-*/
+ */
 interface RegionalLanguageInfo {
-    /**
+  /**
    * Internal identifier of a language set as regional
    */
   id?: string;

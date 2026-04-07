@@ -1,7 +1,7 @@
 import ActivePermissionResource from "./ActivePermissionResource.js";
 
 interface AuthProfileCheckResource {
-    /**
+  /**
    * Format: uri
    */
   uri?: string;

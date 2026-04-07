@@ -4,9 +4,9 @@ import EnumeratedPagingModel from "./EnumeratedPagingModel.js";
 
 /**
  * List of blocked or allowed phone numbers
-*/
+ */
 interface BlockedAllowedPhoneNumbersList {
-    /**
+  /**
    * Link to a list of blocked/allowed phone numbers resource
    * Format: uri
    */

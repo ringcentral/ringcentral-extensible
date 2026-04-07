@@ -1,5 +1,5 @@
 interface PunctuateOutput {
-    /**
+  /**
    * Required
    */
   texts?: string[];

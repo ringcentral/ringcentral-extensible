@@ -1,5 +1,5 @@
 interface CallMonitoringGroupMemberInfo {
-    /**
+  /**
    * Link to a call monitoring group member
    * Format: uri
    */
@@ -17,7 +17,7 @@ interface CallMonitoringGroupMemberInfo {
 
   /**
    */
-  permissions?: ('Monitoring' | 'Monitored')[];
+  permissions?: ("Monitoring" | "Monitored")[];
 }
 
 export default CallMonitoringGroupMemberInfo;

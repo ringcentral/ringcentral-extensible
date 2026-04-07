@@ -1,5 +1,5 @@
 interface CommRangeRequest {
-    /**
+  /**
    * Start date-time
    */
   startDateTime?: string;

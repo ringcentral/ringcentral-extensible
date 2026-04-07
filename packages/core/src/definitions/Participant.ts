@@ -1,8 +1,8 @@
 /**
  * Basic participant information
-*/
+ */
 interface Participant {
-    /**
+  /**
    * Required
    */
   id?: string;

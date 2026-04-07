@@ -88,9 +88,7 @@ class RingCentral implements RingCentralInterface {
         config,
       );
       RingCentral.config.logger.info(
-        `[${
-          new Date().toLocaleString()
-        } HTTP ${method} ${r.status} ${r.statusText}] ${this.rest.server} ${endpoint}`,
+        `[${new Date().toLocaleString()} HTTP ${method} ${r.status} ${r.statusText}] ${this.rest.server} ${endpoint}`,
       );
       return r;
     } catch (e) {
@@ -98,9 +96,7 @@ class RingCentral implements RingCentralInterface {
       if (re.response) {
         const r = re.response;
         RingCentral.config.logger.info(
-          `[${
-            new Date().toLocaleString()
-          } HTTP ${method} ${r.status} ${r.statusText}] ${this.rest.server} ${endpoint}`,
+          `[${new Date().toLocaleString()} HTTP ${method} ${r.status} ${r.statusText}] ${this.rest.server} ${endpoint}`,
         );
       }
       throw e;
@@ -226,8 +222,8 @@ class RingCentral implements RingCentralInterface {
       // no clientSecret is fine, since PKCE doesn't have clientSecret
       return;
     }
-    const temp = tokenToRevoke ?? this.token?.access_token ??
-      this.token?.refresh_token;
+    const temp =
+      tokenToRevoke ?? this.token?.access_token ?? this.token?.refresh_token;
     await this.restapi(null)
       .oauth()
       .revoke()

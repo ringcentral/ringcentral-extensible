@@ -1,5 +1,5 @@
 interface CustomFieldInfo {
-    /**
+  /**
    * Internal identifier of a custom field
    */
   id?: string;

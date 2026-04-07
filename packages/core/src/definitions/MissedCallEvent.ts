@@ -1,7 +1,7 @@
 import APNSInfo from "./APNSInfo.js";
 
 interface MissedCallEvent {
-    /**
+  /**
    * Universally unique identifier of a notification
    */
   uuid?: string;

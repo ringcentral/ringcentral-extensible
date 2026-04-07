@@ -1,21 +1,28 @@
 import PermissionCategoryResource from "../../../../definitions/PermissionCategoryResource.js";
 import PermissionCategoryCollectionResource from "../../../../definitions/PermissionCategoryCollectionResource.js";
 import ListPermissionCategoriesParameters from "../../../../definitions/ListPermissionCategoriesParameters.js";
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types.js';
+import {
+  RingCentralInterface,
+  ParentInterface,
+  RestRequestConfig,
+} from "../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
   public permissionCategoryId: string | null;
-  
-  public constructor(_parent: ParentInterface, permissionCategoryId: string | null = null) {
+
+  public constructor(
+    _parent: ParentInterface,
+    permissionCategoryId: string | null = null,
+  ) {
     this._parent = _parent;
     this.rc = _parent.rc;
     this.permissionCategoryId = permissionCategoryId;
   }
   public path(withParameter = true): string {
     if (withParameter && this.permissionCategoryId !== null) {
-        return `${this._parent.path()}/permission-category/${this.permissionCategoryId}`;
+      return `${this._parent.path()}/permission-category/${this.permissionCategoryId}`;
     }
     return `${this._parent.path()}/permission-category`;
   }
@@ -25,8 +32,15 @@ class Index {
    * Endpoint: /restapi/{apiVersion}/dictionary/permission-category
    * Rate Limit Group: Light
    */
-  public async list(queryParams?: ListPermissionCategoriesParameters, restRequestConfig?: RestRequestConfig): Promise<PermissionCategoryCollectionResource> {
-    const r = await this.rc.get<PermissionCategoryCollectionResource>(this.path(false), queryParams, restRequestConfig);
+  public async list(
+    queryParams?: ListPermissionCategoriesParameters,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<PermissionCategoryCollectionResource> {
+    const r = await this.rc.get<PermissionCategoryCollectionResource>(
+      this.path(false),
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -36,12 +50,17 @@ class Index {
    * Endpoint: /restapi/{apiVersion}/dictionary/permission-category/{permissionCategoryId}
    * Rate Limit Group: Light
    */
-  public async get(restRequestConfig?: RestRequestConfig): Promise<PermissionCategoryResource> {
-    if (this.permissionCategoryId === null)
-    {
-        throw new Error('permissionCategoryId must be specified.');
+  public async get(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<PermissionCategoryResource> {
+    if (this.permissionCategoryId === null) {
+      throw new Error("permissionCategoryId must be specified.");
     }
-    const r = await this.rc.get<PermissionCategoryResource>(this.path(), undefined, restRequestConfig);
+    const r = await this.rc.get<PermissionCategoryResource>(
+      this.path(),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

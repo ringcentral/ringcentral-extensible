@@ -6,7 +6,7 @@ import CustomFieldResource from "./CustomFieldResource.js";
 import ExternalIntegrationResource from "./ExternalIntegrationResource.js";
 
 interface ContactResource {
-    /**
+  /**
    * Contact extension identifier
    * Required
    * Example: 865706371004
@@ -17,13 +17,38 @@ interface ContactResource {
    * Contact type
    * Example: User
    */
-  type?: ('User' | 'Department' | 'Announcement' | 'Voicemail' | 'SharedLinesGroup' | 'PagingOnly' | 'ParkLocation' | 'IvrMenu' | 'Limited' | 'ApplicationExtension' | 'Site' | 'Bot' | 'Room' | 'ProxyAdmin' | 'DelegatedLinesGroup' | 'GroupCallPickup' | 'External' | 'RoomConnector' | 'Unknown');
+  type?:
+    | "User"
+    | "Department"
+    | "Announcement"
+    | "Voicemail"
+    | "SharedLinesGroup"
+    | "PagingOnly"
+    | "ParkLocation"
+    | "IvrMenu"
+    | "Limited"
+    | "ApplicationExtension"
+    | "Site"
+    | "Bot"
+    | "Room"
+    | "ProxyAdmin"
+    | "DelegatedLinesGroup"
+    | "GroupCallPickup"
+    | "External"
+    | "RoomConnector"
+    | "Unknown";
 
   /**
    * Contact status
    * Example: Enabled
    */
-  status?: ('Enabled' | 'Disabled' | 'Frozen' | 'NotActivated' | 'Unassigned' | 'Unknown');
+  status?:
+    | "Enabled"
+    | "Disabled"
+    | "Frozen"
+    | "NotActivated"
+    | "Unassigned"
+    | "Unknown";
 
   /**
    */

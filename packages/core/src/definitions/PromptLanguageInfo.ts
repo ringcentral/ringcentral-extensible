@@ -1,8 +1,8 @@
 /**
  * For 'TextToSpeech' mode only. Prompt language metadata
-*/
+ */
 interface PromptLanguageInfo {
-    /**
+  /**
    * Link to a prompt language
    * Format: uri
    */

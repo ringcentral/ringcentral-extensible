@@ -8,10 +8,10 @@ import BillingPackageInfo from "./BillingPackageInfo.js";
 
 /**
  * Account service information, including brand, service plan and billing plan
- * 
-*/
+ *
+ */
 interface AccountServiceInfoRequest {
-    /**
+  /**
    * Canonical URI of the account Service Info resource
    * Format: uri
    */

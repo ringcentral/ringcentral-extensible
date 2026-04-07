@@ -2,9 +2,9 @@ import CommReferencedExtensionResource from "./CommReferencedExtensionResource.j
 
 /**
  * All Mobile Ring target
-*/
+ */
 interface CommAllMobileTargetResource {
-    /**
+  /**
    */
   extension?: CommReferencedExtensionResource;
 
@@ -16,7 +16,7 @@ interface CommAllMobileTargetResource {
   /**
    * Example: AllMobileRingTarget
    */
-  type?: ('AllMobileRingTarget');
+  type?: "AllMobileRingTarget";
 }
 
 export default CommAllMobileTargetResource;

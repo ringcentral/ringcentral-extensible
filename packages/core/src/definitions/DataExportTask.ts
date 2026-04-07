@@ -3,7 +3,7 @@ import SpecificInfo from "./SpecificInfo.js";
 import ExportTaskResultInfo from "./ExportTaskResultInfo.js";
 
 interface DataExportTask {
-    /**
+  /**
    * Canonical URI of a task
    */
   uri?: string;
@@ -28,7 +28,7 @@ interface DataExportTask {
   /**
    * Task status
    */
-  status?: ('Accepted' | 'InProgress' | 'Completed' | 'Failed' | 'Expired');
+  status?: "Accepted" | "InProgress" | "Completed" | "Failed" | "Expired";
 
   /**
    */

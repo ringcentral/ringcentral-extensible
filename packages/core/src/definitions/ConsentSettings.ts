@@ -3,9 +3,9 @@ import AutomaticConsentCollecting from "./AutomaticConsentCollecting.js";
 
 /**
  * Info about consent configuration for the TCR campaign.
-*/
+ */
 interface ConsentSettings {
-    /**
+  /**
    * Opt-in necessity for outbound communications.
    */
   optInRequired?: boolean;

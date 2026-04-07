@@ -1,8 +1,8 @@
 /**
  * Query parameters for operation scimSearchViaGet2
-*/
+ */
 interface ScimSearchViaGet2Parameters {
-    /**
+  /**
    * Only support 'userName' or 'email' filter expressions for now
    */
   filter?: string;

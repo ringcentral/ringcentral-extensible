@@ -1,13 +1,17 @@
-import CustomGreetings from './CustomGreetings/index.js';
-import BulkAssign from './BulkAssign/index.js';
-import Extensions from './Extensions/index.js';
+import CustomGreetings from "./CustomGreetings/index.js";
+import BulkAssign from "./BulkAssign/index.js";
+import Extensions from "./Extensions/index.js";
 import CallRecordingSettingsResource from "../../../../definitions/CallRecordingSettingsResource.js";
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types.js';
+import {
+  RingCentralInterface,
+  ParentInterface,
+  RestRequestConfig,
+} from "../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
-  
+
   public constructor(_parent: ParentInterface) {
     this._parent = _parent;
     this.rc = _parent.rc;
@@ -23,8 +27,14 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadCompanyInfo
    */
-  public async get(restRequestConfig?: RestRequestConfig): Promise<CallRecordingSettingsResource> {
-    const r = await this.rc.get<CallRecordingSettingsResource>(this.path(), undefined, restRequestConfig);
+  public async get(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<CallRecordingSettingsResource> {
+    const r = await this.rc.get<CallRecordingSettingsResource>(
+      this.path(),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -36,8 +46,16 @@ class Index {
    * App Permission: EditAccounts
    * User Permission: EditCompanyInfo
    */
-  public async put(callRecordingSettingsResource: CallRecordingSettingsResource, restRequestConfig?: RestRequestConfig): Promise<CallRecordingSettingsResource> {
-    const r = await this.rc.put<CallRecordingSettingsResource>(this.path(), callRecordingSettingsResource, undefined, restRequestConfig);
+  public async put(
+    callRecordingSettingsResource: CallRecordingSettingsResource,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<CallRecordingSettingsResource> {
+    const r = await this.rc.put<CallRecordingSettingsResource>(
+      this.path(),
+      callRecordingSettingsResource,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -49,7 +67,7 @@ class Index {
     return new BulkAssign(this);
   }
 
-  public customGreetings(greetingId: (string | null) = null): CustomGreetings {
+  public customGreetings(greetingId: string | null = null): CustomGreetings {
     return new CustomGreetings(this, greetingId);
   }
 }

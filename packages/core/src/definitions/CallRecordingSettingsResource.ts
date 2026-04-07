@@ -3,7 +3,7 @@ import AutomaticRecordingResource from "./AutomaticRecordingResource.js";
 import CallRecordingGreetingResource from "./CallRecordingGreetingResource.js";
 
 interface CallRecordingSettingsResource {
-    /**
+  /**
    */
   onDemand?: OnDemandResource;
 

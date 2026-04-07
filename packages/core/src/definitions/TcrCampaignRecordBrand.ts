@@ -1,5 +1,5 @@
 interface TcrCampaignRecordBrand {
-    /**
+  /**
    */
   id?: string;
 

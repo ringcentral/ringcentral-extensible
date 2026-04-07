@@ -1,5 +1,5 @@
 interface BatchProvisionUsersRequestItemRoles {
-    /**
+  /**
    * Internal identifier of a role to be assigned
    * Example: 1
    */

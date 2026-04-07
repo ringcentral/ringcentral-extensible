@@ -3,7 +3,7 @@ import LastModifiedByInfo from "./LastModifiedByInfo.js";
 import LockedByInfo from "./LockedByInfo.js";
 
 interface TMNoteInfo {
-    /**
+  /**
    * Internal identifier of a note
    */
   id?: string;
@@ -38,7 +38,7 @@ interface TMNoteInfo {
   /**
    * Note publishing status. Any note is created in 'Draft' status. After it is posted it becomes 'Active'
    */
-  status?: ('Active' | 'Draft');
+  status?: "Active" | "Draft";
 
   /**
    * Creation time
@@ -54,7 +54,7 @@ interface TMNoteInfo {
 
   /**
    */
-  type?: ('Note');
+  type?: "Note";
 }
 
 export default TMNoteInfo;

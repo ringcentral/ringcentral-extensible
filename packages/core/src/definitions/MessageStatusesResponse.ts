@@ -2,9 +2,9 @@ import MessageStatusCounts from "./MessageStatusCounts.js";
 
 /**
  * The messages status object with details of each status
-*/
+ */
 interface MessageStatusesResponse {
-    /**
+  /**
    */
   queued?: MessageStatusCounts;
 

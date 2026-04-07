@@ -2,9 +2,9 @@ import CommReferencedExtensionResource from "./CommReferencedExtensionResource.j
 
 /**
  * Ring target
-*/
+ */
 interface CommCoworkerForwardingTargetRequest {
-    /**
+  /**
    */
   name?: string;
 
@@ -13,7 +13,13 @@ interface CommCoworkerForwardingTargetRequest {
    * Required
    * Example: CoworkerRingTarget
    */
-  type?: ('CoworkerAppsRingTarget' | 'CoworkerRingTarget' | 'DeviceRingTarget' | 'ImsPhoneNumberRingTarget' | 'IntegrationRingTarget' | 'PhoneNumberRingTarget');
+  type?:
+    | "CoworkerAppsRingTarget"
+    | "CoworkerRingTarget"
+    | "DeviceRingTarget"
+    | "ImsPhoneNumberRingTarget"
+    | "IntegrationRingTarget"
+    | "PhoneNumberRingTarget";
 
   /**
    * Required

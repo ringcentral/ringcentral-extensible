@@ -1,26 +1,29 @@
-import Subscription from './Subscription/index.js';
-import ClientInfo from './ClientInfo/index.js';
-import Dictionary from './Dictionary/index.js';
-import Account from './Account/index.js';
-import Oauth from './Oauth/index.js';
-import V2 from './V2/index.js';
+import Subscription from "./Subscription/index.js";
+import ClientInfo from "./ClientInfo/index.js";
+import Dictionary from "./Dictionary/index.js";
+import Account from "./Account/index.js";
+import Oauth from "./Oauth/index.js";
+import V2 from "./V2/index.js";
 import ApiVersionInfo from "../../definitions/ApiVersionInfo.js";
 import ApiVersionsList from "../../definitions/ApiVersionsList.js";
-import { RingCentralInterface, RestRequestConfig } from '../../types.js';
+import { RingCentralInterface, RestRequestConfig } from "../../types.js";
 
 class Index {
   public rc: RingCentralInterface;
   public apiVersion: string | null;
-  
-  public constructor(rc: RingCentralInterface, apiVersion: string | null = 'v1.0') {
+
+  public constructor(
+    rc: RingCentralInterface,
+    apiVersion: string | null = "v1.0",
+  ) {
     this.rc = rc;
     this.apiVersion = apiVersion;
   }
   public path(withParameter = true): string {
     if (withParameter && this.apiVersion !== null) {
-        return `/restapi/${this.apiVersion}`;
+      return `/restapi/${this.apiVersion}`;
     }
-    return '/restapi';
+    return "/restapi";
   }
   /**
    * Returns current API version(s) and server info.
@@ -28,8 +31,14 @@ class Index {
    * Endpoint: /restapi
    * Rate Limit Group: NoThrottling
    */
-  public async list(restRequestConfig?: RestRequestConfig): Promise<ApiVersionsList> {
-    const r = await this.rc.get<ApiVersionsList>(this.path(false), undefined, restRequestConfig);
+  public async list(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<ApiVersionsList> {
+    const r = await this.rc.get<ApiVersionsList>(
+      this.path(false),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -39,12 +48,17 @@ class Index {
    * Endpoint: /restapi/{apiVersion}
    * Rate Limit Group: NoThrottling
    */
-  public async get(restRequestConfig?: RestRequestConfig): Promise<ApiVersionInfo> {
-    if (this.apiVersion === null)
-    {
-        throw new Error('apiVersion must be specified.');
+  public async get(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<ApiVersionInfo> {
+    if (this.apiVersion === null) {
+      throw new Error("apiVersion must be specified.");
     }
-    const r = await this.rc.get<ApiVersionInfo>(this.path(), undefined, restRequestConfig);
+    const r = await this.rc.get<ApiVersionInfo>(
+      this.path(),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -56,7 +70,7 @@ class Index {
     return new Oauth(this);
   }
 
-  public account(accountId: (string | null) = '~'): Account {
+  public account(accountId: string | null = "~"): Account {
     return new Account(this, accountId);
   }
 
@@ -68,7 +82,7 @@ class Index {
     return new ClientInfo(this);
   }
 
-  public subscription(subscriptionId: (string | null) = null): Subscription {
+  public subscription(subscriptionId: string | null = null): Subscription {
     return new Subscription(this, subscriptionId);
   }
 }

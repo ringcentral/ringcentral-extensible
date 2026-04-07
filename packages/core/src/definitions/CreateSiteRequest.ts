@@ -4,7 +4,7 @@ import SiteOperatorReference from "./SiteOperatorReference.js";
 import CostCenterInfo from "./CostCenterInfo.js";
 
 interface CreateSiteRequest {
-    /**
+  /**
    * Internal identifier of a site extension
    */
   id?: string;
@@ -21,7 +21,7 @@ interface CreateSiteRequest {
 
   /**
    * Custom name of a caller. Max number of characters is 15 (only
- *  alphabetical symbols, numbers and commas are supported)
+   *  alphabetical symbols, numbers and commas are supported)
    */
   callerIdName?: string;
 
@@ -46,7 +46,7 @@ interface CreateSiteRequest {
   /**
    * Site access status for cross-site limitation
    */
-  siteAccess?: ('Limited' | 'Unlimited');
+  siteAccess?: "Limited" | "Unlimited";
 
   /**
    */

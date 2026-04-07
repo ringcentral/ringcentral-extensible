@@ -1,8 +1,8 @@
 interface ScimPhoneNumber {
-    /**
+  /**
    * Required
    */
-  type?: ('work' | 'mobile' | 'other');
+  type?: "work" | "mobile" | "other";
 
   /**
    * Required

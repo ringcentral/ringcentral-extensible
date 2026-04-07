@@ -1,5 +1,5 @@
 interface ValidationError {
-    /**
+  /**
    * Error code
    */
   errorCode?: string;

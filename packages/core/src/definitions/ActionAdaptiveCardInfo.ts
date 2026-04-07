@@ -1,9 +1,9 @@
 import ActionCardBody from "./ActionCardBody.js";
 
 interface ActionAdaptiveCardInfo {
-    /**
+  /**
    */
-  type?: ('AdaptiveCard');
+  type?: "AdaptiveCard";
 
   /**
    */

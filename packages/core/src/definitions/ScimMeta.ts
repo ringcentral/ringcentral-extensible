@@ -1,8 +1,8 @@
 /**
  * Resource metadata
-*/
+ */
 interface ScimMeta {
-    /**
+  /**
    * Format: date-time
    */
   created?: string;
@@ -19,7 +19,7 @@ interface ScimMeta {
 
   /**
    */
-  resourceType?: ('User' | 'Group' | 'ResourceType' | 'Schema');
+  resourceType?: "User" | "Group" | "ResourceType" | "Schema";
 }
 
 export default ScimMeta;

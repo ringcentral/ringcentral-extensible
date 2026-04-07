@@ -1,8 +1,8 @@
 /**
  * Settings about automatic reply message sending to collect consent.
-*/
+ */
 interface AutomaticConsentCollecting {
-    /**
+  /**
    * Necessity of automatic reply message sending to collect consent.
    */
   enabled?: boolean;

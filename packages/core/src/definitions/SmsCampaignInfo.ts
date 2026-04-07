@@ -2,7 +2,7 @@ import ApiError from "./ApiError.js";
 import ConsentSettings from "./ConsentSettings.js";
 
 interface SmsCampaignInfo {
-    /**
+  /**
    * Identifier of the associated TCR campaign
    */
   id?: string;
@@ -10,7 +10,18 @@ interface SmsCampaignInfo {
   /**
    * Status of the associated TCR campaign
    */
-  status?: ('Created' | 'Submitted' | 'Confirmed' | 'SubmitFailed' | 'UpdateRequested' | 'DeleteRequested' | 'CampaignSuspended' | 'CampaignExpired' | 'Draft' | 'PreVetFailed' | 'Unconfirmed');
+  status?:
+    | "Created"
+    | "Submitted"
+    | "Confirmed"
+    | "SubmitFailed"
+    | "UpdateRequested"
+    | "DeleteRequested"
+    | "CampaignSuspended"
+    | "CampaignExpired"
+    | "Draft"
+    | "PreVetFailed"
+    | "Unconfirmed";
 
   /**
    * Use case of the associated TCR campaign
@@ -33,7 +44,12 @@ interface SmsCampaignInfo {
   /**
    * Coverage type.
    */
-  coverageType?: ('PhoneNumber' | 'Account' | 'Conversational' | 'Informational' | 'Promotional');
+  coverageType?:
+    | "PhoneNumber"
+    | "Account"
+    | "Conversational"
+    | "Informational"
+    | "Promotional";
 }
 
 export default SmsCampaignInfo;

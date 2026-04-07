@@ -1,8 +1,8 @@
 /**
  * Paging information
-*/
+ */
 interface ResponsePaging {
-    /**
+  /**
    * The current page number
    * Required
    * Format: int64

@@ -2,7 +2,7 @@ import AddDeviceToInventoryResponseDevices from "./AddDeviceToInventoryResponseD
 import SiteBasicInfo from "./SiteBasicInfo.js";
 
 interface AddDeviceToInventoryResponse {
-    /**
+  /**
    * Required
    */
   devices?: AddDeviceToInventoryResponseDevices[];

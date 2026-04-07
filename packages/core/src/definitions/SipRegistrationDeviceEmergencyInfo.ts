@@ -3,9 +3,9 @@ import SipRegistrationDeviceLocationInfo from "./SipRegistrationDeviceLocationIn
 
 /**
  * Emergency response location settings of a device
-*/
+ */
 interface SipRegistrationDeviceEmergencyInfo {
-    /**
+  /**
    */
   address?: DeviceEmergencyServiceAddressResource;
 
@@ -21,24 +21,30 @@ interface SipRegistrationDeviceEmergencyInfo {
   /**
    * Emergency address status
    */
-  addressStatus?: ('Valid' | 'Invalid' | 'Provisioning' | 'Deprovisioned');
+  addressStatus?: "Valid" | "Invalid" | "Provisioning" | "Deprovisioned";
 
   /**
    * Specifies whether to return only private or only public (company) ERLs (Emergency Response Locations)
    */
-  visibility?: ('Private' | 'Public');
+  visibility?: "Private" | "Public";
 
   /**
    * Resulting status of emergency address synchronization. Returned
- *  if `syncEmergencyAddress` parameter is set to `true`
+   *  if `syncEmergencyAddress` parameter is set to `true`
    */
-  syncStatus?: ('Verified' | 'Updated' | 'Deleted' | 'NotRequired' | 'Unsupported' | 'Failed');
+  syncStatus?:
+    | "Verified"
+    | "Updated"
+    | "Deleted"
+    | "NotRequired"
+    | "Unsupported"
+    | "Failed";
 
   /**
    * Ability to register new emergency address for a phone line
- *  using devices sharing this line or only main device (line owner)
+   *  using devices sharing this line or only main device (line owner)
    */
-  addressEditableStatus?: ('MainDevice' | 'AnyDevice');
+  addressEditableStatus?: "MainDevice" | "AnyDevice";
 
   /**
    * Indicates if emergency address is required for the country of a phone line

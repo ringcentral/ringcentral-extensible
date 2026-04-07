@@ -2,13 +2,20 @@ import CommGreetingResource from "./CommGreetingResource.js";
 
 /**
  * Action information
-*/
+ */
 interface CommPlayWelcomePromptActionResource {
-    /**
+  /**
    * Required
    * Example: PlayWelcomePromptAction
    */
-  type?: ('PlayConnectingMessageAction' | 'PlayConnectingPromptAction' | 'PlayWelcomePromptAction' | 'ScreeningAction' | 'RingGroupAction' | 'RingAlwaysGroupAction' | 'TerminatingAction');
+  type?:
+    | "PlayConnectingMessageAction"
+    | "PlayConnectingPromptAction"
+    | "PlayWelcomePromptAction"
+    | "ScreeningAction"
+    | "RingGroupAction"
+    | "RingAlwaysGroupAction"
+    | "TerminatingAction";
 
   /**
    * Required

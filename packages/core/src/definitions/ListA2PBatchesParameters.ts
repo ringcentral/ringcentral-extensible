@@ -1,10 +1,10 @@
 /**
  * Query parameters for operation listA2PBatches
-*/
+ */
 interface ListA2PBatchesParameters {
-    /**
+  /**
    * The beginning of the time range to filter the results in ISO 8601 format including timezone.
- *  Default is the `dateTo` minus 24 hours
+   *  Default is the `dateTo` minus 24 hours
    * Format: date-time
    * Example: Mon Nov 09 2020 08:07:52 GMT-0800 (Pacific Standard Time)
    */
@@ -12,7 +12,7 @@ interface ListA2PBatchesParameters {
 
   /**
    * The end of the time range to filter the results in ISO 8601 format including timezone.
- *  Default is the current time
+   *  Default is the current time
    * Format: date-time
    * Example: Wed Nov 25 2020 08:07:52 GMT-0800 (Pacific Standard Time)
    */
@@ -28,7 +28,7 @@ interface ListA2PBatchesParameters {
    * A list of batch statuses to filter the results
    * Example: Queued,Processing
    */
-  status?: ('Queued' | 'Processing' | 'Sent' | 'Completed')[];
+  status?: ("Queued" | "Processing" | "Sent" | "Completed")[];
 
   /**
    * The page token of the page to be retrieved

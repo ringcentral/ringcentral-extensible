@@ -2,7 +2,7 @@ import PhoneNumberInfoIntId from "./PhoneNumberInfoIntId.js";
 import EmergencyAddress from "./EmergencyAddress.js";
 
 interface PhoneLinesInfo {
-    /**
+  /**
    * Internal identifier of a phone line
    */
   id?: string;
@@ -10,7 +10,12 @@ interface PhoneLinesInfo {
   /**
    * The type of phone line
    */
-  lineType?: ('Unknown' | 'Standalone' | 'StandaloneFree' | 'BlaPrimary' | 'BlaSecondary');
+  lineType?:
+    | "Unknown"
+    | "Standalone"
+    | "StandaloneFree"
+    | "BlaPrimary"
+    | "BlaSecondary";
 
   /**
    */

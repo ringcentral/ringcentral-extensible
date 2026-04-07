@@ -12,9 +12,9 @@ import CallsByQueueHours from "./CallsByQueueHours.js";
 
 /**
  * Call length data for the specified grouping
-*/
+ */
 interface CallsTimers {
-    /**
+  /**
    */
   allCalls?: AllCalls;
 

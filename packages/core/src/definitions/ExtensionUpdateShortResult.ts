@@ -1,7 +1,7 @@
 import ErrorEntity from "./ErrorEntity.js";
 
 interface ExtensionUpdateShortResult {
-    /**
+  /**
    * Internal identifier of an extension
    */
   extensionId?: string;
@@ -9,7 +9,7 @@ interface ExtensionUpdateShortResult {
   /**
    * Extension update status
    */
-  status?: ('Fail' | 'Success');
+  status?: "Fail" | "Success";
 
   /**
    */

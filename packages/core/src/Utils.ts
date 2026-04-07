@@ -9,42 +9,40 @@ class Utils {
     }
 
     Response:
-    ${
-      JSON.stringify(
-        {
-          data: r.data,
-          status: r.status,
-          statusText: r.statusText,
-          headers: r.headers,
-        },
-        null,
-        2,
-      )
-    }
+    ${JSON.stringify(
+      {
+        data: r.data,
+        status: r.status,
+        statusText: r.statusText,
+        headers: r.headers,
+      },
+      null,
+      2,
+    )}
 
     Request:
-    ${
-      JSON.stringify(
-        {
-          method: r.config.method,
-          baseURL: r.config.baseURL,
-          url: r.config.url,
-          params: r.config.params,
-          data: r.config.data instanceof Uint8Array
-            ? "<Binary>"
-            : r.config.data,
-          headers: r.config.headers,
-        },
-        null,
-        2,
-      )
-    }
+    ${JSON.stringify(
+      {
+        method: r.config.method,
+        baseURL: r.config.baseURL,
+        url: r.config.url,
+        params: r.config.params,
+        data: r.config.data instanceof Uint8Array ? "<Binary>" : r.config.data,
+        headers: r.config.headers,
+      },
+      null,
+      2,
+    )}
     `;
   }
 
   public static isAttachment(obj: {}): boolean {
-    return typeof obj === "object" && obj !== null && "filename" in obj &&
-      "content" in obj;
+    return (
+      typeof obj === "object" &&
+      obj !== null &&
+      "filename" in obj &&
+      "content" in obj
+    );
   }
 
   public static getFormData(...objects: {}[]): Promise<Uint8Array> {

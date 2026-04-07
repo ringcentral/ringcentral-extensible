@@ -2,12 +2,16 @@ import TMTaskInfo from "../../../../../definitions/TMTaskInfo.js";
 import TMCreateTaskRequest from "../../../../../definitions/TMCreateTaskRequest.js";
 import TMTaskList from "../../../../../definitions/TMTaskList.js";
 import ListChatTasksNewParameters from "../../../../../definitions/ListChatTasksNewParameters.js";
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types.js';
+import {
+  RingCentralInterface,
+  ParentInterface,
+  RestRequestConfig,
+} from "../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
-  
+
   public constructor(_parent: ParentInterface) {
     this._parent = _parent;
     this.rc = _parent.rc;
@@ -22,8 +26,15 @@ class Index {
    * Rate Limit Group: Heavy
    * App Permission: TeamMessaging
    */
-  public async get(queryParams?: ListChatTasksNewParameters, restRequestConfig?: RestRequestConfig): Promise<TMTaskList> {
-    const r = await this.rc.get<TMTaskList>(this.path(), queryParams, restRequestConfig);
+  public async get(
+    queryParams?: ListChatTasksNewParameters,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<TMTaskList> {
+    const r = await this.rc.get<TMTaskList>(
+      this.path(),
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -34,8 +45,16 @@ class Index {
    * Rate Limit Group: Medium
    * App Permission: TeamMessaging
    */
-  public async post(tMCreateTaskRequest: TMCreateTaskRequest, restRequestConfig?: RestRequestConfig): Promise<TMTaskInfo> {
-    const r = await this.rc.post<TMTaskInfo>(this.path(), tMCreateTaskRequest, undefined, restRequestConfig);
+  public async post(
+    tMCreateTaskRequest: TMCreateTaskRequest,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<TMTaskInfo> {
+    const r = await this.rc.post<TMTaskInfo>(
+      this.path(),
+      tMCreateTaskRequest,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

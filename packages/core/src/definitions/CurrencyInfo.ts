@@ -1,8 +1,8 @@
 /**
  * Currency information
-*/
+ */
 interface CurrencyInfo {
-    /**
+  /**
    * Internal identifier of a currency
    * Format: int64
    */

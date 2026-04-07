@@ -1,7 +1,7 @@
 import ScimUserShortInfo from "./ScimUserShortInfo.js";
 
 interface ScimUserSearchResponse {
-    /**
+  /**
    * User list
    */
   Resources?: ScimUserShortInfo[];
@@ -13,7 +13,7 @@ interface ScimUserSearchResponse {
 
   /**
    */
-  schemas?: ('urn:ietf:params:scim:api:messages:2.0:ListResponse')[];
+  schemas?: "urn:ietf:params:scim:api:messages:2.0:ListResponse"[];
 
   /**
    * Format: int64

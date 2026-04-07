@@ -1,9 +1,9 @@
 interface CallLogExtractSyncInfo {
-    /**
+  /**
    * Type of call log synchronization request: full or incremental sync
    * Required
    */
-  syncType?: ('FSync' | 'ISync');
+  syncType?: "FSync" | "ISync";
 
   /**
    * Synchronization token

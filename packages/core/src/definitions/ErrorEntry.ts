@@ -1,8 +1,8 @@
 /**
  * Single (of potential multiple) error entry in an ASG error response
-*/
+ */
 interface ErrorEntry {
-    /**
+  /**
    * Error code
    * Required
    * Example: CMN-101

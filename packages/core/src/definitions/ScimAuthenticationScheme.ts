@@ -1,5 +1,5 @@
 interface ScimAuthenticationScheme {
-    /**
+  /**
    */
   description?: string;
 

@@ -43,8 +43,7 @@ export default class Rest {
 
     this.httpClient = axios.create({
       headers: {
-        "X-User-Agent":
-          `${this.appName}/${this.appVersion} ringcentral-extensible/core/${version}`,
+        "X-User-Agent": `${this.appName}/${this.appVersion} ringcentral-extensible/core/${version}`,
       },
       validateStatus: () => true,
       paramsSerializer: {

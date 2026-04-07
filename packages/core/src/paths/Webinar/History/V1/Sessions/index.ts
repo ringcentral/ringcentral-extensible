@@ -1,11 +1,15 @@
 import SessionGlobalListResource from "../../../../../definitions/SessionGlobalListResource.js";
 import RcwHistoryListAllSessionsParameters from "../../../../../definitions/RcwHistoryListAllSessionsParameters.js";
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types.js';
+import {
+  RingCentralInterface,
+  ParentInterface,
+  RestRequestConfig,
+} from "../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
-  
+
   public constructor(_parent: ParentInterface) {
     this._parent = _parent;
     this.rc = _parent.rc;
@@ -15,16 +19,23 @@ class Index {
   }
   /**
    * Returns the list of historical Webinar Sessions hosted by a current authorized user
- * sorted by 'endTime' in the descending order. Depending on a session status 'endTime' can
- * represent actual end time or scheduled end time.
- * 
+   * sorted by 'endTime' in the descending order. Depending on a session status 'endTime' can
+   * represent actual end time or scheduled end time.
+   *
    * HTTP Method: get
    * Endpoint: /webinar/history/v1/sessions
    * Rate Limit Group: Heavy
    * App Permission: ReadWebinars
    */
-  public async get(queryParams?: RcwHistoryListAllSessionsParameters, restRequestConfig?: RestRequestConfig): Promise<SessionGlobalListResource> {
-    const r = await this.rc.get<SessionGlobalListResource>(this.path(), queryParams, restRequestConfig);
+  public async get(
+    queryParams?: RcwHistoryListAllSessionsParameters,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<SessionGlobalListResource> {
+    const r = await this.rc.get<SessionGlobalListResource>(
+      this.path(),
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

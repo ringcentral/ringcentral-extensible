@@ -1,7 +1,7 @@
 import TaskResultRecordErrorsInfo from "./TaskResultRecordErrorsInfo.js";
 
 interface TaskResultRecord {
-    /**
+  /**
    * Internal identifier of the created/updated element - wireless point or network switch
    */
   id?: string;

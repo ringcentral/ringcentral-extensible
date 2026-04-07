@@ -1,8 +1,8 @@
 /**
  * Assign a specific phone number
-*/
+ */
 interface PhoneNumberDefinitionDirectNumberType {
-    /**
+  /**
    * Phone number in e164 format
    * Required
    */
@@ -11,7 +11,7 @@ interface PhoneNumberDefinitionDirectNumberType {
   /**
    * Type of a phone number
    */
-  type?: ('VoiceFax' | 'VoiceOnly' | 'FaxOnly');
+  type?: "VoiceFax" | "VoiceOnly" | "FaxOnly";
 }
 
 export default PhoneNumberDefinitionDirectNumberType;

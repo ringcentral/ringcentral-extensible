@@ -2,7 +2,7 @@ import LocationUpdatesEmergencyAddressInfoRequest from "./LocationUpdatesEmergen
 import EmergencyLocationInfo from "./EmergencyLocationInfo.js";
 
 interface PrivateIpRangeInfoRequest {
-    /**
+  /**
    */
   id?: string;
 
@@ -25,8 +25,8 @@ interface PrivateIpRangeInfoRequest {
 
   /**
    * Emergency response location (address) internal identifier.
- *  Only one of a pair `emergencyAddress` or `emergencyLocationId` should
- *  be specified, otherwise the error is returned
+   *  Only one of a pair `emergencyAddress` or `emergencyLocationId` should
+   *  be specified, otherwise the error is returned
    */
   emergencyLocationId?: string;
 

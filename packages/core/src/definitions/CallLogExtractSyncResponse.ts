@@ -2,7 +2,7 @@ import CallLogRecord from "./CallLogRecord.js";
 import CallLogExtractSyncInfo from "./CallLogExtractSyncInfo.js";
 
 interface CallLogExtractSyncResponse {
-    /**
+  /**
    * Link to the list of call log records with sync information
    * Required
    * Format: uri

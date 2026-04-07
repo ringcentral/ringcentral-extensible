@@ -2,9 +2,9 @@ import CompanyAnsweringRuleTimeIntervalRequest from "./CompanyAnsweringRuleTimeI
 
 /**
  * Weekly schedule. If specified, ranges cannot be specified
-*/
+ */
 interface CompanyAnsweringRuleWeeklyScheduleInfoRequest {
-    /**
+  /**
    * Time interval for a particular day
    */
   monday?: CompanyAnsweringRuleTimeIntervalRequest[];

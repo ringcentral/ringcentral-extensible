@@ -4,16 +4,16 @@ import AdaptiveCardSelectAction from "./AdaptiveCardSelectAction.js";
 import BackgroundImage from "./BackgroundImage.js";
 
 interface AdaptiveCardRequest {
-    /**
+  /**
    * Type of attachment. This field is mandatory and filled on server side -
- *  will be ignored if set in request body
+   *  will be ignored if set in request body
    * Required
    */
-  type?: ('AdaptiveCard');
+  type?: "AdaptiveCard";
 
   /**
    * Version. This field is mandatory and filled on server side -
- *  will be ignored if set in request body
+   *  will be ignored if set in request body
    * Required
    * Default: 1.3
    */
@@ -55,12 +55,12 @@ interface AdaptiveCardRequest {
   /**
    * The 2-letter ISO-639-1 language used in the card. Used to localize any date/time functions
    */
-  lang?: ('en' | 'fr' | 'es');
+  lang?: "en" | "fr" | "es";
 
   /**
    * Defines how the content should be aligned vertically within the container. Only relevant for fixed-height cards, or cards with a `minHeight` specified
    */
-  verticalContentAlignment?: ('top' | 'center' | 'bottom');
+  verticalContentAlignment?: "top" | "center" | "bottom";
 }
 
 export default AdaptiveCardRequest;

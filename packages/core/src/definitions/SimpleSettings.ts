@@ -1,5 +1,5 @@
 interface SimpleSettings {
-    /**
+  /**
    * Email notification flag
    */
   notifyByEmail?: boolean;

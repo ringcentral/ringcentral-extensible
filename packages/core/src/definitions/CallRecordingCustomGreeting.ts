@@ -2,9 +2,9 @@ import CallRecordingCustomGreetingData from "./CallRecordingCustomGreetingData.j
 import CallRecordingCustomGreetingLanguage from "./CallRecordingCustomGreetingLanguage.js";
 
 interface CallRecordingCustomGreeting {
-    /**
+  /**
    */
-  type?: ('StartRecording' | 'StopRecording' | 'AutomaticRecording');
+  type?: "StartRecording" | "StopRecording" | "AutomaticRecording";
 
   /**
    */

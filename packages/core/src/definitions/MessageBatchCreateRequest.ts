@@ -6,12 +6,12 @@ import MessageCreateRequest from "./MessageCreateRequest.js";
  * as `text` which apply to all `messages`. In addition to that, it is possible
  * to override this attribute for each message. This way a single API call may
  * be used to send individual messages to many recipients.
- * 
-*/
+ *
+ */
 interface MessageBatchCreateRequest {
-    /**
+  /**
    * Sender's phone number in [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I)
- *  format.
+   *  format.
    * Required
    * Example: +15551234567
    */

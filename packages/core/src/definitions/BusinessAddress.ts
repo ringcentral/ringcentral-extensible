@@ -1,5 +1,5 @@
 interface BusinessAddress {
-    /**
+  /**
    * Street
    */
   street?: string;

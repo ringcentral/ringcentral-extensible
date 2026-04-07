@@ -2,9 +2,9 @@ import CommInteractionDispatchingResource from "./CommInteractionDispatchingReso
 
 /**
  * Interaction rule
-*/
+ */
 interface CommInteractionRuleResource {
-    /**
+  /**
    * Internal identifier of a rule
    * Required
    * Example: 400133463175

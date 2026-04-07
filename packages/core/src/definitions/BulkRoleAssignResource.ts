@@ -1,5 +1,5 @@
 interface BulkRoleAssignResource {
-    /**
+  /**
    * Example: true
    */
   siteRestricted?: boolean;

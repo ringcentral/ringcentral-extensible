@@ -1,5 +1,5 @@
 interface SiteMemberInfo {
-    /**
+  /**
    * Format: int64
    */
   id?: number;

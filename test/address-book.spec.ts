@@ -5,7 +5,12 @@ import ReusableRestClient from "./reusable-rest-client";
 describe("Address Book", () => {
   test("contacts", async () => {
     const rc = await ReusableRestClient.getInstance();
-    const r = await rc.restapi().account().extension().addressBook().contact()
+    const r = await rc
+      .restapi()
+      .account()
+      .extension()
+      .addressBook()
+      .contact()
       .list();
     expect(r).toBeDefined();
     expect(r.records).toBeDefined();

@@ -3,9 +3,9 @@ import TimelineResponseOptionsTimers from "./TimelineResponseOptionsTimers.js";
 
 /**
  * Counters and timers options for calls breakdown
-*/
+ */
 interface TimelineResponseOptions {
-    /**
+  /**
    */
   counters?: TimelineResponseOptionsCounters;
 

@@ -1,7 +1,7 @@
 import PermissionsCapabilities from "./PermissionsCapabilities.js";
 
 interface PermissionIdResource {
-    /**
+  /**
    * Format: uri
    */
   uri?: string;
@@ -13,7 +13,7 @@ interface PermissionIdResource {
   /**
    * Site compatibility flag set for permission
    */
-  siteCompatible?: ('Compatible' | 'Incompatible' | 'Independent');
+  siteCompatible?: "Compatible" | "Incompatible" | "Independent";
 
   /**
    * Specifies if the permission is editable on UI (if set to `true`) or not (if set to `false`)

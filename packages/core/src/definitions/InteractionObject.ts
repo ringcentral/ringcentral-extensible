@@ -3,7 +3,7 @@ import SpeakerInsightsObject from "./SpeakerInsightsObject.js";
 import ConversationalInsightsUnit from "./ConversationalInsightsUnit.js";
 
 interface InteractionObject {
-    /**
+  /**
    */
   utteranceInsights?: UtteranceInsightsObject[];
 

@@ -2,7 +2,7 @@ import UpdateUnifiedPresenceGlip from "./UpdateUnifiedPresenceGlip.js";
 import UpdateUnifiedPresenceTelephony from "./UpdateUnifiedPresenceTelephony.js";
 
 interface UpdateUnifiedPresence {
-    /**
+  /**
    */
   glip?: UpdateUnifiedPresenceGlip;
 

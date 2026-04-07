@@ -1,5 +1,5 @@
 interface RolesTimezoneResource {
-    /**
+  /**
    * Format: uri
    */
   uri?: string;

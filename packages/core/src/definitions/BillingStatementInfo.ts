@@ -4,12 +4,12 @@ import BillingStatementFees from "./BillingStatementFees.js";
 /**
  * Billing information. Returned for device update request if `prestatement`
  * query parameter is set to 'true'
- * 
-*/
+ *
+ */
 interface BillingStatementInfo {
-    /**
+  /**
    * Currency code complying with [ISO-4217](https://en.wikipedia.org/wiki/ISO_4217)
- *  standard
+   *  standard
    */
   currency?: string;
 

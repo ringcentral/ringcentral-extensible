@@ -1,5 +1,5 @@
 interface SpeakerInsightsValuesItems {
-    /**
+  /**
    * Required
    * Example: JohnDoe
    */

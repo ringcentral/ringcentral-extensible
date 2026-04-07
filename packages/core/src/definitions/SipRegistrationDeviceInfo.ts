@@ -7,7 +7,7 @@ import DevicePhoneLinesInfo from "./DevicePhoneLinesInfo.js";
 import DeviceSiteInfo from "./DeviceSiteInfo.js";
 
 interface SipRegistrationDeviceInfo {
-    /**
+  /**
    * Canonical URI of the resource
    * Format: uri
    */
@@ -21,30 +21,37 @@ interface SipRegistrationDeviceInfo {
   /**
    * Device type
    */
-  type?: ('HardPhone' | 'MobileDevice' | 'OtherPhone' | 'Paging' | 'Room' | 'SoftPhone' | 'WebPhone');
+  type?:
+    | "HardPhone"
+    | "MobileDevice"
+    | "OtherPhone"
+    | "Paging"
+    | "Room"
+    | "SoftPhone"
+    | "WebPhone";
 
   /**
    * Device identification number (SKU, Stock Keeping Unit) in the format
- *  TP-ID [-AT-AC], where TP is device type (HP for RC desk phones, DV for all
- *  other devices including soft phones); ID - device model ID; AT - add-on type
- *  ID; AC - add-on count (if any). For example 'HP-56-2-2'
+   *  TP-ID [-AT-AC], where TP is device type (HP for RC desk phones, DV for all
+   *  other devices including soft phones); ID - device model ID; AT - add-on type
+   *  ID; AC - add-on count (if any). For example 'HP-56-2-2'
    */
   sku?: string;
 
   /**
    */
-  status?: ('Online' | 'Offline');
+  status?: "Online" | "Offline";
 
   /**
    * Device name. Mandatory if ordering  SoftPhone or OtherPhone.
- *  Optional for HardPhone. If not specified for HardPhone, then device  model  name
- *  is used as device  name
+   *  Optional for HardPhone. If not specified for HardPhone, then device  model  name
+   *  is used as device  name
    */
   name?: string;
 
   /**
    * Serial number for HardPhone (is returned only when the phone
- *  is shipped and provisioned); endpoint_id for Softphone and mobile applications
+   *  is shipped and provisioned); endpoint_id for Softphone and mobile applications
    */
   serial?: string;
 
@@ -91,17 +98,17 @@ interface SipRegistrationDeviceInfo {
 
   /**
    * Pooling type of device:
- *  - `Host` - device with a standalone paid phone line which can be linked to soft phone client instance;
- *  - `Guest` - device with a linked phone line;
- *  - `None` - device without a phone line or with a specific line (free, BLA, etc.)
+   *  - `Host` - device with a standalone paid phone line which can be linked to soft phone client instance;
+   *  - `Guest` - device with a linked phone line;
+   *  - `None` - device without a phone line or with a specific line (free, BLA, etc.)
    */
-  linePooling?: ('Host' | 'Guest' | 'None');
+  linePooling?: "Host" | "Guest" | "None";
 
   /**
    * Network location status. `true` if the device is located in
- *  the configured corporate network (On-Net); `false` for Off-Net location.
- *  Parameter is not returned if `EmergencyAddressAutoUpdate` feature is not
- *  enabled for the account/user, or if device network location is not determined
+   *  the configured corporate network (On-Net); `false` for Off-Net location.
+   *  Parameter is not returned if `EmergencyAddressAutoUpdate` feature is not
+   *  enabled for the account/user, or if device network location is not determined
    */
   inCompanyNet?: boolean;
 
@@ -111,14 +118,14 @@ interface SipRegistrationDeviceInfo {
 
   /**
    * Timestamp of receiving last location report in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
- *  format including timezone, for example *2016-03-10T18:07:52.534Z
+   *  format including timezone, for example *2016-03-10T18:07:52.534Z
    * Format: date-time
    */
   lastLocationReportTime?: string;
 
   /**
    * Indicates whether this device is used for hot desking or not.
- *  Returned if `useAsCommonPhone` is set to false
+   *  Returned if `useAsCommonPhone` is set to false
    */
   hotDeskDevice?: boolean;
 }

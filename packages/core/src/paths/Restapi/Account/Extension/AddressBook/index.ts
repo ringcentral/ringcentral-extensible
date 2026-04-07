@@ -1,10 +1,10 @@
-import Contact from './Contact/index.js';
-import { RingCentralInterface, ParentInterface } from '../../../../../types.js';
+import Contact from "./Contact/index.js";
+import { RingCentralInterface, ParentInterface } from "../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
-  
+
   public constructor(_parent: ParentInterface) {
     this._parent = _parent;
     this.rc = _parent.rc;
@@ -13,8 +13,7 @@ class Index {
     return `${this._parent.path()}/address-book`;
   }
 
-
-  public contact(contactId: (string | null) = null): Contact {
+  public contact(contactId: string | null = null): Contact {
     return new Contact(this, contactId);
   }
 }

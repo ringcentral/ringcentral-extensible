@@ -2,7 +2,7 @@ import WcsWebinarSettingsModel from "./WcsWebinarSettingsModel.js";
 import WcsHostModel from "./WcsHostModel.js";
 
 interface WcsWebinarResource {
-    /**
+  /**
    * Internal object ID
    * Example: 78654321
    */

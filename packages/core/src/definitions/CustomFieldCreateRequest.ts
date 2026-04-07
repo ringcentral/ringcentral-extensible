@@ -1,8 +1,8 @@
 interface CustomFieldCreateRequest {
-    /**
+  /**
    * Object category to attach custom fields
    */
-  category?: ('User');
+  category?: "User";
 
   /**
    * Custom field display name

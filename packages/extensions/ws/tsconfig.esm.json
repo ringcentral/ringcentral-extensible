@@ -7,21 +7,13 @@
     "outDir": "./dist/esm",
     "skipLibCheck": true,
     "paths": {
-      "@rc-ex/core": [
-        "../../core/dist/esm/index"
-      ],
-      "@rc-ex/core/*": [
-        "../../core/dist/esm/*"
-      ],
-      "isomorphic-ws": [
-        "../../../node_modules/isomorphic-ws/node.js"
-      ],
+      "@rc-ex/core": ["../../core/dist/esm/index"],
+      "@rc-ex/core/*": ["../../core/dist/esm/*"],
+      "isomorphic-ws": ["../../../node_modules/isomorphic-ws/node.js"],
       "wait-for-async": [
         "../../../node_modules/wait-for-async/dist/esm/index.js"
       ],
-      "hyperid": [
-        "../../../node_modules/hyperid/hyperid.js"
-      ],
+      "hyperid": ["../../../node_modules/hyperid/hyperid.js"],
       "http-status-codes": [
         "../../../node_modules/http-status-codes/build/es/index.js"
       ]

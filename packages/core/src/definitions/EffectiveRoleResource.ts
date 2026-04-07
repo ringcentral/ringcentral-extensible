@@ -1,5 +1,5 @@
 interface EffectiveRoleResource {
-    /**
+  /**
    * Format: uri
    */
   uri?: string;

@@ -1,35 +1,49 @@
 import InviteeModel from "../../../../../../../definitions/InviteeModel.js";
 import InviteeListResource from "../../../../../../../definitions/InviteeListResource.js";
 import RcwHistoryListInviteesParameters from "../../../../../../../definitions/RcwHistoryListInviteesParameters.js";
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../../types.js';
+import {
+  RingCentralInterface,
+  ParentInterface,
+  RestRequestConfig,
+} from "../../../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
   public inviteeId: string | null;
-  
-  public constructor(_parent: ParentInterface, inviteeId: string | null = null) {
+
+  public constructor(
+    _parent: ParentInterface,
+    inviteeId: string | null = null,
+  ) {
     this._parent = _parent;
     this.rc = _parent.rc;
     this.inviteeId = inviteeId;
   }
   public path(withParameter = true): string {
     if (withParameter && this.inviteeId !== null) {
-        return `${this._parent.path()}/invitees/${this.inviteeId}`;
+      return `${this._parent.path()}/invitees/${this.inviteeId}`;
     }
     return `${this._parent.path()}/invitees`;
   }
   /**
    * Returns the list of Invitees (co-hosts and panelists) of a given Webinar Session (host interface).
- * An implicit record created for a Webinar 'Host' is always returned.
- * 
+   * An implicit record created for a Webinar 'Host' is always returned.
+   *
    * HTTP Method: get
    * Endpoint: /webinar/history/v1/webinars/{webinarId}/sessions/{sessionId}/invitees
    * Rate Limit Group: Heavy
    * App Permission: ReadWebinars
    */
-  public async list(queryParams?: RcwHistoryListInviteesParameters, restRequestConfig?: RestRequestConfig): Promise<InviteeListResource> {
-    const r = await this.rc.get<InviteeListResource>(this.path(false), queryParams, restRequestConfig);
+  public async list(
+    queryParams?: RcwHistoryListInviteesParameters,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<InviteeListResource> {
+    const r = await this.rc.get<InviteeListResource>(
+      this.path(false),
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -40,12 +54,17 @@ class Index {
    * Rate Limit Group: Heavy
    * App Permission: ReadWebinars
    */
-  public async get(restRequestConfig?: RestRequestConfig): Promise<InviteeModel> {
-    if (this.inviteeId === null)
-    {
-        throw new Error('inviteeId must be specified.');
+  public async get(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<InviteeModel> {
+    if (this.inviteeId === null) {
+      throw new Error("inviteeId must be specified.");
     }
-    const r = await this.rc.get<InviteeModel>(this.path(), undefined, restRequestConfig);
+    const r = await this.rc.get<InviteeModel>(
+      this.path(),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

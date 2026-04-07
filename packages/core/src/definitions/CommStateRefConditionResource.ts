@@ -1,11 +1,11 @@
 import CommStateReferenceResource from "./CommStateReferenceResource.js";
 
 interface CommStateRefConditionResource {
-    /**
+  /**
    * State condition type
    * Required
    */
-  type?: ('Schedule' | 'State');
+  type?: "Schedule" | "State";
 
   /**
    */

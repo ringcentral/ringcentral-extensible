@@ -1,12 +1,12 @@
 /**
  * Query parameters for operation extractSyncAccountCallLog
-*/
+ */
 interface ExtractSyncAccountCallLogParameters {
-    /**
+  /**
    * Type of call log synchronization request - full or incremental sync
    * Default: FSync
    */
-  syncType?: ('FSync' | 'ISync');
+  syncType?: "FSync" | "ISync";
 
   /**
    * Value of `syncToken` property of the last extract-sync request response. Mandatory for 'ISync' type
@@ -21,10 +21,10 @@ interface ExtractSyncAccountCallLogParameters {
 
   /**
    * Allowed for `FSync` mode only. It limits the number of records to be returned in response
- *  (the maximum number of records is 1000, the default value is 250).
- *  
- *  Actual number of calls could extend the limit in case there are several calls at borderline
- *  modification time (millisecond precision).
+   *  (the maximum number of records is 1000, the default value is 250).
+   *
+   *  Actual number of calls could extend the limit in case there are several calls at borderline
+   *  modification time (millisecond precision).
    * Minimum: 1
    * Format: int32
    * Default: 250
@@ -35,11 +35,11 @@ interface ExtractSyncAccountCallLogParameters {
    * Defines the level of details for returned call records
    * Default: Simple
    */
-  view?: ('Simple' | 'Detailed');
+  view?: "Simple" | "Detailed";
 
   /**
    * Category of metadata to be returned. If omitted, all call records are returned.
- *  Multiple values are supported
+   *  Multiple values are supported
    */
   metadataCategory?: string[];
 }

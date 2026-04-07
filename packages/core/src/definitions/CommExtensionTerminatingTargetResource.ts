@@ -1,7 +1,7 @@
 import CommReferencedExtensionResource from "./CommReferencedExtensionResource.js";
 
 interface CommExtensionTerminatingTargetResource {
-    /**
+  /**
    * Required
    */
   name?: string;
@@ -11,7 +11,11 @@ interface CommExtensionTerminatingTargetResource {
    * Required
    * Example: ExtensionTerminatingTarget
    */
-  type?: ('ExtensionTerminatingTarget' | 'PhoneNumberTerminatingTarget' | 'PlayAnnouncementTerminatingTarget' | 'VoiceMailTerminatingTarget');
+  type?:
+    | "ExtensionTerminatingTarget"
+    | "PhoneNumberTerminatingTarget"
+    | "PlayAnnouncementTerminatingTarget"
+    | "VoiceMailTerminatingTarget";
 
   /**
    * Required
@@ -21,7 +25,7 @@ interface CommExtensionTerminatingTargetResource {
   /**
    * Required
    */
-  dispatchingType?: ('Ringing' | 'Terminating');
+  dispatchingType?: "Ringing" | "Terminating";
 }
 
 export default CommExtensionTerminatingTargetResource;

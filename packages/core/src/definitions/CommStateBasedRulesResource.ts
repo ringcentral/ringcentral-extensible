@@ -3,9 +3,9 @@ import EnumeratedPagingModel from "./EnumeratedPagingModel.js";
 
 /**
  * State-based rule information
-*/
+ */
 interface CommStateBasedRulesResource {
-    /**
+  /**
    * Required
    */
   records?: CommStateBasedRuleResource[];

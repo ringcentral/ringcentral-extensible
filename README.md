@@ -114,10 +114,11 @@ construct the uri as [sample code](./packages/core/src/samples.md) shows.
 
 ## For maintainers
 
-### Code format
+### Code style
 
 ```
-deno fmt
+yarn lint
+yarn format
 ```
 
 ### Regenerate code using latest swagger spec

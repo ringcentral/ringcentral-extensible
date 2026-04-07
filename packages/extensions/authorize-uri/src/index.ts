@@ -12,7 +12,9 @@ async function generateCodeVerifier(): Promise<string> {
   const array = new Uint8Array(32);
   crypto.getRandomValues(array);
   return btoa(String.fromCharCode(...array))
-    .replace(/\+/g, "-").replace(/\//g, "_").replace(/=/g, "");
+    .replace(/\+/g, "-")
+    .replace(/\//g, "_")
+    .replace(/=/g, "");
 }
 
 async function generateCodeChallenge(verifier: string): Promise<string> {
@@ -21,10 +23,10 @@ async function generateCodeChallenge(verifier: string): Promise<string> {
   const hashBuffer = await crypto.subtle.digest("SHA-256", data);
   const hashArray = Array.from(new Uint8Array(hashBuffer));
   const hashStr = String.fromCharCode(...hashArray);
-  return btoa(hashStr).replace(/\+/g, "-").replace(/\//g, "_").replace(
-    /=/g,
-    "",
-  );
+  return btoa(hashStr)
+    .replace(/\+/g, "-")
+    .replace(/\//g, "_")
+    .replace(/=/g, "");
 }
 
 class AuthorizeUriExtension extends SdkExtension {

@@ -3,7 +3,7 @@ import CommTerminatingPromptResource from "./CommTerminatingPromptResource.js";
 import CommPhoneNumberResource from "./CommPhoneNumberResource.js";
 
 interface CommTerminatingActionResourceTargets {
-    /**
+  /**
    */
   name?: string;
 
@@ -11,7 +11,11 @@ interface CommTerminatingActionResourceTargets {
    * Terminating target type
    * Example: ExtensionTerminatingTarget
    */
-  type?: ('ExtensionTerminatingTarget' | 'PhoneNumberTerminatingTarget' | 'PlayAnnouncementTerminatingTarget' | 'VoiceMailTerminatingTarget');
+  type?:
+    | "ExtensionTerminatingTarget"
+    | "PhoneNumberTerminatingTarget"
+    | "PlayAnnouncementTerminatingTarget"
+    | "VoiceMailTerminatingTarget";
 
   /**
    */
@@ -23,7 +27,7 @@ interface CommTerminatingActionResourceTargets {
 
   /**
    */
-  dispatchingType?: ('Ringing' | 'Terminating');
+  dispatchingType?: "Ringing" | "Terminating";
 
   /**
    */

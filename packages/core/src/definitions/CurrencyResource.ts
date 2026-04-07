@@ -1,5 +1,5 @@
 interface CurrencyResource {
-    /**
+  /**
    */
   id?: string;
 

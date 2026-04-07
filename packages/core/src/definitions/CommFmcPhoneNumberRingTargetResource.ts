@@ -1,7 +1,7 @@
 import CommPhoneNumberResource from "./CommPhoneNumberResource.js";
 
 interface CommFmcPhoneNumberRingTargetResource {
-    /**
+  /**
    */
   name?: string;
 
@@ -10,7 +10,16 @@ interface CommFmcPhoneNumberRingTargetResource {
    * Required
    * Example: FmcPhoneNumberRingTarget
    */
-  type?: ('AllDesktopRingTarget' | 'AllMobileRingTarget' | 'CoworkerRingTarget' | 'DeviceRingTarget' | 'HotdeskRingTarget' | 'ImsPhoneNumberRingTarget' | 'FmcPhoneNumberRingTarget' | 'IntegrationRingTarget' | 'PhoneNumberRingTarget');
+  type?:
+    | "AllDesktopRingTarget"
+    | "AllMobileRingTarget"
+    | "CoworkerRingTarget"
+    | "DeviceRingTarget"
+    | "HotdeskRingTarget"
+    | "ImsPhoneNumberRingTarget"
+    | "FmcPhoneNumberRingTarget"
+    | "IntegrationRingTarget"
+    | "PhoneNumberRingTarget";
 
   /**
    * Required

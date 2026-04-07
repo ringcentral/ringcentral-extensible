@@ -7,9 +7,7 @@
     "outDir": "./dist/cjs",
     "skipLibCheck": true,
     "paths": {
-      "@rc-ex/retry": [
-        "../retry/dist/cjs/index.js"
-      ]
+      "@rc-ex/retry": ["../retry/dist/cjs/index.js"]
     }
   },
   "include": ["src/**/*.ts"]

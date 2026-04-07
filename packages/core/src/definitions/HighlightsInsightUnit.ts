@@ -1,5 +1,5 @@
 interface HighlightsInsightUnit {
-    /**
+  /**
    * Participant ID
    * Required
    * Example: p-32423

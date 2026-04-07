@@ -2,7 +2,7 @@ import WcsWebinarSettingsModel from "./WcsWebinarSettingsModel.js";
 import RcwLinkedUserModel from "./RcwLinkedUserModel.js";
 
 interface WebinarCreationRequest {
-    /**
+  /**
    * Webinar title
    * Required
    * Example: All-Hands Webinar

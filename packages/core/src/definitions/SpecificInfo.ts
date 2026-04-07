@@ -2,9 +2,9 @@ import DataExportTaskContactInfo from "./DataExportTaskContactInfo.js";
 
 /**
  * Information specified in request
-*/
+ */
 interface SpecificInfo {
-    /**
+  /**
    * Starting time for data collection
    * Format: date-time
    */

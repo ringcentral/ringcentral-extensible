@@ -1,11 +1,15 @@
 import DefaultUserRoleRequest from "../../../../../definitions/DefaultUserRoleRequest.js";
 import DefaultUserRole from "../../../../../definitions/DefaultUserRole.js";
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types.js';
+import {
+  RingCentralInterface,
+  ParentInterface,
+  RestRequestConfig,
+} from "../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
-  
+
   public constructor(_parent: ParentInterface) {
     this._parent = _parent;
     this.rc = _parent.rc;
@@ -21,8 +25,14 @@ class Index {
    * App Permission: RoleManagement
    * User Permission: Roles
    */
-  public async get(restRequestConfig?: RestRequestConfig): Promise<DefaultUserRole> {
-    const r = await this.rc.get<DefaultUserRole>(this.path(), undefined, restRequestConfig);
+  public async get(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<DefaultUserRole> {
+    const r = await this.rc.get<DefaultUserRole>(
+      this.path(),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -34,8 +44,16 @@ class Index {
    * App Permission: RoleManagement
    * User Permission: Roles
    */
-  public async put(defaultUserRoleRequest: DefaultUserRoleRequest, restRequestConfig?: RestRequestConfig): Promise<DefaultUserRole> {
-    const r = await this.rc.put<DefaultUserRole>(this.path(), defaultUserRoleRequest, undefined, restRequestConfig);
+  public async put(
+    defaultUserRoleRequest: DefaultUserRoleRequest,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<DefaultUserRole> {
+    const r = await this.rc.put<DefaultUserRole>(
+      this.path(),
+      defaultUserRoleRequest,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

@@ -1,5 +1,5 @@
 interface LocationDeletionErrorInfo {
-    /**
+  /**
    * Error code
    */
   errorCode?: string;

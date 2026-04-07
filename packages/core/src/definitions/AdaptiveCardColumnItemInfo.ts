@@ -1,5 +1,5 @@
 interface AdaptiveCardColumnItemInfo {
-    /**
+  /**
    */
   type?: string;
 

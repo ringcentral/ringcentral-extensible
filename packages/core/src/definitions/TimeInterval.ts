@@ -1,5 +1,5 @@
 interface TimeInterval {
-    /**
+  /**
    * Time in format hh:mm
    */
   from?: string;

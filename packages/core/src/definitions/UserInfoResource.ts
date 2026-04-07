@@ -1,5 +1,5 @@
 interface UserInfoResource {
-    /**
+  /**
    * Subject - the End-User internal identifier. Contains RingCentral user (extension) ID
    * Required
    * Example: 987654321

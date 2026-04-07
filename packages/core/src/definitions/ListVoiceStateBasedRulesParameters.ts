@@ -1,8 +1,8 @@
 /**
  * Query parameters for operation listVoiceStateBasedRules
-*/
+ */
 interface ListVoiceStateBasedRulesParameters {
-    /**
+  /**
    * The result set page number (1-indexed) to return
    * Maximum: 1000
    * Minimum: 1
@@ -14,7 +14,7 @@ interface ListVoiceStateBasedRulesParameters {
 
   /**
    * The number of items per page. If the provided value in the request
- *  is greater than a maximum, the maximum value is applied
+   *  is greater than a maximum, the maximum value is applied
    * Maximum: 1000
    * Minimum: 1
    * Format: int32

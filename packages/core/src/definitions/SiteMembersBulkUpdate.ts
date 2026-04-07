@@ -1,5 +1,5 @@
 interface SiteMembersBulkUpdate {
-    /**
+  /**
    * List of removed extensions
    */
   removedExtensionIds?: string[];

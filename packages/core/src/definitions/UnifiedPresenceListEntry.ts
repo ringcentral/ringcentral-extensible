@@ -1,7 +1,7 @@
 import UnifiedPresence from "./UnifiedPresence.js";
 
 interface UnifiedPresenceListEntry {
-    /**
+  /**
    * Internal identifier of the resource
    */
   resourceId?: string;

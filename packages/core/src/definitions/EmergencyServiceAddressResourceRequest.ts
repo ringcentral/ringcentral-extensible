@@ -2,17 +2,17 @@
  * Address for emergency cases. The same emergency address is assigned to all
  * numbers of a single device. If the emergency address is also specified in
  * `emergency` resource, then this value is ignored
- * 
-*/
+ *
+ */
 interface EmergencyServiceAddressResourceRequest {
-    /**
+  /**
    * First line address
    */
   street?: string;
 
   /**
    * Second line address (apartment, suite, unit, building, floor,
- *  etc.)
+   *  etc.)
    */
   street2?: string;
 

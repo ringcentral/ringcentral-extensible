@@ -2,7 +2,7 @@ import DeviceDefinitionEmergencyLocation from "./DeviceDefinitionEmergencyLocati
 import PostalAddress from "./PostalAddress.js";
 
 interface DeviceDefinitionEmergency {
-    /**
+  /**
    */
   location?: DeviceDefinitionEmergencyLocation;
 

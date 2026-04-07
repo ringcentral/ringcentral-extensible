@@ -1,7 +1,7 @@
 import IvrMenuListInfo from "./IvrMenuListInfo.js";
 
 interface IvrMenuList {
-    /**
+  /**
    * Link to an IVR Menu list
    * Format: uri
    */

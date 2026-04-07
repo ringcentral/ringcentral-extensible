@@ -3,7 +3,7 @@ import IvrMenuPromptInfo from "./IvrMenuPromptInfo.js";
 import IvrMenuActionsInfo from "./IvrMenuActionsInfo.js";
 
 interface IvrMenuInfo {
-    /**
+  /**
    * Internal identifier of an IVR Menu extension
    */
   id?: string;

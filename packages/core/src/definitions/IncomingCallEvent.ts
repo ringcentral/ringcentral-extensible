@@ -1,7 +1,7 @@
 import APSInfo from "./APSInfo.js";
 
 interface IncomingCallEvent {
-    /**
+  /**
    */
   aps?: APSInfo;
 

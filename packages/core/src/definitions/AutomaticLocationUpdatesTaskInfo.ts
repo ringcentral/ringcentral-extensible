@@ -1,7 +1,7 @@
 import TaskResultInfo from "./TaskResultInfo.js";
 
 interface AutomaticLocationUpdatesTaskInfo {
-    /**
+  /**
    * Internal identifier of a task
    */
   id?: string;
@@ -9,7 +9,7 @@ interface AutomaticLocationUpdatesTaskInfo {
   /**
    * Status of a task
    */
-  status?: ('Accepted' | 'InProgress' | 'Completed' | 'Failed');
+  status?: "Accepted" | "InProgress" | "Completed" | "Failed";
 
   /**
    * Task creation time
@@ -26,7 +26,11 @@ interface AutomaticLocationUpdatesTaskInfo {
   /**
    * Type of task
    */
-  type?: ('WirelessPointsBulkCreate' | 'WirelessPointsBulkUpdate' | 'SwitchesBulkCreate' | 'SwitchesBulkUpdate');
+  type?:
+    | "WirelessPointsBulkCreate"
+    | "WirelessPointsBulkUpdate"
+    | "SwitchesBulkCreate"
+    | "SwitchesBulkUpdate";
 
   /**
    */

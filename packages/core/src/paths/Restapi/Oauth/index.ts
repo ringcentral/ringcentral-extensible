@@ -1,15 +1,15 @@
-import Authorize from './Authorize/index.js';
-import Userinfo from './Userinfo/index.js';
-import Wstoken from './Wstoken/index.js';
-import Revoke from './Revoke/index.js';
-import Token from './Token/index.js';
-import Jwks from './Jwks/index.js';
-import { RingCentralInterface, ParentInterface } from '../../../types.js';
+import Authorize from "./Authorize/index.js";
+import Userinfo from "./Userinfo/index.js";
+import Wstoken from "./Wstoken/index.js";
+import Revoke from "./Revoke/index.js";
+import Token from "./Token/index.js";
+import Jwks from "./Jwks/index.js";
+import { RingCentralInterface, ParentInterface } from "../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
-  
+
   public constructor(_parent: ParentInterface) {
     this._parent = _parent;
     this.rc = _parent.rc;
@@ -17,7 +17,6 @@ class Index {
   public path(): string {
     return `${this._parent.path(false)}/oauth`;
   }
-
 
   public jwks(): Jwks {
     return new Jwks(this);

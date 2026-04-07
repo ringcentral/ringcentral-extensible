@@ -1,7 +1,7 @@
 import TMCreateTeamRequestMembers from "./TMCreateTeamRequestMembers.js";
 
 interface TMCreateTeamRequest {
-    /**
+  /**
    * Team access level.
    */
   public?: boolean;

@@ -1,8 +1,8 @@
 /**
  * Address for emergency cases. The same emergency address is assigned to all numbers of a single device
-*/
+ */
 interface DeviceEmergencyServiceAddressResource {
-    /**
+  /**
    * Country name
    */
   country?: string;
@@ -35,33 +35,33 @@ interface DeviceEmergencyServiceAddressResource {
 
   /**
    * Email of a primary contact person (receiver). Should be specified
- *  for countries except the US, Canada, the UK and Australia
+   *  for countries except the US, Canada, the UK and Australia
    * Format: email
    */
   customerEmail?: string;
 
   /**
    * Email of an additional contact person. Should be specified
- *  for countries except the US, Canada, the UK and Australia
+   *  for countries except the US, Canada, the UK and Australia
    * Format: email
    */
   additionalCustomerEmail?: string;
 
   /**
    * Name of an additional contact person. Should be specified for
- *  countries except the US, Canada, the UK and Australia
+   *  countries except the US, Canada, the UK and Australia
    */
   additionalCustomerName?: string;
 
   /**
    * Phone number of a primary contact person (receiver). Should
- *  be specified for countries except the US, Canada, the UK and Australia
+   *  be specified for countries except the US, Canada, the UK and Australia
    */
   customerPhone?: string;
 
   /**
    * Phone number of an additional contact person. Should be specified
- *  for countries except the US, Canada, the UK & Australia
+   *  for countries except the US, Canada, the UK & Australia
    */
   additionalCustomerPhone?: string;
 
@@ -92,7 +92,7 @@ interface DeviceEmergencyServiceAddressResource {
 
   /**
    * Second line address (apartment, suite, unit, building, floor,
- *  etc.)
+   *  etc.)
    */
   street2?: string;
 
@@ -124,13 +124,19 @@ interface DeviceEmergencyServiceAddressResource {
   /**
    * Status of a digital line provisioning
    */
-  lineProvisioningStatus?: ('Provisioning' | 'Valid' | 'Invalid');
+  lineProvisioningStatus?: "Provisioning" | "Valid" | "Invalid";
 
   /**
    * Resulting status of emergency address synchronization. Returned
- *  if `syncEmergencyAddress` parameter is set to `true`
+   *  if `syncEmergencyAddress` parameter is set to `true`
    */
-  syncStatus?: ('Verified' | 'Updated' | 'Deleted' | 'NotRequired' | 'Unsupported' | 'Failed');
+  syncStatus?:
+    | "Verified"
+    | "Updated"
+    | "Deleted"
+    | "NotRequired"
+    | "Unsupported"
+    | "Failed";
 
   /**
    * Internal identifier of a tax

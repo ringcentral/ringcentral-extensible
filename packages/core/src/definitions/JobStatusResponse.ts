@@ -1,7 +1,7 @@
 import JobStatusResponseResponse from "./JobStatusResponseResponse.js";
 
 interface JobStatusResponse {
-    /**
+  /**
    */
   jobId?: string;
 
@@ -22,7 +22,7 @@ interface JobStatusResponse {
 
   /**
    */
-  status?: ('Success' | 'Fail');
+  status?: "Success" | "Fail";
 
   /**
    */

@@ -1,8 +1,8 @@
 /**
  * Target number country information. Either `id` or `isoCode` can be specified.
-*/
+ */
 interface SmsRequestCountryInfo {
-    /**
+  /**
    * Internal identifier of a country
    */
   id?: string;

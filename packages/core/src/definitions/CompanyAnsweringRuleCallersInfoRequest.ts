@@ -1,5 +1,5 @@
 interface CompanyAnsweringRuleCallersInfoRequest {
-    /**
+  /**
    * Phone number of a caller
    */
   callerId?: string;

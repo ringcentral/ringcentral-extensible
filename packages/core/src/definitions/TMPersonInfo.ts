@@ -1,5 +1,5 @@
 interface TMPersonInfo {
-    /**
+  /**
    * Internal identifier of a user
    * Required
    */

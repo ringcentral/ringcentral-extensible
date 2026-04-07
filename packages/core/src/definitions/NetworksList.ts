@@ -3,7 +3,7 @@ import PageNavigationModel from "./PageNavigationModel.js";
 import EnumeratedPagingModel from "./EnumeratedPagingModel.js";
 
 interface NetworksList {
-    /**
+  /**
    * Link to a networks resource
    * Format: uri
    */

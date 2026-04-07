@@ -1,5 +1,5 @@
 interface CommCallTypesResource {
-    /**
+  /**
    * Required
    */
   queueCallsIncluded?: boolean;

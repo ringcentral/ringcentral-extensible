@@ -1,11 +1,15 @@
 import CallLogExtractSyncResponse from "../../../../definitions/CallLogExtractSyncResponse.js";
 import ExtractSyncAccountCallLogParameters from "../../../../definitions/ExtractSyncAccountCallLogParameters.js";
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types.js';
+import {
+  RingCentralInterface,
+  ParentInterface,
+  RestRequestConfig,
+} from "../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
-  
+
   public constructor(_parent: ParentInterface) {
     this._parent = _parent;
     this.rc = _parent.rc;
@@ -21,8 +25,15 @@ class Index {
    * App Permission: ReadCallLog
    * User Permission: ReadCallLog
    */
-  public async get(queryParams?: ExtractSyncAccountCallLogParameters, restRequestConfig?: RestRequestConfig): Promise<CallLogExtractSyncResponse> {
-    const r = await this.rc.get<CallLogExtractSyncResponse>(this.path(), queryParams, restRequestConfig);
+  public async get(
+    queryParams?: ExtractSyncAccountCallLogParameters,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<CallLogExtractSyncResponse> {
+    const r = await this.rc.get<CallLogExtractSyncResponse>(
+      this.path(),
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

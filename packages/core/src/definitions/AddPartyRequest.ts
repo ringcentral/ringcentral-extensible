@@ -1,5 +1,5 @@
 interface AddPartyRequest {
-    /**
+  /**
    * Internal identifier of a call session
    * Required
    */

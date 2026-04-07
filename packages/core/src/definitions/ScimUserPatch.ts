@@ -1,7 +1,7 @@
 import ScimPatchOperation from "./ScimPatchOperation.js";
 
 interface ScimUserPatch {
-    /**
+  /**
    * Patch operations list
    * Required
    */
@@ -10,7 +10,7 @@ interface ScimUserPatch {
   /**
    * Required
    */
-  schemas?: ('urn:ietf:params:scim:api:messages:2.0:PatchOp')[];
+  schemas?: "urn:ietf:params:scim:api:messages:2.0:PatchOp"[];
 }
 
 export default ScimUserPatch;

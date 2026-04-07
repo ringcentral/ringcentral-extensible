@@ -7,12 +7,8 @@
     "outDir": "./dist/esm",
     "skipLibCheck": true,
     "paths": {
-      "@rc-ex/core": [
-        "../../core/dist/esm/index"
-      ],
-      "@rc-ex/core/*": [
-        "../../core/dist/esm/*"
-      ],
+      "@rc-ex/core": ["../../core/dist/esm/index"],
+      "@rc-ex/core/*": ["../../core/dist/esm/*"],
       "wait-for-async": [
         "../../../node_modules/wait-for-async/dist/esm/index.js"
       ]

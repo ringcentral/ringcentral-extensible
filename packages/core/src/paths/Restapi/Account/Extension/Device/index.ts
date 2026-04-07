@@ -1,11 +1,15 @@
 import GetExtensionDevicesResponse from "../../../../../definitions/GetExtensionDevicesResponse.js";
 import ListExtensionDevicesParameters from "../../../../../definitions/ListExtensionDevicesParameters.js";
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types.js';
+import {
+  RingCentralInterface,
+  ParentInterface,
+  RestRequestConfig,
+} from "../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
-  
+
   public constructor(_parent: ParentInterface) {
     this._parent = _parent;
     this.rc = _parent.rc;
@@ -15,16 +19,23 @@ class Index {
   }
   /**
    * Returns devices of an extension or multiple extensions by their ID(s).
- * [Bulk request syntax](https://developers.ringcentral.com/guide/basics/batch-requests) is supported.
- * 
+   * [Bulk request syntax](https://developers.ringcentral.com/guide/basics/batch-requests) is supported.
+   *
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/device
    * Rate Limit Group: Light
    * App Permission: ReadAccounts
    * User Permission: ReadUserDevices
    */
-  public async get(queryParams?: ListExtensionDevicesParameters, restRequestConfig?: RestRequestConfig): Promise<GetExtensionDevicesResponse> {
-    const r = await this.rc.get<GetExtensionDevicesResponse>(this.path(), queryParams, restRequestConfig);
+  public async get(
+    queryParams?: ListExtensionDevicesParameters,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<GetExtensionDevicesResponse> {
+    const r = await this.rc.get<GetExtensionDevicesResponse>(
+      this.path(),
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

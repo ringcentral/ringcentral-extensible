@@ -1,8 +1,8 @@
 /**
  * Brief information on a phone number country
-*/
+ */
 interface PhoneNumberCountryInfo {
-    /**
+  /**
    * Internal identifier of a home country
    */
   id?: string;

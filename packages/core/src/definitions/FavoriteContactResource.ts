@@ -1,5 +1,5 @@
 interface FavoriteContactResource {
-    /**
+  /**
    * Format: int64
    */
   id?: number;

@@ -3,18 +3,23 @@ import GreetingAnsweringRuleId from "./GreetingAnsweringRuleId.js";
 
 /**
  * Request body for operation createCompanyGreeting
-*/
+ */
 interface CreateCompanyGreetingRequest {
-    /**
+  /**
    * Type of greeting, specifying the case when the greeting
- *  is played.
+   *  is played.
    * Required
    */
-  type?: ('Company' | 'StartRecording' | 'StopRecording' | 'AutomaticRecording' | 'TemplateGreeting');
+  type?:
+    | "Company"
+    | "StartRecording"
+    | "StopRecording"
+    | "AutomaticRecording"
+    | "TemplateGreeting";
 
   /**
    * Internal identifier of a language. See Get Language
- *  List
+   *  List
    */
   languageId?: string;
 

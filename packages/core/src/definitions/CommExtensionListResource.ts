@@ -2,7 +2,7 @@ import CommReferencedExtensionResource from "./CommReferencedExtensionResource.j
 import EnumeratedPagingModel from "./EnumeratedPagingModel.js";
 
 interface CommExtensionListResource {
-    /**
+  /**
    * Required
    */
   referencedExtensions?: CommReferencedExtensionResource[];

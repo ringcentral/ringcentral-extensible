@@ -1,7 +1,7 @@
 import RegAnswerModel from "./RegAnswerModel.js";
 
 interface RegistrantModelResponsePostWithQuestionnaire {
-    /**
+  /**
    * Internal object ID
    * Example: 78654321
    */

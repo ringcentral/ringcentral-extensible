@@ -1,7 +1,7 @@
 import NotificationInfo from "./NotificationInfo.js";
 
 interface InboundMessageEvent {
-    /**
+  /**
    */
   aps?: NotificationInfo;
 

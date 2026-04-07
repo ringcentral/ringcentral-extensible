@@ -1,8 +1,8 @@
 /**
  * Flags controlling parsing result content.
-*/
+ */
 interface ResultContent {
-    /**
+  /**
    * Indicates that `results.dialingDetails` section should be returned for particular result items in the response.
    * Default: true
    */

@@ -1,7 +1,7 @@
 import ApiError from "./ApiError.js";
 
 interface SessionLivestreamMinimalModel {
-    /**
+  /**
    * Identifier of the livestream
    * Required
    * Example: 40740e06-4eec-4458-a86e-8578e192274q
@@ -20,13 +20,33 @@ interface SessionLivestreamMinimalModel {
    * Required
    * Example: Configured
    */
-  livestreamStatus?: ('Initialized' | 'Authorized' | 'Configured' | 'PublishSetup' | 'Publishing' | 'Error' | 'Paused' | 'Break' | 'Deleted' | 'Completed');
+  livestreamStatus?:
+    | "Initialized"
+    | "Authorized"
+    | "Configured"
+    | "PublishSetup"
+    | "Publishing"
+    | "Error"
+    | "Paused"
+    | "Break"
+    | "Deleted"
+    | "Completed";
 
   /**
    * Livestream status
    * Example: Configured
    */
-  previousLivestreamStatus?: ('Initialized' | 'Authorized' | 'Configured' | 'PublishSetup' | 'Publishing' | 'Error' | 'Paused' | 'Break' | 'Deleted' | 'Completed');
+  previousLivestreamStatus?:
+    | "Initialized"
+    | "Authorized"
+    | "Configured"
+    | "PublishSetup"
+    | "Publishing"
+    | "Error"
+    | "Paused"
+    | "Break"
+    | "Deleted"
+    | "Completed";
 
   /**
    * Time at which the session started to publish media to livestream service provider.

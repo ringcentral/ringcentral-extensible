@@ -1,5 +1,3 @@
-interface JsValue {
-    
-}
+interface JsValue {}
 
 export default JsValue;

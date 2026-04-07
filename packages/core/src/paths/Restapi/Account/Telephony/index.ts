@@ -1,12 +1,12 @@
-import Conference from './Conference/index.js';
-import CallOut from './CallOut/index.js';
-import Sessions from './Sessions/index.js';
-import { RingCentralInterface, ParentInterface } from '../../../../types.js';
+import Conference from "./Conference/index.js";
+import CallOut from "./CallOut/index.js";
+import Sessions from "./Sessions/index.js";
+import { RingCentralInterface, ParentInterface } from "../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
-  
+
   public constructor(_parent: ParentInterface) {
     this._parent = _parent;
     this.rc = _parent.rc;
@@ -15,8 +15,7 @@ class Index {
     return `${this._parent.path()}/telephony`;
   }
 
-
-  public sessions(telephonySessionId: (string | null) = null): Sessions {
+  public sessions(telephonySessionId: string | null = null): Sessions {
     return new Sessions(this, telephonySessionId);
   }
 

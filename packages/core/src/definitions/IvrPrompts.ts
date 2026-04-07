@@ -3,7 +3,7 @@ import PageNavigationModel from "./PageNavigationModel.js";
 import EnumeratedPagingModel from "./EnumeratedPagingModel.js";
 
 interface IvrPrompts {
-    /**
+  /**
    * Link to prompts library resource
    * Format: uri
    */

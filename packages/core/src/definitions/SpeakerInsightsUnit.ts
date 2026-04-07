@@ -1,11 +1,11 @@
 import SpeakerInsightsValuesItems from "./SpeakerInsightsValuesItems.js";
 
 interface SpeakerInsightsUnit {
-    /**
+  /**
    * Required
    * Example: TalkToListenRatio
    */
-  name?: ('Pace' | 'TalkToListenRatio' | 'QuestionsAsked');
+  name?: "Pace" | "TalkToListenRatio" | "QuestionsAsked";
 
   /**
    * Required

@@ -1,12 +1,16 @@
 import CommPhoneNumberResource from "./CommPhoneNumberResource.js";
 
 interface CommPhoneNumberTerminatingTargetRequest {
-    /**
+  /**
    * Terminating target type
    * Required
    * Example: PhoneNumberTerminatingTarget
    */
-  type?: ('ExtensionTerminatingTarget' | 'PhoneNumberTerminatingTarget' | 'PlayAnnouncementTerminatingTarget' | 'VoiceMailTerminatingTarget');
+  type?:
+    | "ExtensionTerminatingTarget"
+    | "PhoneNumberTerminatingTarget"
+    | "PlayAnnouncementTerminatingTarget"
+    | "VoiceMailTerminatingTarget";
 
   /**
    * Phone number name
@@ -21,7 +25,7 @@ interface CommPhoneNumberTerminatingTargetRequest {
   /**
    * Required
    */
-  dispatchingType?: ('Ringing' | 'Terminating');
+  dispatchingType?: "Ringing" | "Terminating";
 }
 
 export default CommPhoneNumberTerminatingTargetRequest;

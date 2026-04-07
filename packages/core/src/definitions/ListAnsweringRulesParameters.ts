@@ -1,17 +1,17 @@
 /**
  * Query parameters for operation listAnsweringRules
-*/
+ */
 interface ListAnsweringRulesParameters {
-    /**
+  /**
    * Type of an answering rule. Multiple values are supported
    */
-  type?: ('BusinessHours' | 'AfterHours' | 'Custom')[];
+  type?: ("BusinessHours" | "AfterHours" | "Custom")[];
 
   /**
    * The level of details to be returned about each answering rule
    * Default: Simple
    */
-  view?: ('Detailed' | 'Simple');
+  view?: "Detailed" | "Simple";
 
   /**
    * If true, then only active call handling rules are returned
@@ -35,7 +35,7 @@ interface ListAnsweringRulesParameters {
 
   /**
    * The number of items per page. If the provided value in the request
- *  is greater than a maximum, the maximum value is applied
+   *  is greater than a maximum, the maximum value is applied
    * Maximum: 1000
    * Minimum: 1
    * Format: int32

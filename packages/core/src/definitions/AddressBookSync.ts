@@ -2,7 +2,7 @@ import PersonalContactResource from "./PersonalContactResource.js";
 import SyncInfo from "./SyncInfo.js";
 
 interface AddressBookSync {
-    /**
+  /**
    * Format: uri
    */
   uri?: string;

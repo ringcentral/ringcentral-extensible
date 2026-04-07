@@ -3,7 +3,7 @@ import TaskRecurrenceInfo from "./TaskRecurrenceInfo.js";
 import TaskAttachment from "./TaskAttachment.js";
 
 interface TMCreateTaskRequest {
-    /**
+  /**
    * Task name/subject. Max allowed length is 250 characters
    * Required
    */
@@ -17,7 +17,7 @@ interface TMCreateTaskRequest {
   /**
    * Default: Simple
    */
-  completenessCondition?: ('Simple' | 'AllAssignees' | 'Percentage');
+  completenessCondition?: "Simple" | "AllAssignees" | "Percentage";
 
   /**
    * Task start date in UTC time zone.
@@ -34,7 +34,15 @@ interface TMCreateTaskRequest {
   /**
    * Default: Black
    */
-  color?: ('Black' | 'Red' | 'Orange' | 'Yellow' | 'Green' | 'Blue' | 'Purple' | 'Magenta');
+  color?:
+    | "Black"
+    | "Red"
+    | "Orange"
+    | "Yellow"
+    | "Green"
+    | "Blue"
+    | "Purple"
+    | "Magenta";
 
   /**
    * Task section to group / search by. Max allowed length is 100 characters.

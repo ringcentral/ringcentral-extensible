@@ -1,7 +1,7 @@
 import AddressBookBulkContactAddressInfo from "./AddressBookBulkContactAddressInfo.js";
 
 interface AddressBookBulkContactResource {
-    /**
+  /**
    * Email of a contact
    * Format: email
    * Example: charlie.williams@example.com

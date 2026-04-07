@@ -2,9 +2,9 @@ import MessagingNavigationInfoURI from "./MessagingNavigationInfoURI.js";
 
 /**
  * Information on navigation
-*/
+ */
 interface MessagingNavigationInfo {
-    /**
+  /**
    */
   firstPage?: MessagingNavigationInfoURI;
 

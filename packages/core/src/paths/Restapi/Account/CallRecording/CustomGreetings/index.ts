@@ -1,20 +1,27 @@
 import CallRecordingCustomGreetings from "../../../../../definitions/CallRecordingCustomGreetings.js";
 import ListCallRecordingCustomGreetingsParameters from "../../../../../definitions/ListCallRecordingCustomGreetingsParameters.js";
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types.js';
+import {
+  RingCentralInterface,
+  ParentInterface,
+  RestRequestConfig,
+} from "../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
   public greetingId: string | null;
-  
-  public constructor(_parent: ParentInterface, greetingId: string | null = null) {
+
+  public constructor(
+    _parent: ParentInterface,
+    greetingId: string | null = null,
+  ) {
     this._parent = _parent;
     this.rc = _parent.rc;
     this.greetingId = greetingId;
   }
   public path(withParameter = true): string {
     if (withParameter && this.greetingId !== null) {
-        return `${this._parent.path()}/custom-greetings/${this.greetingId}`;
+      return `${this._parent.path()}/custom-greetings/${this.greetingId}`;
     }
     return `${this._parent.path()}/custom-greetings`;
   }
@@ -26,8 +33,15 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadCompanyInfo
    */
-  public async get(queryParams?: ListCallRecordingCustomGreetingsParameters, restRequestConfig?: RestRequestConfig): Promise<CallRecordingCustomGreetings> {
-    const r = await this.rc.get<CallRecordingCustomGreetings>(this.path(false), queryParams, restRequestConfig);
+  public async get(
+    queryParams?: ListCallRecordingCustomGreetingsParameters,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<CallRecordingCustomGreetings> {
+    const r = await this.rc.get<CallRecordingCustomGreetings>(
+      this.path(false),
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -39,8 +53,15 @@ class Index {
    * App Permission: EditAccounts
    * User Permission: EditCompanyInfo
    */
-  public async deleteAll(restRequestConfig?: RestRequestConfig): Promise<string> {
-    const r = await this.rc.delete<string>(this.path(false), {}, undefined, restRequestConfig);
+  public async deleteAll(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<string> {
+    const r = await this.rc.delete<string>(
+      this.path(false),
+      {},
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -53,11 +74,15 @@ class Index {
    * User Permission: EditCompanyInfo
    */
   public async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
-    if (this.greetingId === null)
-    {
-        throw new Error('greetingId must be specified.');
+    if (this.greetingId === null) {
+      throw new Error("greetingId must be specified.");
     }
-    const r = await this.rc.delete<string>(this.path(), {}, undefined, restRequestConfig);
+    const r = await this.rc.delete<string>(
+      this.path(),
+      {},
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

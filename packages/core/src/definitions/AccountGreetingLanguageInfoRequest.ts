@@ -1,5 +1,5 @@
 interface AccountGreetingLanguageInfoRequest {
-    /**
+  /**
    * Internal identifier of a greeting language
    * Required
    */

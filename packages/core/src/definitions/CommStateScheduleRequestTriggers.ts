@@ -1,11 +1,11 @@
 import CommWeeklyItemsResource from "./CommWeeklyItemsResource.js";
 
 interface CommStateScheduleRequestTriggers {
-    /**
+  /**
    * Trigger type
    * Example: Range
    */
-  triggerType?: ('Daily' | 'Weekly' | 'Range');
+  triggerType?: "Daily" | "Weekly" | "Range";
 
   /**
    * Start time in format hh:mm:ss

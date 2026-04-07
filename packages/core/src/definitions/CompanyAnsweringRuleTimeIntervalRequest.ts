@@ -1,5 +1,5 @@
 interface CompanyAnsweringRuleTimeIntervalRequest {
-    /**
+  /**
    * Time in format hh:mm
    */
   from?: string;

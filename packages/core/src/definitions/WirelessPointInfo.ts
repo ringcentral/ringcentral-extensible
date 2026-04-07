@@ -3,7 +3,7 @@ import EmergencyAddressInfo from "./EmergencyAddressInfo.js";
 import EmergencyLocationInfo from "./EmergencyLocationInfo.js";
 
 interface WirelessPointInfo {
-    /**
+  /**
    * Link to the wireless point resource
    * Format: uri
    */
@@ -40,9 +40,9 @@ interface WirelessPointInfo {
   emergencyLocation?: EmergencyLocationInfo;
 
   /**
-   * Emergency response location (address) internal identifier. 
- *  Only one of a pair `emergencyAddress` or `emergencyLocationId`
- *  can be specified, otherwise the error is returned
+   * Emergency response location (address) internal identifier.
+   *  Only one of a pair `emergencyAddress` or `emergencyLocationId`
+   *  can be specified, otherwise the error is returned
    */
   emergencyLocationId?: string;
 }

@@ -1,7 +1,7 @@
 import RegSessionModelSettings from "./RegSessionModelSettings.js";
 
 interface RegSessionModel {
-    /**
+  /**
    * ID of the session
    * Required
    * Example: 123456789
@@ -13,7 +13,7 @@ interface RegSessionModel {
    * Required
    * Example: Open
    */
-  registrationStatus?: ('Open' | 'Closed');
+  registrationStatus?: "Open" | "Closed";
 
   /**
    * The URI of the registration landing page

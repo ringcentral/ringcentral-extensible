@@ -3,9 +3,9 @@ import PronouncedNameInfo from "./PronouncedNameInfo.js";
 
 /**
  * Detailed contact information
-*/
+ */
 interface ContactInfo {
-    /**
+  /**
    * User's first name (for extensions of `User` type only)
    */
   firstName?: string;
@@ -38,13 +38,13 @@ interface ContactInfo {
 
   /**
    * User's contact phone number in [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I)
- *  (with '+' sign) format
+   *  (with '+' sign) format
    */
   businessPhone?: string;
 
   /**
    * User's mobile (**non** Toll Free) phone number in [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I)
- *  (with '+' sign) format
+   *  (with '+' sign) format
    */
   mobilePhone?: string;
 
@@ -54,7 +54,7 @@ interface ContactInfo {
 
   /**
    * Indicates that the contact email is enabled as a login name for this
- *  user. Please note that the email must be unique in this case.
+   *  user. Please note that the email must be unique in this case.
    */
   emailAsLoginName?: boolean;
 

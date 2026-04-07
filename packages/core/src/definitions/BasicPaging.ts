@@ -1,8 +1,8 @@
 /**
  * Paging information
-*/
+ */
 interface BasicPaging {
-    /**
+  /**
    * Current offset token
    * Required
    */

@@ -1,5 +1,5 @@
 interface BatchProvisionUsersResponseResultsExtensionDevices {
-    /**
+  /**
    * The internal identifier of device created
    * Example: 12345
    */

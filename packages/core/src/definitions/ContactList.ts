@@ -4,7 +4,7 @@ import UserContactsPagingInfo from "./UserContactsPagingInfo.js";
 import UserContactsGroupsInfo from "./UserContactsGroupsInfo.js";
 
 interface ContactList {
-    /**
+  /**
    * Link to the list of user personal contacts
    * Format: uri
    */

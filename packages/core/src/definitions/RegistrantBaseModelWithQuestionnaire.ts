@@ -1,7 +1,7 @@
 import RegAnswerModel from "./RegAnswerModel.js";
 
 interface RegistrantBaseModelWithQuestionnaire {
-    /**
+  /**
    * First (given) name
    * Required
    * Example: John

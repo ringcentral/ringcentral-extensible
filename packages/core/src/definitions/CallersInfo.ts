@@ -1,5 +1,5 @@
 interface CallersInfo {
-    /**
+  /**
    * Phone number of a caller
    */
   callerId?: string;

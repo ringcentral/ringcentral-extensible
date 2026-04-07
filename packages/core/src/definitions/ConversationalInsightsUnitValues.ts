@@ -1,5 +1,5 @@
 interface ConversationalInsightsUnitValues {
-    /**
+  /**
    * Format: float
    * Example: 0.97
    */

@@ -2,7 +2,7 @@ import SiteIVRTopMenu from "./SiteIVRTopMenu.js";
 import SiteIvrActions from "./SiteIvrActions.js";
 
 interface SiteIVRSettings {
-    /**
+  /**
    */
   topMenu?: SiteIVRTopMenu;
 

@@ -2,11 +2,18 @@ import CommGreetingResource from "./CommGreetingResource.js";
 import CommStateDispatchingResourceActionsTargets from "./CommStateDispatchingResourceActionsTargets.js";
 
 interface CommStateDispatchingResourceActions {
-    /**
+  /**
    * Action type
    * Example: TerminatingAction
    */
-  type?: ('PlayConnectingMessageAction' | 'PlayConnectingPromptAction' | 'PlayWelcomePromptAction' | 'ScreeningAction' | 'RingGroupAction' | 'RingAlwaysGroupAction' | 'TerminatingAction');
+  type?:
+    | "PlayConnectingMessageAction"
+    | "PlayConnectingPromptAction"
+    | "PlayWelcomePromptAction"
+    | "ScreeningAction"
+    | "RingGroupAction"
+    | "RingAlwaysGroupAction"
+    | "TerminatingAction";
 
   /**
    */
@@ -20,11 +27,11 @@ interface CommStateDispatchingResourceActions {
   /**
    * Screening type
    */
-  screening?: ('NoCallerId' | 'UnknownCallerId' | 'Always');
+  screening?: "NoCallerId" | "UnknownCallerId" | "Always";
 
   /**
    */
-  screeningResult?: ('AskToAnswer' | 'PlayCallerNameOnly');
+  screeningResult?: "AskToAnswer" | "PlayCallerNameOnly";
 
   /**
    * Action information
@@ -48,12 +55,20 @@ interface CommStateDispatchingResourceActions {
   /**
    * Terminating target type
    */
-  ringingTargetType?: ('ExtensionTerminatingTarget' | 'PhoneNumberTerminatingTarget' | 'PlayAnnouncementTerminatingTarget' | 'VoiceMailTerminatingTarget');
+  ringingTargetType?:
+    | "ExtensionTerminatingTarget"
+    | "PhoneNumberTerminatingTarget"
+    | "PlayAnnouncementTerminatingTarget"
+    | "VoiceMailTerminatingTarget";
 
   /**
    * Terminating target type
    */
-  terminatingTargetType?: ('ExtensionTerminatingTarget' | 'PhoneNumberTerminatingTarget' | 'PlayAnnouncementTerminatingTarget' | 'VoiceMailTerminatingTarget');
+  terminatingTargetType?:
+    | "ExtensionTerminatingTarget"
+    | "PhoneNumberTerminatingTarget"
+    | "PlayAnnouncementTerminatingTarget"
+    | "VoiceMailTerminatingTarget";
 }
 
 export default CommStateDispatchingResourceActions;

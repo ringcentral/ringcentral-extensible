@@ -1,5 +1,5 @@
 interface CaiAsyncApiResponse {
-    /**
+  /**
    */
   jobId?: string;
 }

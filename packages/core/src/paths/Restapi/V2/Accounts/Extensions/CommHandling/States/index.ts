@@ -2,13 +2,17 @@ import CommStateUpdateRequest from "../../../../../../../definitions/CommStateUp
 import CommStateResource from "../../../../../../../definitions/CommStateResource.js";
 import CommStatesResource from "../../../../../../../definitions/CommStatesResource.js";
 import ListCicStatesParameters from "../../../../../../../definitions/ListCicStatesParameters.js";
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../../types.js';
+import {
+  RingCentralInterface,
+  ParentInterface,
+  RestRequestConfig,
+} from "../../../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
   public stateId: string | null;
-  
+
   public constructor(_parent: ParentInterface, stateId: string | null = null) {
     this._parent = _parent;
     this.rc = _parent.rc;
@@ -16,7 +20,7 @@ class Index {
   }
   public path(withParameter = true): string {
     if (withParameter && this.stateId !== null) {
-        return `${this._parent.path()}/states/${this.stateId}`;
+      return `${this._parent.path()}/states/${this.stateId}`;
     }
     return `${this._parent.path()}/states`;
   }
@@ -27,8 +31,15 @@ class Index {
    * Rate Limit Group: Medium
    * App Permission: ReadAccounts
    */
-  public async list(queryParams?: ListCicStatesParameters, restRequestConfig?: RestRequestConfig): Promise<CommStatesResource> {
-    const r = await this.rc.get<CommStatesResource>(this.path(false), queryParams, restRequestConfig);
+  public async list(
+    queryParams?: ListCicStatesParameters,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<CommStatesResource> {
+    const r = await this.rc.get<CommStatesResource>(
+      this.path(false),
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -39,12 +50,17 @@ class Index {
    * Rate Limit Group: Medium
    * App Permission: ReadAccounts
    */
-  public async get(restRequestConfig?: RestRequestConfig): Promise<CommStateResource> {
-    if (this.stateId === null)
-    {
-        throw new Error('stateId must be specified.');
+  public async get(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<CommStateResource> {
+    if (this.stateId === null) {
+      throw new Error("stateId must be specified.");
     }
-    const r = await this.rc.get<CommStateResource>(this.path(), undefined, restRequestConfig);
+    const r = await this.rc.get<CommStateResource>(
+      this.path(),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -55,12 +71,19 @@ class Index {
    * Rate Limit Group: Medium
    * App Permission: ReadAccounts
    */
-  public async patch(commStateUpdateRequest: CommStateUpdateRequest, restRequestConfig?: RestRequestConfig): Promise<CommStateResource> {
-    if (this.stateId === null)
-    {
-        throw new Error('stateId must be specified.');
+  public async patch(
+    commStateUpdateRequest: CommStateUpdateRequest,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<CommStateResource> {
+    if (this.stateId === null) {
+      throw new Error("stateId must be specified.");
     }
-    const r = await this.rc.patch<CommStateResource>(this.path(), commStateUpdateRequest, undefined, restRequestConfig);
+    const r = await this.rc.patch<CommStateResource>(
+      this.path(),
+      commStateUpdateRequest,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

@@ -1,12 +1,12 @@
 import CommRangeRequest from "./CommRangeRequest.js";
 
 interface CommRangeTriggerRequest {
-    /**
+  /**
    * Trigger type
    * Required
    * Example: Range
    */
-  triggerType?: ('Daily' | 'Weekly' | 'Range');
+  triggerType?: "Daily" | "Weekly" | "Range";
 
   /**
    * Required

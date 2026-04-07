@@ -3,13 +3,17 @@ import CompanyAnsweringRuleInfo from "../../../../definitions/CompanyAnsweringRu
 import CompanyAnsweringRuleRequest from "../../../../definitions/CompanyAnsweringRuleRequest.js";
 import CompanyAnsweringRuleList from "../../../../definitions/CompanyAnsweringRuleList.js";
 import ListCompanyAnsweringRulesParameters from "../../../../definitions/ListCompanyAnsweringRulesParameters.js";
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../types.js';
+import {
+  RingCentralInterface,
+  ParentInterface,
+  RestRequestConfig,
+} from "../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
   public ruleId: string | null;
-  
+
   public constructor(_parent: ParentInterface, ruleId: string | null = null) {
     this._parent = _parent;
     this.rc = _parent.rc;
@@ -17,7 +21,7 @@ class Index {
   }
   public path(withParameter = true): string {
     if (withParameter && this.ruleId !== null) {
-        return `${this._parent.path()}/answering-rule/${this.ruleId}`;
+      return `${this._parent.path()}/answering-rule/${this.ruleId}`;
     }
     return `${this._parent.path()}/answering-rule`;
   }
@@ -29,8 +33,15 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadCompanyAnsweringRules
    */
-  public async list(queryParams?: ListCompanyAnsweringRulesParameters, restRequestConfig?: RestRequestConfig): Promise<CompanyAnsweringRuleList> {
-    const r = await this.rc.get<CompanyAnsweringRuleList>(this.path(false), queryParams, restRequestConfig);
+  public async list(
+    queryParams?: ListCompanyAnsweringRulesParameters,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<CompanyAnsweringRuleList> {
+    const r = await this.rc.get<CompanyAnsweringRuleList>(
+      this.path(false),
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -42,8 +53,16 @@ class Index {
    * App Permission: EditAccounts
    * User Permission: EditCompanyAnsweringRules
    */
-  public async post(companyAnsweringRuleRequest: CompanyAnsweringRuleRequest, restRequestConfig?: RestRequestConfig): Promise<CompanyAnsweringRuleInfo> {
-    const r = await this.rc.post<CompanyAnsweringRuleInfo>(this.path(false), companyAnsweringRuleRequest, undefined, restRequestConfig);
+  public async post(
+    companyAnsweringRuleRequest: CompanyAnsweringRuleRequest,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<CompanyAnsweringRuleInfo> {
+    const r = await this.rc.post<CompanyAnsweringRuleInfo>(
+      this.path(false),
+      companyAnsweringRuleRequest,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -55,12 +74,17 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadCompanyAnsweringRules
    */
-  public async get(restRequestConfig?: RestRequestConfig): Promise<CompanyAnsweringRuleInfo> {
-    if (this.ruleId === null)
-    {
-        throw new Error('ruleId must be specified.');
+  public async get(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<CompanyAnsweringRuleInfo> {
+    if (this.ruleId === null) {
+      throw new Error("ruleId must be specified.");
     }
-    const r = await this.rc.get<CompanyAnsweringRuleInfo>(this.path(), undefined, restRequestConfig);
+    const r = await this.rc.get<CompanyAnsweringRuleInfo>(
+      this.path(),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -72,12 +96,19 @@ class Index {
    * App Permission: EditAccounts
    * User Permission: EditCompanyAnsweringRules
    */
-  public async put(companyAnsweringRuleUpdate: CompanyAnsweringRuleUpdate, restRequestConfig?: RestRequestConfig): Promise<CompanyAnsweringRuleInfo> {
-    if (this.ruleId === null)
-    {
-        throw new Error('ruleId must be specified.');
+  public async put(
+    companyAnsweringRuleUpdate: CompanyAnsweringRuleUpdate,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<CompanyAnsweringRuleInfo> {
+    if (this.ruleId === null) {
+      throw new Error("ruleId must be specified.");
     }
-    const r = await this.rc.put<CompanyAnsweringRuleInfo>(this.path(), companyAnsweringRuleUpdate, undefined, restRequestConfig);
+    const r = await this.rc.put<CompanyAnsweringRuleInfo>(
+      this.path(),
+      companyAnsweringRuleUpdate,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -90,11 +121,15 @@ class Index {
    * User Permission: EditCompanyAnsweringRules
    */
   public async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
-    if (this.ruleId === null)
-    {
-        throw new Error('ruleId must be specified.');
+    if (this.ruleId === null) {
+      throw new Error("ruleId must be specified.");
     }
-    const r = await this.rc.delete<string>(this.path(), {}, undefined, restRequestConfig);
+    const r = await this.rc.delete<string>(
+      this.path(),
+      {},
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

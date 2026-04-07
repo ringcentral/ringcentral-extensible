@@ -1,5 +1,5 @@
 interface BillingStatementCharges {
-    /**
+  /**
    */
   description?: string;
 

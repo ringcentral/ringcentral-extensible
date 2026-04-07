@@ -3,9 +3,9 @@ import CallParty from "./CallParty.js";
 
 /**
  * Call session information
-*/
+ */
 interface CallSessionObject {
-    /**
+  /**
    * Internal identifier of a call session
    */
   id?: string;

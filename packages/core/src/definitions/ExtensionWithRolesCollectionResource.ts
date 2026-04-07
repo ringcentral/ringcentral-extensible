@@ -3,7 +3,7 @@ import EnumeratedPagingModel from "./EnumeratedPagingModel.js";
 import PageNavigationModel from "./PageNavigationModel.js";
 
 interface ExtensionWithRolesCollectionResource {
-    /**
+  /**
    * Format: uri
    */
   uri?: string;

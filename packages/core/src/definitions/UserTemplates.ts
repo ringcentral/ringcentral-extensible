@@ -3,7 +3,7 @@ import PageNavigationModel from "./PageNavigationModel.js";
 import EnumeratedPagingModel from "./EnumeratedPagingModel.js";
 
 interface UserTemplates {
-    /**
+  /**
    * Link to user templates resource
    * Format: uri
    */

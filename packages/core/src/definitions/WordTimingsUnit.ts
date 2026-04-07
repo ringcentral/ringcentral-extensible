@@ -1,5 +1,5 @@
 interface WordTimingsUnit {
-    /**
+  /**
    * Format: float
    * Example: 0.3
    */

@@ -1,5 +1,5 @@
 interface PartyInfo {
-    /**
+  /**
    * Phone number of a party
    */
   phoneNumber?: string;

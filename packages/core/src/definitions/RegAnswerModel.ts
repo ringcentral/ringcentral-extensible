@@ -1,5 +1,5 @@
 interface RegAnswerModel {
-    /**
+  /**
    * ID of the custom question
    * Required
    * Example: 123456789

@@ -5,10 +5,10 @@ import EnumeratedPagingModel from "./EnumeratedPagingModel.js";
 /**
  * Please note that legacy 'Department' extension type corresponds to
  * 'Call Queue' extensions in modern RingCentral product terminology
- * 
-*/
+ *
+ */
 interface DepartmentMemberList {
-    /**
+  /**
    * Canonical URL of the resource
    * Format: uri
    */

@@ -1,8 +1,8 @@
 /**
  * Custom greeting data
-*/
+ */
 interface CallRecordingCustomGreetingData {
-    /**
+  /**
    * Link to a custom company greeting
    * Format: uri
    */

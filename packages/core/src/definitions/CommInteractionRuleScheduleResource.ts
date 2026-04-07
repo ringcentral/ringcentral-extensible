@@ -1,7 +1,7 @@
 import CommInteractionRuleScheduleResourceTriggers from "./CommInteractionRuleScheduleResourceTriggers.js";
 
 interface CommInteractionRuleScheduleResource {
-    /**
+  /**
    * Start date-time
    */
   startDateTime?: string;

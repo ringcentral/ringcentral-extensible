@@ -3,9 +3,9 @@ import CountryContext from "./CountryContext.js";
 
 /**
  * Absent if the request's parameter `resultContent.includeNumberDetails` value is set to `false`.
-*/
+ */
 interface NumberDetails {
-    /**
+  /**
    * Absent if the request's parameter `context.siteCode` value is set to `null`.
    * Example: 10
    */
@@ -19,14 +19,14 @@ interface NumberDetails {
 
   /**
    * Absent for the `results.category` response's attribute values:
- *  `Unknown`, `ServiceCode`, `SpecialService`, `Regular`, `TollFree` and `ShortCode`.
+   *  `Unknown`, `ServiceCode`, `SpecialService`, `Regular`, `TollFree` and `ShortCode`.
    * Example: 10303
    */
   extensionNumber?: string;
 
   /**
    * Absent for the `results.category` response's attribute values:
- *  `Unknown`, `ServiceCode`, `Extension`, `Regular`, `TollFree`, `ShortCode` and `Ambiguous`.
+   *  `Unknown`, `ServiceCode`, `Extension`, `Regular`, `TollFree`, `ShortCode` and `Ambiguous`.
    */
   specialService?: NumberDetailsSpecialService;
 
@@ -86,10 +86,10 @@ interface NumberDetails {
 
   /**
    * Absent for the `results.category` response's attribute values:
- *  `Unknown`, `SpecialService`, `Extension`, `TollFree`, `ShortCode` and `Ambiguous`.
+   *  `Unknown`, `SpecialService`, `Extension`, `TollFree`, `ShortCode` and `Ambiguous`.
    * Example: Valid
    */
-  status?: ('Valid' | 'Possible' | 'Invalid');
+  status?: "Valid" | "Possible" | "Invalid";
 }
 
 export default NumberDetails;

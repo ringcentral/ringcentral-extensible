@@ -1,12 +1,16 @@
 import UserBusinessHoursUpdateResponse from "../../../../../definitions/UserBusinessHoursUpdateResponse.js";
 import UserBusinessHoursUpdateRequest from "../../../../../definitions/UserBusinessHoursUpdateRequest.js";
 import GetUserBusinessHoursResponse from "../../../../../definitions/GetUserBusinessHoursResponse.js";
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types.js';
+import {
+  RingCentralInterface,
+  ParentInterface,
+  RestRequestConfig,
+} from "../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
-  
+
   public constructor(_parent: ParentInterface) {
     this._parent = _parent;
     this.rc = _parent.rc;
@@ -22,8 +26,14 @@ class Index {
    * App Permission: ReadAccounts
    * User Permission: ReadExtensions
    */
-  public async get(restRequestConfig?: RestRequestConfig): Promise<GetUserBusinessHoursResponse> {
-    const r = await this.rc.get<GetUserBusinessHoursResponse>(this.path(), undefined, restRequestConfig);
+  public async get(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<GetUserBusinessHoursResponse> {
+    const r = await this.rc.get<GetUserBusinessHoursResponse>(
+      this.path(),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -35,8 +45,16 @@ class Index {
    * App Permission: EditExtensions
    * User Permission: EditUserAnsweringRules
    */
-  public async put(userBusinessHoursUpdateRequest: UserBusinessHoursUpdateRequest, restRequestConfig?: RestRequestConfig): Promise<UserBusinessHoursUpdateResponse> {
-    const r = await this.rc.put<UserBusinessHoursUpdateResponse>(this.path(), userBusinessHoursUpdateRequest, undefined, restRequestConfig);
+  public async put(
+    userBusinessHoursUpdateRequest: UserBusinessHoursUpdateRequest,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<UserBusinessHoursUpdateResponse> {
+    const r = await this.rc.put<UserBusinessHoursUpdateResponse>(
+      this.path(),
+      userBusinessHoursUpdateRequest,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

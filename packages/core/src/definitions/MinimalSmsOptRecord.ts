@@ -1,5 +1,5 @@
 interface MinimalSmsOptRecord {
-    /**
+  /**
    * Phone number in e.164 format (with '+' prefix)
    * Required
    * Example: +16501234567
@@ -8,12 +8,12 @@ interface MinimalSmsOptRecord {
 
   /**
    * Consent status of a recipient's phone number:
- *  - `OptOut` - The number is opted out of receiving SMS.
- *  - `OptIn` - The number is opted in to receiving SMS (if it was previously opted out).
+   *  - `OptOut` - The number is opted out of receiving SMS.
+   *  - `OptIn` - The number is opted in to receiving SMS (if it was previously opted out).
    * Required
    * Example: OptOut
    */
-  optStatus?: ('OptOut' | 'OptIn');
+  optStatus?: "OptOut" | "OptIn";
 
   /**
    * Phone number in e.164 format (with '+' prefix)

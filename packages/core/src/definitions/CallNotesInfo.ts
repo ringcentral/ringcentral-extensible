@@ -1,5 +1,5 @@
 interface CallNotesInfo {
-    /**
+  /**
    */
   notifyByEmail?: boolean;
 

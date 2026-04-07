@@ -3,7 +3,7 @@ import PageNavigationModel from "./PageNavigationModel.js";
 import EnumeratedPagingModel from "./EnumeratedPagingModel.js";
 
 interface GetTimezoneListResponse {
-    /**
+  /**
    * Link to the timezone list resource
    * Format: uri
    */

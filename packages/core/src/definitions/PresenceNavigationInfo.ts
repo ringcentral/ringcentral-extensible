@@ -2,9 +2,9 @@ import PresenceNavigationInfoURI from "./PresenceNavigationInfoURI.js";
 
 /**
  * Information on navigation
-*/
+ */
 interface PresenceNavigationInfo {
-    /**
+  /**
    */
   firstPage?: PresenceNavigationInfoURI;
 

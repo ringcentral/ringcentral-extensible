@@ -3,13 +3,17 @@ import WirelessPointInfo from "../../../../../definitions/WirelessPointInfo.js";
 import CreateWirelessPoint from "../../../../../definitions/CreateWirelessPoint.js";
 import WirelessPointsList from "../../../../../definitions/WirelessPointsList.js";
 import ListWirelessPointsParameters from "../../../../../definitions/ListWirelessPointsParameters.js";
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types.js';
+import {
+  RingCentralInterface,
+  ParentInterface,
+  RestRequestConfig,
+} from "../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
   public pointId: string | null;
-  
+
   public constructor(_parent: ParentInterface, pointId: string | null = null) {
     this._parent = _parent;
     this.rc = _parent.rc;
@@ -17,75 +21,102 @@ class Index {
   }
   public path(withParameter = true): string {
     if (withParameter && this.pointId !== null) {
-        return `${this._parent.path()}/wireless-points/${this.pointId}`;
+      return `${this._parent.path()}/wireless-points/${this.pointId}`;
     }
     return `${this._parent.path()}/wireless-points`;
   }
   /**
    * Returns account wireless points configured and used for Automatic
- * Location Updates feature.
- * 
+   * Location Updates feature.
+   *
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/wireless-points
    * Rate Limit Group: Medium
    * App Permission: EditAccounts
    * User Permission: ConfigureEmergencyMaps
    */
-  public async list(queryParams?: ListWirelessPointsParameters, restRequestConfig?: RestRequestConfig): Promise<WirelessPointsList> {
-    const r = await this.rc.get<WirelessPointsList>(this.path(false), queryParams, restRequestConfig);
+  public async list(
+    queryParams?: ListWirelessPointsParameters,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<WirelessPointsList> {
+    const r = await this.rc.get<WirelessPointsList>(
+      this.path(false),
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 
   /**
    * Creates a new wireless point in network configuration with the
- * emergency address assigned.
- * 
+   * emergency address assigned.
+   *
    * HTTP Method: post
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/wireless-points
    * Rate Limit Group: Heavy
    * App Permission: EditAccounts
    * User Permission: ConfigureEmergencyMaps
    */
-  public async post(createWirelessPoint: CreateWirelessPoint, restRequestConfig?: RestRequestConfig): Promise<WirelessPointInfo> {
-    const r = await this.rc.post<WirelessPointInfo>(this.path(false), createWirelessPoint, undefined, restRequestConfig);
+  public async post(
+    createWirelessPoint: CreateWirelessPoint,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<WirelessPointInfo> {
+    const r = await this.rc.post<WirelessPointInfo>(
+      this.path(false),
+      createWirelessPoint,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
   /**
    * Returns the specified wireless access point of a corporate map
- * with the emergency address assigned.
- * 
+   * with the emergency address assigned.
+   *
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/wireless-points/{pointId}
    * Rate Limit Group: Medium
    * App Permission: EditAccounts
    * User Permission: ConfigureEmergencyMaps
    */
-  public async get(restRequestConfig?: RestRequestConfig): Promise<WirelessPointInfo> {
-    if (this.pointId === null)
-    {
-        throw new Error('pointId must be specified.');
+  public async get(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<WirelessPointInfo> {
+    if (this.pointId === null) {
+      throw new Error("pointId must be specified.");
     }
-    const r = await this.rc.get<WirelessPointInfo>(this.path(), undefined, restRequestConfig);
+    const r = await this.rc.get<WirelessPointInfo>(
+      this.path(),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
   /**
    * Updates the specified wireless access point of a corporate map
- * by ID.
- * 
+   * by ID.
+   *
    * HTTP Method: put
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/wireless-points/{pointId}
    * Rate Limit Group: Heavy
    * App Permission: EditAccounts
    * User Permission: ConfigureEmergencyMaps
    */
-  public async put(updateWirelessPoint: UpdateWirelessPoint, restRequestConfig?: RestRequestConfig): Promise<WirelessPointInfo> {
-    if (this.pointId === null)
-    {
-        throw new Error('pointId must be specified.');
+  public async put(
+    updateWirelessPoint: UpdateWirelessPoint,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<WirelessPointInfo> {
+    if (this.pointId === null) {
+      throw new Error("pointId must be specified.");
     }
-    const r = await this.rc.put<WirelessPointInfo>(this.path(), updateWirelessPoint, undefined, restRequestConfig);
+    const r = await this.rc.put<WirelessPointInfo>(
+      this.path(),
+      updateWirelessPoint,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -98,11 +129,15 @@ class Index {
    * User Permission: ConfigureEmergencyMaps
    */
   public async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
-    if (this.pointId === null)
-    {
-        throw new Error('pointId must be specified.');
+    if (this.pointId === null) {
+      throw new Error("pointId must be specified.");
     }
-    const r = await this.rc.delete<string>(this.path(), {}, undefined, restRequestConfig);
+    const r = await this.rc.delete<string>(
+      this.path(),
+      {},
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

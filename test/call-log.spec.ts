@@ -27,13 +27,16 @@ describe("call log", () => {
 
   test("call log sync", async () => {
     const rc = await ReusableRestClient.getInstance();
-    const callLogs = await rc.restapi().account().extension().callLogSync().get(
-      {
+    const callLogs = await rc
+      .restapi()
+      .account()
+      .extension()
+      .callLogSync()
+      .get({
         syncType: "FSync",
         dateFrom: "2020-06-08T15:41:00.000Z",
         recordCount: 5,
-      },
-    );
+      });
     expect(callLogs).not.toBeUndefined();
     expect(callLogs.records).not.toBeUndefined();
 

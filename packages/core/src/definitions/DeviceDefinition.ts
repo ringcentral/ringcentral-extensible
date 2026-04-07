@@ -2,11 +2,11 @@ import DeviceDefinitionEmergency from "./DeviceDefinitionEmergency.js";
 import DeviceDefinitionPhoneInfo from "./DeviceDefinitionPhoneInfo.js";
 
 interface DeviceDefinition {
-    /**
+  /**
    * Device type. Only "OtherPhone" and "WebRTC" device types are supported at the moment
    * Required
    */
-  type?: ('OtherPhone' | 'WebRTC');
+  type?: "OtherPhone" | "WebRTC";
 
   /**
    * Required

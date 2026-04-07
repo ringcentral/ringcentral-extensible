@@ -1,11 +1,15 @@
 import CallParty from "../../../../../../../definitions/CallParty.js";
 import PickupTarget from "../../../../../../../definitions/PickupTarget.js";
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../../types.js';
+import {
+  RingCentralInterface,
+  ParentInterface,
+  RestRequestConfig,
+} from "../../../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
-  
+
   public constructor(_parent: ParentInterface) {
     this._parent = _parent;
     this.rc = _parent.rc;
@@ -20,8 +24,16 @@ class Index {
    * Rate Limit Group: Light
    * App Permission: CallControl
    */
-  public async post(pickupTarget: PickupTarget, restRequestConfig?: RestRequestConfig): Promise<CallParty> {
-    const r = await this.rc.post<CallParty>(this.path(), pickupTarget, undefined, restRequestConfig);
+  public async post(
+    pickupTarget: PickupTarget,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<CallParty> {
+    const r = await this.rc.post<CallParty>(
+      this.path(),
+      pickupTarget,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

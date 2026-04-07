@@ -3,7 +3,7 @@ import BulkAddDevicesItemEmergency from "./BulkAddDevicesItemEmergency.js";
 import BulkAddDevicesItemPhoneInfo from "./BulkAddDevicesItemPhoneInfo.js";
 
 interface BulkAddDevicesItem {
-    /**
+  /**
    * Internal identifier of a cost center
    * Example: 224149
    */
@@ -18,7 +18,7 @@ interface BulkAddDevicesItem {
    * Device type. Only "OtherPhone" and "WebRTC" device types are supported at the moment
    * Required
    */
-  type?: ('OtherPhone' | 'WebRTC');
+  type?: "OtherPhone" | "WebRTC";
 
   /**
    * Required

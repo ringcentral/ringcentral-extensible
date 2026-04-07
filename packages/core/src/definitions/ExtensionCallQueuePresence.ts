@@ -1,7 +1,7 @@
 import PresenceCallQueueInfo from "./PresenceCallQueueInfo.js";
 
 interface ExtensionCallQueuePresence {
-    /**
+  /**
    */
   callQueue?: PresenceCallQueueInfo;
 

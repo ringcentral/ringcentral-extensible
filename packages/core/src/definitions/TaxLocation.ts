@@ -1,7 +1,7 @@
 import PostalAddress from "./PostalAddress.js";
 
 interface TaxLocation {
-    /**
+  /**
    * Internal identifier of a tax location
    * Required
    * Format: int64
@@ -21,7 +21,7 @@ interface TaxLocation {
    * Required
    * Example: TaxLocation
    */
-  type?: ('BillingAddress' | 'TaxLocation' | 'Site');
+  type?: "BillingAddress" | "TaxLocation" | "Site";
 
   /**
    * Unique identifier of a tax location in the partner's system

@@ -45,8 +45,7 @@ class FormData {
       }
       let temp = `--${boundary}\r\n`;
       temp += `Content-Type: ${formFile.contentType}\r\n`;
-      temp +=
-        `Content-Disposition: form-data; name="${formFile.name}"; filename="${formFile.filename}"\r\n\r\n`;
+      temp += `Content-Disposition: form-data; name="${formFile.name}"; filename="${formFile.filename}"\r\n\r\n`;
       buffer = concat([buffer, encoder.encode(temp)]);
       let fileBuffer: Uint8Array;
       if (typeof formFile.content === "string") {
@@ -62,10 +61,7 @@ class FormData {
       }
       buffer = concat([buffer, fileBuffer]);
     }
-    return concat([
-      buffer,
-      encoder.encode(`\r\n--${boundary}--\r\n`),
-    ]);
+    return concat([buffer, encoder.encode(`\r\n--${boundary}--\r\n`)]);
   }
 }
 

@@ -1,5 +1,5 @@
 interface CommRangeResource {
-    /**
+  /**
    * Start date-time
    * Required
    */

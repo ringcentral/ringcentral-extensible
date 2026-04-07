@@ -2,9 +2,9 @@ import Host from "./Host.js";
 
 /**
  * Meeting information
-*/
+ */
 interface BasicMeeting {
-    /**
+  /**
    * Meeting id
    * Required
    */

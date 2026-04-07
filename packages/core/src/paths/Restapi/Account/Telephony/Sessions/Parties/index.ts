@@ -1,27 +1,31 @@
-import Recordings from './Recordings/index.js';
-import Supervise from './Supervise/index.js';
-import BringIn from './BringIn/index.js';
-import Transfer from './Transfer/index.js';
-import Forward from './Forward/index.js';
-import Pickup from './Pickup/index.js';
-import Answer from './Answer/index.js';
-import Bridge from './Bridge/index.js';
-import Ignore from './Ignore/index.js';
-import Reject from './Reject/index.js';
-import Unhold from './Unhold/index.js';
-import Reply from './Reply/index.js';
-import Park from './Park/index.js';
-import Flip from './Flip/index.js';
-import Hold from './Hold/index.js';
+import Recordings from "./Recordings/index.js";
+import Supervise from "./Supervise/index.js";
+import BringIn from "./BringIn/index.js";
+import Transfer from "./Transfer/index.js";
+import Forward from "./Forward/index.js";
+import Pickup from "./Pickup/index.js";
+import Answer from "./Answer/index.js";
+import Bridge from "./Bridge/index.js";
+import Ignore from "./Ignore/index.js";
+import Reject from "./Reject/index.js";
+import Unhold from "./Unhold/index.js";
+import Reply from "./Reply/index.js";
+import Park from "./Park/index.js";
+import Flip from "./Flip/index.js";
+import Hold from "./Hold/index.js";
 import PartyUpdateRequest from "../../../../../../definitions/PartyUpdateRequest.js";
 import CallParty from "../../../../../../definitions/CallParty.js";
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../types.js';
+import {
+  RingCentralInterface,
+  ParentInterface,
+  RestRequestConfig,
+} from "../../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
   public partyId: string | null;
-  
+
   public constructor(_parent: ParentInterface, partyId: string | null = null) {
     this._parent = _parent;
     this.rc = _parent.rc;
@@ -29,7 +33,7 @@ class Index {
   }
   public path(withParameter = true): string {
     if (withParameter && this.partyId !== null) {
-        return `${this._parent.path()}/parties/${this.partyId}`;
+      return `${this._parent.path()}/parties/${this.partyId}`;
     }
     return `${this._parent.path()}/parties`;
   }
@@ -41,11 +45,14 @@ class Index {
    * App Permission: CallControl
    */
   public async get(restRequestConfig?: RestRequestConfig): Promise<CallParty> {
-    if (this.partyId === null)
-    {
-        throw new Error('partyId must be specified.');
+    if (this.partyId === null) {
+      throw new Error("partyId must be specified.");
     }
-    const r = await this.rc.get<CallParty>(this.path(), undefined, restRequestConfig);
+    const r = await this.rc.get<CallParty>(
+      this.path(),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -57,11 +64,15 @@ class Index {
    * App Permission: CallControl
    */
   public async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
-    if (this.partyId === null)
-    {
-        throw new Error('partyId must be specified.');
+    if (this.partyId === null) {
+      throw new Error("partyId must be specified.");
     }
-    const r = await this.rc.delete<string>(this.path(), {}, undefined, restRequestConfig);
+    const r = await this.rc.delete<string>(
+      this.path(),
+      {},
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -72,12 +83,19 @@ class Index {
    * Rate Limit Group: Light
    * App Permission: CallControl
    */
-  public async patch(partyUpdateRequest: PartyUpdateRequest, restRequestConfig?: RestRequestConfig): Promise<CallParty> {
-    if (this.partyId === null)
-    {
-        throw new Error('partyId must be specified.');
+  public async patch(
+    partyUpdateRequest: PartyUpdateRequest,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<CallParty> {
+    if (this.partyId === null) {
+      throw new Error("partyId must be specified.");
     }
-    const r = await this.rc.patch<CallParty>(this.path(), partyUpdateRequest, undefined, restRequestConfig);
+    const r = await this.rc.patch<CallParty>(
+      this.path(),
+      partyUpdateRequest,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -137,7 +155,7 @@ class Index {
     return new Supervise(this);
   }
 
-  public recordings(recordingId: (string | null) = null): Recordings {
+  public recordings(recordingId: string | null = null): Recordings {
     return new Recordings(this, recordingId);
   }
 }

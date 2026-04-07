@@ -1,7 +1,7 @@
 import CommPhoneNumberResource from "./CommPhoneNumberResource.js";
 
 interface CommPhoneNumberTerminatingTargetResource {
-    /**
+  /**
    * Required
    */
   name?: string;
@@ -11,7 +11,11 @@ interface CommPhoneNumberTerminatingTargetResource {
    * Required
    * Example: PhoneNumberTerminatingTarget
    */
-  type?: ('ExtensionTerminatingTarget' | 'PhoneNumberTerminatingTarget' | 'PlayAnnouncementTerminatingTarget' | 'VoiceMailTerminatingTarget');
+  type?:
+    | "ExtensionTerminatingTarget"
+    | "PhoneNumberTerminatingTarget"
+    | "PlayAnnouncementTerminatingTarget"
+    | "VoiceMailTerminatingTarget";
 
   /**
    * Required
@@ -21,7 +25,7 @@ interface CommPhoneNumberTerminatingTargetResource {
   /**
    * Required
    */
-  dispatchingType?: ('Ringing' | 'Terminating');
+  dispatchingType?: "Ringing" | "Terminating";
 }
 
 export default CommPhoneNumberTerminatingTargetResource;

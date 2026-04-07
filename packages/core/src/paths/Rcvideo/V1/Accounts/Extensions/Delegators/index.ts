@@ -1,10 +1,14 @@
 import DelegatorsListResult from "../../../../../../definitions/DelegatorsListResult.js";
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../../types.js';
+import {
+  RingCentralInterface,
+  ParentInterface,
+  RestRequestConfig,
+} from "../../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
-  
+
   public constructor(_parent: ParentInterface) {
     this._parent = _parent;
     this.rc = _parent.rc;
@@ -19,8 +23,14 @@ class Index {
    * Rate Limit Group: Medium
    * App Permission: Video
    */
-  public async get(restRequestConfig?: RestRequestConfig): Promise<DelegatorsListResult> {
-    const r = await this.rc.get<DelegatorsListResult>(this.path(), undefined, restRequestConfig);
+  public async get(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<DelegatorsListResult> {
+    const r = await this.rc.get<DelegatorsListResult>(
+      this.path(),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

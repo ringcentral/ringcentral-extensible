@@ -1,5 +1,5 @@
 interface AssignMultipleDevicesAutomaticLocationUpdates {
-    /**
+  /**
    */
   enabledDeviceIds?: string[];
 

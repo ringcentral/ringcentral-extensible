@@ -3,7 +3,7 @@ import RegionalSettings from "./RegionalSettings.js";
 import OperatorInfo from "./OperatorInfo.js";
 
 interface SiteUpdateRequest {
-    /**
+  /**
    * Extension user first name
    */
   name?: string;
@@ -15,7 +15,7 @@ interface SiteUpdateRequest {
 
   /**
    * Custom name of a caller. Max number of characters is 15 (only
- *  alphabetical symbols, numbers and commas are supported)
+   *  alphabetical symbols, numbers and commas are supported)
    */
   callerIdName?: string;
 
@@ -40,7 +40,7 @@ interface SiteUpdateRequest {
   /**
    * Site access status for cross-site limitation
    */
-  siteAccess?: ('Limited' | 'Unlimited');
+  siteAccess?: "Limited" | "Unlimited";
 
   /**
    */

@@ -2,7 +2,7 @@ import AccountPhoneNumberInfo from "./AccountPhoneNumberInfo.js";
 import EnumeratedPagingModel from "./EnumeratedPagingModel.js";
 
 interface AccountPhoneNumberList {
-    /**
+  /**
    * List of account phone numbers
    * Required
    */

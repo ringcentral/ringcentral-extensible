@@ -2,9 +2,9 @@ import ErrorEntry from "./ErrorEntry.js";
 
 /**
  * Error response
-*/
+ */
 interface ASGErrorResponse {
-    /**
+  /**
    * Error code
    * Required
    * Example: CMN-101

@@ -1,7 +1,7 @@
 import RingOutStatusInfo from "./RingOutStatusInfo.js";
 
 interface GetRingOutStatusResponse {
-    /**
+  /**
    * Internal identifier of a RingOut call
    */
   id?: string;

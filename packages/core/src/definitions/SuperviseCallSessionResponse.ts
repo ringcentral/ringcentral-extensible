@@ -3,7 +3,7 @@ import OwnerInfo from "./OwnerInfo.js";
 import CallStatusInfo from "./CallStatusInfo.js";
 
 interface SuperviseCallSessionResponse {
-    /**
+  /**
    */
   from?: PartyInfo;
 
@@ -14,7 +14,7 @@ interface SuperviseCallSessionResponse {
   /**
    * Direction of a call
    */
-  direction?: ('Outbound' | 'Inbound');
+  direction?: "Outbound" | "Inbound";
 
   /**
    * Internal identifier of a party that monitors a call

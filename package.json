@@ -15,9 +15,13 @@
     "reinstall": "lerna exec 'rm -rf node_modules' && yarn install",
     "prepublishOnly": "yarn reset && yarn compile && yarn test",
     "test": "yarn workspace @rc-ex/test run vitest",
-    "upgrade-all": "yarn-upgrade-all -W && yarn workspaces run yarn-upgrade-all && yarn install"
+    "upgrade-all": "yarn-upgrade-all -W && yarn workspaces run yarn-upgrade-all && yarn install",
+    "lint": "biome lint --write .",
+    "format": "biome format --write .",
+    "check": "biome check --write ."
   },
   "devDependencies": {
+    "@biomejs/biome": "^2.4.10",
     "@types/node": "^25.0.3",
     "lerna": "^9.0.3",
     "typescript": "^5.9.3",

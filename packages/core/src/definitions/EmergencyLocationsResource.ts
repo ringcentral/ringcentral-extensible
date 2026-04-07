@@ -3,7 +3,7 @@ import EmergencyLocationsPaging from "./EmergencyLocationsPaging.js";
 import PageNavigationModel from "./PageNavigationModel.js";
 
 interface EmergencyLocationsResource {
-    /**
+  /**
    * Link to an emergency locations resource
    */
   uri?: string;

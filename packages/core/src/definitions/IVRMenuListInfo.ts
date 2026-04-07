@@ -1,5 +1,5 @@
 interface IvrMenuListInfo {
-    /**
+  /**
    * Internal identifier of an IVR Menu extension
    * Example: 7258440006
    */

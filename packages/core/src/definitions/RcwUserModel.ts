@@ -1,5 +1,5 @@
 interface RcwUserModel {
-    /**
+  /**
    * User ID
    * Required
    */

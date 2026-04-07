@@ -1,8 +1,8 @@
 /**
  * Appearance phone numbers information. Supported only for Delegated Lines Group extensions
-*/
+ */
 interface AppearanceInfo {
-    /**
+  /**
    * Appearance phone number
    */
   phoneNumber?: string;

@@ -1,5 +1,5 @@
 interface AdgPhoneNumberResource {
-    /**
+  /**
    * Example: +1 (205) 6812029
    */
   formattedPhoneNumber?: string;
@@ -24,7 +24,12 @@ interface AdgPhoneNumberResource {
    * Usage type of phone number
    * Example: DirectNumber
    */
-  usageType?: ('MobileNumber' | 'ContactNumber' | 'DirectNumber' | 'ForwardedNumber' | 'PartnerBusinessMobileNumber');
+  usageType?:
+    | "MobileNumber"
+    | "ContactNumber"
+    | "DirectNumber"
+    | "ForwardedNumber"
+    | "PartnerBusinessMobileNumber";
 
   /**
    * Specifies if a phone number should be hidden or not
@@ -51,7 +56,15 @@ interface AdgPhoneNumberResource {
   /**
    * SMS availability status of a phone number
    */
-  smsAvailabilityStatus?: ('Active' | 'Inactive' | 'Disabled' | 'Banned' | 'Suspended' | 'Deprovisioning' | 'InboundOnly' | 'Unknown');
+  smsAvailabilityStatus?:
+    | "Active"
+    | "Inactive"
+    | "Disabled"
+    | "Banned"
+    | "Suspended"
+    | "Deprovisioning"
+    | "InboundOnly"
+    | "Unknown";
 
   /**
    * SMS campaign identifier

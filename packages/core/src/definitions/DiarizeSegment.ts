@@ -1,5 +1,5 @@
 interface DiarizeSegment {
-    /**
+  /**
    * Required
    * Example: JohnDoe
    */

@@ -1,12 +1,21 @@
 import CommPhoneNumberResource from "./CommPhoneNumberResource.js";
 
 interface CommPhoneNumberRingTargetRequest {
-    /**
+  /**
    * Ring target type
    * Required
    * Example: PhoneNumberRingTarget
    */
-  type?: ('AllDesktopRingTarget' | 'AllMobileRingTarget' | 'CoworkerRingTarget' | 'DeviceRingTarget' | 'HotdeskRingTarget' | 'ImsPhoneNumberRingTarget' | 'FmcPhoneNumberRingTarget' | 'IntegrationRingTarget' | 'PhoneNumberRingTarget');
+  type?:
+    | "AllDesktopRingTarget"
+    | "AllMobileRingTarget"
+    | "CoworkerRingTarget"
+    | "DeviceRingTarget"
+    | "HotdeskRingTarget"
+    | "ImsPhoneNumberRingTarget"
+    | "FmcPhoneNumberRingTarget"
+    | "IntegrationRingTarget"
+    | "PhoneNumberRingTarget";
 
   /**
    * Required

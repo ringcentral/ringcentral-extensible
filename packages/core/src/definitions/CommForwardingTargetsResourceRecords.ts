@@ -4,11 +4,18 @@ import CommPhoneNumberResource from "./CommPhoneNumberResource.js";
 import CommIntegrationResource from "./CommIntegrationResource.js";
 
 interface CommForwardingTargetsResourceRecords {
-    /**
+  /**
    * Ring target type
    * Example: PhoneNumberRingTarget
    */
-  type?: ('CoworkerAppsRingTarget' | 'CoworkerRingTarget' | 'DeviceRingTarget' | 'ImsPhoneNumberRingTarget' | 'FmcPhoneNumberRingTarget' | 'IntegrationRingTarget' | 'PhoneNumberRingTarget');
+  type?:
+    | "CoworkerAppsRingTarget"
+    | "CoworkerRingTarget"
+    | "DeviceRingTarget"
+    | "ImsPhoneNumberRingTarget"
+    | "FmcPhoneNumberRingTarget"
+    | "IntegrationRingTarget"
+    | "PhoneNumberRingTarget";
 
   /**
    */

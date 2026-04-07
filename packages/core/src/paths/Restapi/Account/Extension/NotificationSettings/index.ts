@@ -1,11 +1,15 @@
 import NotificationSettingsUpdateRequest from "../../../../../definitions/NotificationSettingsUpdateRequest.js";
 import NotificationSettings from "../../../../../definitions/NotificationSettings.js";
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types.js';
+import {
+  RingCentralInterface,
+  ParentInterface,
+  RestRequestConfig,
+} from "../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
-  
+
   public constructor(_parent: ParentInterface) {
     this._parent = _parent;
     this.rc = _parent.rc;
@@ -15,32 +19,46 @@ class Index {
   }
   /**
    * Returns notification settings for the current extension.
- * 
- * Knowledge Article: [User Settings - Set Up Message Notifications](https://success.ringcentral.com/articles/RC_Knowledge_Article/9740)
- * 
+   *
+   * Knowledge Article: [User Settings - Set Up Message Notifications](https://success.ringcentral.com/articles/RC_Knowledge_Article/9740)
+   *
    * HTTP Method: get
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/notification-settings
    * Rate Limit Group: Light
    * App Permission: ReadAccounts
    * User Permission: ReadMessagesNotificationsSettings
    */
-  public async get(restRequestConfig?: RestRequestConfig): Promise<NotificationSettings> {
-    const r = await this.rc.get<NotificationSettings>(this.path(), undefined, restRequestConfig);
+  public async get(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<NotificationSettings> {
+    const r = await this.rc.get<NotificationSettings>(
+      this.path(),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 
   /**
    * Updates notification settings for the current extension.
- * Knowledge Article: [User Settings - Set Up Message Notifications](https://success.ringcentral.com/articles/RC_Knowledge_Article/9740)
- * 
+   * Knowledge Article: [User Settings - Set Up Message Notifications](https://success.ringcentral.com/articles/RC_Knowledge_Article/9740)
+   *
    * HTTP Method: put
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/notification-settings
    * Rate Limit Group: Medium
    * App Permission: EditExtensions
    * User Permission: EditMessagesNotificationsSettings
    */
-  public async put(notificationSettingsUpdateRequest: NotificationSettingsUpdateRequest, restRequestConfig?: RestRequestConfig): Promise<NotificationSettings> {
-    const r = await this.rc.put<NotificationSettings>(this.path(), notificationSettingsUpdateRequest, undefined, restRequestConfig);
+  public async put(
+    notificationSettingsUpdateRequest: NotificationSettingsUpdateRequest,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<NotificationSettings> {
+    const r = await this.rc.put<NotificationSettings>(
+      this.path(),
+      notificationSettingsUpdateRequest,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

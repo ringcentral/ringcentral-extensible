@@ -1,5 +1,5 @@
 interface Attributes {
-    /**
+  /**
    * Indicates that this party is agent of new call queue
    */
   queueCall?: boolean;

@@ -1,24 +1,31 @@
-import HoldMusic from './HoldMusic/index.js';
-import Content from './Content/index.js';
-import Utils from '../../../../../Utils.js';
+import HoldMusic from "./HoldMusic/index.js";
+import Content from "./Content/index.js";
+import Utils from "../../../../../Utils.js";
 import CustomUserGreetingInfo from "../../../../../definitions/CustomUserGreetingInfo.js";
 import CreateCustomUserGreetingParameters from "../../../../../definitions/CreateCustomUserGreetingParameters.js";
 import CreateCustomUserGreetingRequest from "../../../../../definitions/CreateCustomUserGreetingRequest.js";
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types.js';
+import {
+  RingCentralInterface,
+  ParentInterface,
+  RestRequestConfig,
+} from "../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
   public greetingId: string | null;
-  
-  public constructor(_parent: ParentInterface, greetingId: string | null = null) {
+
+  public constructor(
+    _parent: ParentInterface,
+    greetingId: string | null = null,
+  ) {
     this._parent = _parent;
     this.rc = _parent.rc;
     this.greetingId = greetingId;
   }
   public path(withParameter = true): string {
     if (withParameter && this.greetingId !== null) {
-        return `${this._parent.path()}/greeting/${this.greetingId}`;
+      return `${this._parent.path()}/greeting/${this.greetingId}`;
     }
     return `${this._parent.path()}/greeting`;
   }
@@ -30,9 +37,18 @@ class Index {
    * App Permission: EditExtensions
    * User Permission: EditUserAnsweringRules
    */
-  public async post(createCustomUserGreetingRequest: CreateCustomUserGreetingRequest, queryParams?: CreateCustomUserGreetingParameters, restRequestConfig?: RestRequestConfig): Promise<CustomUserGreetingInfo> {
-const formData = await Utils.getFormData(createCustomUserGreetingRequest);
-    const r = await this.rc.post<CustomUserGreetingInfo>(this.path(false), formData, queryParams, restRequestConfig);
+  public async post(
+    createCustomUserGreetingRequest: CreateCustomUserGreetingRequest,
+    queryParams?: CreateCustomUserGreetingParameters,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<CustomUserGreetingInfo> {
+    const formData = await Utils.getFormData(createCustomUserGreetingRequest);
+    const r = await this.rc.post<CustomUserGreetingInfo>(
+      this.path(false),
+      formData,
+      queryParams,
+      restRequestConfig,
+    );
     return r.data;
   }
 
@@ -44,12 +60,17 @@ const formData = await Utils.getFormData(createCustomUserGreetingRequest);
    * App Permission: ReadAccounts
    * User Permission: ReadUserInfo
    */
-  public async get(restRequestConfig?: RestRequestConfig): Promise<CustomUserGreetingInfo> {
-    if (this.greetingId === null)
-    {
-        throw new Error('greetingId must be specified.');
+  public async get(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<CustomUserGreetingInfo> {
+    if (this.greetingId === null) {
+      throw new Error("greetingId must be specified.");
     }
-    const r = await this.rc.get<CustomUserGreetingInfo>(this.path(), undefined, restRequestConfig);
+    const r = await this.rc.get<CustomUserGreetingInfo>(
+      this.path(),
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 

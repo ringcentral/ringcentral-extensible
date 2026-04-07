@@ -2,7 +2,7 @@ import CompanyDetails from "./CompanyDetails.js";
 import ApiErrorWithParameter from "./ApiErrorWithParameter.js";
 
 interface TcrBrandRecord {
-    /**
+  /**
    * Identifier of a TCR brand
    * Format: int64
    */
@@ -20,7 +20,18 @@ interface TcrBrandRecord {
 
   /**
    */
-  status?: ('Created' | 'Submitted' | 'SubmitFailed' | 'Verified' | 'Unverified' | 'UpdateRequested' | 'DeleteRequested' | 'Suspended' | 'Expired' | 'Draft' | 'PreventFailed');
+  status?:
+    | "Created"
+    | "Submitted"
+    | "SubmitFailed"
+    | "Verified"
+    | "Unverified"
+    | "UpdateRequested"
+    | "DeleteRequested"
+    | "Suspended"
+    | "Expired"
+    | "Draft"
+    | "PreventFailed";
 
   /**
    * Registration time

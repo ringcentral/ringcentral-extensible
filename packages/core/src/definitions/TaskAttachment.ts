@@ -1,5 +1,5 @@
 interface TaskAttachment {
-    /**
+  /**
    * File ID.
    */
   id?: string;
@@ -7,7 +7,7 @@ interface TaskAttachment {
   /**
    * Possible value - File. Attachment type (currently, only File is possible)
    */
-  type?: ('File');
+  type?: "File";
 
   /**
    * Name of the attached file (incl. extension name)

@@ -1,5 +1,5 @@
 interface AssignedRoleResource {
-    /**
+  /**
    * Link to an assigned role resource
    * Format: uri
    */

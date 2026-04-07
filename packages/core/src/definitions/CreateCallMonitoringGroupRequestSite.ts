@@ -1,5 +1,5 @@
 interface CreateCallMonitoringGroupRequestSite {
-    /**
+  /**
    * Identifier of a site
    */
   id?: string;

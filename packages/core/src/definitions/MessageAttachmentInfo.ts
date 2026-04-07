@@ -1,5 +1,5 @@
 interface MessageAttachmentInfo {
-    /**
+  /**
    * Internal identifier of a message attachment
    * Format: int64
    */
@@ -14,7 +14,13 @@ interface MessageAttachmentInfo {
   /**
    * Type of message attachment
    */
-  type?: ('AudioRecording' | 'AudioTranscription' | 'Text' | 'SourceDocument' | 'RenderedDocument' | 'MmsAttachment');
+  type?:
+    | "AudioRecording"
+    | "AudioTranscription"
+    | "Text"
+    | "SourceDocument"
+    | "RenderedDocument"
+    | "MmsAttachment";
 
   /**
    * MIME type for a given attachment, for instance 'audio/wav'
@@ -23,7 +29,7 @@ interface MessageAttachmentInfo {
 
   /**
    * Supported for `Voicemail` only. Duration of a voicemail in
- *  seconds
+   *  seconds
    * Format: int32
    */
   vmDuration?: number;

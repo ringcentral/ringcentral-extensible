@@ -1,8 +1,8 @@
 /**
  * Result breakdown by company hours
-*/
+ */
 interface CallsByCompanyHoursBreakdown {
-    /**
+  /**
    * Value for BusinessHours company hours
    * Required
    * Format: double

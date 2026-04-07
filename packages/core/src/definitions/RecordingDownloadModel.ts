@@ -1,5 +1,5 @@
 interface RecordingDownloadModel {
-    /**
+  /**
    * Download URI (available only for webinar host or admin)
    * Required
    * Format: uri
@@ -11,7 +11,7 @@ interface RecordingDownloadModel {
    * Required
    * Default: video/mp4
    */
-  downloadContentType?: ('video/mp4' | 'audio/m4a');
+  downloadContentType?: "video/mp4" | "audio/m4a";
 
   /**
    * Download file size in bytes

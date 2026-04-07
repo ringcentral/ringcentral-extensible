@@ -3,7 +3,7 @@ import PageNavigationModel from "./PageNavigationModel.js";
 import EnumeratedPagingModel from "./EnumeratedPagingModel.js";
 
 interface CallRecordingExtensions {
-    /**
+  /**
    * Link to call recording extension list resource
    * Format: uri
    */

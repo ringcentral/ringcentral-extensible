@@ -2,9 +2,9 @@ import CountryInfoShortModel from "./CountryInfoShortModel.js";
 
 /**
  * Information on account brand
-*/
+ */
 interface BrandInfo {
-    /**
+  /**
    * Internal identifier of a brand
    */
   id?: string;

@@ -4,7 +4,7 @@ import CommPhoneNumberResource from "./CommPhoneNumberResource.js";
 import CommIntegrationResource from "./CommIntegrationResource.js";
 
 interface CommRingGroupActionResourceTargets {
-    /**
+  /**
    */
   name?: string;
 
@@ -12,7 +12,16 @@ interface CommRingGroupActionResourceTargets {
    * Ring target type
    * Example: PhoneNumberRingTarget
    */
-  type?: ('AllDesktopRingTarget' | 'AllMobileRingTarget' | 'CoworkerRingTarget' | 'DeviceRingTarget' | 'HotdeskRingTarget' | 'ImsPhoneNumberRingTarget' | 'FmcPhoneNumberRingTarget' | 'IntegrationRingTarget' | 'PhoneNumberRingTarget');
+  type?:
+    | "AllDesktopRingTarget"
+    | "AllMobileRingTarget"
+    | "CoworkerRingTarget"
+    | "DeviceRingTarget"
+    | "HotdeskRingTarget"
+    | "ImsPhoneNumberRingTarget"
+    | "FmcPhoneNumberRingTarget"
+    | "IntegrationRingTarget"
+    | "PhoneNumberRingTarget";
 
   /**
    */

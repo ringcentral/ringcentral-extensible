@@ -1,8 +1,8 @@
 /**
  * Company emergency response location details
-*/
+ */
 interface SipRegistrationDeviceLocationInfo {
-    /**
+  /**
    * Internal identifier of an emergency response location
    */
   id?: string;
@@ -20,7 +20,7 @@ interface SipRegistrationDeviceLocationInfo {
   /**
    * Address format statuses
    */
-  addressFormatStatus?: ('Actual' | 'Outdated' | 'Deprecated');
+  addressFormatStatus?: "Actual" | "Outdated" | "Deprecated";
 }
 
 export default SipRegistrationDeviceLocationInfo;

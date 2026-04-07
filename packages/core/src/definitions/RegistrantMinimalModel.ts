@@ -1,5 +1,5 @@
 interface RegistrantMinimalModel {
-    /**
+  /**
    * First (given) name
    * Required
    * Example: John

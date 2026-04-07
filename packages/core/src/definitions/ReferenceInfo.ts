@@ -1,5 +1,5 @@
 interface ReferenceInfo {
-    /**
+  /**
    * Non-RC identifier of an extension
    */
   ref?: string;
@@ -7,7 +7,7 @@ interface ReferenceInfo {
   /**
    * Type of external identifier
    */
-  type?: ('PartnerId' | 'CustomerDirectoryId');
+  type?: "PartnerId" | "CustomerDirectoryId";
 
   /**
    * Primary federation admin account identifier

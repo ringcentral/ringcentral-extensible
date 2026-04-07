@@ -1,10 +1,14 @@
 import SendWelcomeEmailV2Request from "../../../../../definitions/SendWelcomeEmailV2Request.js";
-import { RingCentralInterface, ParentInterface, RestRequestConfig } from '../../../../../types.js';
+import {
+  RingCentralInterface,
+  ParentInterface,
+  RestRequestConfig,
+} from "../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;
   public _parent: ParentInterface;
-  
+
   public constructor(_parent: ParentInterface) {
     this._parent = _parent;
     this.rc = _parent.rc;
@@ -20,8 +24,16 @@ class Index {
    * App Permission: EditExtensions
    * User Permission: Users
    */
-  public async post(sendWelcomeEmailV2Request: SendWelcomeEmailV2Request, restRequestConfig?: RestRequestConfig): Promise<string> {
-    const r = await this.rc.post<string>(this.path(), sendWelcomeEmailV2Request, undefined, restRequestConfig);
+  public async post(
+    sendWelcomeEmailV2Request: SendWelcomeEmailV2Request,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<string> {
+    const r = await this.rc.post<string>(
+      this.path(),
+      sendWelcomeEmailV2Request,
+      undefined,
+      restRequestConfig,
+    );
     return r.data;
   }
 }

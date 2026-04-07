@@ -2,14 +2,21 @@ import CommReferencedExtensionResource from "./CommReferencedExtensionResource.j
 
 /**
  * Coworker apps target
-*/
+ */
 interface CommCoworkerAppsRingTargetResource {
-    /**
+  /**
    * Ring target type
    * Required
    * Example: CoworkerAppsRingTarget
    */
-  type?: ('CoworkerAppsRingTarget' | 'CoworkerRingTarget' | 'DeviceRingTarget' | 'ImsPhoneNumberRingTarget' | 'FmcPhoneNumberRingTarget' | 'IntegrationRingTarget' | 'PhoneNumberRingTarget');
+  type?:
+    | "CoworkerAppsRingTarget"
+    | "CoworkerRingTarget"
+    | "DeviceRingTarget"
+    | "ImsPhoneNumberRingTarget"
+    | "FmcPhoneNumberRingTarget"
+    | "IntegrationRingTarget"
+    | "PhoneNumberRingTarget";
 
   /**
    * Required

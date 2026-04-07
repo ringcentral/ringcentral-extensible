@@ -1,8 +1,8 @@
 /**
  * Assign a number by ID
-*/
+ */
 interface PhoneNumberDefinitionNumberId {
-    /**
+  /**
    * Phone number identifier
    * Required
    */

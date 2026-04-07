@@ -1,5 +1,5 @@
 interface HistorySessionBaseModel {
-    /**
+  /**
    * Session start time. If a session hasn't been started this fields should be set to "scheduledStartTime"
    * Format: date-time
    */
@@ -58,7 +58,7 @@ interface HistorySessionBaseModel {
 
   /**
    * The time offset (positive, in seconds) indicating how much in advance
- *  (comparing to "scheduledStartTime") panel members should join for the pre-webinar team sync
+   *  (comparing to "scheduledStartTime") panel members should join for the pre-webinar team sync
    * Format: int32
    * Example: 900
    */
@@ -80,15 +80,21 @@ interface HistorySessionBaseModel {
    * Webinar session status
    * Example: Finished
    */
-  status?: ('Scheduled' | 'Active' | 'Finished');
+  status?: "Scheduled" | "Active" | "Finished";
 
   /**
    * Session runtime status (for 'Active' Sessions only).
- *  Please note that 'Idle' status shouldn't be returned in the API
- *  (but can be delivered in an event)
+   *  Please note that 'Idle' status shouldn't be returned in the API
+   *  (but can be delivered in an event)
    * Example: Live
    */
-  runtimeStatus?: ('Idle' | 'Practice' | 'GoingLive' | 'Live' | 'Break' | 'Debrief');
+  runtimeStatus?:
+    | "Idle"
+    | "Practice"
+    | "GoingLive"
+    | "Live"
+    | "Break"
+    | "Debrief";
 
   /**
    * The number of participants (of all roles) who joined the webinar

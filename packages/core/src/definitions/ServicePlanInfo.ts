@@ -1,8 +1,8 @@
 /**
  * Information on account service plan
-*/
+ */
 interface ServicePlanInfo {
-    /**
+  /**
    * Internal identifier of a service plan
    */
   id?: string;
@@ -19,7 +19,7 @@ interface ServicePlanInfo {
 
   /**
    */
-  freemiumProductType?: ('Freyja' | 'Phoenix' | 'PbxBasic');
+  freemiumProductType?: "Freyja" | "Phoenix" | "PbxBasic";
 }
 
 export default ServicePlanInfo;

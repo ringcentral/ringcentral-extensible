@@ -1,12 +1,12 @@
 /**
  * Query parameters for operation readForwardingTargets
-*/
+ */
 interface ReadForwardingTargetsParameters {
-    /**
+  /**
    * Filters the list of forwarding targets. Includes or excludes extension's own targets from it
    * Example: true
    */
-  excludeOwnTargets?: ('true' | 'false');
+  excludeOwnTargets?: "true" | "false";
 
   /**
    * The result set page number (1-indexed) to return
@@ -20,7 +20,7 @@ interface ReadForwardingTargetsParameters {
 
   /**
    * The number of items per page. If the provided value in the request
- *  is greater than a maximum, the maximum value is applied
+   *  is greater than a maximum, the maximum value is applied
    * Maximum: 1000
    * Minimum: 1
    * Format: int32

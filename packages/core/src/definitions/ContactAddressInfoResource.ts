@@ -1,5 +1,5 @@
 interface ContactAddressInfoResource {
-    /**
+  /**
    */
   street?: string;
 
