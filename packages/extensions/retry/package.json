@@ -32,7 +32,7 @@
     "wait-for-async": "^0.8.0"
   },
   "scripts": {
-    "build": "tsup --config tsup.config.ts && tsc -p tsconfig.esm.json --declaration --emitDeclarationOnly --outDir dist"
+    "build": "tsup --config tsup.config.ts && tsc -p tsconfig.json --declaration --emitDeclarationOnly --outDir dist"
   },
   "type": "module"
 }
