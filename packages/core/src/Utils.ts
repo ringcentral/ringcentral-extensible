@@ -1,5 +1,5 @@
-import FormData from "./FormData.js";
 import type Attachment from "./definitions/Attachment.js";
+import FormData from "./FormData.js";
 import type { RestResponse } from "./types.js";
 
 class Utils {

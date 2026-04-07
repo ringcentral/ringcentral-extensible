@@ -1,9 +1,9 @@
-import type ModifyAccountBusinessAddressRequest from "../../../../definitions/ModifyAccountBusinessAddressRequest.js";
 import type AccountBusinessAddressResource from "../../../../definitions/AccountBusinessAddressResource.js";
+import type ModifyAccountBusinessAddressRequest from "../../../../definitions/ModifyAccountBusinessAddressRequest.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../types.js";
 
 class Index {

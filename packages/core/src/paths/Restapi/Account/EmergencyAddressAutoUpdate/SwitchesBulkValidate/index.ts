@@ -1,9 +1,9 @@
-import type ValidateMultipleSwitchesResponse from "../../../../../definitions/ValidateMultipleSwitchesResponse.js";
 import type ValidateMultipleSwitchesRequest from "../../../../../definitions/ValidateMultipleSwitchesRequest.js";
+import type ValidateMultipleSwitchesResponse from "../../../../../definitions/ValidateMultipleSwitchesResponse.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../../types.js";
 
 class Index {

@@ -1,5 +1,5 @@
-import type Host from "./Host.js";
 import type BasicParticipant from "./BasicParticipant.js";
+import type Host from "./Host.js";
 
 /**
  * Meeting information

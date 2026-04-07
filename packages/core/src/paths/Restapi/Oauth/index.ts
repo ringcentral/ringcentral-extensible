@@ -1,10 +1,10 @@
+import type { ParentInterface, RingCentralInterface } from "../../../types.js";
 import Authorize from "./Authorize/index.js";
-import Userinfo from "./Userinfo/index.js";
-import Wstoken from "./Wstoken/index.js";
+import Jwks from "./Jwks/index.js";
 import Revoke from "./Revoke/index.js";
 import Token from "./Token/index.js";
-import Jwks from "./Jwks/index.js";
-import type { RingCentralInterface, ParentInterface } from "../../../types.js";
+import Userinfo from "./Userinfo/index.js";
+import Wstoken from "./Wstoken/index.js";
 
 class Index {
   public rc: RingCentralInterface;

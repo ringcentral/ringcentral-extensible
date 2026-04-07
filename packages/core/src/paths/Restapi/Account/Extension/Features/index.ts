@@ -1,9 +1,9 @@
 import type FeatureList from "../../../../../definitions/FeatureList.js";
 import type ReadExtensionFeaturesParameters from "../../../../../definitions/ReadExtensionFeaturesParameters.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../../types.js";
 
 class Index {

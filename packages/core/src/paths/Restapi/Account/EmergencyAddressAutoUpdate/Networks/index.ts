@@ -1,12 +1,12 @@
-import type UpdateNetworkRequest from "../../../../../definitions/UpdateNetworkRequest.js";
-import type NetworkInfo from "../../../../../definitions/NetworkInfo.js";
 import type CreateNetworkRequest from "../../../../../definitions/CreateNetworkRequest.js";
-import type NetworksList from "../../../../../definitions/NetworksList.js";
 import type ListNetworksParameters from "../../../../../definitions/ListNetworksParameters.js";
+import type NetworkInfo from "../../../../../definitions/NetworkInfo.js";
+import type NetworksList from "../../../../../definitions/NetworksList.js";
+import type UpdateNetworkRequest from "../../../../../definitions/UpdateNetworkRequest.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../../types.js";
 
 class Index {

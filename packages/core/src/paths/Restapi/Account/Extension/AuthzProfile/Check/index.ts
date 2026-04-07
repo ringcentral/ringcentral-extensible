@@ -1,9 +1,9 @@
 import type AuthProfileCheckResource from "../../../../../../definitions/AuthProfileCheckResource.js";
 import type CheckUserPermissionParameters from "../../../../../../definitions/CheckUserPermissionParameters.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../../../types.js";
 
 class Index {

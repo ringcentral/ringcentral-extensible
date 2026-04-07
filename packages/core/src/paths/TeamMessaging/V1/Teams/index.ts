@@ -1,19 +1,19 @@
-import Unarchive from "./Unarchive/index.js";
-import Archive from "./Archive/index.js";
-import Remove from "./Remove/index.js";
-import Leave from "./Leave/index.js";
-import Join from "./Join/index.js";
-import Add from "./Add/index.js";
-import type TMUpdateTeamRequest from "../../../../definitions/TMUpdateTeamRequest.js";
-import type TMTeamInfo from "../../../../definitions/TMTeamInfo.js";
-import type TMCreateTeamRequest from "../../../../definitions/TMCreateTeamRequest.js";
-import type TMTeamList from "../../../../definitions/TMTeamList.js";
 import type ListGlipTeamsNewParameters from "../../../../definitions/ListGlipTeamsNewParameters.js";
+import type TMCreateTeamRequest from "../../../../definitions/TMCreateTeamRequest.js";
+import type TMTeamInfo from "../../../../definitions/TMTeamInfo.js";
+import type TMTeamList from "../../../../definitions/TMTeamList.js";
+import type TMUpdateTeamRequest from "../../../../definitions/TMUpdateTeamRequest.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../types.js";
+import Add from "./Add/index.js";
+import Archive from "./Archive/index.js";
+import Join from "./Join/index.js";
+import Leave from "./Leave/index.js";
+import Remove from "./Remove/index.js";
+import Unarchive from "./Unarchive/index.js";
 
 class Index {
   public rc: RingCentralInterface;

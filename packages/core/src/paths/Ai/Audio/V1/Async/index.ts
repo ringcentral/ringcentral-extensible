@@ -1,6 +1,9 @@
+import type {
+  ParentInterface,
+  RingCentralInterface,
+} from "../../../../../types.js";
 import SpeakerDiarize from "./SpeakerDiarize/index.js";
 import SpeechToText from "./SpeechToText/index.js";
-import type { RingCentralInterface, ParentInterface } from "../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

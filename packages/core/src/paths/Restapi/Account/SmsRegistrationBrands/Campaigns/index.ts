@@ -1,11 +1,11 @@
-import SubmitPhoneNumbers from "./SubmitPhoneNumbers/index.js";
-import type TcrCampaignRecord from "../../../../../definitions/TcrCampaignRecord.js";
 import type CampaignListResponse from "../../../../../definitions/CampaignListResponse.js";
+import type TcrCampaignRecord from "../../../../../definitions/TcrCampaignRecord.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../../types.js";
+import SubmitPhoneNumbers from "./SubmitPhoneNumbers/index.js";
 
 class Index {
   public rc: RingCentralInterface;

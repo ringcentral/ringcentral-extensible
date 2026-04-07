@@ -1,14 +1,14 @@
-import type UpdateForwardingNumberRequest from "../../../../../definitions/UpdateForwardingNumberRequest.js";
-import type ForwardingNumberResource from "../../../../../definitions/ForwardingNumberResource.js";
+import type CreateForwardingNumberRequest from "../../../../../definitions/CreateForwardingNumberRequest.js";
 import type DeleteForwardingNumbersRequest from "../../../../../definitions/DeleteForwardingNumbersRequest.js";
 import type ForwardingNumberInfo from "../../../../../definitions/ForwardingNumberInfo.js";
-import type CreateForwardingNumberRequest from "../../../../../definitions/CreateForwardingNumberRequest.js";
+import type ForwardingNumberResource from "../../../../../definitions/ForwardingNumberResource.js";
 import type GetExtensionForwardingNumberListResponse from "../../../../../definitions/GetExtensionForwardingNumberListResponse.js";
 import type ListForwardingNumbersParameters from "../../../../../definitions/ListForwardingNumbersParameters.js";
+import type UpdateForwardingNumberRequest from "../../../../../definitions/UpdateForwardingNumberRequest.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../../types.js";
 
 class Index {

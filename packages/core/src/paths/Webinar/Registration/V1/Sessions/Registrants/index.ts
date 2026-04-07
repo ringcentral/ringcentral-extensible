@@ -1,13 +1,13 @@
-import type RegistrantModelWithQuestionnaire from "../../../../../../definitions/RegistrantModelWithQuestionnaire.js";
 import type RcwRegGetRegistrantParameters from "../../../../../../definitions/RcwRegGetRegistrantParameters.js";
-import type RegistrantModelResponsePostWithQuestionnaire from "../../../../../../definitions/RegistrantModelResponsePostWithQuestionnaire.js";
+import type RcwRegListRegistrantsParameters from "../../../../../../definitions/RcwRegListRegistrantsParameters.js";
 import type RegistrantBaseModelWithQuestionnaire from "../../../../../../definitions/RegistrantBaseModelWithQuestionnaire.js";
 import type RegistrantListResource from "../../../../../../definitions/RegistrantListResource.js";
-import type RcwRegListRegistrantsParameters from "../../../../../../definitions/RcwRegListRegistrantsParameters.js";
+import type RegistrantModelResponsePostWithQuestionnaire from "../../../../../../definitions/RegistrantModelResponsePostWithQuestionnaire.js";
+import type RegistrantModelWithQuestionnaire from "../../../../../../definitions/RegistrantModelWithQuestionnaire.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../../../types.js";
 
 class Index {

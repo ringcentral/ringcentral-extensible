@@ -1,9 +1,9 @@
 import type CallLogSyncResponse from "../../../../definitions/CallLogSyncResponse.js";
 import type SyncAccountCallLogParameters from "../../../../definitions/SyncAccountCallLogParameters.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../types.js";
 
 class Index {

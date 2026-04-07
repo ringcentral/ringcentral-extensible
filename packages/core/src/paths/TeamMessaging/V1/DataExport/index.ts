@@ -1,11 +1,11 @@
-import type DataExportTask from "../../../../definitions/DataExportTask.js";
 import type CreateDataExportTaskRequest from "../../../../definitions/CreateDataExportTaskRequest.js";
+import type DataExportTask from "../../../../definitions/DataExportTask.js";
 import type DataExportTaskList from "../../../../definitions/DataExportTaskList.js";
 import type ListDataExportTasksNewParameters from "../../../../definitions/ListDataExportTasksNewParameters.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../types.js";
 
 class Index {

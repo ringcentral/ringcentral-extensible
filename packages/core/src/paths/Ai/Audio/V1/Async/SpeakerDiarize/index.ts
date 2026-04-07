@@ -2,9 +2,9 @@ import type CaiAsyncApiResponse from "../../../../../../definitions/CaiAsyncApiR
 import type CaiSpeakerDiarizeParameters from "../../../../../../definitions/CaiSpeakerDiarizeParameters.js";
 import type DiarizeInput from "../../../../../../definitions/DiarizeInput.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../../../types.js";
 
 class Index {

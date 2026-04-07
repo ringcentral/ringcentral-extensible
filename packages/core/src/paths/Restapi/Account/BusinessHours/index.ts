@@ -1,9 +1,9 @@
-import type CompanyBusinessHoursUpdateRequest from "../../../../definitions/CompanyBusinessHoursUpdateRequest.js";
 import type CompanyBusinessHours from "../../../../definitions/CompanyBusinessHours.js";
+import type CompanyBusinessHoursUpdateRequest from "../../../../definitions/CompanyBusinessHoursUpdateRequest.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../types.js";
 
 class Index {

@@ -1,9 +1,9 @@
 import type AddressBookSync from "../../../../../definitions/AddressBookSync.js";
 import type SyncAddressBookParameters from "../../../../../definitions/SyncAddressBookParameters.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../../types.js";
 
 class Index {

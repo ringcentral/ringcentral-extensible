@@ -1,14 +1,14 @@
-import BulkAssign from "./BulkAssign/index.js";
-import Members from "./Members/index.js";
 import type CallMonitoringGroup from "../../../../definitions/CallMonitoringGroup.js";
-import type CreateCallMonitoringGroupRequest from "../../../../definitions/CreateCallMonitoringGroupRequest.js";
 import type CallMonitoringGroups from "../../../../definitions/CallMonitoringGroups.js";
+import type CreateCallMonitoringGroupRequest from "../../../../definitions/CreateCallMonitoringGroupRequest.js";
 import type ListCallMonitoringGroupsParameters from "../../../../definitions/ListCallMonitoringGroupsParameters.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../types.js";
+import BulkAssign from "./BulkAssign/index.js";
+import Members from "./Members/index.js";
 
 class Index {
   public rc: RingCentralInterface;

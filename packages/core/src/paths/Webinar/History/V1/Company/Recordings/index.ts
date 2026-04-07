@@ -1,10 +1,10 @@
+import type RcwHistoryAdminListRecordingsParameters from "../../../../../../definitions/RcwHistoryAdminListRecordingsParameters.js";
 import type RecordingAdminExtendedItemModel from "../../../../../../definitions/RecordingAdminExtendedItemModel.js";
 import type RecordingAdminListResource from "../../../../../../definitions/RecordingAdminListResource.js";
-import type RcwHistoryAdminListRecordingsParameters from "../../../../../../definitions/RcwHistoryAdminListRecordingsParameters.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../../../types.js";
 
 class Index {

@@ -1,12 +1,12 @@
-import type TMUpdatePostRequest from "../../../../../definitions/TMUpdatePostRequest.js";
-import type TMPostInfo from "../../../../../definitions/TMPostInfo.js";
-import type TMCreatePostRequest from "../../../../../definitions/TMCreatePostRequest.js";
-import type TMPostsList from "../../../../../definitions/TMPostsList.js";
 import type ReadGlipPostsNewParameters from "../../../../../definitions/ReadGlipPostsNewParameters.js";
+import type TMCreatePostRequest from "../../../../../definitions/TMCreatePostRequest.js";
+import type TMPostInfo from "../../../../../definitions/TMPostInfo.js";
+import type TMPostsList from "../../../../../definitions/TMPostsList.js";
+import type TMUpdatePostRequest from "../../../../../definitions/TMUpdatePostRequest.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../../types.js";
 
 class Index {

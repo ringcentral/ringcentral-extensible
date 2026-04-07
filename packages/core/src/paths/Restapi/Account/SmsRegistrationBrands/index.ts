@@ -1,11 +1,11 @@
-import Campaigns from "./Campaigns/index.js";
-import type TcrBrandRecord from "../../../../definitions/TcrBrandRecord.js";
 import type BrandListResponse from "../../../../definitions/BrandListResponse.js";
+import type TcrBrandRecord from "../../../../definitions/TcrBrandRecord.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../types.js";
+import Campaigns from "./Campaigns/index.js";
 
 class Index {
   public rc: RingCentralInterface;

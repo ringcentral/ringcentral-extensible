@@ -1,9 +1,9 @@
 import type CallQueueMembers from "../../../../../definitions/CallQueueMembers.js";
 import type ListCallQueueMembersParameters from "../../../../../definitions/ListCallQueueMembersParameters.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../../types.js";
 
 class Index {

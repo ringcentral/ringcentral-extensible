@@ -1,14 +1,14 @@
-import type PatchContactParameters from "../../../../../../definitions/PatchContactParameters.js";
-import type UpdateContactParameters from "../../../../../../definitions/UpdateContactParameters.js";
-import type PersonalContactResource from "../../../../../../definitions/PersonalContactResource.js";
-import type CreateContactParameters from "../../../../../../definitions/CreateContactParameters.js";
-import type PersonalContactRequest from "../../../../../../definitions/PersonalContactRequest.js";
 import type ContactList from "../../../../../../definitions/ContactList.js";
+import type CreateContactParameters from "../../../../../../definitions/CreateContactParameters.js";
 import type ListContactsParameters from "../../../../../../definitions/ListContactsParameters.js";
+import type PatchContactParameters from "../../../../../../definitions/PatchContactParameters.js";
+import type PersonalContactRequest from "../../../../../../definitions/PersonalContactRequest.js";
+import type PersonalContactResource from "../../../../../../definitions/PersonalContactResource.js";
+import type UpdateContactParameters from "../../../../../../definitions/UpdateContactParameters.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../../../types.js";
 
 class Index {

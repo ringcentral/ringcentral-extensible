@@ -1,8 +1,8 @@
 import type AccountServiceInfo from "../../../../definitions/AccountServiceInfo.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../types.js";
 
 class Index {

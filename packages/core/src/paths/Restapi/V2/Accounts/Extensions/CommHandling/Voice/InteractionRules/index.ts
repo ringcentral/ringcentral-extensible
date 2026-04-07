@@ -1,12 +1,12 @@
-import type CommInteractionRuleUpdateRequest from "../../../../../../../../definitions/CommInteractionRuleUpdateRequest.js";
-import type CommInteractionRuleResource from "../../../../../../../../definitions/CommInteractionRuleResource.js";
 import type CommInteractionRuleCreateRequest from "../../../../../../../../definitions/CommInteractionRuleCreateRequest.js";
+import type CommInteractionRuleResource from "../../../../../../../../definitions/CommInteractionRuleResource.js";
 import type CommInteractionRulesResource from "../../../../../../../../definitions/CommInteractionRulesResource.js";
+import type CommInteractionRuleUpdateRequest from "../../../../../../../../definitions/CommInteractionRuleUpdateRequest.js";
 import type ListVoiceInteractionRulesParameters from "../../../../../../../../definitions/ListVoiceInteractionRulesParameters.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../../../../../types.js";
 
 class Index {

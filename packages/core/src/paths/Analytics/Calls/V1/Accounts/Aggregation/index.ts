@@ -1,8 +1,8 @@
-import Fetch from "./Fetch/index.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
+  RingCentralInterface,
 } from "../../../../../../types.js";
+import Fetch from "./Fetch/index.js";
 
 class Index {
   public rc: RingCentralInterface;

@@ -1,12 +1,12 @@
+import type AssignedCountryInfo from "./AssignedCountryInfo.js";
+import type CallQueueExtensionInfo from "./CallQueueExtensionInfo.js";
 import type ContactInfo from "./ContactInfo.js";
+import type CostCenterInfo from "./CostCenterInfo.js";
 import type ExtensionPermissions from "./ExtensionPermissions.js";
 import type ProfileImageInfo from "./ProfileImageInfo.js";
-import type ReferenceInfo from "./ReferenceInfo.js";
-import type CallQueueExtensionInfo from "./CallQueueExtensionInfo.js";
-import type Roles from "./Roles.js";
 import type ProvisioningSiteInfo from "./ProvisioningSiteInfo.js";
-import type AssignedCountryInfo from "./AssignedCountryInfo.js";
-import type CostCenterInfo from "./CostCenterInfo.js";
+import type ReferenceInfo from "./ReferenceInfo.js";
+import type Roles from "./Roles.js";
 
 interface GetExtensionListInfoResponse {
   /**

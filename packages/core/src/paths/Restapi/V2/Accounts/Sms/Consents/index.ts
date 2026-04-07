@@ -1,13 +1,13 @@
-import Export from "./Export/index.js";
+import type ListSmsConsentRecordsParameters from "../../../../../../definitions/ListSmsConsentRecordsParameters.js";
+import type OptRecordList from "../../../../../../definitions/OptRecordList.js";
 import type OptRecordsModificationSummary from "../../../../../../definitions/OptRecordsModificationSummary.js";
 import type UpdateOptRecordList from "../../../../../../definitions/UpdateOptRecordList.js";
-import type OptRecordList from "../../../../../../definitions/OptRecordList.js";
-import type ListSmsConsentRecordsParameters from "../../../../../../definitions/ListSmsConsentRecordsParameters.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../../../types.js";
+import Export from "./Export/index.js";
 
 class Index {
   public rc: RingCentralInterface;

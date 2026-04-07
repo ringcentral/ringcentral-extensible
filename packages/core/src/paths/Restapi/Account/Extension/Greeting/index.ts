@@ -1,14 +1,14 @@
-import HoldMusic from "./HoldMusic/index.js";
-import Content from "./Content/index.js";
-import Utils from "../../../../../Utils.js";
-import type CustomUserGreetingInfo from "../../../../../definitions/CustomUserGreetingInfo.js";
 import type CreateCustomUserGreetingParameters from "../../../../../definitions/CreateCustomUserGreetingParameters.js";
 import type CreateCustomUserGreetingRequest from "../../../../../definitions/CreateCustomUserGreetingRequest.js";
+import type CustomUserGreetingInfo from "../../../../../definitions/CustomUserGreetingInfo.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../../types.js";
+import Utils from "../../../../../Utils.js";
+import Content from "./Content/index.js";
+import HoldMusic from "./HoldMusic/index.js";
 
 class Index {
   public rc: RingCentralInterface;

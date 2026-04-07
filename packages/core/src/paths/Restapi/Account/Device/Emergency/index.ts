@@ -1,9 +1,9 @@
-import type DeviceResource from "../../../../../definitions/DeviceResource.js";
 import type AccountDeviceUpdate from "../../../../../definitions/AccountDeviceUpdate.js";
+import type DeviceResource from "../../../../../definitions/DeviceResource.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../../types.js";
 
 class Index {

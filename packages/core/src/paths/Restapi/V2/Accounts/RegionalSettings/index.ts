@@ -1,9 +1,9 @@
 import type AccountRegionalSettingRequest from "../../../../../definitions/AccountRegionalSettingRequest.js";
 import type RegionalSettings from "../../../../../definitions/RegionalSettings.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../../types.js";
 
 class Index {

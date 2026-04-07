@@ -1,10 +1,10 @@
-import type CompanyPhoneNumberInfo from "../../../../definitions/CompanyPhoneNumberInfo.js";
 import type AccountPhoneNumbers from "../../../../definitions/AccountPhoneNumbers.js";
+import type CompanyPhoneNumberInfo from "../../../../definitions/CompanyPhoneNumberInfo.js";
 import type ListAccountPhoneNumbersParameters from "../../../../definitions/ListAccountPhoneNumbersParameters.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../types.js";
 
 class Index {

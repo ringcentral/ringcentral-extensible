@@ -1,8 +1,8 @@
 import type CommExtensionListResource from "../../../../../../../../../../definitions/CommExtensionListResource.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../../../../../../../types.js";
 
 class Index {

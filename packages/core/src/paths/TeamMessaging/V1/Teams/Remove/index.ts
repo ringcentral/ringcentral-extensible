@@ -1,8 +1,8 @@
 import type TMRemoveTeamMembersRequest from "../../../../../definitions/TMRemoveTeamMembersRequest.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../../types.js";
 
 class Index {

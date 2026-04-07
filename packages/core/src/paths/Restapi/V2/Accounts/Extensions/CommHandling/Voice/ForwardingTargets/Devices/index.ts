@@ -1,8 +1,8 @@
-import Extensions from "./Extensions/index.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
+  RingCentralInterface,
 } from "../../../../../../../../../types.js";
+import Extensions from "./Extensions/index.js";
 
 class Index {
   public rc: RingCentralInterface;

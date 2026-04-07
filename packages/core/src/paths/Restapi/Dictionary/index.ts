@@ -1,15 +1,15 @@
-import PermissionCategory from "./PermissionCategory/index.js";
-import FaxCoverPage from "./FaxCoverPage/index.js";
-import Permission from "./Permission/index.js";
-import UserRole from "./UserRole/index.js";
-import Location from "./Location/index.js";
-import Timezone from "./Timezone/index.js";
-import Language from "./Language/index.js";
-import Greeting from "./Greeting/index.js";
-import Country from "./Country/index.js";
-import State from "./State/index.js";
+import type { ParentInterface, RingCentralInterface } from "../../../types.js";
 import Brand from "./Brand/index.js";
-import type { RingCentralInterface, ParentInterface } from "../../../types.js";
+import Country from "./Country/index.js";
+import FaxCoverPage from "./FaxCoverPage/index.js";
+import Greeting from "./Greeting/index.js";
+import Language from "./Language/index.js";
+import Location from "./Location/index.js";
+import Permission from "./Permission/index.js";
+import PermissionCategory from "./PermissionCategory/index.js";
+import State from "./State/index.js";
+import Timezone from "./Timezone/index.js";
+import UserRole from "./UserRole/index.js";
 
 class Index {
   public rc: RingCentralInterface;

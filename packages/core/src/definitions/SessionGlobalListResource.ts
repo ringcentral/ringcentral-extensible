@@ -1,5 +1,5 @@
-import type SessionGlobalResource from "./SessionGlobalResource.js";
 import type RcwPagingModel from "./RcwPagingModel.js";
+import type SessionGlobalResource from "./SessionGlobalResource.js";
 
 interface SessionGlobalListResource {
   /**

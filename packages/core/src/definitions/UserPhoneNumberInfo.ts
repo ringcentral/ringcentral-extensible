@@ -1,5 +1,5 @@
-import type CountryInfoBasicModel from "./CountryInfoBasicModel.js";
 import type ContactCenterProvider from "./ContactCenterProvider.js";
+import type CountryInfoBasicModel from "./CountryInfoBasicModel.js";
 import type UserPhoneNumberExtensionInfo from "./UserPhoneNumberExtensionInfo.js";
 
 interface UserPhoneNumberInfo {

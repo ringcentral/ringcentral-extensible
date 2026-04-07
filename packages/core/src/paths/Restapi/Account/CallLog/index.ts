@@ -1,11 +1,11 @@
 import type CallLogRecord from "../../../../definitions/CallLogRecord.js";
-import type ReadCompanyCallRecordParameters from "../../../../definitions/ReadCompanyCallRecordParameters.js";
 import type CallLogResponse from "../../../../definitions/CallLogResponse.js";
 import type ReadCompanyCallLogParameters from "../../../../definitions/ReadCompanyCallLogParameters.js";
+import type ReadCompanyCallRecordParameters from "../../../../definitions/ReadCompanyCallRecordParameters.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../types.js";
 
 class Index {

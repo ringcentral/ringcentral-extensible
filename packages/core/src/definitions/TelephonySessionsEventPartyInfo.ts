@@ -1,7 +1,7 @@
 import type CallPartyShortInfo from "./CallPartyShortInfo.js";
-import type RecordingInfo from "./RecordingInfo.js";
 import type CallStatusInfo from "./CallStatusInfo.js";
 import type ParkInfo from "./ParkInfo.js";
+import type RecordingInfo from "./RecordingInfo.js";
 import type SipData from "./SipData.js";
 import type UiCallInfo from "./UiCallInfo.js";
 

@@ -1,5 +1,5 @@
-import type CompanyDetails from "./CompanyDetails.js";
 import type ApiErrorWithParameter from "./ApiErrorWithParameter.js";
+import type CompanyDetails from "./CompanyDetails.js";
 
 interface TcrBrandRecord {
   /**

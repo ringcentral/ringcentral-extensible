@@ -1,5 +1,5 @@
-import type CreateFaxMessageRequest from "@rc-ex/core/definitions/CreateFaxMessageRequest";
 import type Attachment from "@rc-ex/core/definitions/Attachment";
+import type CreateFaxMessageRequest from "@rc-ex/core/definitions/CreateFaxMessageRequest";
 import type FaxResponse from "@rc-ex/core/definitions/FaxResponse";
 import Utils from "@rc-ex/core/Utils";
 import fs from "fs";

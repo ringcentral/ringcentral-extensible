@@ -1,13 +1,13 @@
-import type UpdateInviteeRequest from "../../../../../../../definitions/UpdateInviteeRequest.js";
-import type InviteeResource from "../../../../../../../definitions/InviteeResource.js";
-import type BulkUpdateInviteesResponse from "../../../../../../../definitions/BulkUpdateInviteesResponse.js";
 import type BulkUpdateInviteesRequest from "../../../../../../../definitions/BulkUpdateInviteesRequest.js";
-import type WcsInviteeListResource from "../../../../../../../definitions/WcsInviteeListResource.js";
+import type BulkUpdateInviteesResponse from "../../../../../../../definitions/BulkUpdateInviteesResponse.js";
+import type InviteeResource from "../../../../../../../definitions/InviteeResource.js";
 import type RcwConfigListInviteesParameters from "../../../../../../../definitions/RcwConfigListInviteesParameters.js";
+import type UpdateInviteeRequest from "../../../../../../../definitions/UpdateInviteeRequest.js";
+import type WcsInviteeListResource from "../../../../../../../definitions/WcsInviteeListResource.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../../../../types.js";
 
 class Index {

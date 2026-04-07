@@ -1,15 +1,15 @@
-import Publish from "./Publish/index.js";
-import Unlock from "./Unlock/index.js";
-import Lock from "./Lock/index.js";
-import type TMNoteInfo from "../../../../definitions/TMNoteInfo.js";
 import type PatchNoteNewParameters from "../../../../definitions/PatchNoteNewParameters.js";
 import type TMCreateNoteRequest from "../../../../definitions/TMCreateNoteRequest.js";
+import type TMNoteInfo from "../../../../definitions/TMNoteInfo.js";
 import type TMNoteWithBodyInfo from "../../../../definitions/TMNoteWithBodyInfo.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../types.js";
+import Lock from "./Lock/index.js";
+import Publish from "./Publish/index.js";
+import Unlock from "./Unlock/index.js";
 
 class Index {
   public rc: RingCentralInterface;

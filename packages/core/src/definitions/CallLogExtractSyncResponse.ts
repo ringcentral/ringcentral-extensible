@@ -1,5 +1,5 @@
-import type CallLogRecord from "./CallLogRecord.js";
 import type CallLogExtractSyncInfo from "./CallLogExtractSyncInfo.js";
+import type CallLogRecord from "./CallLogRecord.js";
 
 interface CallLogExtractSyncResponse {
   /**

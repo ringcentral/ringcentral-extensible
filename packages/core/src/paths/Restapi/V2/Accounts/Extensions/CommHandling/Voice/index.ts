@@ -1,10 +1,10 @@
+import type {
+  ParentInterface,
+  RingCentralInterface,
+} from "../../../../../../../types.js";
 import ForwardingTargets from "./ForwardingTargets/index.js";
 import InteractionRules from "./InteractionRules/index.js";
 import StateRules from "./StateRules/index.js";
-import type {
-  RingCentralInterface,
-  ParentInterface,
-} from "../../../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

@@ -1,9 +1,9 @@
-import type RecordingInsights from "../../../../../../../../../definitions/RecordingInsights.js";
 import type GetRecordingInsightsParameters from "../../../../../../../../../definitions/GetRecordingInsightsParameters.js";
+import type RecordingInsights from "../../../../../../../../../definitions/RecordingInsights.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../../../../../../types.js";
 
 class Index {

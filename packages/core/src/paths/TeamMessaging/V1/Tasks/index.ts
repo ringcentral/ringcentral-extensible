@@ -1,12 +1,12 @@
-import Complete from "./Complete/index.js";
+import type TMTaskInfo from "../../../../definitions/TMTaskInfo.js";
 import type TMTaskList from "../../../../definitions/TMTaskList.js";
 import type TMUpdateTaskRequest from "../../../../definitions/TMUpdateTaskRequest.js";
-import type TMTaskInfo from "../../../../definitions/TMTaskInfo.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../types.js";
+import Complete from "./Complete/index.js";
 
 class Index {
   public rc: RingCentralInterface;

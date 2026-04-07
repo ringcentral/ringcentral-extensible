@@ -1,8 +1,8 @@
 import type CallPartyFlip from "../../../../../../../definitions/CallPartyFlip.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../../../../types.js";
 
 class Index {

@@ -1,5 +1,5 @@
-import type TimeRange from "./TimeRange.js";
 import type AdvancedTimeSettings from "./AdvancedTimeSettings.js";
+import type TimeRange from "./TimeRange.js";
 
 /**
  * Date-time range for the calls. The call is considered to be within time range if it started within time range. Both borders are inclusive

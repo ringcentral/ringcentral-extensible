@@ -1,6 +1,6 @@
-import type ExtensionFilters from "./ExtensionFilters.js";
-import type CallSegmentFilter from "./CallSegmentFilter.js";
 import type CallDurationFilter from "./CallDurationFilter.js";
+import type CallSegmentFilter from "./CallSegmentFilter.js";
+import type ExtensionFilters from "./ExtensionFilters.js";
 import type TimeSpentFilter from "./TimeSpentFilter.js";
 
 /**

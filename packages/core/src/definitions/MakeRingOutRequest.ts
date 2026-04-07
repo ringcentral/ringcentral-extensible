@@ -1,6 +1,6 @@
+import type MakeRingOutCallerIdInfo from "./MakeRingOutCallerIdInfo.js";
 import type MakeRingOutCallerInfoRequestFrom from "./MakeRingOutCallerInfoRequestFrom.js";
 import type MakeRingOutCallerInfoRequestTo from "./MakeRingOutCallerInfoRequestTo.js";
-import type MakeRingOutCallerIdInfo from "./MakeRingOutCallerIdInfo.js";
 import type MakeRingOutCountryInfo from "./MakeRingOutCountryInfo.js";
 
 interface MakeRingOutRequest {

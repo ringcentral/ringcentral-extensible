@@ -1,9 +1,9 @@
-import type SessionsInsightsResource from "../../../../../../../../../definitions/SessionsInsightsResource.js";
 import type GetSessionInsightsParameters from "../../../../../../../../../definitions/GetSessionInsightsParameters.js";
+import type SessionsInsightsResource from "../../../../../../../../../definitions/SessionsInsightsResource.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../../../../../../types.js";
 
 class Index {

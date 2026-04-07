@@ -1,6 +1,6 @@
+import type EnumeratedPagingModel from "./EnumeratedPagingModel.js";
 import type ForwardingNumberInfo from "./ForwardingNumberInfo.js";
 import type PageNavigationModel from "./PageNavigationModel.js";
-import type EnumeratedPagingModel from "./EnumeratedPagingModel.js";
 
 interface GetExtensionForwardingNumberListResponse {
   /**

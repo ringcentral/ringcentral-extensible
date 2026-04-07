@@ -1,10 +1,10 @@
+import type ListVideoMeetingsParameters from "../../../../../definitions/ListVideoMeetingsParameters.js";
 import type Meeting from "../../../../../definitions/Meeting.js";
 import type MeetingPage from "../../../../../definitions/MeetingPage.js";
-import type ListVideoMeetingsParameters from "../../../../../definitions/ListVideoMeetingsParameters.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../../types.js";
 
 class Index {

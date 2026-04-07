@@ -2,9 +2,9 @@ import type CountryInfoDictionaryModel from "../../../../definitions/CountryInfo
 import type CountryListDictionaryModel from "../../../../definitions/CountryListDictionaryModel.js";
 import type ListCountriesParameters from "../../../../definitions/ListCountriesParameters.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../types.js";
 
 class Index {

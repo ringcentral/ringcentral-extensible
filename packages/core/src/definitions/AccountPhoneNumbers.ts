@@ -1,6 +1,6 @@
 import type CompanyPhoneNumberInfo from "./CompanyPhoneNumberInfo.js";
-import type PageNavigationModel from "./PageNavigationModel.js";
 import type EnumeratedPagingModel from "./EnumeratedPagingModel.js";
+import type PageNavigationModel from "./PageNavigationModel.js";
 
 interface AccountPhoneNumbers {
   /**

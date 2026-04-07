@@ -1,5 +1,5 @@
-import type ConsentSettingsCoverage from "./ConsentSettingsCoverage.js";
 import type AutomaticConsentCollecting from "./AutomaticConsentCollecting.js";
+import type ConsentSettingsCoverage from "./ConsentSettingsCoverage.js";
 
 /**
  * Info about consent configuration for the TCR campaign.

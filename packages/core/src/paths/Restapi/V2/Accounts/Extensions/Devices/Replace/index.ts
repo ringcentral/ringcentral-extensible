@@ -1,8 +1,8 @@
 import type SwapDeviceRequest from "../../../../../../../definitions/SwapDeviceRequest.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../../../../types.js";
 
 class Index {

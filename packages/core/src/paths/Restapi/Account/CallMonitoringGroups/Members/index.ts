@@ -1,9 +1,9 @@
 import type CallMonitoringGroupMemberList from "../../../../../definitions/CallMonitoringGroupMemberList.js";
 import type ListCallMonitoringGroupMembersParameters from "../../../../../definitions/ListCallMonitoringGroupMembersParameters.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../../types.js";
 
 class Index {

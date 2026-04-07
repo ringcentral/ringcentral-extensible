@@ -1,8 +1,8 @@
 import type UserInfoResource from "../../../../definitions/UserInfoResource.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../types.js";
 
 class Index {

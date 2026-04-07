@@ -1,8 +1,8 @@
 import type CallQueueBulkAssignResource from "../../../../../definitions/CallQueueBulkAssignResource.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../../types.js";
 
 class Index {

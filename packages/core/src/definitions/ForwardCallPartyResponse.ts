@@ -1,7 +1,7 @@
 import type CallStatusInfo from "./CallStatusInfo.js";
+import type OwnerInfo from "./OwnerInfo.js";
 import type ParkInfo from "./ParkInfo.js";
 import type PartyInfo from "./PartyInfo.js";
-import type OwnerInfo from "./OwnerInfo.js";
 import type RecordingInfo from "./RecordingInfo.js";
 
 /**

@@ -1,10 +1,10 @@
-import type SwitchInfo from "../../../../../definitions/SwitchInfo.js";
-import type SwitchesList from "../../../../../definitions/SwitchesList.js";
 import type ListAccountSwitchesParameters from "../../../../../definitions/ListAccountSwitchesParameters.js";
+import type SwitchesList from "../../../../../definitions/SwitchesList.js";
+import type SwitchInfo from "../../../../../definitions/SwitchInfo.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../../types.js";
 
 class Index {

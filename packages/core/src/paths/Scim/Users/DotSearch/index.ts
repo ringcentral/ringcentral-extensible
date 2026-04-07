@@ -1,9 +1,9 @@
-import type ScimUserSearchResponse from "../../../../definitions/ScimUserSearchResponse.js";
 import type ScimSearchRequest from "../../../../definitions/ScimSearchRequest.js";
+import type ScimUserSearchResponse from "../../../../definitions/ScimUserSearchResponse.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../types.js";
 
 class Index {

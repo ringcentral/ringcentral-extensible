@@ -1,10 +1,10 @@
-import type TimezoneInfoBase from "../../../../definitions/TimezoneInfoBase.js";
 import type GetTimezoneListResponse from "../../../../definitions/GetTimezoneListResponse.js";
 import type ListTimezonesParameters from "../../../../definitions/ListTimezonesParameters.js";
+import type TimezoneInfoBase from "../../../../definitions/TimezoneInfoBase.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../types.js";
 
 class Index {

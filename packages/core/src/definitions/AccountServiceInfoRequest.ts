@@ -1,10 +1,10 @@
-import type BrandInfo from "./BrandInfo.js";
-import type CountryInfoShortModel from "./CountryInfoShortModel.js";
-import type ServicePlanInfo from "./ServicePlanInfo.js";
-import type BillingPlanInfo from "./BillingPlanInfo.js";
-import type ServiceFeatureInfo from "./ServiceFeatureInfo.js";
 import type AccountLimitsInfo from "./AccountLimitsInfo.js";
 import type BillingPackageInfo from "./BillingPackageInfo.js";
+import type BillingPlanInfo from "./BillingPlanInfo.js";
+import type BrandInfo from "./BrandInfo.js";
+import type CountryInfoShortModel from "./CountryInfoShortModel.js";
+import type ServiceFeatureInfo from "./ServiceFeatureInfo.js";
+import type ServicePlanInfo from "./ServicePlanInfo.js";
 
 /**
  * Account service information, including brand, service plan and billing plan

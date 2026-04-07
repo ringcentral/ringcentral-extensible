@@ -1,9 +1,9 @@
 import type AccountPhoneNumberInfo from "../../../../../../definitions/AccountPhoneNumberInfo.js";
 import type ReplacePhoneNumberRequest from "../../../../../../definitions/ReplacePhoneNumberRequest.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../../../types.js";
 
 class Index {

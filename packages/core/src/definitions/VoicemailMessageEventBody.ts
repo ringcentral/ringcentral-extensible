@@ -1,6 +1,6 @@
+import type MessageAttachmentInfo from "./MessageAttachmentInfo.js";
 import type NotificationRecipientInfo from "./NotificationRecipientInfo.js";
 import type SenderInfo from "./SenderInfo.js";
-import type MessageAttachmentInfo from "./MessageAttachmentInfo.js";
 
 /**
  * Notification payload body

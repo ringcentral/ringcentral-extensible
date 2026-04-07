@@ -1,5 +1,5 @@
-import type MessageAttachmentInfo from "./MessageAttachmentInfo.js";
 import type ConversationInfo from "./ConversationInfo.js";
+import type MessageAttachmentInfo from "./MessageAttachmentInfo.js";
 import type MessageStoreCallerInfoResponseFrom from "./MessageStoreCallerInfoResponseFrom.js";
 import type MessageStoreCallerInfoResponseTo from "./MessageStoreCallerInfoResponseTo.js";
 

@@ -1,5 +1,5 @@
-import type PermissionIdResource from "./PermissionIdResource.js";
 import type EffectiveRoleResource from "./EffectiveRoleResource.js";
+import type PermissionIdResource from "./PermissionIdResource.js";
 
 interface ActivePermissionResource {
   /**

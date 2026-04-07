@@ -1,8 +1,8 @@
 import type ReadIVRPromptContentParameters from "../../../../../definitions/ReadIVRPromptContentParameters.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../../types.js";
 
 class Index {

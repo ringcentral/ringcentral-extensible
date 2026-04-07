@@ -1,9 +1,9 @@
 import type CloudRecordings from "../../../../../../definitions/CloudRecordings.js";
 import type GetExtensionRecordingsParameters from "../../../../../../definitions/GetExtensionRecordingsParameters.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../../../types.js";
 
 class Index {

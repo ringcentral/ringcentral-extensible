@@ -1,5 +1,5 @@
-import type EmergencyLocationAddressResource from "./EmergencyLocationAddressResource.js";
 import type DeviceEmergencyLocationInfo from "./DeviceEmergencyLocationInfo.js";
+import type EmergencyLocationAddressResource from "./EmergencyLocationAddressResource.js";
 
 /**
  * Device emergency settings

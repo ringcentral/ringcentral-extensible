@@ -1,10 +1,10 @@
 import type Attributes from "./Attributes.js";
 import type CallStatusInfo from "./CallStatusInfo.js";
+import type MetaData from "./MetaData.js";
+import type OwnerInfo from "./OwnerInfo.js";
 import type ParkInfo from "./ParkInfo.js";
 import type PartyInfo from "./PartyInfo.js";
-import type OwnerInfo from "./OwnerInfo.js";
 import type RecordingInfo from "./RecordingInfo.js";
-import type MetaData from "./MetaData.js";
 
 /**
  * Information on a party of a call session

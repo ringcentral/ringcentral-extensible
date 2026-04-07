@@ -1,10 +1,10 @@
+import type AsrInput from "../../../../../../definitions/AsrInput.js";
 import type CaiAsyncApiResponse from "../../../../../../definitions/CaiAsyncApiResponse.js";
 import type CaiSpeechToTextParameters from "../../../../../../definitions/CaiSpeechToTextParameters.js";
-import type AsrInput from "../../../../../../definitions/AsrInput.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../../../types.js";
 
 class Index {

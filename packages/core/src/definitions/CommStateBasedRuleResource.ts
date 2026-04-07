@@ -1,5 +1,5 @@
-import type CommStateDispatchingResource from "./CommStateDispatchingResource.js";
 import type CommStateDispatchingRefResource from "./CommStateDispatchingRefResource.js";
+import type CommStateDispatchingResource from "./CommStateDispatchingResource.js";
 import type CommStateResource from "./CommStateResource.js";
 
 /**

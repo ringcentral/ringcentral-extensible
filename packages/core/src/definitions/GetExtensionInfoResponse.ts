@@ -1,18 +1,18 @@
-import type GetExtensionAccountInfo from "./GetExtensionAccountInfo.js";
+import type AssignedCountryInfo from "./AssignedCountryInfo.js";
+import type CallQueueExtensionInfo from "./CallQueueExtensionInfo.js";
 import type ContactInfo from "./ContactInfo.js";
 import type CostCenterInfo from "./CostCenterInfo.js";
 import type CustomFieldInfo from "./CustomFieldInfo.js";
 import type DepartmentInfo from "./DepartmentInfo.js";
 import type ExtensionPermissions from "./ExtensionPermissions.js";
-import type ProfileImageInfo from "./ProfileImageInfo.js";
-import type ReferenceInfo from "./ReferenceInfo.js";
-import type Roles from "./Roles.js";
-import type RegionalSettings from "./RegionalSettings.js";
 import type ExtensionServiceFeatureInfo from "./ExtensionServiceFeatureInfo.js";
 import type ExtensionStatusInfo from "./ExtensionStatusInfo.js";
-import type CallQueueExtensionInfo from "./CallQueueExtensionInfo.js";
+import type GetExtensionAccountInfo from "./GetExtensionAccountInfo.js";
+import type ProfileImageInfo from "./ProfileImageInfo.js";
 import type ProvisioningSiteInfo from "./ProvisioningSiteInfo.js";
-import type AssignedCountryInfo from "./AssignedCountryInfo.js";
+import type ReferenceInfo from "./ReferenceInfo.js";
+import type RegionalSettings from "./RegionalSettings.js";
+import type Roles from "./Roles.js";
 
 interface GetExtensionInfoResponse {
   /**

@@ -1,11 +1,11 @@
-import type DisconnectTeamsUsersParameters from "../../../../../../definitions/DisconnectTeamsUsersParameters.js";
 import type ConnectTeamsUsersRequest from "../../../../../../definitions/ConnectTeamsUsersRequest.js";
-import type MsTeamsUserListResponse from "../../../../../../definitions/MsTeamsUserListResponse.js";
+import type DisconnectTeamsUsersParameters from "../../../../../../definitions/DisconnectTeamsUsersParameters.js";
 import type ListTeamsUsersParameters from "../../../../../../definitions/ListTeamsUsersParameters.js";
+import type MsTeamsUserListResponse from "../../../../../../definitions/MsTeamsUserListResponse.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../../../types.js";
 
 class Index {

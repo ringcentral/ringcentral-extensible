@@ -1,10 +1,10 @@
-import type DeviceModelInfo from "./DeviceModelInfo.js";
-import type DeviceExtensionInfo from "./DeviceExtensionInfo.js";
 import type DeviceEmergencyServiceAddressResource from "./DeviceEmergencyServiceAddressResource.js";
-import type SipRegistrationDeviceEmergencyInfo from "./SipRegistrationDeviceEmergencyInfo.js";
-import type ShippingInfo from "./ShippingInfo.js";
+import type DeviceExtensionInfo from "./DeviceExtensionInfo.js";
+import type DeviceModelInfo from "./DeviceModelInfo.js";
 import type DevicePhoneLinesInfo from "./DevicePhoneLinesInfo.js";
 import type DeviceSiteInfo from "./DeviceSiteInfo.js";
+import type ShippingInfo from "./ShippingInfo.js";
+import type SipRegistrationDeviceEmergencyInfo from "./SipRegistrationDeviceEmergencyInfo.js";
 
 interface SipRegistrationDeviceInfo {
   /**

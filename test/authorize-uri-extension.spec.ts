@@ -1,5 +1,5 @@
-import RingCentral from "@rc-ex/core";
 import AuthorizeUriExtension from "@rc-ex/authorize-uri";
+import RingCentral from "@rc-ex/core";
 import { describe, expect, test } from "vitest";
 
 describe("Authorize URI Extension", () => {

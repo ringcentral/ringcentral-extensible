@@ -1,5 +1,5 @@
-import type EveryoneCanControl from "./EveryoneCanControl.js";
 import type AutoShared from "./AutoShared.js";
+import type EveryoneCanControl from "./EveryoneCanControl.js";
 
 /**
  * Recordings preferences

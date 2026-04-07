@@ -1,10 +1,10 @@
+import type ContractedCountryListResponse from "../../../../../definitions/ContractedCountryListResponse.js";
 import type CountryListDictionaryModel from "../../../../../definitions/CountryListDictionaryModel.js";
 import type ListDomesticCountriesParameters from "../../../../../definitions/ListDomesticCountriesParameters.js";
-import type ContractedCountryListResponse from "../../../../../definitions/ContractedCountryListResponse.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../../types.js";
 
 class Index {

@@ -1,11 +1,11 @@
-import type TMTaskInfo from "../../../../../definitions/TMTaskInfo.js";
-import type TMCreateTaskRequest from "../../../../../definitions/TMCreateTaskRequest.js";
-import type TMTaskList from "../../../../../definitions/TMTaskList.js";
 import type ListChatTasksNewParameters from "../../../../../definitions/ListChatTasksNewParameters.js";
+import type TMCreateTaskRequest from "../../../../../definitions/TMCreateTaskRequest.js";
+import type TMTaskInfo from "../../../../../definitions/TMTaskInfo.js";
+import type TMTaskList from "../../../../../definitions/TMTaskList.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../../types.js";
 
 class Index {

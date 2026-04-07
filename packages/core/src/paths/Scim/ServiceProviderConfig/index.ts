@@ -1,8 +1,8 @@
 import type ScimProviderConfig from "../../../definitions/ScimProviderConfig.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../types.js";
 
 class Index {

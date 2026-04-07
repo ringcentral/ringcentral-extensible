@@ -2,9 +2,9 @@ import type DictionaryGreetingInfo from "../../../../definitions/DictionaryGreet
 import type DictionaryGreetingList from "../../../../definitions/DictionaryGreetingList.js";
 import type ListStandardGreetingsParameters from "../../../../definitions/ListStandardGreetingsParameters.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../types.js";
 
 class Index {

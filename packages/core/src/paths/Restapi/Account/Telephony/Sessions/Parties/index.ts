@@ -1,25 +1,25 @@
-import Recordings from "./Recordings/index.js";
-import Supervise from "./Supervise/index.js";
-import BringIn from "./BringIn/index.js";
-import Transfer from "./Transfer/index.js";
-import Forward from "./Forward/index.js";
-import Pickup from "./Pickup/index.js";
-import Answer from "./Answer/index.js";
-import Bridge from "./Bridge/index.js";
-import Ignore from "./Ignore/index.js";
-import Reject from "./Reject/index.js";
-import Unhold from "./Unhold/index.js";
-import Reply from "./Reply/index.js";
-import Park from "./Park/index.js";
-import Flip from "./Flip/index.js";
-import Hold from "./Hold/index.js";
-import type PartyUpdateRequest from "../../../../../../definitions/PartyUpdateRequest.js";
 import type CallParty from "../../../../../../definitions/CallParty.js";
+import type PartyUpdateRequest from "../../../../../../definitions/PartyUpdateRequest.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../../../types.js";
+import Answer from "./Answer/index.js";
+import Bridge from "./Bridge/index.js";
+import BringIn from "./BringIn/index.js";
+import Flip from "./Flip/index.js";
+import Forward from "./Forward/index.js";
+import Hold from "./Hold/index.js";
+import Ignore from "./Ignore/index.js";
+import Park from "./Park/index.js";
+import Pickup from "./Pickup/index.js";
+import Recordings from "./Recordings/index.js";
+import Reject from "./Reject/index.js";
+import Reply from "./Reply/index.js";
+import Supervise from "./Supervise/index.js";
+import Transfer from "./Transfer/index.js";
+import Unhold from "./Unhold/index.js";
 
 class Index {
   public rc: RingCentralInterface;

@@ -2,9 +2,9 @@ import type CaiAsyncApiResponse from "../../../../../../definitions/CaiAsyncApiR
 import type CaiSummarizeParameters from "../../../../../../definitions/CaiSummarizeParameters.js";
 import type SummaryInput from "../../../../../../definitions/SummaryInput.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../../../types.js";
 
 class Index {

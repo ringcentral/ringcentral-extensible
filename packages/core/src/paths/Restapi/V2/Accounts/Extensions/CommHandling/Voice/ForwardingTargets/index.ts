@@ -1,13 +1,13 @@
-import Devices from "./Devices/index.js";
-import type CommRemoveForwardingTargetsResponse from "../../../../../../../../definitions/CommRemoveForwardingTargetsResponse.js";
-import type CommRemoveForwardingTargetsRequest from "../../../../../../../../definitions/CommRemoveForwardingTargetsRequest.js";
 import type CommForwardingTargetsResource from "../../../../../../../../definitions/CommForwardingTargetsResource.js";
+import type CommRemoveForwardingTargetsRequest from "../../../../../../../../definitions/CommRemoveForwardingTargetsRequest.js";
+import type CommRemoveForwardingTargetsResponse from "../../../../../../../../definitions/CommRemoveForwardingTargetsResponse.js";
 import type ReadForwardingTargetsParameters from "../../../../../../../../definitions/ReadForwardingTargetsParameters.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../../../../../types.js";
+import Devices from "./Devices/index.js";
 
 class Index {
   public rc: RingCentralInterface;

@@ -1,9 +1,9 @@
 import type LanguageInfo from "../../../../definitions/LanguageInfo.js";
 import type LanguageList from "../../../../definitions/LanguageList.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../types.js";
 
 class Index {

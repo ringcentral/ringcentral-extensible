@@ -1,13 +1,13 @@
-import Renew from "./Renew/index.js";
-import type UpdateSubscriptionRequest from "../../../../../definitions/UpdateSubscriptionRequest.js";
-import type SubscriptionInfo from "../../../../../definitions/SubscriptionInfo.js";
 import type CreateWebhookSubscriptionRequest from "../../../../../definitions/CreateWebhookSubscriptionRequest.js";
+import type SubscriptionInfo from "../../../../../definitions/SubscriptionInfo.js";
 import type SubscriptionListResource from "../../../../../definitions/SubscriptionListResource.js";
+import type UpdateSubscriptionRequest from "../../../../../definitions/UpdateSubscriptionRequest.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../../types.js";
+import Renew from "./Renew/index.js";
 
 class Index {
   public rc: RingCentralInterface;

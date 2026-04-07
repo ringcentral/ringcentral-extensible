@@ -1,9 +1,9 @@
 import type BusinessSiteCollectionRequest from "../../../../../definitions/BusinessSiteCollectionRequest.js";
 import type BusinessSiteCollectionResource from "../../../../../definitions/BusinessSiteCollectionResource.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../../types.js";
 
 class Index {

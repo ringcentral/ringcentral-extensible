@@ -1,9 +1,9 @@
 import type ExtensionWithRolesCollectionResource from "../../../../definitions/ExtensionWithRolesCollectionResource.js";
 import type ListAssignedRolesParameters from "../../../../definitions/ListAssignedRolesParameters.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../types.js";
 
 class Index {

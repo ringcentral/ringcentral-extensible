@@ -1,7 +1,7 @@
 import type BatchProvisionUsersRequestItemContact from "./BatchProvisionUsersRequestItemContact.js";
 import type BatchProvisionUsersRequestItemCostCenter from "./BatchProvisionUsersRequestItemCostCenter.js";
-import type BatchProvisionUsersRequestItemRoles from "./BatchProvisionUsersRequestItemRoles.js";
 import type BatchProvisionUsersRequestItemDevices from "./BatchProvisionUsersRequestItemDevices.js";
+import type BatchProvisionUsersRequestItemRoles from "./BatchProvisionUsersRequestItemRoles.js";
 
 /**
  * Describes request for user extension provisioning

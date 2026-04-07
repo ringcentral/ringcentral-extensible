@@ -1,9 +1,9 @@
 import type CallLogResponse from "../../../../../definitions/CallLogResponse.js";
 import type ListExtensionActiveCallsParameters from "../../../../../definitions/ListExtensionActiveCallsParameters.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../../types.js";
 
 class Index {

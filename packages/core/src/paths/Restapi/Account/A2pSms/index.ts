@@ -1,7 +1,10 @@
-import Statuses from "./Statuses/index.js";
-import Messages from "./Messages/index.js";
+import type {
+  ParentInterface,
+  RingCentralInterface,
+} from "../../../../types.js";
 import Batches from "./Batches/index.js";
-import type { RingCentralInterface, ParentInterface } from "../../../../types.js";
+import Messages from "./Messages/index.js";
+import Statuses from "./Statuses/index.js";
 
 class Index {
   public rc: RingCentralInterface;

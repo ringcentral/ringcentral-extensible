@@ -1,15 +1,15 @@
-import BulkAssign from "./BulkAssign/index.js";
-import Presence from "./Presence/index.js";
-import Members from "./Members/index.js";
-import type CallQueueDetailsForUpdate from "../../../../definitions/CallQueueDetailsForUpdate.js";
 import type CallQueueDetails from "../../../../definitions/CallQueueDetails.js";
+import type CallQueueDetailsForUpdate from "../../../../definitions/CallQueueDetailsForUpdate.js";
 import type CallQueueList from "../../../../definitions/CallQueueList.js";
 import type ListCallQueuesParameters from "../../../../definitions/ListCallQueuesParameters.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../types.js";
+import BulkAssign from "./BulkAssign/index.js";
+import Members from "./Members/index.js";
+import Presence from "./Presence/index.js";
 
 class Index {
   public rc: RingCentralInterface;

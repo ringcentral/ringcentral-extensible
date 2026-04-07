@@ -1,10 +1,9 @@
 import type { AxiosInstance } from "axios";
 import axios from "axios";
 import qs from "qs";
-
+import type TokenInfo from "./definitions/TokenInfo.js";
 import { boundary } from "./FormData.js";
 import RestException from "./RestException.js";
-import type TokenInfo from "./definitions/TokenInfo.js";
 import type {
   RestMethod,
   RestOptions,

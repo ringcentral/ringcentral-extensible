@@ -1,5 +1,5 @@
+import type { ParentInterface, RingCentralInterface } from "../../../types.js";
 import V1 from "./V1/index.js";
-import type { RingCentralInterface, ParentInterface } from "../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

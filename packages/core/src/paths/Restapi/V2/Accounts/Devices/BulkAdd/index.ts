@@ -1,9 +1,9 @@
-import type BulkAddDevicesResponse from "../../../../../../definitions/BulkAddDevicesResponse.js";
 import type BulkAddDevicesRequest from "../../../../../../definitions/BulkAddDevicesRequest.js";
+import type BulkAddDevicesResponse from "../../../../../../definitions/BulkAddDevicesResponse.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../../../types.js";
 
 class Index {

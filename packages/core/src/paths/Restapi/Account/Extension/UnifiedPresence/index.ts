@@ -1,9 +1,9 @@
-import type UpdateUnifiedPresence from "../../../../../definitions/UpdateUnifiedPresence.js";
 import type UnifiedPresence from "../../../../../definitions/UnifiedPresence.js";
+import type UpdateUnifiedPresence from "../../../../../definitions/UpdateUnifiedPresence.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../../types.js";
 
 class Index {

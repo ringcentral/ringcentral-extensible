@@ -1,10 +1,10 @@
-import type TimelineResponse from "../../../../../../../definitions/TimelineResponse.js";
 import type AnalyticsCallsTimelineFetchParameters from "../../../../../../../definitions/AnalyticsCallsTimelineFetchParameters.js";
 import type TimelineRequest from "../../../../../../../definitions/TimelineRequest.js";
+import type TimelineResponse from "../../../../../../../definitions/TimelineResponse.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../../../../types.js";
 
 class Index {

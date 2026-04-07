@@ -1,9 +1,9 @@
 import type AccountPresenceInfo from "../../../../definitions/AccountPresenceInfo.js";
 import type ReadAccountPresenceParameters from "../../../../definitions/ReadAccountPresenceParameters.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../types.js";
 
 class Index {

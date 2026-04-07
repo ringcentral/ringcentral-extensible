@@ -1,11 +1,11 @@
-import type CommStateBasedRuleUpdateRequest from "../../../../../../../../definitions/CommStateBasedRuleUpdateRequest.js";
 import type CommStateBasedRuleResource from "../../../../../../../../definitions/CommStateBasedRuleResource.js";
 import type CommStateBasedRulesResource from "../../../../../../../../definitions/CommStateBasedRulesResource.js";
+import type CommStateBasedRuleUpdateRequest from "../../../../../../../../definitions/CommStateBasedRuleUpdateRequest.js";
 import type ListVoiceStateBasedRulesParameters from "../../../../../../../../definitions/ListVoiceStateBasedRulesParameters.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../../../../../types.js";
 
 class Index {

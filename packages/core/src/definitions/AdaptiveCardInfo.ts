@@ -1,6 +1,6 @@
+import type AdaptiveCardAction from "./AdaptiveCardAction.js";
 import type AdaptiveCardCreator from "./AdaptiveCardCreator.js";
 import type AdaptiveCardInfoRequest from "./AdaptiveCardInfoRequest.js";
-import type AdaptiveCardAction from "./AdaptiveCardAction.js";
 import type AdaptiveCardSelectAction from "./AdaptiveCardSelectAction.js";
 import type BackgroundImage from "./BackgroundImage.js";
 

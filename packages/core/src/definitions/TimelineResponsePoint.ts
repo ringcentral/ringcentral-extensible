@@ -1,5 +1,5 @@
-import type CallsTimers from "./CallsTimers.js";
 import type CallsCounters from "./CallsCounters.js";
+import type CallsTimers from "./CallsTimers.js";
 
 interface TimelineResponsePoint {
   /**

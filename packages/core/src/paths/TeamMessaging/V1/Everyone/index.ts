@@ -1,9 +1,9 @@
-import type UpdateEveryoneTeamRequest from "../../../../definitions/UpdateEveryoneTeamRequest.js";
 import type EveryoneTeamInfo from "../../../../definitions/EveryoneTeamInfo.js";
+import type UpdateEveryoneTeamRequest from "../../../../definitions/UpdateEveryoneTeamRequest.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../types.js";
 
 class Index {

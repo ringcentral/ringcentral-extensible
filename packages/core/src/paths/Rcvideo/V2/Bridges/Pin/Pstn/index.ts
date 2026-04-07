@@ -1,9 +1,9 @@
 import type BridgeResponse from "../../../../../../definitions/BridgeResponse.js";
 import type GetBridgeByPstnPinParameters from "../../../../../../definitions/GetBridgeByPstnPinParameters.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../../../types.js";
 
 class Index {

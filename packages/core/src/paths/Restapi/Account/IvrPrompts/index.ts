@@ -1,14 +1,14 @@
-import Content from "./Content/index.js";
-import Utils from "../../../../Utils.js";
-import type UpdateIVRPromptRequest from "../../../../definitions/UpdateIVRPromptRequest.js";
-import type PromptInfo from "../../../../definitions/PromptInfo.js";
 import type CreateIVRPromptRequest from "../../../../definitions/CreateIVRPromptRequest.js";
 import type IvrPrompts from "../../../../definitions/IvrPrompts.js";
+import type PromptInfo from "../../../../definitions/PromptInfo.js";
+import type UpdateIVRPromptRequest from "../../../../definitions/UpdateIVRPromptRequest.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../types.js";
+import Utils from "../../../../Utils.js";
+import Content from "./Content/index.js";
 
 class Index {
   public rc: RingCentralInterface;

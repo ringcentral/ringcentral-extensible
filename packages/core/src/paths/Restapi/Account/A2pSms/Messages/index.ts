@@ -1,10 +1,10 @@
+import type ListA2PSMSParameters from "../../../../../definitions/ListA2PSMSParameters.js";
 import type MessageDetailsResponse from "../../../../../definitions/MessageDetailsResponse.js";
 import type MessageListResponse from "../../../../../definitions/MessageListResponse.js";
-import type ListA2PSMSParameters from "../../../../../definitions/ListA2PSMSParameters.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../../types.js";
 
 class Index {

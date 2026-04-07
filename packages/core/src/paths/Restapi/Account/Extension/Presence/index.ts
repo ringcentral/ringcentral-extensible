@@ -2,9 +2,9 @@ import type PresenceInfoRequest from "../../../../../definitions/PresenceInfoReq
 import type PresenceInfoResponse from "../../../../../definitions/PresenceInfoResponse.js";
 import type ReadUserPresenceStatusParameters from "../../../../../definitions/ReadUserPresenceStatusParameters.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../../types.js";
 
 class Index {

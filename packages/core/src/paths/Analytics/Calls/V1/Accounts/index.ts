@@ -1,6 +1,9 @@
+import type {
+  ParentInterface,
+  RingCentralInterface,
+} from "../../../../../types.js";
 import Aggregation from "./Aggregation/index.js";
 import Timeline from "./Timeline/index.js";
-import type { RingCentralInterface, ParentInterface } from "../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

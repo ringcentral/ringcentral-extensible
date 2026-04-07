@@ -1,9 +1,9 @@
 import type GetMessageSyncResponse from "../../../../../definitions/GetMessageSyncResponse.js";
 import type SyncMessagesParameters from "../../../../../definitions/SyncMessagesParameters.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../../types.js";
 
 class Index {

@@ -1,5 +1,5 @@
-import type TcrCampaignRecordBrand from "./TcrCampaignRecordBrand.js";
 import type ApiErrorWithParameter from "./ApiErrorWithParameter.js";
+import type TcrCampaignRecordBrand from "./TcrCampaignRecordBrand.js";
 
 interface TcrCampaignRecord {
   /**

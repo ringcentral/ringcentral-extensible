@@ -1,7 +1,7 @@
 import type BillingPlanInfo from "./BillingPlanInfo.js";
 import type BrandInfo from "./BrandInfo.js";
-import type ServicePlanInfo from "./ServicePlanInfo.js";
 import type CountryInfoShortModel from "./CountryInfoShortModel.js";
+import type ServicePlanInfo from "./ServicePlanInfo.js";
 import type UBrandInfo from "./UBrandInfo.js";
 
 /**

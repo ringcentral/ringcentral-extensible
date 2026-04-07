@@ -1,14 +1,14 @@
-import type UpdateAnsweringRuleRequest from "../../../../../definitions/UpdateAnsweringRuleRequest.js";
 import type CallHandlingRuleInfo from "../../../../../definitions/CallHandlingRuleInfo.js";
-import type ReadAnsweringRuleParameters from "../../../../../definitions/ReadAnsweringRuleParameters.js";
-import type CustomAnsweringRuleInfo from "../../../../../definitions/CustomAnsweringRuleInfo.js";
 import type CreateAnsweringRuleRequest from "../../../../../definitions/CreateAnsweringRuleRequest.js";
-import type UserAnsweringRuleList from "../../../../../definitions/UserAnsweringRuleList.js";
+import type CustomAnsweringRuleInfo from "../../../../../definitions/CustomAnsweringRuleInfo.js";
 import type ListAnsweringRulesParameters from "../../../../../definitions/ListAnsweringRulesParameters.js";
+import type ReadAnsweringRuleParameters from "../../../../../definitions/ReadAnsweringRuleParameters.js";
+import type UpdateAnsweringRuleRequest from "../../../../../definitions/UpdateAnsweringRuleRequest.js";
+import type UserAnsweringRuleList from "../../../../../definitions/UserAnsweringRuleList.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../../types.js";
 
 class Index {

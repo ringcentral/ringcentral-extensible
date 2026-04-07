@@ -1,8 +1,8 @@
 import type CallRecordingIds from "../../../../definitions/CallRecordingIds.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../types.js";
 
 class Index {

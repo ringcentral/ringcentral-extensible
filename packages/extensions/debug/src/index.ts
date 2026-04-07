@@ -1,11 +1,11 @@
 import type RingCentral from "@rc-ex/core";
+import SdkExtension from "@rc-ex/core/SdkExtension";
 import type {
   RestMethod,
   RestRequestConfig,
   RestResponse,
 } from "@rc-ex/core/types";
 import Utils from "@rc-ex/core/Utils";
-import SdkExtension from "@rc-ex/core/SdkExtension";
 
 export interface DebugOptions {
   loggingAction?: (message: string) => void;

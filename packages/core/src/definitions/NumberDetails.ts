@@ -1,5 +1,5 @@
-import type NumberDetailsSpecialService from "./NumberDetailsSpecialService.js";
 import type CountryContext from "./CountryContext.js";
+import type NumberDetailsSpecialService from "./NumberDetailsSpecialService.js";
 
 /**
  * Absent if the request's parameter `resultContent.includeNumberDetails` value is set to `false`.

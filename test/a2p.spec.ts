@@ -1,6 +1,6 @@
-import path from "path";
-import dotenv from "dotenv-override-true";
 import DebugExtension from "@rc-ex/debug";
+import dotenv from "dotenv-override-true";
+import path from "path";
 import { describe, expect, test } from "vitest";
 
 import ReusableRestClient from "./reusable-rest-client";

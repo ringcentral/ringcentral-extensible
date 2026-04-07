@@ -1,5 +1,5 @@
-import type CallInfoCQ from "./CallInfoCQ.js";
 import type AppearanceInfo from "./AppearanceInfo.js";
+import type CallInfoCQ from "./CallInfoCQ.js";
 
 interface ActiveCallInfoWithoutSIP {
   /**

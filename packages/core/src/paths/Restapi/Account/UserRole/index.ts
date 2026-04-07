@@ -1,17 +1,17 @@
-import BulkAssign from "./BulkAssign/index.js";
-import Default from "./Default/index.js";
-import type DeleteCustomRoleParameters from "../../../../definitions/DeleteCustomRoleParameters.js";
-import type UpdateUserRoleParameters from "../../../../definitions/UpdateUserRoleParameters.js";
-import type ReadUserRoleParameters from "../../../../definitions/ReadUserRoleParameters.js";
 import type CreateCustomRoleParameters from "../../../../definitions/CreateCustomRoleParameters.js";
+import type DeleteCustomRoleParameters from "../../../../definitions/DeleteCustomRoleParameters.js";
+import type ListUserRolesParameters from "../../../../definitions/ListUserRolesParameters.js";
+import type ReadUserRoleParameters from "../../../../definitions/ReadUserRoleParameters.js";
 import type RoleResource from "../../../../definitions/RoleResource.js";
 import type RolesCollectionResource from "../../../../definitions/RolesCollectionResource.js";
-import type ListUserRolesParameters from "../../../../definitions/ListUserRolesParameters.js";
+import type UpdateUserRoleParameters from "../../../../definitions/UpdateUserRoleParameters.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../types.js";
+import BulkAssign from "./BulkAssign/index.js";
+import Default from "./Default/index.js";
 
 class Index {
   public rc: RingCentralInterface;

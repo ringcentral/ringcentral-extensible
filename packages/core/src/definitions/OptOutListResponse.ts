@@ -1,5 +1,5 @@
-import type OptOutResponse from "./OptOutResponse.js";
 import type NonEnumeratedPagingModel from "./NonEnumeratedPagingModel.js";
+import type OptOutResponse from "./OptOutResponse.js";
 
 /**
  * The list of opt outs

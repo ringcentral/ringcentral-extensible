@@ -1,6 +1,6 @@
-import type UserPhoneNumberInfo from "./UserPhoneNumberInfo.js";
-import type PageNavigationModel from "./PageNavigationModel.js";
 import type EnumeratedPagingModel from "./EnumeratedPagingModel.js";
+import type PageNavigationModel from "./PageNavigationModel.js";
+import type UserPhoneNumberInfo from "./UserPhoneNumberInfo.js";
 
 interface GetExtensionPhoneNumbersResponse {
   /**

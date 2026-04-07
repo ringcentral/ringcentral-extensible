@@ -1,8 +1,8 @@
-import Replace from "./Replace/index.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
+  RingCentralInterface,
 } from "../../../../../../types.js";
+import Replace from "./Replace/index.js";
 
 class Index {
   public rc: RingCentralInterface;

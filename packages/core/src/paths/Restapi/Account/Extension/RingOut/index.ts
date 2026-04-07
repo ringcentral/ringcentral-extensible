@@ -1,9 +1,9 @@
 import type GetRingOutStatusResponse from "../../../../../definitions/GetRingOutStatusResponse.js";
 import type MakeRingOutRequest from "../../../../../definitions/MakeRingOutRequest.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../../types.js";
 
 class Index {

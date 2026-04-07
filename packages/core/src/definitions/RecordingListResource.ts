@@ -1,5 +1,5 @@
-import type RecordingItemModel from "./RecordingItemModel.js";
 import type RcwPagingModel from "./RcwPagingModel.js";
+import type RecordingItemModel from "./RecordingItemModel.js";
 
 interface RecordingListResource {
   /**

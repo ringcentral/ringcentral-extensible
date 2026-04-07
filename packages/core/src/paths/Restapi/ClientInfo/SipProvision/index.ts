@@ -1,9 +1,9 @@
-import type CreateSipRegistrationResponse from "../../../../definitions/CreateSipRegistrationResponse.js";
 import type CreateSipRegistrationRequest from "../../../../definitions/CreateSipRegistrationRequest.js";
+import type CreateSipRegistrationResponse from "../../../../definitions/CreateSipRegistrationResponse.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../types.js";
 
 class Index {

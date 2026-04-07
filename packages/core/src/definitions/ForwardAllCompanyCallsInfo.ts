@@ -1,6 +1,6 @@
-import type RangesInfo from "./RangesInfo.js";
 import type ExtensionShortInfoResource from "./ExtensionShortInfoResource.js";
 import type ForwardAllCallsReason from "./ForwardAllCallsReason.js";
+import type RangesInfo from "./RangesInfo.js";
 
 interface ForwardAllCompanyCallsInfo {
   /**

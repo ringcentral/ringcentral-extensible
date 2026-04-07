@@ -1,8 +1,8 @@
 import type ReadMessageContentParameters from "../../../../../../definitions/ReadMessageContentParameters.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../../../types.js";
 
 class Index {

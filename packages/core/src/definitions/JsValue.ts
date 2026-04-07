@@ -1,3 +1,3 @@
-type JsValue = {}
+type JsValue = {};
 
 export default JsValue;

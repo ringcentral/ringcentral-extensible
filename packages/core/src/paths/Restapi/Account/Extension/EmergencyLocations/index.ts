@@ -1,14 +1,14 @@
+import type CommonEmergencyLocationResource from "../../../../../definitions/CommonEmergencyLocationResource.js";
+import type CreateUserEmergencyLocationRequest from "../../../../../definitions/CreateUserEmergencyLocationRequest.js";
 import type DeleteExtensionEmergencyLocationParameters from "../../../../../definitions/DeleteExtensionEmergencyLocationParameters.js";
 import type EmergencyLocationRequestResource from "../../../../../definitions/EmergencyLocationRequestResource.js";
-import type CommonEmergencyLocationResource from "../../../../../definitions/CommonEmergencyLocationResource.js";
 import type EmergencyLocationResponseResource from "../../../../../definitions/EmergencyLocationResponseResource.js";
-import type CreateUserEmergencyLocationRequest from "../../../../../definitions/CreateUserEmergencyLocationRequest.js";
 import type EmergencyLocationsResource from "../../../../../definitions/EmergencyLocationsResource.js";
 import type GetExtensionEmergencyLocationsParameters from "../../../../../definitions/GetExtensionEmergencyLocationsParameters.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../../types.js";
 
 class Index {

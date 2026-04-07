@@ -1,9 +1,9 @@
 import type GetLocationListResponse from "../../../../definitions/GetLocationListResponse.js";
 import type ListLocationsParameters from "../../../../definitions/ListLocationsParameters.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../types.js";
 
 class Index {

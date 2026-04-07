@@ -1,9 +1,9 @@
 import type GetExtensionDevicesResponse from "../../../../../definitions/GetExtensionDevicesResponse.js";
 import type ListExtensionDevicesParameters from "../../../../../definitions/ListExtensionDevicesParameters.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../../types.js";
 
 class Index {

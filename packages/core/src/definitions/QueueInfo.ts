@@ -1,5 +1,5 @@
-import type TransferInfo from "./TransferInfo.js";
 import type FixedOrderAgents from "./FixedOrderAgents.js";
+import type TransferInfo from "./TransferInfo.js";
 import type UnconditionalForwardingInfo from "./UnconditionalForwardingInfo.js";
 
 /**

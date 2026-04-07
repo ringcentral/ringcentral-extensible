@@ -1,8 +1,8 @@
 import type MessageStoreConfiguration from "../../../../definitions/MessageStoreConfiguration.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../types.js";
 
 class Index {

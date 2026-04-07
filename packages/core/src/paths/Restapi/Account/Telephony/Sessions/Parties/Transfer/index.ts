@@ -1,9 +1,9 @@
 import type CallParty from "../../../../../../../definitions/CallParty.js";
 import type TransferTarget from "../../../../../../../definitions/TransferTarget.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../../../../types.js";
 
 class Index {

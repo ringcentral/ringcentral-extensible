@@ -1,14 +1,13 @@
+import RestException from "@rc-ex/core/RestException";
 import type {
   RestMethod,
   RestRequestConfig,
   RestResponse,
 } from "@rc-ex/core/types";
-import RestException from "@rc-ex/core/RestException";
-import hyperid from "hyperid";
 import { getReasonPhrase } from "http-status-codes";
-
-import Utils from "./utils.js";
+import hyperid from "hyperid";
 import type { WebSocketExtensionInterface } from "./types.js";
+import Utils from "./utils.js";
 
 const version = "0.16";
 

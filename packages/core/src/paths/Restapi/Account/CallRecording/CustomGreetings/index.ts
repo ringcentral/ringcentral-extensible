@@ -1,9 +1,9 @@
 import type CallRecordingCustomGreetings from "../../../../../definitions/CallRecordingCustomGreetings.js";
 import type ListCallRecordingCustomGreetingsParameters from "../../../../../definitions/ListCallRecordingCustomGreetingsParameters.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../../types.js";
 
 class Index {

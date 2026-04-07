@@ -1,16 +1,16 @@
-import BulkAdd from "./BulkAdd/index.js";
-import Replace from "./Replace/index.js";
 import type AccountPhoneNumberInfo from "../../../../../definitions/AccountPhoneNumberInfo.js";
-import type AssignPhoneNumberRequest from "../../../../../definitions/AssignPhoneNumberRequest.js";
-import type DeletePhoneNumbersResponse from "../../../../../definitions/DeletePhoneNumbersResponse.js";
-import type DeletePhoneNumbersRequest from "../../../../../definitions/DeletePhoneNumbersRequest.js";
 import type AccountPhoneNumberList from "../../../../../definitions/AccountPhoneNumberList.js";
+import type AssignPhoneNumberRequest from "../../../../../definitions/AssignPhoneNumberRequest.js";
+import type DeletePhoneNumbersRequest from "../../../../../definitions/DeletePhoneNumbersRequest.js";
+import type DeletePhoneNumbersResponse from "../../../../../definitions/DeletePhoneNumbersResponse.js";
 import type ListAccountPhoneNumbersV2Parameters from "../../../../../definitions/ListAccountPhoneNumbersV2Parameters.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../../types.js";
+import BulkAdd from "./BulkAdd/index.js";
+import Replace from "./Replace/index.js";
 
 class Index {
   public rc: RingCentralInterface;

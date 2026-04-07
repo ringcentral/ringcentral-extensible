@@ -1,9 +1,9 @@
-import type AccountHistorySearchPublicResponse from "../../../../../definitions/AccountHistorySearchPublicResponse.js";
 import type AccountHistorySearchPublicRequest from "../../../../../definitions/AccountHistorySearchPublicRequest.js";
+import type AccountHistorySearchPublicResponse from "../../../../../definitions/AccountHistorySearchPublicResponse.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../../types.js";
 
 class Index {

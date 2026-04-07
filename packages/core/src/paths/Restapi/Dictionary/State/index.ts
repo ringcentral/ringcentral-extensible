@@ -2,9 +2,9 @@ import type GetStateInfoResponse from "../../../../definitions/GetStateInfoRespo
 import type GetStateListResponse from "../../../../definitions/GetStateListResponse.js";
 import type ListStatesParameters from "../../../../definitions/ListStatesParameters.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../types.js";
 
 class Index {

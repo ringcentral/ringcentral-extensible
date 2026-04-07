@@ -1,9 +1,9 @@
-import type ReplyParty from "../../../../../../../definitions/ReplyParty.js";
 import type CallPartyReply from "../../../../../../../definitions/CallPartyReply.js";
+import type ReplyParty from "../../../../../../../definitions/ReplyParty.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../../../../types.js";
 
 class Index {

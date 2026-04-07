@@ -1,8 +1,8 @@
 import type ReadCallRecordingContentParameters from "../../../../../definitions/ReadCallRecordingContentParameters.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../../types.js";
 
 class Index {

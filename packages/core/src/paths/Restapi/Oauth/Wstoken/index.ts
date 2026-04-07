@@ -1,8 +1,8 @@
 import type WsTokenResponse from "../../../../definitions/WsTokenResponse.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../types.js";
 
 class Index {

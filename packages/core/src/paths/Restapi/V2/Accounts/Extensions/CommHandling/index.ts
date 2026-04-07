@@ -1,9 +1,9 @@
+import type {
+  ParentInterface,
+  RingCentralInterface,
+} from "../../../../../../types.js";
 import States from "./States/index.js";
 import Voice from "./Voice/index.js";
-import type {
-  RingCentralInterface,
-  ParentInterface,
-} from "../../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

@@ -1,13 +1,13 @@
-import Search from "./Search/index.js";
 import type ContactResource from "../../../../../definitions/ContactResource.js";
-import type ReadDirectoryEntryParameters from "../../../../../definitions/ReadDirectoryEntryParameters.js";
 import type DirectoryResource from "../../../../../definitions/DirectoryResource.js";
 import type ListDirectoryEntriesParameters from "../../../../../definitions/ListDirectoryEntriesParameters.js";
+import type ReadDirectoryEntryParameters from "../../../../../definitions/ReadDirectoryEntryParameters.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../../types.js";
+import Search from "./Search/index.js";
 
 class Index {
   public rc: RingCentralInterface;

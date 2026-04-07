@@ -1,12 +1,12 @@
-import type ExtensionStatusInfo from "./ExtensionStatusInfo.js";
-import type ContactInfoUpdateRequest from "./ContactInfoUpdateRequest.js";
-import type ExtensionRegionalSettingRequest from "./ExtensionRegionalSettingRequest.js";
 import type CallQueueInfoRequest from "./CallQueueInfoRequest.js";
-import type UserTransitionInfo from "./UserTransitionInfo.js";
+import type ContactInfoUpdateRequest from "./ContactInfoUpdateRequest.js";
 import type CostCenterInfo from "./CostCenterInfo.js";
 import type CustomFieldInfo from "./CustomFieldInfo.js";
+import type ExtensionRegionalSettingRequest from "./ExtensionRegionalSettingRequest.js";
+import type ExtensionStatusInfo from "./ExtensionStatusInfo.js";
 import type ProvisioningSiteInfo from "./ProvisioningSiteInfo.js";
 import type ReferenceInfo from "./ReferenceInfo.js";
+import type UserTransitionInfo from "./UserTransitionInfo.js";
 
 interface ExtensionBulkUpdateInfo {
   /**

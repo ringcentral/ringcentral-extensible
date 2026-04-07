@@ -1,9 +1,9 @@
-import type PartySuperviseResponse from "../../../../../../../definitions/PartySuperviseResponse.js";
 import type PartySuperviseRequest from "../../../../../../../definitions/PartySuperviseRequest.js";
+import type PartySuperviseResponse from "../../../../../../../definitions/PartySuperviseResponse.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../../../../types.js";
 
 class Index {

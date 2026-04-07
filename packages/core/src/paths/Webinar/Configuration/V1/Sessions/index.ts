@@ -1,9 +1,9 @@
-import type WcsSessionGlobalListResource from "../../../../../definitions/WcsSessionGlobalListResource.js";
 import type RcwConfigListAllSessionsParameters from "../../../../../definitions/RcwConfigListAllSessionsParameters.js";
+import type WcsSessionGlobalListResource from "../../../../../definitions/WcsSessionGlobalListResource.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../../types.js";
 
 class Index {

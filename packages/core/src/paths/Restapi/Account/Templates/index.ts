@@ -1,10 +1,10 @@
+import type ListUserTemplatesParameters from "../../../../definitions/ListUserTemplatesParameters.js";
 import type TemplateInfo from "../../../../definitions/TemplateInfo.js";
 import type UserTemplates from "../../../../definitions/UserTemplates.js";
-import type ListUserTemplatesParameters from "../../../../definitions/ListUserTemplatesParameters.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../types.js";
 
 class Index {

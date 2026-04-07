@@ -1,19 +1,19 @@
-import SendActivationEmail from "./SendActivationEmail/index.js";
-import SendWelcomeEmail from "./SendWelcomeEmail/index.js";
-import BatchProvisioning from "./BatchProvisioning/index.js";
-import RegionalSettings from "./RegionalSettings/index.js";
-import DeviceInventory from "./DeviceInventory/index.js";
-import PhoneNumbers from "./PhoneNumbers/index.js";
-import CostCenters from "./CostCenters/index.js";
-import Extensions from "./Extensions/index.js";
-import Devices from "./Devices/index.js";
-import Sms from "./Sms/index.js";
 import type AccountInfo from "../../../../definitions/AccountInfo.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../types.js";
+import BatchProvisioning from "./BatchProvisioning/index.js";
+import CostCenters from "./CostCenters/index.js";
+import DeviceInventory from "./DeviceInventory/index.js";
+import Devices from "./Devices/index.js";
+import Extensions from "./Extensions/index.js";
+import PhoneNumbers from "./PhoneNumbers/index.js";
+import RegionalSettings from "./RegionalSettings/index.js";
+import SendActivationEmail from "./SendActivationEmail/index.js";
+import SendWelcomeEmail from "./SendWelcomeEmail/index.js";
+import Sms from "./Sms/index.js";
 
 class Index {
   public rc: RingCentralInterface;

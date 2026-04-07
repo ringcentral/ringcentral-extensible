@@ -1,11 +1,11 @@
-import type CustomFieldUpdateRequest from "../../../../definitions/CustomFieldUpdateRequest.js";
-import type CustomFieldModel from "../../../../definitions/CustomFieldModel.js";
 import type CustomFieldCreateRequest from "../../../../definitions/CustomFieldCreateRequest.js";
 import type CustomFieldList from "../../../../definitions/CustomFieldList.js";
+import type CustomFieldModel from "../../../../definitions/CustomFieldModel.js";
+import type CustomFieldUpdateRequest from "../../../../definitions/CustomFieldUpdateRequest.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../types.js";
 
 class Index {

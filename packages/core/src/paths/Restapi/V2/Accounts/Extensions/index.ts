@@ -1,13 +1,13 @@
+import type BulkDeleteUsersRequest from "../../../../../definitions/BulkDeleteUsersRequest.js";
+import type BulkDeleteUsersResponse from "../../../../../definitions/BulkDeleteUsersResponse.js";
+import type {
+  ParentInterface,
+  RestRequestConfig,
+  RingCentralInterface,
+} from "../../../../../types.js";
 import CallFlipNumbers from "./CallFlipNumbers/index.js";
 import CommHandling from "./CommHandling/index.js";
 import Devices from "./Devices/index.js";
-import type BulkDeleteUsersResponse from "../../../../../definitions/BulkDeleteUsersResponse.js";
-import type BulkDeleteUsersRequest from "../../../../../definitions/BulkDeleteUsersRequest.js";
-import type {
-  RingCentralInterface,
-  ParentInterface,
-  RestRequestConfig,
-} from "../../../../../types.js";
 
 class Index {
   public rc: RingCentralInterface;

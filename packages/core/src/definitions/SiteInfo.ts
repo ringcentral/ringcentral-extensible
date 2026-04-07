@@ -1,6 +1,6 @@
 import type ContactBusinessAddressInfo from "./ContactBusinessAddressInfo.js";
-import type RegionalSettings from "./RegionalSettings.js";
 import type OperatorInfo from "./OperatorInfo.js";
+import type RegionalSettings from "./RegionalSettings.js";
 
 interface SiteInfo {
   /**

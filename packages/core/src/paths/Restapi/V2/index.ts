@@ -1,6 +1,6 @@
-import NumberParser from "./NumberParser/index.js";
+import type { ParentInterface, RingCentralInterface } from "../../../types.js";
 import Accounts from "./Accounts/index.js";
-import type { RingCentralInterface, ParentInterface } from "../../../types.js";
+import NumberParser from "./NumberParser/index.js";
 
 class Index {
   public rc: RingCentralInterface;

@@ -1,11 +1,11 @@
-import Self from "./Self/index.js";
 import type ParticipantListResource from "../../../../../../../definitions/ParticipantListResource.js";
 import type RcwHistoryListParticipantsParameters from "../../../../../../../definitions/RcwHistoryListParticipantsParameters.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../../../../types.js";
+import Self from "./Self/index.js";
 
 class Index {
   public rc: RingCentralInterface;

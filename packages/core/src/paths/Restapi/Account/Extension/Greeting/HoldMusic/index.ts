@@ -1,8 +1,8 @@
 import type CustomUserGreetingInfo from "../../../../../../definitions/CustomUserGreetingInfo.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../../../types.js";
 
 class Index {

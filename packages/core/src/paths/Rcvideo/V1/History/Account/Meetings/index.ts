@@ -1,9 +1,9 @@
 import type AdminAccessMeetings from "../../../../../../definitions/AdminAccessMeetings.js";
 import type ListAccountMeetingsParameters from "../../../../../../definitions/ListAccountMeetingsParameters.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../../../types.js";
 
 class Index {

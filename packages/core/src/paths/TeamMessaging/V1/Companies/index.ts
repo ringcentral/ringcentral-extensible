@@ -1,8 +1,8 @@
 import type TMCompanyInfo from "../../../../definitions/TMCompanyInfo.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../types.js";
 
 class Index {

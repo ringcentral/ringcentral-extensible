@@ -2,9 +2,9 @@ import type DirectoryResource from "../../../../../../definitions/DirectoryResou
 import type SearchDirectoryEntriesParameters from "../../../../../../definitions/SearchDirectoryEntriesParameters.js";
 import type SearchDirectoryEntriesRequest from "../../../../../../definitions/SearchDirectoryEntriesRequest.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../../../types.js";
 
 class Index {

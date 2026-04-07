@@ -1,8 +1,8 @@
-import Insights from "./Insights/index.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
+  RingCentralInterface,
 } from "../../../../../../../../types.js";
+import Insights from "./Insights/index.js";
 
 class Index {
   public rc: RingCentralInterface;

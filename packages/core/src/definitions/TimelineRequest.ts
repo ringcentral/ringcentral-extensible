@@ -1,7 +1,7 @@
-import type Grouping from "./Grouping.js";
-import type TimeSettings from "./TimeSettings.js";
 import type CallFilters from "./CallFilters.js";
+import type Grouping from "./Grouping.js";
 import type TimelineResponseOptions from "./TimelineResponseOptions.js";
+import type TimeSettings from "./TimeSettings.js";
 
 interface TimelineRequest {
   /**

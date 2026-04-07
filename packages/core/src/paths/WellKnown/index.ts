@@ -1,5 +1,5 @@
-import OpenidConfiguration from "./OpenidConfiguration/index.js";
 import type { RingCentralInterface } from "../../types.js";
+import OpenidConfiguration from "./OpenidConfiguration/index.js";
 
 class Index {
   public rc: RingCentralInterface;

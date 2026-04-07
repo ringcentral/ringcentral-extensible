@@ -1,9 +1,9 @@
-import type PagingOnlyGroupDevices from "../../../../../definitions/PagingOnlyGroupDevices.js";
 import type ListPagingGroupDevicesParameters from "../../../../../definitions/ListPagingGroupDevicesParameters.js";
+import type PagingOnlyGroupDevices from "../../../../../definitions/PagingOnlyGroupDevices.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../../types.js";
 
 class Index {

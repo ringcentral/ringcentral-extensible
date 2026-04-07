@@ -1,8 +1,8 @@
 import type Host from "./Host.js";
+import type MeetingNotes from "./MeetingNotes.js";
 import type Participant from "./Participant.js";
 import type Recording from "./Recording.js";
 import type Transcriptions from "./Transcriptions.js";
-import type MeetingNotes from "./MeetingNotes.js";
 
 /**
  * Meeting information

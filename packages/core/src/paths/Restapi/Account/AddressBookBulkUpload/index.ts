@@ -1,11 +1,11 @@
-import Tasks from "./Tasks/index.js";
-import type AddressBookBulkUploadResponse from "../../../../definitions/AddressBookBulkUploadResponse.js";
 import type AddressBookBulkUploadRequest from "../../../../definitions/AddressBookBulkUploadRequest.js";
+import type AddressBookBulkUploadResponse from "../../../../definitions/AddressBookBulkUploadResponse.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../types.js";
+import Tasks from "./Tasks/index.js";
 
 class Index {
   public rc: RingCentralInterface;

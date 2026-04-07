@@ -1,9 +1,9 @@
 import type IvrMenuInfo from "../../../../definitions/IvrMenuInfo.js";
 import type IvrMenuList from "../../../../definitions/IvrMenuList.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../types.js";
 
 class Index {

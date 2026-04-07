@@ -1,5 +1,5 @@
-import type SmsCampaignInfo from "./SmsCampaignInfo.js";
 import type SmsBrandInfo from "./SmsBrandInfo.js";
+import type SmsCampaignInfo from "./SmsCampaignInfo.js";
 
 interface SmsConfigurationResource {
   /**

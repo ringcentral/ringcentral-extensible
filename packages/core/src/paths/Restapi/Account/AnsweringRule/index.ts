@@ -1,12 +1,12 @@
-import type CompanyAnsweringRuleUpdate from "../../../../definitions/CompanyAnsweringRuleUpdate.js";
 import type CompanyAnsweringRuleInfo from "../../../../definitions/CompanyAnsweringRuleInfo.js";
-import type CompanyAnsweringRuleRequest from "../../../../definitions/CompanyAnsweringRuleRequest.js";
 import type CompanyAnsweringRuleList from "../../../../definitions/CompanyAnsweringRuleList.js";
+import type CompanyAnsweringRuleRequest from "../../../../definitions/CompanyAnsweringRuleRequest.js";
+import type CompanyAnsweringRuleUpdate from "../../../../definitions/CompanyAnsweringRuleUpdate.js";
 import type ListCompanyAnsweringRulesParameters from "../../../../definitions/ListCompanyAnsweringRulesParameters.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../types.js";
 
 class Index {

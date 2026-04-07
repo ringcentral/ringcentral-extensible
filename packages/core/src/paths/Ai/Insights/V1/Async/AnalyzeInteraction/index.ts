@@ -1,10 +1,10 @@
-import type CaiAsyncApiResponse from "../../../../../../definitions/CaiAsyncApiResponse.js";
 import type CaiAnalyzeInteractionParameters from "../../../../../../definitions/CaiAnalyzeInteractionParameters.js";
+import type CaiAsyncApiResponse from "../../../../../../definitions/CaiAsyncApiResponse.js";
 import type InteractionInput from "../../../../../../definitions/InteractionInput.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../../../types.js";
 
 class Index {

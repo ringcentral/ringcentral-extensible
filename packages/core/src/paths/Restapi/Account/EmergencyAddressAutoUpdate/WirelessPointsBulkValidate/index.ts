@@ -1,9 +1,9 @@
-import type ValidateMultipleWirelessPointsResponse from "../../../../../definitions/ValidateMultipleWirelessPointsResponse.js";
 import type ValidateMultipleWirelessPointsRequest from "../../../../../definitions/ValidateMultipleWirelessPointsRequest.js";
+import type ValidateMultipleWirelessPointsResponse from "../../../../../definitions/ValidateMultipleWirelessPointsResponse.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../../../types.js";
 
 class Index {

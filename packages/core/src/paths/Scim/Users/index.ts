@@ -1,14 +1,14 @@
-import DotSearch from "./DotSearch/index.js";
+import type ScimSearchViaGet2Parameters from "../../../definitions/ScimSearchViaGet2Parameters.js";
+import type ScimUser from "../../../definitions/ScimUser.js";
 import type ScimUserPatch from "../../../definitions/ScimUserPatch.js";
 import type ScimUserResponse from "../../../definitions/ScimUserResponse.js";
-import type ScimUser from "../../../definitions/ScimUser.js";
 import type ScimUserSearchResponse from "../../../definitions/ScimUserSearchResponse.js";
-import type ScimSearchViaGet2Parameters from "../../../definitions/ScimSearchViaGet2Parameters.js";
 import type {
-  RingCentralInterface,
   ParentInterface,
   RestRequestConfig,
+  RingCentralInterface,
 } from "../../../types.js";
+import DotSearch from "./DotSearch/index.js";
 
 class Index {
   public rc: RingCentralInterface;
