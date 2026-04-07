@@ -130,7 +130,7 @@ project.
 ### Test
 
 ```
-yarn reset && yarn compile && yarn test
+yarn clean && yarn build && yarn test
 ```
 
 ### Test one test case
@@ -144,7 +144,7 @@ t=auto-recover yarn test
 Update version number in `packages/core/src/Rest.ts`
 
 ```
-yarn compile
+yarn build
 yarn lerna publish from-package
 ```
 

@@ -8,21 +8,24 @@
   "files": [
     "dist"
   ],
-  "types": "./dist/esm/index.d.ts",
-  "main": "./dist/esm/index.js",
-  "module": "./dist/esm/index.js",
+  "types": "./dist/index.d.ts",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
   "exports": {
     ".": {
-      "types": "./dist/esm/index.d.ts",
-      "import": "./dist/esm/index.js"
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
     },
     "./lib/*": {
-      "types": "./dist/esm/*.d.ts",
-      "import": "./dist/esm/*.js"
+      "types": "./dist/*.d.ts",
+      "import": "./dist/*.js",
+      "require": "./dist/*.cjs"
     },
     "./*": {
-      "types": "./dist/esm/*.d.ts",
-      "import": "./dist/esm/*.js"
+      "types": "./dist/*.d.ts",
+      "import": "./dist/*.js",
+      "require": "./dist/*.cjs"
     }
   },
   "repository": {
@@ -45,7 +48,7 @@
     "ringcentral-code-generator": "^0.7.6"
   },
   "scripts": {
-    "build": "tsc -p tsconfig.esm.json"
+    "build": "tsup --config tsup.config.ts && tsc -p tsconfig.esm.json --declaration --emitDeclarationOnly --outDir dist"
   },
   "type": "module"
 }
