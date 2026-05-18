@@ -11,6 +11,7 @@
     "prepack": "pnpm clean && pnpm build && pnpm test",
     "test": "pnpm --filter @rc-ex/test exec vitest",
     "upgrade-all": "pnpm update --latest --recursive",
+    "publish-changed": "pnpm --filter './packages/**' -r publish --access public",
     "format-lint": "biome check --write --unsafe ."
   },
   "devDependencies": {
