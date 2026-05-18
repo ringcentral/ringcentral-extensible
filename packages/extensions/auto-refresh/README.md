@@ -5,7 +5,7 @@ This extension will auto refresh your token every 30 minutes(customizable).
 ## Install
 
 ```
-yarn add @rc-ex/auto-refresh
+pnpm add @rc-ex/auto-refresh
 ```
 
 ## Usage

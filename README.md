@@ -18,7 +18,7 @@ from our developer website.
 ## Installation
 
 ```
-yarn add @rc-ex/core
+pnpm add @rc-ex/core
 ```
 
 Then you should be able to import the SDK like this:
@@ -117,8 +117,7 @@ construct the uri as [sample code](./packages/core/src/samples.md) shows.
 ### Code style
 
 ```
-yarn lint
-yarn format
+pnpm format-lint
 ```
 
 ### Regenerate code using latest swagger spec
@@ -130,13 +129,13 @@ project.
 ### Test
 
 ```
-yarn clean && yarn build && yarn test
+pnpm clean && pnpm build && pnpm test
 ```
 
 ### Test one test case
 
 ```
-t=auto-recover yarn test
+t=auto-recover pnpm test
 ```
 
 ## Publish
@@ -144,25 +143,22 @@ t=auto-recover yarn test
 Update version number in `packages/core/src/Rest.ts`
 
 ```
-yarn build
-yarn lerna publish from-package
+pnpm build
+pnpm --filter './packages/**' -r publish --access public
 ```
 
-By default lerna check git tag to determine which packages to publish.
-`from-package` will make lerna check npmjs.com instead.
-
-Most of the time, it works without `from-package` option. But if the repo is in
-a "half-published" state, you will need this option to publish.
+Recursive pnpm publish checks npmjs.com and only publishes workspace packages
+whose current versions are not already in the registry.
 
 ### NPM 2FA
 
-I don't know how to make it work with lerna and I have to disable it via
+I don't know how to make it work with publishing and I have to disable it via
 npmjs.com GUI: I disabled "Require two-factor authentication for write actions".
 
 ## Add dependency
 
 ```
-yarn workspace @rc-ex/debug add ramda
+pnpm --filter @rc-ex/debug add ramda
 ```
 
 ### Todo

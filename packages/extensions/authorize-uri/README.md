@@ -5,7 +5,7 @@ Generate Authorize URI.
 ## Install
 
 ```
-yarn add @rc-ex/authorize-uri
+pnpm add @rc-ex/authorize-uri
 ```
 
 ## Usage

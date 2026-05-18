@@ -5,7 +5,7 @@ Retry API calls upon `RestException`
 ## Install
 
 ```
-yarn add @rc-ex/retry
+pnpm add @rc-ex/retry
 ```
 
 ## Usage

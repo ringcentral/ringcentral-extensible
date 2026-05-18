@@ -5,7 +5,7 @@ Provide debug mode for this SDK.
 ## Install
 
 ```
-yarn add @rc-ex/debug
+pnpm add @rc-ex/debug
 ```
 
 ## Usage

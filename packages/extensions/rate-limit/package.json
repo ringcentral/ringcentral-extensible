@@ -29,7 +29,7 @@
     "access": "public"
   },
   "dependencies": {
-    "@rc-ex/retry": "^1.4.0"
+    "@rc-ex/retry": "workspace:^"
   },
   "scripts": {
     "build": "tsup --config tsup.config.ts && tsc -p tsconfig.json --declaration --emitDeclarationOnly --outDir dist"

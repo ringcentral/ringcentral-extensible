@@ -7,7 +7,7 @@ engine.
 ## Install
 
 ```
-yarn add @rc-ex/rcsdk
+pnpm add @rc-ex/rcsdk
 ```
 
 ## Usage

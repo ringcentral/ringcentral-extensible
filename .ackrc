@@ -1,4 +1,4 @@
 --ignore-dir=dist
 --ignore-dir=node_modules
---ignore-dir=.yarn
---ignore-file=match:/^yarn\.lock$/
+--ignore-dir=.pnpm
+--ignore-file=match:/^pnpm-lock\.yaml$/

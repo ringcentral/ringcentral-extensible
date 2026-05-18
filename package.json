@@ -4,27 +4,20 @@
   "private": "true",
   "description": "RingCentral Extensible SDK",
   "license": "MIT",
-  "workspaces": [
-    "packages/core",
-    "packages/extensions/*",
-    "test"
-  ],
   "scripts": {
-    "build": "lerna exec 'yarn build' --scope=@rc-ex/core && lerna exec 'yarn build' --no-private --ignore=@rc-ex/core",
-    "clean": "lerna exec 'rm -rf dist'",
-    "reinstall": "lerna exec 'rm -rf node_modules' && yarn install",
-    "prepack": "yarn clean && yarn build && yarn test",
-    "test": "yarn workspace @rc-ex/test run vitest",
-    "upgrade-all": "yarn-upgrade-all -W && yarn workspaces run yarn-upgrade-all && yarn install",
+    "build": "pnpm --filter @rc-ex/core run build && pnpm --filter './packages/extensions/**' -r run build",
+    "clean": "pnpm --filter './packages/**' -r exec rm -rf dist",
+    "reinstall": "pnpm install --force",
+    "prepack": "pnpm clean && pnpm build && pnpm test",
+    "test": "pnpm --filter @rc-ex/test exec vitest",
+    "upgrade-all": "pnpm update --latest --recursive",
     "format-lint": "biome check --write --unsafe ."
   },
   "devDependencies": {
     "@biomejs/biome": "^2.4.10",
     "@types/node": "^25.5.2",
-    "lerna": "^9.0.7",
     "tsup": "^8.5.1",
-    "typescript": "^6.0.2",
-    "yarn-upgrade-all": "^0.7.5"
+    "typescript": "^6.0.2"
   },
-  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
+  "packageManager": "pnpm@10.33.1"
 }

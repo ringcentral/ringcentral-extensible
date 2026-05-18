@@ -8,7 +8,7 @@ Please read this article:
 ## Install
 
 ```
-yarn add @rc-ex/ws
+pnpm add @rc-ex/ws
 ```
 
 ## Usage

@@ -8,7 +8,7 @@ This extension is based on the [Retry Extension](../retry).
 ## Install
 
 ```
-yarn add @rc-ex/rate-limit
+pnpm add @rc-ex/rate-limit
 ```
 
 ## Usage
