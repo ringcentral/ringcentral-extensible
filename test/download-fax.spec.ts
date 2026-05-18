@@ -49,7 +49,7 @@ describe("fax", () => {
       return;
     }
     expect(
-      faxMessages.records?.[0].attachments?.[0].uri!.startsWith("https://"), // absolute CDN uri
+      faxMessages.records?.[0].attachments?.[0].uri?.startsWith("https://"), // absolute CDN uri
     ).toBeTruthy();
   });
 });

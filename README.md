@@ -117,7 +117,8 @@ construct the uri as [sample code](./packages/core/src/samples.md) shows.
 ### Code style
 
 ```
-pnpm format-lint
+pnpm check
+pnpm fix
 ```
 
 ### Regenerate code using latest swagger spec
@@ -129,7 +130,8 @@ project.
 ### Test
 
 ```
-pnpm clean && pnpm build && pnpm test
+pnpm build
+pnpm test
 ```
 
 ### Test one test case
@@ -144,7 +146,7 @@ Update version number in `packages/core/src/Rest.ts`
 
 ```
 pnpm build
-pnpm --filter './packages/**' -r publish --access public
+pnpm publish-changed
 ```
 
 Recursive pnpm publish checks npmjs.com and only publishes workspace packages

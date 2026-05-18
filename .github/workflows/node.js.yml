@@ -15,10 +15,9 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 23.x
+          node-version: 24.x
       - run: corepack enable
       - run: pnpm install --frozen-lockfile
-      - run: pnpm clean
       - run: pnpm build
       - run: pnpm test
         env:

@@ -23,16 +23,6 @@
         "default": "./dist/index.cjs"
       }
     },
-    "./lib/*": {
-      "import": {
-        "types": "./dist/*.d.mts",
-        "default": "./dist/*.mjs"
-      },
-      "require": {
-        "types": "./dist/*.d.cts",
-        "default": "./dist/*.cjs"
-      }
-    },
     "./*": {
       "import": {
         "types": "./dist/*.d.mts",
@@ -55,11 +45,11 @@
     "access": "public"
   },
   "dependencies": {
-    "@types/qs": "^6.15.0",
     "axios": "^1.14.0",
     "qs": "^6.15.0"
   },
   "devDependencies": {
+    "@types/qs": "^6.15.0",
     "dotenv-override-true": "^6.2.2",
     "ringcentral-code-generator": "^0.8.0"
   },

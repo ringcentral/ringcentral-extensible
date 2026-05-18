@@ -1,18 +1,17 @@
 {
   "name": "ringcentral-extensible",
   "version": "0.1.0",
-  "private": "true",
+  "private": true,
   "description": "RingCentral Extensible SDK",
   "license": "MIT",
   "scripts": {
     "build": "pnpm --filter @rc-ex/core run build && pnpm --filter './packages/extensions/**' -r run build",
     "clean": "pnpm --filter './packages/**' -r exec rm -rf dist",
-    "reinstall": "pnpm install --force",
-    "prepack": "pnpm clean && pnpm build && pnpm test",
     "test": "pnpm --filter @rc-ex/test exec vitest",
+    "check": "biome check .",
+    "fix": "biome check --write --unsafe .",
     "upgrade-all": "pnpm update --latest --recursive",
-    "publish-changed": "pnpm --filter './packages/**' -r publish --access public",
-    "format-lint": "biome check --write --unsafe ."
+    "publish-changed": "pnpm --filter './packages/**' -r publish --access public"
   },
   "devDependencies": {
     "@arethetypeswrong/core": "^0.18.2",
@@ -21,6 +20,9 @@
     "publint": "^0.3.21",
     "tsdown": "^0.22.0",
     "typescript": "^6.0.2"
+  },
+  "engines": {
+    "node": "^22.18.0 || >=24.0.0"
   },
   "packageManager": "pnpm@10.33.1"
 }

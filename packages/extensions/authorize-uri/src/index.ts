@@ -62,7 +62,7 @@ class AuthorizeUriExtension extends SdkExtension {
       );
     }
 
-    let uri;
+    let uri: URI;
     if (this.options.baseUri) {
       uri = new URI(this.options.baseUri);
     } else {

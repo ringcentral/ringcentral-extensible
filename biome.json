@@ -6,15 +6,12 @@
     "useIgnoreFile": true
   },
   "files": {
-    "ignoreUnknown": true,
-    "includes": ["**", "!**/dist", "!**/coverage", "!**/*.min.js"]
+    "ignoreUnknown": true
   },
   "formatter": {
-    "enabled": true,
     "indentStyle": "space"
   },
   "linter": {
-    "enabled": true,
     "rules": {
       "recommended": true,
       "style": {

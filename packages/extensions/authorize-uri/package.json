@@ -38,11 +38,11 @@
     "@rc-ex/core": "workspace:^"
   },
   "dependencies": {
-    "@types/urijs": "^1.19.26",
     "urijs": "^1.19.11"
   },
   "devDependencies": {
-    "@rc-ex/core": "workspace:^"
+    "@rc-ex/core": "workspace:^",
+    "@types/urijs": "^1.19.26"
   },
   "scripts": {
     "build": "tsdown"

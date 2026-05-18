@@ -29,9 +29,6 @@ importers:
 
   packages/core:
     dependencies:
-      '@types/qs':
-        specifier: ^6.15.0
-        version: 6.15.0
       axios:
         specifier: ^1.14.0
         version: 1.14.0
@@ -39,6 +36,9 @@ importers:
         specifier: ^6.15.0
         version: 6.15.0
     devDependencies:
+      '@types/qs':
+        specifier: ^6.15.0
+        version: 6.15.0
       dotenv-override-true:
         specifier: ^6.2.2
         version: 6.2.2
@@ -48,9 +48,6 @@ importers:
 
   packages/extensions/authorize-uri:
     dependencies:
-      '@types/urijs':
-        specifier: ^1.19.26
-        version: 1.19.26
       urijs:
         specifier: ^1.19.11
         version: 1.19.11
@@ -58,6 +55,9 @@ importers:
       '@rc-ex/core':
         specifier: workspace:^
         version: link:../../core
+      '@types/urijs':
+        specifier: ^1.19.26
+        version: 1.19.26
 
   packages/extensions/auto-refresh:
     devDependencies:
