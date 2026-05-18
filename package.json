@@ -15,9 +15,11 @@
     "format-lint": "biome check --write --unsafe ."
   },
   "devDependencies": {
+    "@arethetypeswrong/core": "^0.18.2",
     "@biomejs/biome": "^2.4.10",
     "@types/node": "^25.5.2",
-    "tsup": "^8.5.1",
+    "publint": "^0.3.21",
+    "tsdown": "^0.22.0",
     "typescript": "^6.0.2"
   },
   "packageManager": "pnpm@10.33.1"

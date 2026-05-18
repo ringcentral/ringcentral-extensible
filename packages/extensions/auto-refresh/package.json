@@ -8,14 +8,20 @@
   "files": [
     "dist"
   ],
-  "types": "./dist/index.d.ts",
+  "sideEffects": false,
+  "types": "./dist/index.d.mts",
   "main": "./dist/index.cjs",
-  "module": "./dist/index.js",
+  "module": "./dist/index.mjs",
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs"
+      "import": {
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
     }
   },
   "repository": {
@@ -28,8 +34,14 @@
   "publishConfig": {
     "access": "public"
   },
+  "peerDependencies": {
+    "@rc-ex/core": "workspace:^"
+  },
+  "devDependencies": {
+    "@rc-ex/core": "workspace:^"
+  },
   "scripts": {
-    "build": "tsup --config tsup.config.ts && tsc -p tsconfig.json --declaration --emitDeclarationOnly --outDir dist"
+    "build": "tsdown"
   },
   "type": "module"
 }

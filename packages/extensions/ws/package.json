@@ -8,24 +8,40 @@
   "files": [
     "dist"
   ],
-  "types": "./dist/index.d.ts",
+  "sideEffects": false,
+  "types": "./dist/index.d.mts",
   "main": "./dist/index.cjs",
-  "module": "./dist/index.js",
+  "module": "./dist/index.mjs",
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs"
+      "import": {
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
     },
     "./lib/*": {
-      "types": "./dist/*.d.ts",
-      "import": "./dist/*.js",
-      "require": "./dist/*.cjs"
+      "import": {
+        "types": "./dist/*.d.mts",
+        "default": "./dist/*.mjs"
+      },
+      "require": {
+        "types": "./dist/*.d.cts",
+        "default": "./dist/*.cjs"
+      }
     },
     "./*": {
-      "types": "./dist/*.d.ts",
-      "import": "./dist/*.js",
-      "require": "./dist/*.cjs"
+      "import": {
+        "types": "./dist/*.d.mts",
+        "default": "./dist/*.mjs"
+      },
+      "require": {
+        "types": "./dist/*.d.cts",
+        "default": "./dist/*.cjs"
+      }
     }
   },
   "repository": {
@@ -46,8 +62,14 @@
     "wait-for-async": "^0.8.0",
     "ws": "^8.20.0"
   },
+  "peerDependencies": {
+    "@rc-ex/core": "workspace:^"
+  },
+  "devDependencies": {
+    "@rc-ex/core": "workspace:^"
+  },
   "scripts": {
-    "build": "tsup --config tsup.config.ts && tsc -p tsconfig.json --declaration --emitDeclarationOnly --outDir dist"
+    "build": "tsdown"
   },
   "type": "module"
 }
