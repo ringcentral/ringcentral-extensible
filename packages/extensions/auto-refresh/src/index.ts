@@ -8,7 +8,7 @@ export interface AutoRefreshOptions {
 class AutoRefreshExtension extends SdkExtension {
   public rc!: RingCentral;
   public options: AutoRefreshOptions;
-  private timeout?: NodeJS.Timeout;
+  private timeout?: ReturnType<typeof setInterval>;
 
   public constructor(
     options: AutoRefreshOptions = { interval: 1000 * 60 * 30 },
@@ -23,8 +23,12 @@ class AutoRefreshExtension extends SdkExtension {
 
   public start() {
     this.stop(); // stop existing
-    this.timeout = setInterval(() => {
-      this.rc.refresh();
+    this.timeout = setInterval(async () => {
+      try {
+        await this.rc.refresh();
+      } catch (e) {
+        console.error("@rc-ex/auto-refresh failed to refresh token", e);
+      }
     }, this.options.interval);
   }
 
