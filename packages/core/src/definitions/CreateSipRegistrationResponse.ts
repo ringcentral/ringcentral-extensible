@@ -33,6 +33,11 @@ interface CreateSipRegistrationResponse {
    * Format: int32
    */
   pollingInterval?: number;
+
+  /**
+   * Indicates whether the user has an RC App device configured in a PSTN gateway
+   */
+  pstnConfigured?: boolean;
 }
 
 export default CreateSipRegistrationResponse;

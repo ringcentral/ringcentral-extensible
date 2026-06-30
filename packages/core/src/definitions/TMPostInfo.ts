@@ -13,6 +13,21 @@ interface TMPostInfo {
   groupId?: string;
 
   /**
+   * Boolean flag indicating that current post is a parent post of a thread. Populated only for parent posts
+   */
+  isParent?: boolean;
+
+  /**
+   * Internal identifier of a parent post, in case post is a part of a thread
+   */
+  parentPostId?: string;
+
+  /**
+   * Internal identifier of a thread, in case post is a part of a thread
+   */
+  threadId?: string;
+
+  /**
    * Type of post
    */
   type?: "TextMessage" | "PersonJoined" | "PersonsAdded";

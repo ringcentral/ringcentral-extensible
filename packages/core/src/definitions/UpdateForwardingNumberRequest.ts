@@ -25,7 +25,7 @@ interface UpdateForwardingNumberRequest {
     | "Outage"
     | "Other"
     | "BusinessMobilePhone"
-    | "ExternalCarrier";
+    | "ExtensionApps";
 }
 
 export default UpdateForwardingNumberRequest;

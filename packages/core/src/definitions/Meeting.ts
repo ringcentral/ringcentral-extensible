@@ -70,21 +70,6 @@ interface Meeting {
   rights?: ("delete" | "download" | "share")[];
 
   /**
-   * During meeting AI team analyze code and after meeting finished generates text summary about this meeting
-   */
-  longSummary?: string;
-
-  /**
-   * During meeting AI team analyze code and after meeting finished generates text summary about this meeting
-   */
-  shortSummary?: string;
-
-  /**
-   * During meeting AI team analyze code and after meeting finished generates key words used in meeting
-   */
-  keywords?: string[];
-
-  /**
    * List of the participants in the meeting
    * Required
    */

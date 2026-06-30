@@ -122,7 +122,8 @@ interface CallLogRecordLegInfo {
     | "Text Relay"
     | "Transfer"
     | "Unknown"
-    | "VoIP Call";
+    | "VoIP Call"
+    | "VoiceChat Call";
 
   /**
    * The result of the call operation
@@ -358,7 +359,8 @@ interface CallLogRecordLegInfo {
     | "ImsCall"
     | "JoinCall"
     | "TextRelay"
-    | "IvaCall";
+    | "IvaCall"
+    | "VoiceChat";
 
   /**
    * Returned for 'Detailed' call log. Specifies if the leg is master-leg

@@ -67,12 +67,6 @@ interface NotificationSettings {
   includeManagers?: boolean;
 
   /**
-   * Specifies if sms recipients' emails are included in the list of emails to which
-   *  notifications are sent
-   */
-  includeSmsRecipients?: boolean;
-
-  /**
    * List of sms recipients specified for call queue. Returned only for call queue extension
    */
   smsRecipients?: EmailRecipientInfo[];

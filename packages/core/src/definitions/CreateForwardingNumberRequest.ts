@@ -23,10 +23,18 @@ interface CreateForwardingNumberRequest {
   label?: string;
 
   /**
-   * Forwarding/call flip phone type. If specified, 'label' attribute value is ignored
+   * Forwarding phone number type
    * Default: Other
    */
-  type?: "PhoneLine" | "Home" | "Mobile" | "Work" | "Other";
+  type?:
+    | "Home"
+    | "Mobile"
+    | "Work"
+    | "PhoneLine"
+    | "Outage"
+    | "Other"
+    | "BusinessMobilePhone"
+    | "ExtensionApps";
 
   /**
    */

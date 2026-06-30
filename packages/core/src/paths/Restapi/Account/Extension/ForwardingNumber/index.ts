@@ -1,7 +1,6 @@
 import type CreateForwardingNumberRequest from "../../../../../definitions/CreateForwardingNumberRequest.js";
 import type DeleteForwardingNumbersRequest from "../../../../../definitions/DeleteForwardingNumbersRequest.js";
 import type ForwardingNumberInfo from "../../../../../definitions/ForwardingNumberInfo.js";
-import type ForwardingNumberResource from "../../../../../definitions/ForwardingNumberResource.js";
 import type GetExtensionForwardingNumberListResponse from "../../../../../definitions/GetExtensionForwardingNumberListResponse.js";
 import type ListForwardingNumbersParameters from "../../../../../definitions/ListForwardingNumbersParameters.js";
 import type UpdateForwardingNumberRequest from "../../../../../definitions/UpdateForwardingNumberRequest.js";
@@ -105,11 +104,11 @@ class Index {
    */
   public async get(
     restRequestConfig?: RestRequestConfig,
-  ): Promise<ForwardingNumberResource> {
+  ): Promise<ForwardingNumberInfo> {
     if (this.forwardingNumberId === null) {
       throw new Error("forwardingNumberId must be specified.");
     }
-    const r = await this.rc.get<ForwardingNumberResource>(
+    const r = await this.rc.get<ForwardingNumberInfo>(
       this.path(),
       undefined,
       restRequestConfig,

@@ -142,6 +142,21 @@ interface DeviceEmergencyServiceAddressResource {
    * Internal identifier of a tax
    */
   taxId?: string;
+
+  /**
+   * Apartment number (country-specific address field, e.g. Portugal)
+   */
+  apartment?: string;
+
+  /**
+   * Floor number (country-specific address field, e.g. Portugal)
+   */
+  floor?: string;
+
+  /**
+   * Designation (country-specific address field, e.g. Portugal)
+   */
+  designation?: string;
 }
 
 export default DeviceEmergencyServiceAddressResource;

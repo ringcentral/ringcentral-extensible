@@ -51,14 +51,6 @@ interface ReadUserCallLogParameters {
   view?: "Simple" | "Detailed";
 
   /**
-   * Deprecated, replaced with `recordingType` filter, still supported for compatibility reasons.
-   *  Indicates if only recorded calls should be returned.
-   *
-   *  If both `withRecording` and `recordingType` parameters are specified, then `withRecording` is ignored
-   */
-  withRecording?: boolean;
-
-  /**
    * Indicates that call records with recordings of particular type should be returned.
    *  If omitted, then calls with and without recordings are returned
    */
@@ -110,7 +102,7 @@ interface ReadUserCallLogParameters {
   page?: number;
 
   /**
-   * Indicates that deleted calls records should be returned
+   * Indicates that deleted call records should be returned
    */
   showDeleted?: boolean;
 }

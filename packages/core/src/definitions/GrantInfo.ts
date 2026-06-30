@@ -73,6 +73,12 @@ interface GrantInfo {
   sharedVoicemails?: boolean;
 
   /**
+   * Specifies whether the current extension is configured as SMS Recipient
+   *  for the call queue referenced in extension object
+   */
+  callQueueSmsRecipient?: boolean;
+
+  /**
    * Specifies whether the current extension is configured as SMS Recipient for an extension
    */
   smsRecipient?: boolean;

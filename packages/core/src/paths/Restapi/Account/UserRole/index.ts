@@ -61,8 +61,8 @@ class Index {
     roleResource: RoleResource,
     queryParams?: CreateCustomRoleParameters,
     restRequestConfig?: RestRequestConfig,
-  ): Promise<string> {
-    const r = await this.rc.post<string>(
+  ): Promise<RoleResource> {
+    const r = await this.rc.post<RoleResource>(
       this.path(false),
       roleResource,
       queryParams,

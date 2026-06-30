@@ -11,6 +11,7 @@ import Favorite from "./Favorite/index.js";
 import Notes from "./Notes/index.js";
 import Posts from "./Posts/index.js";
 import Tasks from "./Tasks/index.js";
+import Threads from "./Threads/index.js";
 import Unfavorite from "./Unfavorite/index.js";
 
 class Index {
@@ -93,6 +94,10 @@ class Index {
 
   public tasks(): Tasks {
     return new Tasks(this);
+  }
+
+  public threads(threadId: string | null = null): Threads {
+    return new Threads(this, threadId);
   }
 
   public favorite(): Favorite {

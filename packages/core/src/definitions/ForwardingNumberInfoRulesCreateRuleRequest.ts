@@ -15,7 +15,6 @@ interface ForwardingNumberInfoRulesCreateRuleRequest {
     | "Outage"
     | "Other"
     | "BusinessMobilePhone"
-    | "ExternalCarrier"
     | "ExtensionApps";
 
   /**

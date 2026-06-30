@@ -13,7 +13,6 @@ interface ContactInfoCreationRequest {
 
   /**
    * For User extension type only. Extension user last name
-   * Required
    */
   lastName?: string;
 

@@ -44,6 +44,7 @@ import Presence from "./Presence/index.js";
 import ProfileImage from "./ProfileImage/index.js";
 import RingOut from "./RingOut/index.js";
 import Sms from "./Sms/index.js";
+import SmsRecipients from "./SmsRecipients/index.js";
 import UnifiedPresence from "./UnifiedPresence/index.js";
 import VideoConfiguration from "./VideoConfiguration/index.js";
 
@@ -259,6 +260,10 @@ class Index {
 
   public businessHours(): BusinessHours {
     return new BusinessHours(this);
+  }
+
+  public smsRecipients(): SmsRecipients {
+    return new SmsRecipients(this);
   }
 
   public callerBlocking(): CallerBlocking {

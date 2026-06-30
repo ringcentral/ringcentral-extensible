@@ -1,4 +1,3 @@
-import type DeviceDefinitionEmergency from "./DeviceDefinitionEmergency.js";
 import type DeviceDefinitionPhoneInfo from "./DeviceDefinitionPhoneInfo.js";
 
 interface DeviceDefinition {
@@ -7,11 +6,6 @@ interface DeviceDefinition {
    * Required
    */
   type?: "OtherPhone" | "WebRTC";
-
-  /**
-   * Required
-   */
-  emergency?: DeviceDefinitionEmergency;
 
   /**
    * Assign a specific phone number

@@ -33,6 +33,7 @@ import IvrPrompts from "./IvrPrompts/index.js";
 import MessageStoreConfiguration from "./MessageStoreConfiguration/index.js";
 import MessageStoreReport from "./MessageStoreReport/index.js";
 import MessageStoreTemplates from "./MessageStoreTemplates/index.js";
+import MessageThreads from "./MessageThreads/index.js";
 import MsTeams from "./MsTeams/index.js";
 import PagingOnlyGroups from "./PagingOnlyGroups/index.js";
 import PhoneNumber from "./PhoneNumber/index.js";
@@ -186,6 +187,10 @@ class Index {
 
   public callRecording(): CallRecording {
     return new CallRecording(this);
+  }
+
+  public messageThreads(threadId: string | null = null): MessageThreads {
+    return new MessageThreads(this, threadId);
   }
 
   public callRecordings(): CallRecordings {

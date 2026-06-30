@@ -1,4 +1,6 @@
 import type FixedOrderAgents from "./FixedOrderAgents.js";
+import type QueueInfoCallBack from "./QueueInfoCallBack.js";
+import type QueueInfoPositionInQueue from "./QueueInfoPositionInQueue.js";
 import type TransferInfo from "./TransferInfo.js";
 import type UnconditionalForwardingInfo from "./UnconditionalForwardingInfo.js";
 
@@ -99,6 +101,14 @@ interface QueueInfo {
   /**
    */
   unconditionalForwarding?: UnconditionalForwardingInfo[];
+
+  /**
+   */
+  positionInQueue?: QueueInfoPositionInQueue;
+
+  /**
+   */
+  callBack?: QueueInfoCallBack;
 }
 
 export default QueueInfo;

@@ -1,4 +1,3 @@
-import type BulkAddDevicesItemEmergency from "./BulkAddDevicesItemEmergency.js";
 import type BulkAddDevicesItemPhoneInfo from "./BulkAddDevicesItemPhoneInfo.js";
 import type BulkOperationExtensionReference from "./BulkOperationExtensionReference.js";
 
@@ -19,11 +18,6 @@ interface BulkAddDevicesItem {
    * Required
    */
   type?: "OtherPhone" | "WebRTC";
-
-  /**
-   * Required
-   */
-  emergency?: BulkAddDevicesItemEmergency;
 
   /**
    * Assign a specific phone number

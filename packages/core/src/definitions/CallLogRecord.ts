@@ -123,7 +123,8 @@ interface CallLogRecord {
     | "Text Relay"
     | "Transfer"
     | "Unknown"
-    | "VoIP Call";
+    | "VoIP Call"
+    | "VoiceChat Call";
 
   /**
    * The result of the call operation

@@ -38,13 +38,6 @@ interface WirelessPointInfo {
   /**
    */
   emergencyLocation?: EmergencyLocationInfo;
-
-  /**
-   * Emergency response location (address) internal identifier.
-   *  Only one of a pair `emergencyAddress` or `emergencyLocationId`
-   *  can be specified, otherwise the error is returned
-   */
-  emergencyLocationId?: string;
 }
 
 export default WirelessPointInfo;

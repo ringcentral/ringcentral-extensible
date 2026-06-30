@@ -20,12 +20,12 @@ interface ListSmsConsentRecordsParameters {
   perPage?: number;
 
   /**
-   * The sender's phone number(s) used to filter records
+   * The internal party's phone number(s) used to filter records
    */
   from?: string[];
 
   /**
-   * The recipient's phone number(s) used to filter records
+   * The external party's phone number(s) used to filter records
    */
   to?: string[];
 

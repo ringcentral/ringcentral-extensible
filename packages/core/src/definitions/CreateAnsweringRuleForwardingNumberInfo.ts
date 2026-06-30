@@ -21,7 +21,7 @@ interface CreateAnsweringRuleForwardingNumberInfo {
   label?: string;
 
   /**
-   * Type of forwarding number
+   * Forwarding phone number type
    */
   type?:
     | "Home"
@@ -31,7 +31,6 @@ interface CreateAnsweringRuleForwardingNumberInfo {
     | "Outage"
     | "Other"
     | "BusinessMobilePhone"
-    | "ExternalCarrier"
     | "ExtensionApps";
 }
 

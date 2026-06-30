@@ -26,12 +26,6 @@ interface WcsWebinarSettingsModel {
   recordingDownloadEnabled?: boolean;
 
   /**
-   * DEPRECATED AND REPLACED BY 'pastSessionDeletionEnabled' setting.
-   *  Indicates if recording can be deleted (this setting is read-only at webinar level)
-   */
-  recordingDeletionEnabled?: boolean;
-
-  /**
    * Indicates if deletion of past session along with its artifacts is enabled for Host.
    *  This setting is read-only at webinar level
    */

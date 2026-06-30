@@ -29,13 +29,6 @@ interface UpdateWirelessPoint {
   emergencyAddress?: EmergencyAddressInfo;
 
   /**
-   * Emergency response location (address) internal identifier.
-   *  Only one of a pair `emergencyAddress` or `emergencyLocationId`
-   *  can be specified, otherwise the error is returned
-   */
-  emergencyLocationId?: string;
-
-  /**
    */
   emergencyLocation?: EmergencyLocationInfo;
 }

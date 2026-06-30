@@ -38,7 +38,8 @@ class Index {
   }
 
   /**
-   * Updates IVR settings for a site specified in path.
+   * Updates IVR settings for a site specified in path. Omitted fields are
+   * not changed.
    *
    * HTTP Method: put
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/sites/{siteId}/ivr

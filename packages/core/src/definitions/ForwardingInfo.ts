@@ -10,11 +10,6 @@ interface ForwardingInfo {
   notifyMySoftPhones?: boolean;
 
   /**
-   * Deprecated parameter. Specifies if the administrator's softphone is notified before forwarding the incoming call to desk phones and forwarding numbers. The default value is `false`
-   */
-  notifyAdminSoftPhones?: boolean;
-
-  /**
    * Number of rings before forwarding starts
    * Format: int32
    */
@@ -40,11 +35,6 @@ interface ForwardingInfo {
    * Specifies if desktop and mobile applications of the user are notified before (true) or after (false) forwarding the incoming call to desk phones and forwarding numbers. Applicable only if `notifyMySoftPhones` parameter is set to `true`
    */
   softPhonesPositionTop?: boolean;
-
-  /**
-   * Deprecated parameter. Specifies if mobile timeout is activated for the rule
-   */
-  mobileTimeout?: boolean;
 }
 
 export default ForwardingInfo;

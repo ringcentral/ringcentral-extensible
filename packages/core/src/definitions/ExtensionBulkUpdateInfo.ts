@@ -1,6 +1,5 @@
 import type CallQueueInfoRequest from "./CallQueueInfoRequest.js";
 import type ContactInfoUpdateRequest from "./ContactInfoUpdateRequest.js";
-import type CostCenterInfo from "./CostCenterInfo.js";
 import type CustomFieldInfo from "./CustomFieldInfo.js";
 import type ExtensionRegionalSettingRequest from "./ExtensionRegionalSettingRequest.js";
 import type ExtensionStatusInfo from "./ExtensionStatusInfo.js";
@@ -78,16 +77,7 @@ interface ExtensionBulkUpdateInfo {
 
   /**
    */
-  costCenter?: CostCenterInfo;
-
-  /**
-   */
   customFields?: CustomFieldInfo[];
-
-  /**
-   * Hides extension from showing in company directory. Supported for extensions of User type only
-   */
-  hidden?: boolean;
 
   /**
    */

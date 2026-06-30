@@ -10,6 +10,16 @@ interface TMCreatePostRequest {
   text?: string;
 
   /**
+   * Internal identifier of a parent post, in case post is a part of a thread
+   */
+  parentPostId?: string;
+
+  /**
+   * Internal identifier of a thread, in case post is a part of a thread
+   */
+  threadId?: string;
+
+  /**
    * Identifier(s) of attachments. Maximum number of attachments is 25
    */
   attachments?: TMAttachmentInfo[];

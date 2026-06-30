@@ -1,4 +1,6 @@
 import type IvrMenuInfo from "../../../../definitions/IvrMenuInfo.js";
+import type IvrMenuInfoCreate from "../../../../definitions/IvrMenuInfoCreate.js";
+import type IvrMenuInfoUpdate from "../../../../definitions/IvrMenuInfoUpdate.js";
 import type IvrMenuList from "../../../../definitions/IvrMenuList.js";
 import type {
   ParentInterface,
@@ -52,12 +54,12 @@ class Index {
    * User Permission: AutoReceptionist
    */
   public async post(
-    ivrMenuInfo: IvrMenuInfo,
+    ivrMenuInfoCreate: IvrMenuInfoCreate,
     restRequestConfig?: RestRequestConfig,
   ): Promise<IvrMenuInfo> {
     const r = await this.rc.post<IvrMenuInfo>(
       this.path(false),
-      ivrMenuInfo,
+      ivrMenuInfoCreate,
       undefined,
       restRequestConfig,
     );
@@ -87,7 +89,7 @@ class Index {
   }
 
   /**
-   * Updates a company IVR menu by ID.
+   * Updates a company IVR menu by ID. Omitted fields are not changed.
    * HTTP Method: put
    * Endpoint: /restapi/{apiVersion}/account/{accountId}/ivr-menus/{ivrMenuId}
    * Rate Limit Group: Medium
@@ -95,7 +97,7 @@ class Index {
    * User Permission: AutoReceptionist
    */
   public async put(
-    ivrMenuInfo: IvrMenuInfo,
+    ivrMenuInfoUpdate: IvrMenuInfoUpdate,
     restRequestConfig?: RestRequestConfig,
   ): Promise<IvrMenuInfo> {
     if (this.ivrMenuId === null) {
@@ -103,7 +105,7 @@ class Index {
     }
     const r = await this.rc.put<IvrMenuInfo>(
       this.path(),
-      ivrMenuInfo,
+      ivrMenuInfoUpdate,
       undefined,
       restRequestConfig,
     );

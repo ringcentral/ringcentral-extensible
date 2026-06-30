@@ -11,6 +11,7 @@ interface ReasonInfo {
     | "ServicePlanLimitation"
     | "AccountLimitation"
     | "ExtensionTypeLimitation"
+    | "ExtensionSubTypeLimitation"
     | "ExtensionLimitation"
     | "InsufficientPermissions"
     | "ConfigurationLimitation"

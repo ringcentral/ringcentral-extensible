@@ -1,5 +1,5 @@
 import type CreateForwardingNumberDeviceInfo from "./CreateForwardingNumberDeviceInfo.js";
-import type ForwardingNumberInfoExtension from "./ForwardingNumberInfoExtension.js";
+import type ForwardingNumberExtensionInfo from "./ForwardingNumberExtensionInfo.js";
 
 interface ForwardingNumberInfo {
   /**
@@ -48,13 +48,11 @@ interface ForwardingNumberInfo {
     | "Outage"
     | "Other"
     | "BusinessMobilePhone"
-    | "ExternalCarrier"
     | "ExtensionApps";
 
   /**
-   * Extension information. Returned only if extension type is 'ExtensionApps'
    */
-  extension?: ForwardingNumberInfoExtension;
+  extension?: ForwardingNumberExtensionInfo;
 }
 
 export default ForwardingNumberInfo;

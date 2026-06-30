@@ -30,6 +30,11 @@ interface AccountInfo {
   status?: "Initial" | "Unconfirmed" | "Confirmed" | "Disabled";
 
   /**
+   * Indicates if the billing is active.
+   */
+  billingActive?: boolean;
+
+  /**
    * Company name
    * Example: Acme Inc.
    */

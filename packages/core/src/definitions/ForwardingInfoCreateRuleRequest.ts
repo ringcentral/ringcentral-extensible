@@ -10,11 +10,6 @@ interface ForwardingInfoCreateRuleRequest {
   notifyMySoftPhones?: boolean;
 
   /**
-   * Deprecated parameter. Specifies if the administrator's softphone (desktop application) is notified before forwarding the incoming call to desk phones and forwarding numbers. The default value is `true`.
-   */
-  notifyAdminSoftPhones?: boolean;
-
-  /**
    * Specifies delay between ring on apps and starting of a call forwarding. To activate this parameter use the value > 0, and turn off the `softPhonesAlwaysRing` setting. If the value is 1 or 0, the `softPhonesAlwaysRing` setting cannot be turned off
    * Format: int32
    */
@@ -35,11 +30,6 @@ interface ForwardingInfoCreateRuleRequest {
    * Information on a call forwarding rule
    */
   rules?: ForwardingRuleCreateRequest[];
-
-  /**
-   * Deprecated parameter. Specifies if mobile timeout is activated for the rule
-   */
-  mobileTimeout?: boolean;
 }
 
 export default ForwardingInfoCreateRuleRequest;
