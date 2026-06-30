@@ -23,10 +23,10 @@ describe("extensions", () => {
       clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET!,
       server: process.env.RINGCENTRAL_SERVER_URL!,
     });
+    const rcSdkExtension = new RcSdkExtension({ rcSdk: sdk });
     await sdk.login({
       jwt: process.env.RINGCENTRAL_JWT_TOKEN,
     });
-    const rcSdkExtension = new RcSdkExtension({ rcSdk: sdk });
     await rc.installExtension(rcSdkExtension);
 
     // install WebSocket Extension

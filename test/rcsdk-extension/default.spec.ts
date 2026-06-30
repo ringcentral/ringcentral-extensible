@@ -10,12 +10,12 @@ describe("RingCentral extension", () => {
       clientSecret: process.env.RINGCENTRAL_CLIENT_SECRET!,
       server: process.env.RINGCENTRAL_SERVER_URL!,
     });
+    const rcSdkExtension = new RcSdkExtension({ rcSdk: sdk });
     await sdk.login({
       jwt: process.env.RINGCENTRAL_JWT_TOKEN,
     });
 
     const rc = new RingCentral();
-    const rcSdkExtension = new RcSdkExtension({ rcSdk: sdk });
     await rc.installExtension(rcSdkExtension);
 
     const extensionInfo = await rc.restapi().account().extension().get();

@@ -295,16 +295,7 @@ class WebSocketExtension extends SdkExtension {
 
   public async _connect(recoverSession = false) {
     if (!this.wsToken || Date.now() > this.wsTokenExpiresAt) {
-      const r = await this.rc.post(
-        "/restapi/oauth/wstoken",
-        undefined,
-        undefined,
-        // node-fetch 2.7 uses Node's keep-alive agent by default; this
-        // chunked gzip endpoint can otherwise fail with Premature close in CI.
-        typeof process !== "undefined" && process.versions?.node
-          ? { headers: { Connection: "close" } }
-          : undefined,
-      );
+      const r = await this.rc.post("/restapi/oauth/wstoken");
       this.wsToken = r.data as WsToken;
       // `expires_in` default value is 600 seconds. That's why we `* 0.8`
       this.wsTokenExpiresAt = Date.now() + this.wsToken.expires_in * 0.8 * 1000;
