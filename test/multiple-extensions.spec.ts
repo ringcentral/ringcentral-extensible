@@ -32,6 +32,7 @@ describe("extensions", () => {
     // install WebSocket Extension
     const webSocketExtension = new WebSocketExtension({
       restOverWebSocket: true,
+      debugMode: true,
     });
     await rc.installExtension(webSocketExtension);
 
