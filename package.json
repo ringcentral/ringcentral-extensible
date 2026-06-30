@@ -14,12 +14,12 @@
     "publish-changed": "pnpm --filter './packages/**' -r publish --access public"
   },
   "devDependencies": {
-    "@arethetypeswrong/core": "^0.18.2",
-    "@biomejs/biome": "^2.4.10",
-    "@types/node": "^25.5.2",
+    "@arethetypeswrong/core": "^0.18.4",
+    "@biomejs/biome": "^2.5.1",
+    "@types/node": "^26.0.1",
     "publint": "^0.3.21",
-    "tsdown": "^0.22.0",
-    "typescript": "^6.0.2"
+    "tsdown": "^0.22.3",
+    "typescript": "^6.0.3"
   },
   "engines": {
     "node": "^22.18.0 || >=24.0.0"

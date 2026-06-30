@@ -35,7 +35,7 @@
     "access": "public"
   },
   "dependencies": {
-    "wait-for-async": "^0.8.0"
+    "wait-for-async": "^0.8.1"
   },
   "peerDependencies": {
     "@rc-ex/core": "workspace:^"
