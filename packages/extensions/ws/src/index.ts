@@ -299,6 +299,8 @@ class WebSocketExtension extends SdkExtension {
         "/restapi/oauth/wstoken",
         undefined,
         undefined,
+        // node-fetch 2.7 uses Node's keep-alive agent by default; this
+        // chunked gzip endpoint can otherwise fail with Premature close in CI.
         typeof process !== "undefined" && process.versions?.node
           ? { headers: { Connection: "close" } }
           : undefined,
