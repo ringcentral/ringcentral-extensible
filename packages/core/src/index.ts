@@ -156,8 +156,9 @@ class RingCentral implements RingCentralInterface {
 
   public async authorize(
     options: PasswordFlowOptions | AuthCodeFlowOptions | JwtFlowOptions,
+    otherOptions: GetTokenRequest = {},
   ): Promise<TokenInfo> {
-    const getTokenRequest: GetTokenRequest = {};
+    const getTokenRequest: GetTokenRequest = otherOptions;
     if ("code" in options) {
       getTokenRequest.grant_type = "authorization_code";
       getTokenRequest.code = options.code;
