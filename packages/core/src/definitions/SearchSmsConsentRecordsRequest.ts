@@ -25,7 +25,7 @@ interface SearchSmsConsentRecordsRequest {
 
   /**
    * The campaign type(s) used to filter records
-   *  (if requested `coverage` is `Campaign`)
+   *  (if requested `coverage` is `CampaignType`)
    */
   campaignType?: ("Conversational" | "Informational" | "Promotional")[];
 

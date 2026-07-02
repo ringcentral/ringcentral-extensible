@@ -1,5 +1,4 @@
 import type CallSessionObject from "../../../../../definitions/CallSessionObject.js";
-import type ReadCallSessionStatusParameters from "../../../../../definitions/ReadCallSessionStatusParameters.js";
 import type {
   ParentInterface,
   RestRequestConfig,
@@ -35,7 +34,6 @@ class Index {
    * App Permission: CallControl
    */
   public async get(
-    queryParams?: ReadCallSessionStatusParameters,
     restRequestConfig?: RestRequestConfig,
   ): Promise<CallSessionObject> {
     if (this.telephonySessionId === null) {
@@ -43,7 +41,7 @@ class Index {
     }
     const r = await this.rc.get<CallSessionObject>(
       this.path(),
-      queryParams,
+      undefined,
       restRequestConfig,
     );
     return r.data;

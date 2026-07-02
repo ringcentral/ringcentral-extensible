@@ -18,8 +18,12 @@ interface RingOutStatusInfo {
     | "InternationalDisabled"
     | "DestinationBlocked"
     | "NotEnoughFunds"
-    | "NoSuchUser"
-    | "Error";
+    | "NosuchUser"
+    | "Error"
+    | "CannotReach"
+    | "NoAnsweringMachine"
+    | "NoSessionFound"
+    | "Unknown";
 
   /**
    * Status of a call and calling/called party
@@ -37,8 +41,12 @@ interface RingOutStatusInfo {
     | "InternationalDisabled"
     | "DestinationBlocked"
     | "NotEnoughFunds"
-    | "NoSuchUser"
-    | "Error";
+    | "NosuchUser"
+    | "Error"
+    | "CannotReach"
+    | "NoAnsweringMachine"
+    | "NoSessionFound"
+    | "Unknown";
 
   /**
    * Status of a call and calling/called party
@@ -56,8 +64,12 @@ interface RingOutStatusInfo {
     | "InternationalDisabled"
     | "DestinationBlocked"
     | "NotEnoughFunds"
-    | "NoSuchUser"
-    | "Error";
+    | "NosuchUser"
+    | "Error"
+    | "CannotReach"
+    | "NoAnsweringMachine"
+    | "NoSessionFound"
+    | "Unknown";
 }
 
 export default RingOutStatusInfo;

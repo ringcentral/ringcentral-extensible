@@ -5809,14 +5809,14 @@ User Permission|`N/A`
 ```ts
 const rc = new RingCentral({clientId, clientSecret, server});
 await rc.authorize({jwt});
-const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).messageStoreTemplates(templateId).put(messageTemplateUpdateRequest);
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).messageStoreTemplates(templateId).put(messageTemplateRequest);
 await rc.revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `messageTemplateUpdateRequest` is of type [MessageTemplateUpdateRequest](./definitions/MessageTemplateUpdateRequest.ts)
+- `messageTemplateRequest` is of type [MessageTemplateRequest](./definitions/MessageTemplateRequest.ts)
 - `result` is of type [MessageTemplateResponse](./definitions/MessageTemplateResponse.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#SMS-Templates-updateUserMessageTemplate) in API Explorer.
@@ -7009,13 +7009,13 @@ User Permission|`N/A`
 ```ts
 const rc = new RingCentral({clientId, clientSecret, server});
 await rc.authorize({jwt});
-const result = await rc.restapi(apiVersion).account(accountId).messageStoreTemplates(templateId).put(messageTemplateUpdateRequest);
+const result = await rc.restapi(apiVersion).account(accountId).messageStoreTemplates(templateId).put(messageTemplateRequest);
 await rc.revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `messageTemplateUpdateRequest` is of type [MessageTemplateUpdateRequest](./definitions/MessageTemplateUpdateRequest.ts)
+- `messageTemplateRequest` is of type [MessageTemplateRequest](./definitions/MessageTemplateRequest.ts)
 - `result` is of type [MessageTemplateResponse](./definitions/MessageTemplateResponse.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#SMS-Templates-updateCompanyMessageTemplate) in API Explorer.
@@ -8125,13 +8125,12 @@ User Permission|`N/A`
 ```ts
 const rc = new RingCentral({clientId, clientSecret, server});
 await rc.authorize({jwt});
-const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).get(readCallSessionStatusParameters);
+const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).get();
 await rc.revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `readCallSessionStatusParameters` is of type [ReadCallSessionStatusParameters](./definitions/ReadCallSessionStatusParameters.ts)
 - `result` is of type [CallSessionObject](./definitions/CallSessionObject.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Control-readCallSessionStatus) in API Explorer.
@@ -8223,12 +8222,13 @@ User Permission|`N/A`
 ```ts
 const rc = new RingCentral({clientId, clientSecret, server});
 await rc.authorize({jwt});
-const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).parties(partyId).delete();
+const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).parties(partyId).delete(deletePartyRequest);
 await rc.revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
+- `deletePartyRequest` is of type [DeletePartyRequest](./definitions/DeletePartyRequest.ts)
 - `result` is an empty string
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Control-deleteCallParty) in API Explorer.
@@ -8477,7 +8477,7 @@ await rc.revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `result` is an empty string
+- `result` is of type [CallRecording](./definitions/CallRecording.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Control-startCallRecording) in API Explorer.
 
@@ -8495,14 +8495,13 @@ User Permission|`N/A`
 ```ts
 const rc = new RingCentral({clientId, clientSecret, server});
 await rc.authorize({jwt});
-const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).parties(partyId).recordings(recordingId).patch(callRecordingUpdate, pauseResumeCallRecordingParameters);
+const result = await rc.restapi(apiVersion).account(accountId).telephony().sessions(telephonySessionId).parties(partyId).recordings(recordingId).patch(callRecordingUpdate);
 await rc.revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - `callRecordingUpdate` is of type [CallRecordingUpdate](./definitions/CallRecordingUpdate.ts)
-- `pauseResumeCallRecordingParameters` is of type [PauseResumeCallRecordingParameters](./definitions/PauseResumeCallRecordingParameters.ts)
 - `result` is of type [CallRecording](./definitions/CallRecording.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Control-pauseResumeCallRecording) in API Explorer.

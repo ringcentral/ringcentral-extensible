@@ -29,7 +29,7 @@ interface SmsOptHistoryRecord {
   source?: "Recipient" | "Api" | "Upstream" | "Carrier";
 
   /**
-   * The time when the record was last updated
+   * The time when this history record was created
    * Required
    * Format: date-time
    */

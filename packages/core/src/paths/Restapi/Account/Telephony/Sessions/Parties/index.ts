@@ -1,4 +1,5 @@
 import type CallParty from "../../../../../../definitions/CallParty.js";
+import type DeletePartyRequest from "../../../../../../definitions/DeletePartyRequest.js";
 import type PartyUpdateRequest from "../../../../../../definitions/PartyUpdateRequest.js";
 import type {
   ParentInterface,
@@ -63,13 +64,16 @@ class Index {
    * Rate Limit Group: Light
    * App Permission: CallControl
    */
-  public async delete(restRequestConfig?: RestRequestConfig): Promise<string> {
+  public async delete(
+    deletePartyRequest: DeletePartyRequest,
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<string> {
     if (this.partyId === null) {
       throw new Error("partyId must be specified.");
     }
     const r = await this.rc.delete<string>(
       this.path(),
-      {},
+      deletePartyRequest,
       undefined,
       restRequestConfig,
     );

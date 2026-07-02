@@ -2,7 +2,6 @@ import type ListCompanyMessageTemplatesParameters from "../../../../definitions/
 import type MessageTemplateRequest from "../../../../definitions/MessageTemplateRequest.js";
 import type MessageTemplateResponse from "../../../../definitions/MessageTemplateResponse.js";
 import type MessageTemplatesListResponse from "../../../../definitions/MessageTemplatesListResponse.js";
-import type MessageTemplateUpdateRequest from "../../../../definitions/MessageTemplateUpdateRequest.js";
 import type {
   ParentInterface,
   RestRequestConfig,
@@ -96,7 +95,7 @@ class Index {
    * App Permission: EditAccounts
    */
   public async put(
-    messageTemplateUpdateRequest: MessageTemplateUpdateRequest,
+    messageTemplateRequest: MessageTemplateRequest,
     restRequestConfig?: RestRequestConfig,
   ): Promise<MessageTemplateResponse> {
     if (this.templateId === null) {
@@ -104,7 +103,7 @@ class Index {
     }
     const r = await this.rc.put<MessageTemplateResponse>(
       this.path(),
-      messageTemplateUpdateRequest,
+      messageTemplateRequest,
       undefined,
       restRequestConfig,
     );

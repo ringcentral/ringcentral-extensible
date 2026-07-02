@@ -1,6 +1,5 @@
 import type CallRecording from "../../../../../../../definitions/CallRecording.js";
 import type CallRecordingUpdate from "../../../../../../../definitions/CallRecordingUpdate.js";
-import type PauseResumeCallRecordingParameters from "../../../../../../../definitions/PauseResumeCallRecordingParameters.js";
 import type {
   ParentInterface,
   RestRequestConfig,
@@ -35,8 +34,10 @@ class Index {
    * Rate Limit Group: Light
    * App Permission: CallControl
    */
-  public async post(restRequestConfig?: RestRequestConfig): Promise<string> {
-    const r = await this.rc.post<string>(
+  public async post(
+    restRequestConfig?: RestRequestConfig,
+  ): Promise<CallRecording> {
+    const r = await this.rc.post<CallRecording>(
       this.path(false),
       {},
       undefined,
@@ -54,7 +55,6 @@ class Index {
    */
   public async patch(
     callRecordingUpdate: CallRecordingUpdate,
-    queryParams?: PauseResumeCallRecordingParameters,
     restRequestConfig?: RestRequestConfig,
   ): Promise<CallRecording> {
     if (this.recordingId === null) {
@@ -63,7 +63,7 @@ class Index {
     const r = await this.rc.patch<CallRecording>(
       this.path(),
       callRecordingUpdate,
-      queryParams,
+      undefined,
       restRequestConfig,
     );
     return r.data;

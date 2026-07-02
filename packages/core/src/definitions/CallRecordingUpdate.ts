@@ -1,6 +1,7 @@
 interface CallRecordingUpdate {
   /**
    * Recording status
+   * Required
    */
   active?: boolean;
 }
