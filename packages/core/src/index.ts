@@ -7,6 +7,7 @@ import Restapi from "./paths/Restapi/index.js";
 import Scim from "./paths/Scim/index.js";
 import TeamMessaging from "./paths/TeamMessaging/index.js";
 import Webinar from "./paths/Webinar/index.js";
+import WellKnown from "./paths/WellKnown/index.js";
 import Rest from "./Rest.js";
 import type RestException from "./RestException.js";
 import type SdkExtension from "./SdkExtension.js";
@@ -231,6 +232,22 @@ class RingCentral implements RingCentralInterface {
     this.token = undefined;
   }
 
+  public wellKnown(): WellKnown {
+    return new WellKnown(this);
+  }
+
+  public ai(): Ai {
+    return new Ai(this);
+  }
+
+  public analytics(): Analytics {
+    return new Analytics(this);
+  }
+
+  public rcvideo(): Rcvideo {
+    return new Rcvideo(this);
+  }
+
   public restapi(apiVersion: string | null = "v1.0"): Restapi {
     return new Restapi(this, apiVersion);
   }
@@ -239,20 +256,8 @@ class RingCentral implements RingCentralInterface {
     return new Scim(this, version);
   }
 
-  public analytics(): Analytics {
-    return new Analytics(this);
-  }
-
   public teamMessaging(): TeamMessaging {
     return new TeamMessaging(this);
-  }
-
-  public ai(): Ai {
-    return new Ai(this);
-  }
-
-  public rcvideo(): Rcvideo {
-    return new Rcvideo(this);
   }
 
   public webinar(): Webinar {
