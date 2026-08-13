@@ -23,7 +23,8 @@ interface CommAllDesktopRingTargetResource {
     | "ImsPhoneNumberRingTarget"
     | "FmcPhoneNumberRingTarget"
     | "IntegrationRingTarget"
-    | "PhoneNumberRingTarget";
+    | "PhoneNumberRingTarget"
+    | "CloudConnectorRingTarget";
 
   /**
    */

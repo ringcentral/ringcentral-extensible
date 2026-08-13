@@ -82,7 +82,7 @@ interface CallLogRecord {
   /**
    * Call delegation type
    */
-  delegationType?: "Coworker" | "Unknown";
+  delegationType?: "Coworker" | "QueueForwarding" | "Unknown";
 
   /**
    * The internal action corresponding to the call operation
@@ -313,6 +313,11 @@ interface CallLogRecord {
     | "ImsOutgoing"
     | "ImsIncoming"
     | "Unknown";
+
+  /**
+   * Indicates whether the call has reached a finished state
+   */
+  finished?: boolean;
 
   /**
    * Internal identifier of a call log record

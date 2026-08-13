@@ -31,7 +31,8 @@ interface CommTerminatingActionResource {
     | "ExtensionTerminatingTarget"
     | "PhoneNumberTerminatingTarget"
     | "PlayAnnouncementTerminatingTarget"
-    | "VoiceMailTerminatingTarget";
+    | "VoiceMailTerminatingTarget"
+    | "CloudConnectorTerminatingTarget";
 
   /**
    * Terminating target type
@@ -40,7 +41,8 @@ interface CommTerminatingActionResource {
     | "ExtensionTerminatingTarget"
     | "PhoneNumberTerminatingTarget"
     | "PlayAnnouncementTerminatingTarget"
-    | "VoiceMailTerminatingTarget";
+    | "VoiceMailTerminatingTarget"
+    | "CloudConnectorTerminatingTarget";
 }
 
 export default CommTerminatingActionResource;

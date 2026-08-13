@@ -21,6 +21,12 @@ interface DeviceEmergencyLocationInfo {
    * Address format statuses
    */
   addressFormatStatus?: "Actual" | "Outdated" | "Deprecated";
+
+  /**
+   * Specifies emergency address validation during the ERL creation/update.
+   *  If set to 'true', then address validation for non-US addresses is skipped
+   */
+  trusted?: boolean;
 }
 
 export default DeviceEmergencyLocationInfo;

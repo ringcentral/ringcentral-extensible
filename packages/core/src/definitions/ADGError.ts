@@ -25,6 +25,11 @@ interface ADGError {
    * Message that describes the error. This message can be used in UI.
    */
   message?: string;
+
+  /**
+   * Name of invalid parameter.
+   */
+  parameterName?: string;
 }
 
 export default ADGError;

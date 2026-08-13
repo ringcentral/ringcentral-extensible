@@ -1,24 +1,29 @@
+import type CommCloudDestination from "./CommCloudDestination.js";
 import type CommDeviceRequest from "./CommDeviceRequest.js";
 import type CommIntegrationRequest from "./CommIntegrationRequest.js";
-import type CommPhoneNumberResource from "./CommPhoneNumberResource.js";
 import type CommReferencedExtensionResource from "./CommReferencedExtensionResource.js";
 
 interface CommRemoveForwardingTargetsItemResourceBulkItem {
   /**
+   * Example: Cloud Connector Contact
    */
   name?: string;
 
   /**
    * Ring target type
-   * Example: PhoneNumberRingTarget
+   * Example: CloudConnectorRingTarget
    */
   type?:
-    | "CoworkerAppsRingTarget"
+    | "AllDesktopRingTarget"
+    | "AllMobileRingTarget"
     | "CoworkerRingTarget"
     | "DeviceRingTarget"
+    | "HotdeskRingTarget"
     | "ImsPhoneNumberRingTarget"
+    | "FmcPhoneNumberRingTarget"
     | "IntegrationRingTarget"
-    | "PhoneNumberRingTarget";
+    | "PhoneNumberRingTarget"
+    | "CloudConnectorRingTarget";
 
   /**
    */
@@ -34,7 +39,7 @@ interface CommRemoveForwardingTargetsItemResourceBulkItem {
 
   /**
    */
-  destination?: CommPhoneNumberResource;
+  destination?: CommCloudDestination;
 }
 
 export default CommRemoveForwardingTargetsItemResourceBulkItem;

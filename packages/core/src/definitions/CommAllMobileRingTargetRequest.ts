@@ -18,7 +18,8 @@ interface CommAllMobileRingTargetRequest {
     | "ImsPhoneNumberRingTarget"
     | "FmcPhoneNumberRingTarget"
     | "IntegrationRingTarget"
-    | "PhoneNumberRingTarget";
+    | "PhoneNumberRingTarget"
+    | "CloudConnectorRingTarget";
 
   /**
    */

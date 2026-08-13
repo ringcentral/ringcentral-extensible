@@ -1,12 +1,12 @@
+import type CommCloudDestination from "./CommCloudDestination.js";
 import type CommDeviceResource from "./CommDeviceResource.js";
 import type CommIntegrationResource from "./CommIntegrationResource.js";
-import type CommPhoneNumberResource from "./CommPhoneNumberResource.js";
 import type CommReferencedExtensionResource from "./CommReferencedExtensionResource.js";
 
 interface CommForwardingTargetsResourceRecords {
   /**
    * Ring target type
-   * Example: PhoneNumberRingTarget
+   * Example: CloudConnectorRingTarget
    */
   type?:
     | "CoworkerAppsRingTarget"
@@ -15,7 +15,8 @@ interface CommForwardingTargetsResourceRecords {
     | "ImsPhoneNumberRingTarget"
     | "FmcPhoneNumberRingTarget"
     | "IntegrationRingTarget"
-    | "PhoneNumberRingTarget";
+    | "PhoneNumberRingTarget"
+    | "CloudConnectorRingTarget";
 
   /**
    */
@@ -33,7 +34,7 @@ interface CommForwardingTargetsResourceRecords {
 
   /**
    */
-  destination?: CommPhoneNumberResource;
+  destination?: CommCloudDestination;
 
   /**
    */

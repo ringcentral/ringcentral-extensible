@@ -81,7 +81,7 @@ interface BaseCallLogRecord {
   /**
    * Call delegation type
    */
-  delegationType?: "Coworker" | "Unknown";
+  delegationType?: "Coworker" | "QueueForwarding" | "Unknown";
 
   /**
    * The internal action corresponding to the call operation
@@ -312,6 +312,11 @@ interface BaseCallLogRecord {
     | "ImsOutgoing"
     | "ImsIncoming"
     | "Unknown";
+
+  /**
+   * Indicates whether the call has reached a finished state
+   */
+  finished?: boolean;
 }
 
 export default BaseCallLogRecord;

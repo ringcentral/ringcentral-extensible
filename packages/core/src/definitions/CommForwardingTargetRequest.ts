@@ -13,7 +13,8 @@ interface CommForwardingTargetRequest {
     | "DeviceRingTarget"
     | "ImsPhoneNumberRingTarget"
     | "IntegrationRingTarget"
-    | "PhoneNumberRingTarget";
+    | "PhoneNumberRingTarget"
+    | "CloudConnectorRingTarget";
 }
 
 export default CommForwardingTargetRequest;

@@ -10,7 +10,8 @@ interface CommPhoneNumberTerminatingTargetRequest {
     | "ExtensionTerminatingTarget"
     | "PhoneNumberTerminatingTarget"
     | "PlayAnnouncementTerminatingTarget"
-    | "VoiceMailTerminatingTarget";
+    | "VoiceMailTerminatingTarget"
+    | "CloudConnectorTerminatingTarget";
 
   /**
    * Phone number name

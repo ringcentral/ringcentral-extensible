@@ -12,7 +12,8 @@ interface CommRingTargetRequest {
     | "ImsPhoneNumberRingTarget"
     | "FmcPhoneNumberRingTarget"
     | "IntegrationRingTarget"
-    | "PhoneNumberRingTarget";
+    | "PhoneNumberRingTarget"
+    | "CloudConnectorRingTarget";
 }
 
 export default CommRingTargetRequest;

@@ -15,7 +15,8 @@ interface CommPhoneNumberTerminatingTargetResource {
     | "ExtensionTerminatingTarget"
     | "PhoneNumberTerminatingTarget"
     | "PlayAnnouncementTerminatingTarget"
-    | "VoiceMailTerminatingTarget";
+    | "VoiceMailTerminatingTarget"
+    | "CloudConnectorTerminatingTarget";
 
   /**
    * Required

@@ -47,6 +47,7 @@ import Sms from "./Sms/index.js";
 import SmsRecipients from "./SmsRecipients/index.js";
 import UnifiedPresence from "./UnifiedPresence/index.js";
 import VideoConfiguration from "./VideoConfiguration/index.js";
+import WebappDevices from "./WebappDevices/index.js";
 
 class Index {
   public rc: RingCentralInterface;
@@ -260,6 +261,10 @@ class Index {
 
   public businessHours(): BusinessHours {
     return new BusinessHours(this);
+  }
+
+  public webappDevices(): WebappDevices {
+    return new WebappDevices(this);
   }
 
   public smsRecipients(): SmsRecipients {

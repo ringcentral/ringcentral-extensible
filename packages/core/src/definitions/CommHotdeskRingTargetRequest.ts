@@ -13,7 +13,8 @@ interface CommHotdeskRingTargetRequest {
     | "ImsPhoneNumberRingTarget"
     | "FmcPhoneNumberRingTarget"
     | "IntegrationRingTarget"
-    | "PhoneNumberRingTarget";
+    | "PhoneNumberRingTarget"
+    | "CloudConnectorRingTarget";
 }
 
 export default CommHotdeskRingTargetRequest;

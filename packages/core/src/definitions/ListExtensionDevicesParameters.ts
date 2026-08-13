@@ -34,29 +34,20 @@ interface ListExtensionDevicesParameters {
   feature?: ("BLA" | "CommonPhone" | "Intercom" | "Paging" | "HELD")[];
 
   /**
-   * Device type
-   * Default: HardPhone
+   * Device type or multiple device types
    */
-  type?:
-    | "HardPhone"
-    | "SoftPhone"
-    | "OtherPhone"
-    | "MobileDevice"
-    | "BLA"
-    | "Paging"
-    | "WebPhone"
-    | "WebRTC"
-    | "Room";
+  type?: ("HardPhone" | "SoftPhone" | "OtherPhone" | "WebRTC" | "Room")[];
 
   /**
-   * The type of phone line
+   * Phone line type or multiple phone line types
    */
-  lineType?:
+  lineType?: (
     | "Unknown"
     | "Standalone"
     | "StandaloneFree"
     | "BlaPrimary"
-    | "BlaSecondary";
+    | "BlaSecondary"
+  )[];
 }
 
 export default ListExtensionDevicesParameters;

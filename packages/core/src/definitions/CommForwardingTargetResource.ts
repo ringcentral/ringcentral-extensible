@@ -10,7 +10,8 @@ interface CommForwardingTargetResource {
     | "ImsPhoneNumberRingTarget"
     | "FmcPhoneNumberRingTarget"
     | "IntegrationRingTarget"
-    | "PhoneNumberRingTarget";
+    | "PhoneNumberRingTarget"
+    | "CloudConnectorRingTarget";
 }
 
 export default CommForwardingTargetResource;

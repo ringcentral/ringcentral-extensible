@@ -41,6 +41,12 @@ interface CustomUserGreetingInfo {
   /**
    */
   answeringRule?: CustomGreetingAnsweringRuleInfo;
+
+  /**
+   * Text to be used for speech transcription
+   * Example: Welcome to RingCentral
+   */
+  text?: string;
 }
 
 export default CustomUserGreetingInfo;

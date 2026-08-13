@@ -41,6 +41,12 @@ interface CustomCompanyGreetingInfo {
   /**
    */
   language?: CustomCompanyGreetingLanguageInfo;
+
+  /**
+   * Text to be used for speech transcription
+   * Example: Welcome to RingCentral
+   */
+  text?: string;
 }
 
 export default CustomCompanyGreetingInfo;

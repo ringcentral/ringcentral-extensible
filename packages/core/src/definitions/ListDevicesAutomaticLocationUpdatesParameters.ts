@@ -19,7 +19,7 @@ interface ListDevicesAutomaticLocationUpdatesParameters {
    * Internal identifier of a device model for filtering. Multiple
    *  values are supported
    */
-  modelId?: string;
+  modelId?: string[];
 
   /**
    * Filters devices which support HELD protocol

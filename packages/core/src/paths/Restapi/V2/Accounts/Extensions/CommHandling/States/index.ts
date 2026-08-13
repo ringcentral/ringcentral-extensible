@@ -69,7 +69,7 @@ class Index {
    * HTTP Method: patch
    * Endpoint: /restapi/v2/accounts/{accountId}/extensions/{extensionId}/comm-handling/states/{stateId}
    * Rate Limit Group: Medium
-   * App Permission: ReadAccounts
+   * App Permission: EditExtensions
    */
   public async patch(
     commStateUpdateRequest: CommStateUpdateRequest,

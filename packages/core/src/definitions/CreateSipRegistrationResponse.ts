@@ -37,7 +37,7 @@ interface CreateSipRegistrationResponse {
   /**
    * Indicates whether the user has an RC App device configured in a PSTN gateway
    */
-  pstnConfigured?: boolean;
+  persistGatewayConfigured?: boolean;
 }
 
 export default CreateSipRegistrationResponse;

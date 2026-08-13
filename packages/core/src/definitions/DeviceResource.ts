@@ -29,7 +29,6 @@ interface DeviceResource {
 
   /**
    * Device type
-   * Default: HardPhone
    */
   type?:
     | "BLA"

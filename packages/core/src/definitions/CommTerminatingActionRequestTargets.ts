@@ -1,17 +1,18 @@
-import type CommPhoneNumberResource from "./CommPhoneNumberResource.js";
+import type CommCloudDestination from "./CommCloudDestination.js";
 import type CommReferencedExtensionResource from "./CommReferencedExtensionResource.js";
 import type CommTerminatingPromptResource from "./CommTerminatingPromptResource.js";
 
 interface CommTerminatingActionRequestTargets {
   /**
    * Terminating target type
-   * Example: ExtensionTerminatingTarget
+   * Example: CloudConnectorTerminatingTarget
    */
   type?:
     | "ExtensionTerminatingTarget"
     | "PhoneNumberTerminatingTarget"
     | "PlayAnnouncementTerminatingTarget"
-    | "VoiceMailTerminatingTarget";
+    | "VoiceMailTerminatingTarget"
+    | "CloudConnectorTerminatingTarget";
 
   /**
    */
@@ -26,13 +27,13 @@ interface CommTerminatingActionRequestTargets {
   dispatchingType?: "Ringing" | "Terminating";
 
   /**
-   * Phone number name
+   * The customised target name
    */
   name?: string;
 
   /**
    */
-  destination?: CommPhoneNumberResource;
+  destination?: CommCloudDestination;
 }
 
 export default CommTerminatingActionRequestTargets;

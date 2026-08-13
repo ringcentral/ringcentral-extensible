@@ -90,6 +90,16 @@ interface AccountPhoneNumberInfo {
   callerIdName?: string;
 
   /**
+   * Custom user-defined name of a phone number, if any
+   */
+  label?: string;
+
+  /**
+   * Indicates if a phone number is primary, i.e. displayed as 'main number' and called by default
+   */
+  primary?: boolean;
+
+  /**
    * Reference to the extension this number is assigned to. Omitted for company numbers
    */
   extension?: AccountPhoneNumberInfoExtension;

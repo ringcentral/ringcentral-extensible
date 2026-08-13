@@ -1,6 +1,6 @@
+import type CommCloudDestination from "./CommCloudDestination.js";
 import type CommDeviceResource from "./CommDeviceResource.js";
 import type CommIntegrationResource from "./CommIntegrationResource.js";
-import type CommPhoneNumberResource from "./CommPhoneNumberResource.js";
 import type CommReferencedExtensionResource from "./CommReferencedExtensionResource.js";
 
 interface CommRingGroupActionResourceTargets {
@@ -10,7 +10,7 @@ interface CommRingGroupActionResourceTargets {
 
   /**
    * Ring target type
-   * Example: PhoneNumberRingTarget
+   * Example: CloudConnectorRingTarget
    */
   type?:
     | "AllDesktopRingTarget"
@@ -21,7 +21,8 @@ interface CommRingGroupActionResourceTargets {
     | "ImsPhoneNumberRingTarget"
     | "FmcPhoneNumberRingTarget"
     | "IntegrationRingTarget"
-    | "PhoneNumberRingTarget";
+    | "PhoneNumberRingTarget"
+    | "CloudConnectorRingTarget";
 
   /**
    */
@@ -33,7 +34,7 @@ interface CommRingGroupActionResourceTargets {
 
   /**
    */
-  destination?: CommPhoneNumberResource;
+  destination?: CommCloudDestination;
 
   /**
    */

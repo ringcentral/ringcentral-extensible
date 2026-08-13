@@ -25,11 +25,29 @@ interface AdgPhoneNumberResource {
    * Example: DirectNumber
    */
   usageType?:
-    | "MobileNumber"
-    | "ContactNumber"
+    | "MainCompanyNumber"
+    | "AdditionalCompanyNumber"
     | "DirectNumber"
+    | "CompanyNumber"
+    | "CompanyFaxNumber"
     | "ForwardedNumber"
-    | "PartnerBusinessMobileNumber";
+    | "ForwardedCompanyNumber"
+    | "ContactCenterNumber"
+    | "ConferencingNumber"
+    | "MeetingsNumber"
+    | "NumberPool"
+    | "ELIN"
+    | "BusinessMobileNumber"
+    | "ExternalMobileNumber"
+    | "IntegrationNumber"
+    | "PartnerBusinessMobileNumber"
+    | "NumberPoolPartnerBusinessMobileNumber"
+    | "NumberStorage"
+    | "FmcBusinessMobileNumber"
+    | "InventoryFmcBusinessMobileNumber"
+    | "InventoryMobileNumber"
+    | "MobileNumber"
+    | "ContactNumber";
 
   /**
    * Specifies if a phone number should be hidden or not

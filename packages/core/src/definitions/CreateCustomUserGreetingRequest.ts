@@ -20,6 +20,12 @@ interface CreateCustomUserGreetingRequest {
     | "TemplateGreeting";
 
   /**
+   * Text to be used for speech transcription
+   * Example: Welcome to RingCentral
+   */
+  text?: string;
+
+  /**
    * Media file to upload
    * Required
    */

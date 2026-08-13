@@ -19,7 +19,8 @@ interface CommCoworkerForwardingTargetRequest {
     | "DeviceRingTarget"
     | "ImsPhoneNumberRingTarget"
     | "IntegrationRingTarget"
-    | "PhoneNumberRingTarget";
+    | "PhoneNumberRingTarget"
+    | "CloudConnectorRingTarget";
 
   /**
    * Required

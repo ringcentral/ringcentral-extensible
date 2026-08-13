@@ -903,7 +903,7 @@ Name|Value
 HTTP Method|`PATCH`
 Endpoint|`/restapi/v2/accounts/{accountId}/extensions/{extensionId}/comm-handling/states/{stateId}`
 Rate Limit Group|`Medium`
-App Permission|`ReadAccounts`
+App Permission|`EditExtensions`
 User Permission|`N/A`
 
 ```ts
@@ -6446,6 +6446,31 @@ await rc.revoke();
 - `result` is of type [UserVideoConfiguration](./definitions/UserVideoConfiguration.ts)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Video-Configuration-readUserVideoConfiguration) in API Explorer.
+
+## listWebAppDevices
+List User Web Phone Devices
+
+Name|Value
+-|-
+HTTP Method|`GET`
+Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/webapp-devices`
+Rate Limit Group|`Medium`
+App Permission|`ReadAccounts`
+User Permission|`N/A`
+
+```ts
+const rc = new RingCentral({clientId, clientSecret, server});
+await rc.authorize({jwt});
+const result = await rc.restapi(apiVersion).account(accountId).extension(extensionId).webappDevices().get();
+await rc.revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- Parameter `extensionId` is optional with default value `~`
+- `result` is of type [WebAppDevicesResponse](./definitions/WebAppDevicesResponse.ts)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Devices-listWebAppDevices) in API Explorer.
 
 ## getForwardAllCompanyCalls
 Get Forward All Company Calls
