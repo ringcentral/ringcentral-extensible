@@ -32,7 +32,10 @@ interface CallQueueMember {
     | "VideoProPlus"
     | "DigitalSignageOnlyRooms"
     | "Unknown"
-    | "Emergency";
+    | "Emergency"
+    | "Programmable"
+    | "Air"
+    | "AirPro";
 }
 
 export default CallQueueMember;

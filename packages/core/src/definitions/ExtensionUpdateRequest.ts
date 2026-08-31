@@ -99,7 +99,10 @@ interface ExtensionUpdateRequest {
     | "VideoProPlus"
     | "DigitalSignageOnlyRooms"
     | "Unknown"
-    | "Emergency";
+    | "Emergency"
+    | "Programmable"
+    | "Air"
+    | "AirPro";
 
   /**
    * List of non-RC internal identifiers assigned to an extension

@@ -40,6 +40,8 @@ interface MthSyncAliveMessageAuthor {
     | "Room"
     | "FlexibleUser"
     | "TieLine"
+    | "VoiceAppIntegration"
+    | "WebVoice"
     | "Unknown";
 }
 

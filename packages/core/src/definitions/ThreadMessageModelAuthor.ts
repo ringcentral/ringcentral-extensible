@@ -40,6 +40,8 @@ interface ThreadMessageModelAuthor {
     | "Room"
     | "FlexibleUser"
     | "TieLine"
+    | "VoiceAppIntegration"
+    | "WebVoice"
     | "Unknown";
 }
 

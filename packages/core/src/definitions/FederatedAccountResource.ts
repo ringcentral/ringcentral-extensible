@@ -27,6 +27,11 @@ interface FederatedAccountResource {
   /**
    */
   mainNumber?: AdgPhoneNumberResource;
+
+  /**
+   * Indicates whether Contact Center is enabled for the account.
+   */
+  contactCenterEnabled?: boolean;
 }
 
 export default FederatedAccountResource;

@@ -41,6 +41,8 @@ interface ThreadUserModel {
     | "Room"
     | "FlexibleUser"
     | "TieLine"
+    | "VoiceAppIntegration"
+    | "WebVoice"
     | "Unknown";
 }
 

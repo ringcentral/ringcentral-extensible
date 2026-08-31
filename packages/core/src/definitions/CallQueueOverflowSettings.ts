@@ -15,7 +15,10 @@ interface CallQueueOverflowSettings {
     | "VideoProPlus"
     | "DigitalSignageOnlyRooms"
     | "Unknown"
-    | "Emergency";
+    | "Emergency"
+    | "Programmable"
+    | "Air"
+    | "AirPro";
 
   /**
    */

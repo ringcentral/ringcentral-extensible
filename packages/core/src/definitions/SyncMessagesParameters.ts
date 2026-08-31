@@ -103,6 +103,8 @@ interface SyncMessagesParameters {
     | "Room"
     | "FlexibleUser"
     | "TieLine"
+    | "VoiceAppIntegration"
+    | "WebVoice"
     | "Unknown"
   )[];
 }

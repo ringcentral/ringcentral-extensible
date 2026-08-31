@@ -40,6 +40,8 @@ interface MthSyncAliveNoteAuthor {
     | "Room"
     | "FlexibleUser"
     | "TieLine"
+    | "VoiceAppIntegration"
+    | "WebVoice"
     | "Unknown";
 }
 

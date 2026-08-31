@@ -36,6 +36,8 @@ interface OwnerResource {
     | "Room"
     | "FlexibleUser"
     | "TieLine"
+    | "VoiceAppIntegration"
+    | "WebVoice"
     | "Unknown";
 
   /**

@@ -114,6 +114,8 @@ interface ListMessagesParameters {
     | "Room"
     | "FlexibleUser"
     | "TieLine"
+    | "VoiceAppIntegration"
+    | "WebVoice"
     | "Unknown"
   )[];
 }

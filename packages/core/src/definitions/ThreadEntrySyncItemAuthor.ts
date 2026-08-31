@@ -40,6 +40,8 @@ interface ThreadEntrySyncItemAuthor {
     | "Room"
     | "FlexibleUser"
     | "TieLine"
+    | "VoiceAppIntegration"
+    | "WebVoice"
     | "Unknown";
 }
 

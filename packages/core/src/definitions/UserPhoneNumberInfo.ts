@@ -81,7 +81,10 @@ interface UserPhoneNumberInfo {
     | "VideoProPlus"
     | "DigitalSignageOnlyRooms"
     | "Unknown"
-    | "Emergency";
+    | "Emergency"
+    | "Programmable"
+    | "Air"
+    | "AirPro";
 
   /**
    * Usage type of a phone number. Numbers of 'NumberPool' and 'NumberStorage' type are not returned in

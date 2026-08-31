@@ -40,6 +40,8 @@ interface MthSyncBaseHintInitiator {
     | "Room"
     | "FlexibleUser"
     | "TieLine"
+    | "VoiceAppIntegration"
+    | "WebVoice"
     | "Unknown";
 }
 

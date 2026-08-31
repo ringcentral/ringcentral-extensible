@@ -69,6 +69,8 @@ interface ListExtensionsParameters {
     | "Room"
     | "FlexibleUser"
     | "TieLine"
+    | "VoiceAppIntegration"
+    | "WebVoice"
     | "Unknown"
   )[];
 }

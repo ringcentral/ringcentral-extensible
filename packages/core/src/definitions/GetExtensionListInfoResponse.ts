@@ -95,6 +95,8 @@ interface GetExtensionListInfoResponse {
     | "Room"
     | "FlexibleUser"
     | "TieLine"
+    | "VoiceAppIntegration"
+    | "WebVoice"
     | "Unknown";
 
   /**
@@ -106,7 +108,10 @@ interface GetExtensionListInfoResponse {
     | "VideoProPlus"
     | "DigitalSignageOnlyRooms"
     | "Unknown"
-    | "Emergency";
+    | "Emergency"
+    | "Programmable"
+    | "Air"
+    | "AirPro";
 
   /**
    */
