@@ -11,7 +11,7 @@ import type {
   RestResponse,
 } from "./types.js";
 
-const version = "1.8.4";
+const version = "1.8.5";
 
 export default class Rest {
   public static sandboxServer = "https://platform.devtest.ringcentral.com";
