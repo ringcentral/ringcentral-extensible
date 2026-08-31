@@ -106,8 +106,9 @@ whenever WebSocket connection is lost.
 `checkInterval` is a callback which decides how long to wait before the next
 connection check or recovery attempt. It receives `retriesAttempted`: the
 number of recovery attempts that have thrown an error because a WebSocket
-connection could not be established. Each successful recovery resets it to
-zero, so a later disconnection starts over with the initial delay.
+connection could not be established. Each completed recovery resets it to
+zero — even when the recovery reports a failed session recovery state — so a
+later disconnection starts over with the initial delay.
 
 The default schedule backs off progressively:
 
