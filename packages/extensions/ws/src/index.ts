@@ -80,8 +80,18 @@ class WebSocketExtension extends SdkExtension {
       enabled: true,
     };
     this.options.autoRecover.checkInterval ??= (retriesAttempted) => {
-      const interval = 2000 + 2000 * retriesAttempted;
-      return Math.min(8000, interval);
+      if (retriesAttempted === 0) {
+        return 1000;
+      }
+      const bands: [number, number][] = [
+        [2000, 6000],
+        [10000, 20000],
+        [20000, 40000],
+        [40000, 80000],
+        [80000, 120000],
+      ];
+      const [min, max] = bands[Math.min(retriesAttempted, bands.length) - 1]!;
+      return min + Math.floor(Math.random() * (max - min + 1));
     };
     this.options.autoRecover.pingServerInterval ??= 60000;
   }

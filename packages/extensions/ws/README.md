@@ -101,6 +101,46 @@ Default value is true.
 If disabled, you need to manually invoke `await webSocketExtension.recover()`
 whenever WebSocket connection is lost.
 
+#### checkInterval
+
+`checkInterval` is a callback which decides how long to wait before the next
+connection check or recovery attempt. It receives `retriesAttempted`: the
+number of recovery attempts that have thrown an error because a WebSocket
+connection could not be established. Each successful recovery resets it to
+zero, so a later disconnection starts over with the initial delay.
+
+The default schedule backs off progressively:
+
+| `retriesAttempted` | Delay before the next check |
+| ---: | ---: |
+| 0 | 1 second |
+| 1 | 2 - 6 seconds |
+| 2 | 10 - 20 seconds |
+| 3 | 20 - 40 seconds |
+| 4 | 40 - 80 seconds |
+| 5 or more | 80 - 120 seconds |
+
+Each ranged delay is a uniformly random whole number of milliseconds within
+the range, including both endpoints. The jitter makes many disconnected
+clients less likely to reconnect at the same time. After 5 failed recovery
+attempts, every later attempt stays within the 80 - 120 seconds range.
+
+Note: the 1-second delay for `retriesAttempted` 0 is also the interval at
+which a healthy WebSocket connection is polled.
+
+You can override the default with your own callback:
+
+```ts
+const webSocketExtension = new WebSocketExtension({
+  autoRecover: {
+    enabled: true,
+    checkInterval: (retriesAttempted) => {
+      return 5000;
+    },
+  },
+});
+```
+
 ## Access WebSocket object
 
 ```ts
